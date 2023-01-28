@@ -1,0 +1,5 @@
+php_value display_errors Off
+php_value mbstring.http_input auto
+php_value date.timezone America/Fortaleza
+# HTID:20882169: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:20882169:

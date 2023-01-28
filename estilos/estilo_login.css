@@ -1,0 +1,97 @@
+/* 
+    Atualizado em 14/01/23 por Dione Silva
+    Alterações:
+        Alterado algumas propriedades do css
+
+*/
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('../imagens/fundo_login.jpg');
+}
+
+#area_login{  
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+    display: block;
+    align-items: center;
+}
+
+#usuário{
+    font-size: 16pt;
+    height: 25px;
+    margin: 8px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#senha{
+    font-size: 16pt;
+    height: 25px;
+    margin: 8px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#saudacao{
+    font-size: 40pt;
+    color: rgb(255, 255, 255);
+}
+
+
+/* IMPORTEI O MODELO DO BOTÃO DE LOGIN */
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 20px;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #ff0000;
+  outline: none;
+  transition: 1s ease-in-out;
+  position: relative;
+}
+
+svg {
+  position: relative;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #000000;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  position: relative; 
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+  top: -45px;
+}

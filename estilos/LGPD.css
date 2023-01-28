@@ -1,0 +1,39 @@
+body{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#at_contatos{
+    border: 2px solid;
+    border-color: #65707a;
+    width: 50%;
+    margin: auto 25% auto 25%;
+    padding: 10px;
+}
+
+#email{
+    width: 75%;
+}
+
+#copiar{
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#transferir{
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

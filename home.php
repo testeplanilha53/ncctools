@@ -1,0 +1,348 @@
+<?php
+	
+	session_start();
+	
+	if( isset($_SESSION['idUser']) && !empty($_SESSION['idUser']) ){ 
+
+	?>
+	
+
+	
+<!-- 
+    //Autor: Lucas Aguiar e Dione
+    //Ultima edição: 11/01/2023
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo">Atendimento via chat</title>
+
+    <link rel="stylesheet" href="estilos/index.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body style="background-color: #35363f;" onmousemove="mudar_titulo()" id="corpo_tela_principal">
+    <!-- rgb(40,42,54) -->
+
+    <header>
+        <button type="button" id="fechar" class="btn btn-danger" onclick="javascript:window.close()">Fechar</button>        
+    
+        <button type="button" id="modelos" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"> MODELOS DE PREENCHIMENTO </button>
+        
+
+        <a href="./home.php" target="_blank" id="novo"><button type="button" class="btn btn-success">Nova Aba</button></a>
+        <div>
+            <br>             
+            <div id="notificacao"> </div>
+            <span id="timer"></span>           
+            
+        </div>
+    </header>
+
+    <!-- Modal Notificação de novidades -->
+    <div class="modal fade" id="notificacaoNovidades" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- COLOCAR AQUI NO FUTURO -->
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal PADRÃO NOC -->
+    <div class="modal fade" id="padrao_noc" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PADRÃO DE REPASSE NOC/MONITORIA</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="campo_padrao_verificao">                    
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="FHTT/ALCL"> <br>
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Usuário"> <br>
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Cidade"> <br>
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Autenticação"> <br>
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Plano"> <br>
+                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Endereço"> <br>
+                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Motivo da verificação"> <br>
+                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Nome e n° de telefone do cliente"> <br>                    
+                </div>
+                <div class="modal-footer">                    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success" onclick="copiar_padrao()">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PADRÕES DE PREENCHIMENTO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="botoes_auto_preenchidos">
+                    <strong>Equipamentos Ópticos</strong> <br>                    
+                    <button class="btn btn-outline-dark" id="fun_Fiberhome" onclick="fun_Fiberhome()">Fiberhome</button>
+                    <button class="btn btn-outline-dark" id="fun_Datacom" onclick="fun_Datacom()">Datacom</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_ONU_NOKIA" onclick="fun_ONU_NOKIA()">ONU NOKIA</button>
+                    <button class="btn btn-outline-dark" id="fun_Conversor_NOKIA" onclick="fun_Conversor_NOKIA()">Conversor NOKIA</button>
+                    
+
+                    <hr><strong>Suporte</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_sup_falta_de_conexao" onclick="fun_sup_falta_de_conexao()">Falta de conexão</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_lentidao" onclick="fun_sup_lentidao()">Lentidão</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_oscilação" onclick="fun_sup_oscilação()">Oscilação</button>
+                    <br> <br>
+                    <button class="btn btn-outline-dark" id="fun_sup_reinicio" onclick="fun_sup_reinicio()">Reinício</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_checagem_cabos" onclick="fun_sup_checagem_cabos()">Checagem de cabo</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_teste_de_velocidade" onclick="fun_sup_teste_de_velocidade()">Teste de velocidade</button>
+                    <br> <br>
+                    <button class="btn btn-outline-dark" id="fun_sup_conexao_normalizada" onclick="fun_sup_conexao_normalizada()">Conexão normalizada</button>
+                    <button class="btn btn-outline-dark" id="fun_sup_envio_de_vs" onclick="fun_sup_envio_de_vs()">Envio de VS</button>
+                    <br> <br>
+                    <button class="btn btn-outline-dark" id="fun_ver_noc" onclick="fun_ver_noc()">Verificação com o NOC</button><br>
+                    <button class="btn btn-outline-dark" id="fun_ver_sup" onclick="fun_ver_sup()">Verificação com a SUPERVISÃO</button><br>
+                    <button class="btn btn-outline-dark" id="fun_ver_escr" onclick="fun_ver_escr()">Verificação com o ESCRITÓRIO</button><br>
+
+                    <hr><strong>Serviços</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_Montagem_de_Rede" onclick="fun_Montagem_de_Rede()">Montagem de rede</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_Mudanca_de_comodo" onclick="fun_Mudanca_de_comodo()">Mudança de cômodo</button>
+                    <button class="btn btn-outline-dark" id="fun_Mudanca_de_comodo_amparo" onclick="fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_Transferência_de_endereço" onclick="fun_Transferência_de_endereço()">Transf. de endereço</button>
+                    <button class="btn btn-outline-dark" id="fun_Transferência_de_endereço_amparo" onclick="fun_Transferência_de_endereço_amparo()">Transf. de endereço - AMPARO</button> <br>
+                    
+                    <hr><strong>Financeiro</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_desb3001" onclick="fun_desb3001()">Desbl. 3001 disponível</button>
+                    <button class="btn btn-outline-dark" id="fun_desb3001_indisp" onclick="fun_desb3001_indisp()">Desbl. 3001 indisponível</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_desb3001_pag_efetuado" onclick="fun_desb3001_pag_efetuado()">Desbl. 3001 indisponível - pagamento já efetuado</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_bloqueio_verde" onclick="fun_bloqueio_verde()">Bloqueio verde</button>
+                    <button class="btn btn-outline-dark" id="fun_bloqueio_azul" onclick="fun_bloqueio_azul()">Bloqueio azul</button> <br>
+
+                    <hr><strong>Alteração de senha wi-fi</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_senha_wifi_ip" onclick="fun_senha_wifi_ip()">Pelo IP de acesso</button>
+                    <button class="btn btn-outline-dark" id="fun_senha_wifi_app" onclick="fun_senha_wifi_app()">Pelo aplicativo</button>
+
+                    <hr><strong>Cancelamento e Troca de titularidade</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_can_titular" onclick="fun_can_titular()">Solicitado pelo titular do cadastro</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_can_com_pendencia" onclick="fun_can_com_pendencia()">Cadastro com pendências</button> <br>
+                    <button class="btn btn-outline-dark" id="fun_can_outra_pessoa" onclick="fun_can_outra_pessoa()">Solicitado por outra pessoa</button> <br> <br>
+                    <button class="btn btn-outline-dark" id="fun_troca_titularidade" onclick="fun_troca_titularidade()">Troca de titularidade</button> <br>
+
+                    <!--NOVO-->
+                    <hr><strong>Problemas na conexão</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_nao_repassou_cpf" onclick="fun_nao_repassou_cpf()">Não soube repassar o CPF</button> 
+                    <button class="btn btn-outline-dark" id="fun_normalizada_sem_procedimento" onclick="fun_normalizada_sem_procedimento()">Conexão normalizada sem procedimento</button>
+                    <button class="btn btn-outline-dark" id="fun_recusa_procedimento" onclick="fun_recusa_procedimento()">Por recusa de procedimento</button>
+                    <button class="btn btn-outline-dark" id="fun_ip_de_bloqueio" onclick="fun_ip_de_bloqueio()">IP de bloqueio</button>
+                    <button class="btn btn-outline-dark" id="fun_prob_ext_conclusao" onclick="fun_prob_ext_conclusao()">Problema externo (conclusão de protocolo)</button>
+                    <button class="btn btn-outline-dark" id="fun_prob_ext_suporte" onclick="fun_prob_ext_suporte()">Problema externo (protocolo em suporte)</button>
+                    <button class="btn btn-outline-dark" id="fun_nao_esta_no_local" onclick="fun_nao_esta_no_local()">Cliente não está no local de instalação</button>
+                    
+                    <hr><strong>Problemas na TV Faster</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_tv_normalizado" onclick="fun_tv_normalizado()">Normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
+                    <button class="btn btn-outline-dark" id="fun_tv_nao_normalizado" onclick="fun_tv_nao_normalizado()">Não normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
+                    <button class="btn btn-outline-dark" id="fun_tv_normalizado_sem_verificacao" onclick="fun_tv_normalizado_sem_verificacao()">Normalizada pós-procedimento (sem verf. com o Rodrigo Frag.)</button> 
+
+                    <hr><strong>Informação sobre visita técnica</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_dentro_do_prazo_vs" onclick="fun_dentro_do_prazo_vs()">Dentro do prazo de 3 dias úteis</button> 
+                    <button class="btn btn-outline-dark" id="fun_fora_do_prazo_vs" onclick="fun_fora_do_prazo_vs()">Fora do prazo de 3 dias úteis</button> 
+                    <button class="btn btn-outline-dark" id="fun_escritorio_indisp" onclick="fun_escritorio_indisp()">Escritório indisponível para verificação</button> 
+                    <button class="btn btn-outline-dark" id="fun_cancelamento_vs" onclick="fun_cancelamento_vs()">Cancelamento da visita antes de ocorrer</button> 
+
+                    <hr><strong>Informação sobre pendências</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_pendencias_atraso" onclick="fun_pendencias_atraso()">Pendências em atraso</button> 
+                    <button class="btn btn-outline-dark" id="fun_negociacao_pendencias" onclick="fun_negociacao_pendencias()">Negociação de pendências</button> 
+                    <button class="btn btn-outline-dark" id="fun_pag_duplicado" onclick="fun_pag_duplicado()">Pagamento duplicado</button> 
+                    <button class="btn btn-outline-dark" id="fun_data_vencimento" onclick="fun_data_vencimento()">Alterar data de vencimento das faturas</button> 
+                    <button class="btn btn-outline-dark" id="fun_formas_pagamento" onclick="fun_formas_pagamento()">Formas de pagamento disponíveis</button> 
+
+                    
+                    <hr><strong>Emissão de 2ª via da fatura</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_instrucao_via_site" onclick="fun_instrucao_via_site()">Instrução através do site</button> 
+                    <button class="btn btn-outline-dark" id="fun_via_sms" onclick="fun_via_sms()">Enviado via SMS</button> 
+                    <button class="btn btn-outline-dark" id="fun_nota_fical" onclick="fun_nota_fical()">Emissão de nota fiscal</button> 
+                    <button class="btn btn-outline-dark" id="fun_troca_plano" onclick="fun_troca_plano()">Troca de plano</button> 
+
+                    <hr><strong>SVA e Token</strong> <br>
+                    <button class="btn btn-outline-dark" id="fun_sva" onclick="fun_sva()">Ativação de SVA’s</button> 
+                    <button class="btn btn-outline-dark" id="fun_token_fatura" onclick="fun_token_fatura()">Token para acessar as faturas</button> 
+                    <button class="btn btn-outline-dark" id="fun_token_sva" onclick="fun_token_sva()">Token para ativar os SVA</button> 
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="container" id="tela_atendimento">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <div id="celula_atd_1">
+
+                    <div id="dados_iniciais">
+
+
+                        <input type="text" id="protocolo_chat" placeholder="Protocolo do Chat" style="color: blue;">
+                        <input type="text" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" style="color: red;"> <br>
+
+                        <input type="text" id="nome_cliente" placeholder="Nome do cliente" onchange="mudar_titulo()">
+                        <input type="tel" id="telefone" placeholder="(xx) y xxxx-xxxx"> <br> <br>
+
+                        <input type="text" id="bfp" placeholder="BFP" value="Padrão Fibra"> <br>
+
+                        <textarea id="descricao" cols="70" rows="8"
+                            placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br> <br>
+                    </div>
+
+                    <div id="vs">
+                        <span id="t1">Horário de preferência:</span>
+                        <span id="hpfr" onchange="fun_h_preferencia()">
+                            <select id="h_preferencia" onchange="fun_h_preferencia()">                            
+                                <option></option>                        
+                                <option value="Manhã">Manhã</option>
+                                <option value="Tarde">Tarde</option>
+                                <option value="Sem preferência">Sem preferência</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </span>                    
+                        <br>
+                        <span id="t2">Ponto de referência:</span>                        
+                        <input type="search" id="ponto_referencia">
+                    </div>
+                    <br>
+                    <div id="botoes">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-lg-3"> </div>
+                                <div class="col"><button type="button" id="Protocolo" class="btn btn_width btn-warning"
+                                        onclick="protocolo()">Protocolo</button></div>
+                                <div class="col"><button type="button" id="Copiar" class="btn btn_width btn-warning"
+                                        onclick="copiar()">Copiar</button></div>
+                                <div class="col"><button type="button" id="Transferir" class="btn btn_width btn-warning"
+                                        onclick="transferir()">Transferir</button></div>
+                                <div class="col"><button type="button" id="Apagar" class="btn btn_width btn-warning"
+                                        onclick="Apagar()">Apagar</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <section>
+                    <div id="btn_atalhos">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" id="btn_cpf" class="btn btn-secondary btn_atalho2" data-toggle="tooltip" data-placement="top" title="Após copiar o CPF, clique aqui." onclick="cpf()" ondblclick="x()" onchange="cpf_corrigir()">CPF</button>
+                                </div>
+                                <div class="col">
+                                    <a href="LGPD.php" target="_blank"> <button type="button" id=""
+                                            class="btn btn-secondary btn_atalho2" onclick="">LGPD</button> </a>
+                                </div>
+                                <div class="w-100"></div> <br> <div class="w-100"></div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho1()">Atalho 1</button> </div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho2()">Atalho 2</button></div>
+                                <div class="w-100"></div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho3()">Atalho 3</button> </div>                                
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho4()">Atalho 4</button> </div>
+                                <div class="w-100"></div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho5()">Atalho 5</button></div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho6()">Atalho 6</button> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <div class="col">
+
+            </div>
+        </div>
+        
+
+        <footer id="foot">
+            <a href="config.php">CONFIGURAÇÕES</a> <br>            
+            Versão: 1.1.16
+        </footer>
+
+    </div>
+    
+    <span>
+
+        <button type="button" id="modelo_noc" class="btn btn-warning" data-toggle="modal" data-target="#padrao_noc"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+              </svg>    
+        </button>
+
+        <button onclick="mudar_tema()" id="tema" type="button" class="btn btn btn-light" data-toggle="tooltip" data-placement="top" title="Mudar tema" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button> <br>
+        <a href="https://ncc.drozbase.cx/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share" target="_blank" id="link_atalho_chat"><button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Clique aqui para ver a lista de atalhos do Omini" >#</button></a>
+    
+        <a id="btn_sair" href="./logout.php" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Logout">              
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5    12.5v-2a.5.5 0 0 1 1 0v2z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+            </svg>
+        </a>
+    </span>
+    
+
+    <script src="funcoes/f_botoes.js"></script>
+    <script src="funcoes/alarmes.js"></script>
+    <script src="funcoes/modelos_preenchimento.js"></script>
+    <script src="funcoes/padrao_noc.js"></script>
+    
+
+</body>
+
+</html>
+
+
+<?php
+	}else{
+		header('Location: index.html');
+		exit;
+	}
+?>

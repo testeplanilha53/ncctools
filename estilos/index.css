@@ -1,0 +1,233 @@
+#tela_atendimento {
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+}
+
+#celula_atd_1 {
+    font-size: 12pt;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    width: 700px;
+    /*
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%); */
+
+}
+
+.campo_preenchimento_ncc {
+    width: 230px;
+}
+
+.campo_preenchimento_ncc2 {
+    width: 380px;
+}
+
+footer {
+    font-size: 12pt;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+    /*position: absolute;
+    left: 50%;
+    top: 98%;
+    transform: translate(-50%, -50%);*/
+}
+
+#btn_sair {
+    position: absolute;
+    left: 95%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+}
+
+
+#link_atalho_chat {
+    position: absolute;
+    left: 95%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+
+#tema {
+    position: absolute;
+    left: 95%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+
+#modelo_noc {
+    position: absolute;
+    left: 95%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#novo {
+    margin: 10px;
+    position: absolute;
+    right: 0%;
+    width: 100px;
+}
+
+#modelos {
+    margin: 10px;
+    width: 300px;
+
+    position: absolute;
+    left: 50%;
+    top: 02%;
+    transform: translate(-50%, -50%);
+
+}
+
+#modelos_noc {
+
+
+
+    position: absolute;
+    left: 95%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+
+}
+
+#fechar {
+    margin: 10px;
+    position: absolute;
+    left: 0%;
+    width: 100px;
+}
+
+#notificacao {
+    margin: 30px;
+}
+
+#protocolo_chat {
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    width: 48%;
+}
+
+#protocolo_adm {
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    width: 48%;
+}
+
+#nome_cliente {
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    width: 48%;
+}
+
+#telefone {
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    width: 48%;
+}
+
+#bfp {
+    width: 99%;
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    width: 98%;
+}
+
+
+#descricao {
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    width: 98%;
+}
+
+#h_preferencia {
+    width: 98%;
+    height: 28px;
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#h_preferencia2 {
+    width: 98%;
+    height: 28px;
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#ponto_referencia {
+    width: 98%;
+
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#botoes {
+    /*
+    position: absolute;
+    text-align: center;
+    left: 40%;
+    */
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.btn_width {
+    width: 115px;
+}
+
+
+#btn_atalhos {
+    /*    
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%); */
+    padding: 10px;
+}
+
+.btn_atalho {
+    width: 310px;
+}
+
+.btn_atalho2 {
+    width: 310px;
+    height: 38px;
+}
+
+#btn_funcoes {
+    margin: 0px;
+    padding: 0px;
+    width: 110%;
+}
+
+#botoes .col {
+    padding: 2px;
+}
+
+#btn_atalhos .col {
+    padding: 8px;
+}
+
+
+#timer {
+    color: white;
+    text-align: center;
+
+    margin: 0px;
+    position: absolute;
+    left: 30%;
+}
+
+iframe {
+    border: none;
+    overflow: auto;
+}

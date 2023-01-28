@@ -1,0 +1,28 @@
+Login: teste_ncc on 25-01-2023 03:42:08
+Logout: teste_ncc on 25-01-2023 03:42:10
+Login: teste_ncc on 25-01-2023 05:09:11
+Logout: teste_ncc on 25-01-2023 05:09:36
+Email - created: ZGlvbmUubW91cmFvQG5jYy5mYXN0ZXIuY29tLmJy2cDR6OWM3YQ.php on 25-01-2023 05:14:52
+Cron - deleted: Resource id #5 on 25-01-2023 05:26:08
+Email - created: ZGlvbmUubW91cmFvQG5jYy5mYXN0ZXIuY29tLmJy2cDR6OWM3YQ.php on 25-01-2023 05:30:34
+Login: teste_ncc on 25-01-2023 05:36:01
+Logout: teste_ncc on 25-01-2023 05:36:05
+Email - deleted: Resource id #12 on 25-01-2023 05:42:01
+Email - created: ZGlvbmUubW91cmFvQG5jYy5mYXN0ZXIuY29tLmJy2cDR6OWM3YQ.php on 25-01-2023 05:47:54
+Email - deleted: Resource id #12 on 25-01-2023 05:52:51
+Email - created: ZGlvbmUubW91cmFvQG5jYy5mYXN0ZXIuY29tLmJy2cDR6OWM3YQ.php on 25-01-2023 05:54:38
+Email - deleted: Resource id #12 on 25-01-2023 05:55:23
+Email - created: ZGlvbmUubW91cmFvQG5jYy5mYXN0ZXIuY29tLmJy2cDR6OWM3YQ.php on 25-01-2023 05:57:30
+Email - deleted: ZGlvbmUubW91cmFvQG5jYy5mYXN0ZXIuY29tLmJy2cDR6OWM3YQ.php on 25-01-2023 05:57:55
+Email - created: ZGlvbmUubW91cmFvQG5jYy5mYXN0ZXIuY29tLmJy2cDR6OWM3YQ.php on 25-01-2023 06:00:56
+Cron - deleted: on 25-01-2023 06:15:12
+Email - reset:  on 25-01-2023 06:20:07
+Cron - deleted:Resource id #5 on 25-01-2023 06:31:17
+Login: thais.oliveira@ncc.faster.com.br on 25-01-2023 12:10:23
+Email - reset:  on 25-01-2023 14:44:47
+Cron - deleted:'Resource id #5' on 25-01-2023 14:56:06
+Login: wanderson.mendes@ncc.faster.com.br on 25-01-2023 18:09:36
+Email - reset:  on 25-01-2023 23:31:40
+Email - reset success: on 25-01-2023 23:32:27
+Login: vitor.ferreira@ncc.faster.com.br on 25-01-2023 23:37:13
+Login: user_ncc on 25-01-2023 23:47:48
