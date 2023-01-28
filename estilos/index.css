@@ -1,15 +1,16 @@
 #tela_atendimento {
-    position: absolute;
-    left: 50%;
-    top: 58%;
-    transform: translate(-50%, -50%);
+    position: relative;
 }
 
 #celula_atd_1 {
     font-size: 12pt;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    width: 700px;
+    max-width: 700px;
+    display:block;
+    margin: auto;
+    width: 100%;
+    margin-top: 60px;
     /*
     position: absolute;
     left: 50%;
@@ -31,6 +32,7 @@ footer {
     color: white;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    margin-top: 30px;
 
     /*position: absolute;
     left: 50%;
@@ -39,51 +41,73 @@ footer {
 }
 
 #btn_sair {
-    position: absolute;
+    /*position: absolute;
     left: 95%;
     top: 95%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+}
+
+body header{
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  margin: auto;
+  margin-top: 10px; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
+body > span{
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  
+}
+
 #link_atalho_chat {
-    position: absolute;
+    /*position: absolute;
     left: 95%;
     top: 90%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 #tema {
-    position: absolute;
+    /*position: absolute;
     left: 95%;
     top: 85%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 #modelo_noc {
-    position: absolute;
+    /*position: absolute;
     left: 95%;
     top: 80%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 
 
 #novo {
-    margin: 10px;
-    position: absolute;
-    right: 0%;
-    width: 100px;
+
+    /*position: absolute;
+    right: 0%;*/
+    max-width: 100px;
 }
 
 #modelos {
-    margin: 10px;
-    width: 300px;
 
-    position: absolute;
+    max-width: 300px;
+
+    /*position: absolute;
     left: 50%;
     top: 02%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 
 }
 
@@ -99,14 +123,27 @@ footer {
 }
 
 #fechar {
-    margin: 10px;
-    position: absolute;
-    left: 0%;
-    width: 100px;
+
+    /*position: absolute;
+    left: 0%;*/
+    max-width: 100px;
 }
 
+body > header > div{
+  position: absolute;
+  width: 100%;
+  max-width: 700px;
+  height: 20px; 
+  top: 60px;
+}
+
+
 #notificacao {
-    margin: 30px;
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    top: -30px;
+    z-index: 5;
 }
 
 #protocolo_chat {
@@ -181,18 +218,19 @@ footer {
 }
 
 .btn_width {
-    width: 115px;
+    width: 147px;
 }
+
 
 
 #btn_atalhos {
-    /*    
-    position: absolute;
-    left: 50%;
-    top: 85%;
-    transform: translate(-50%, -50%); */
-    padding: 10px;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+
 }
+
+
 
 .btn_atalho {
     width: 310px;
@@ -214,7 +252,7 @@ footer {
 }
 
 #btn_atalhos .col {
-    padding: 8px;
+    padding-top: 8px;
 }
 
 
