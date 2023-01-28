@@ -1,0 +1,124 @@
+@charset "UTF-8"; 
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+
+body{
+	background: #ffffff;
+}
+
+
+#dev{
+	width: 100%;
+	height: 25px;
+	background: black;
+	color: white;
+	font-size: 10px;
+
+	display: grid;
+	grid-template-columns: 80% 1fr;
+	align-items: center;
+}
+
+#dev > #version{
+	position: absolute;
+	right: 0;
+	/*background: gray;*/
+	margin: 3px;
+}
+
+
+#menu{
+	width: 100%;	
+	background: black;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	 justify-content: safe center; 
+}
+
+
+#menu li{
+	list-style: none;
+	color: white;
+	margin: 5px;
+	padding: 5px;
+	transition: .5s;
+}
+
+#menu li:hover{
+	background-color: #004b57;
+	transition: .5s;
+}
+
+
+.conteiner{
+	padding: 10px !important;
+	background-color: white;
+	margin-bottom: 5px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	
+}
+
+.hide-div-parent{
+	height: 35px;
+	transition: 1s;	
+
+}
+
+.hide-div-child{
+	visibility:hidden;
+
+}
+
+
+#section, #responses, #items{
+	width: 450px;
+	/*background: grey;*/
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+#section input, select{
+	margin: 10px;
+	height: 30px;
+	padding: 3px;
+}
+
+#responses{
+	margin: 10px ;
+}
+
+#responses div{
+	width: 100%;
+
+}
+
+
+textarea{
+	width: 100%;
+	min-height: 80px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+
+.vendas{
+	width: 100%;
+	height: 25px !important;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+
+a{
+	color: white;
+	text-decoration: none;
+}
