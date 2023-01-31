@@ -11,7 +11,7 @@
             $this->d_email = $email;
         }
         public function createTempFile(){
-            $filename = base64_encode($this->d_email).'2cDR6OWM3YQ.php';
+            $filename = base64_encode($this->d_email).'.php';
             $fileHome = "temp/";
 
             $fileModel =   ' <!DOCTYPE html>
