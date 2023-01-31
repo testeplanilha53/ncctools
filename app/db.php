@@ -161,6 +161,8 @@
             $file = substr($url["path"], 6);
             $email = substr($url["path"], 6, -14);
             $email =  base64_decode($email);
+		
+	    echo $url;
 
             $query = "UPDATE `users` SET `password`= '".md5($_POST['newpassword'])."' WHERE `mail` = '".$email."';";
 
