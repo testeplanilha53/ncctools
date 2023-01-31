@@ -112,7 +112,7 @@
 	    }
 	}
 
-	//12/01 Envia a senha para o e-mail cadastradoaction=resetMail
+	// Envia a senha para o e-mail cadastrado
     
 	if(isset($_GET['action']) && $_GET['action'] == "resetMail"){
         require_once('mail_recovery.php');
@@ -137,12 +137,12 @@
                 $url = $_SERVER["HTTP_ORIGIN"]."/temp/".$array[1] ;
 
                 echo $url;
-                /*
+                
                 if( $recovery-> sendFile($url, $email) ){
                     header('location: index.php?action=passwordSend');
                 }else{
                     header('location: index.php?action=errorSend');  
-                }*/
+                }
                 
             }
             
@@ -162,20 +162,20 @@
             $email = basename($url["path"], '.php');
             $email =  base64_decode($email);
 		
-	    var_dump($url);
-	    echo $email;
+	    //var_dump($url);
+	    //echo $email;
 
             $query = "UPDATE `users` SET `password`= '".md5($_POST['newpassword'])."' WHERE `mail` = '".$email."';";
 
-            echo $query;
+            //echo $query;
             //var_dump($file);
 
-            /*
+            
             $pdo = new Connect();
 	        $db = $pdo->connectOnDb();
-		    $data = $pdo->update($db, $query );  */
+		    $data = $pdo->update($db, $query );  
 
-            /*
+            
             if(file_exists($_SERVER["SERVER_ROOT"]."/temp/".$file)){
                 unlink($_SERVER["SERVER_ROOT"]."/temp/".$file);
                 $file = fopen($_SERVER["SERVER_ROOT"]."/all_logs/log-".date("d-m-Y").".txt", "a+");
@@ -189,7 +189,7 @@
             }else{
                 header('location: index.php?action=errorSend');
             }
-		*/
+		
          
     
         }   
