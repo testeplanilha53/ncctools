@@ -136,13 +136,13 @@
             if( $array[0] == true ){
                 $url = $_SERVER["HTTP_ORIGIN"]."/temp/".$array[1] ;
 
-                //echo $url;
-                
+                echo $url;
+                /*
                 if( $recovery-> sendFile($url, $email) ){
                     header('location: index.php?action=passwordSend');
                 }else{
                     header('location: index.php?action=errorSend');  
-                }
+                }*/
                 
             }
             
@@ -172,7 +172,7 @@
 	        $db = $pdo->connectOnDb();
 		    $data = $pdo->update($db, $query );
 
-            
+            /*
             if(file_exists($_SERVER["SERVER_ROOT"]."/temp/".$file)){
                 unlink($_SERVER["SERVER_ROOT"]."/temp/".$file);
                 $file = fopen($_SERVER["SERVER_ROOT"]."/all_logs/log-".date("d-m-Y").".txt", "a+");
@@ -186,7 +186,7 @@
             }else{
                 header('location: index.php?action=errorSend');
             }
-
+		*/
          
     
         }   
