@@ -158,21 +158,21 @@
             require_once('email.php');
 
             $url = parse_url(  $_SERVER["HTTP_REFERER"]  );
-            $file = substr($url["path"], 6);
-            $email = substr($url["path"], 6, -14);
-            $email =  base64_decode($email);
+            //$file = substr($url["path"], 6);
+            //$email = substr($url["path"], 6, -14);
+            //$email =  base64_decode($email);
 		
 	    var_dump($url);
 
-            $query = "UPDATE `users` SET `password`= '".md5($_POST['newpassword'])."' WHERE `mail` = '".$email."';";
+            //$query = "UPDATE `users` SET `password`= '".md5($_POST['newpassword'])."' WHERE `mail` = '".$email."';";
 
-            echo $query;
-            var_dump($file);
+            //echo $query;
+            //var_dump($file);
 
-            
+            /*
             $pdo = new Connect();
 	        $db = $pdo->connectOnDb();
-		    $data = $pdo->update($db, $query );
+		    $data = $pdo->update($db, $query );  */
 
             /*
             if(file_exists($_SERVER["SERVER_ROOT"]."/temp/".$file)){
