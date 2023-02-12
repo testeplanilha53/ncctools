@@ -151,13 +151,14 @@
 
 	
     <div id="cadastrar_resposta">
+	    <span id="titulo">  CADASTRAR MODELO DE RESPOSTA   </span> <br> <br>
 	    <form >
-	    	<select name="lista_de_titulos">
-	    		<option value="1">teste</option>
+	    	<select name="lista_de_titulos_usuario">
+	    		<option value="1">Respostas pessoais</option>
 		    </select>
 	    
-	    	<input type="text" name="titulo">
-	    	<input type="text" name="resposta">
+	    	<input type="text" name="titulo_usuario" placeholder="Novo título(opcional)">
+	    	<input type="text" name="resposta_usuario" placeholder="Digite aqui sua resposta">
 	    </form>
     <div>
 	
