@@ -194,7 +194,24 @@
     
         }   
 	}
-    
-	
+
+
+	//setModelAnswer
+	if(isset($_GET['action']) && $_GET['action'] == "setModelAnswer"){
+            session_start();
+	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+		
+			var_dump($_POST);
+	            //$settings =  json_encode($_POST, JSON_UNESCAPED_UNICODE);
+	            //$pdo = new Connect();
+                    //$query = "UPDATE `users` SET `config`='".$settings."' WHERE id=".$_SESSION['idUser'].";" ;
+	            //$db = $pdo->connectOnDb();
+		    //$pdo->update($db, $query);
+	        }
+	    }
+	    
+	    header('location:config.php');
+	}
 
 ?>
