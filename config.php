@@ -150,9 +150,15 @@
     </div>
 
 	
+
+
+
+</form><!--Acrescentei essa linha-->
+
+
     <div id="cadastrar_resposta">
 	    <span id="titulo">  CADASTRAR MODELO DE RESPOSTA   </span> <br> <br>
-	    <form >
+	    <form method="post" action="./app.php?action=setModelAnswer">
 	    	<select name="lista_de_titulos_usuario">
 	    		<option value="1">Respostas pessoais</option>
 		    </select>
@@ -161,12 +167,8 @@
 	    	<input type="text" name="resposta_usuario" placeholder="Digite aqui sua resposta">
 	    </form>
     <div>
+		
 	
-
-
-</form><!--Acrescentei essa linha-->
-
-
     
     <div id="notificacao"> </div>
 
