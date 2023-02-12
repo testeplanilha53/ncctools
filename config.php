@@ -165,6 +165,7 @@
 	    
 	    	<input type="text" name="titulo_usuario" placeholder="Novo título(opcional)">
 	    	<input type="text" name="resposta_usuario" placeholder="Digite aqui sua resposta">
+		<input type="submit" value="Cadastrar">
 	    </form>
     <div>
 		
