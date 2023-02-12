@@ -149,6 +149,18 @@
 
     </div>
 
+	
+    <div id="cadastrar_resposta">
+	    <form >
+	    	<select name="lista_de_titulos">
+	    		<option value="1">teste</option>
+		    </select>
+	    
+	    	<input type="text" name="titulo">
+	    	<input type="text" name="resposta">
+	    </form>
+    <div>
+	
 
 
 </form><!--Acrescentei essa linha-->
