@@ -211,7 +211,7 @@
 	        }
 	    }
 	    
-	    header('location:config.php');
+	    //header('location:config.php');
 	}
 
 ?>
