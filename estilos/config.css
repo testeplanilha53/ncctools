@@ -1,8 +1,9 @@
 #Salvar{
     position: relative;
-    right: 0 !important;
+    right: 5px !important;
     bottom: 250px;
     margin: 0 !important;
+    display: inline;
 }
 
 #sair{
