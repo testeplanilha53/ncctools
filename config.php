@@ -163,7 +163,7 @@
 	    		<option value="respostas pessoais" selected >Respostas pessoais</option>
 		    </select>
 	    
-	    	<input type="text" name="titulo_usuario" placeholder="Novo título(opcional)" max="30">
+	    	<input type="text" name="titulo_usuario" placeholder="Novo título(opcional)" maxlength="30">
 	    	<input type="text" name="resposta_usuario" placeholder="Digite aqui sua resposta">
 		<input type="submit" value="Cadastrar">
 	    </form>
