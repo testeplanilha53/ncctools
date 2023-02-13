@@ -159,11 +159,11 @@
     <div id="cadastrar_resposta">
 	    <span id="titulo">  CADASTRAR MODELO DE RESPOSTA   </span> <br> <br>
 	    <form method="post" action="./app.php?action=setModelAnswer">
-	    	<select name="lista_de_titulos_usuario">
-	    		<option value="1">Respostas pessoais</option>
+	    	<select name="lista_de_titulos_usuario" required>
+	    		<option value="respostas pessoais" selected >Respostas pessoais</option>
 		    </select>
 	    
-	    	<input type="text" name="titulo_usuario" placeholder="Novo título(opcional)">
+	    	<input type="text" name="titulo_usuario" placeholder="Novo título(opcional)" max="30">
 	    	<input type="text" name="resposta_usuario" placeholder="Digite aqui sua resposta">
 		<input type="submit" value="Cadastrar">
 	    </form>
