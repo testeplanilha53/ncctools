@@ -204,7 +204,7 @@
 			$title = trim($_POST['titulo_usuario']) == "" ?  "respostas pessoais" : trim($_POST['titulo_usuario']) ; 
 			$id_user = $_SESSION['idUser'];
 			$id_answer = trim($_POST['resposta_usuario']);
-			$query = `INSERT INTO `users_answers`(`id`, `user_id`, `title`, `anwer`) VALUES (DEFAULT, $id_user ,'$title' , '$id_answer' )`;
+			$query = "INSERT INTO `users_answers` VALUES (DEFAULT, $id_user ,'$title' , '$id_answer' );" ;
 			var_dump($query);
 		    //`INSERT INTO `users_answers`(`id`, `user_id`, `title`, `anwer`) VALUES (DEFAULT, $id_user ,'$title' ,[value-4])`
 	            //$settings =  json_encode($_POST, JSON_UNESCAPED_UNICODE);
