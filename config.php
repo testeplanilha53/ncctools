@@ -159,11 +159,13 @@
     <div id="cadastrar_resposta">
 	    <span id="titulo">  CADASTRAR MODELO DE RESPOSTA   </span> <br> <br>
 	    <form method="post" action="./app.php?action=setModelAnswer">
+		<label>Categoria</label>
 	    	<select name="lista_de_titulos_usuario" required>
 	    		<option value="respostas pessoais" selected >Respostas pessoais</option>
 		    </select>
-	    
-	    	<input type="text" name="titulo_usuario" placeholder="Novo título(opcional)" maxlength="100">
+	    	<input type="text" name="nova_categoria" placeholder="Nova categoria(opcional)" maxlength="100" maxlength="100">
+		<label>Título da resposta</label>
+	    	<input type="text" name="titulo_usuario" placeholder="Obrigatório!" maxlength="100" required>
 	    	<input type="text" name="resposta_usuario" placeholder="Digite aqui sua resposta">
 		<input type="submit" value="Cadastrar">
 	    </form>
