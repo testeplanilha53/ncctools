@@ -167,7 +167,7 @@
 		<label>Título da resposta: </label> 
 	    	<input type="text" name="titulo_usuario" placeholder="Obrigatório!" maxlength="100" required><br>
 		<label>Script personalizado</label><br>
-	    	<input type="text" name="resposta_usuario" placeholder="Digite aqui sua resposta"><br>
+	    	<textarea cols="30" rows="5" name="resposta_usuario" placeholder="Digite aqui sua resposta"></textarea><br>
 		<input type="submit" value="Cadastrar">
 	    </form>
     <div>
