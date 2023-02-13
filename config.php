@@ -166,6 +166,8 @@
 	    	<input type="text" name="nova_categoria" placeholder="Nova categoria(opcional)" maxlength="100" maxlength="100"> <br>
 		<label>Título da resposta: </label> 
 	    	<input type="text" name="titulo_usuario" placeholder="Obrigatório!" maxlength="100" required><br>
+		<label>SLA(PRAZO): </label> 
+	    	<input type="text" name="sla_usuario" placeholder="Opcional!"><br>
 		<label>Script personalizado</label><br>
 	    	<textarea cols="60" rows="5" name="resposta_usuario" placeholder="Digite aqui sua resposta"></textarea><br>
 		<input type="submit" value="Cadastrar">
