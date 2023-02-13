@@ -1,8 +1,6 @@
 #Salvar{
-    position: absolute;
-    left: 70%;
-    top: 78%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    right: 10px;
 }
 
 #sair{
