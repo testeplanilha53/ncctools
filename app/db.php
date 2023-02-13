@@ -201,8 +201,12 @@
             session_start();
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
-		
-			var_dump($_POST);
+			$title = trim($_POST['titulo_usuario']) == "" ?  "respostas pessoais" : trim($_POST['titulo_usuario']) ; 
+			$id_user = $_SESSION['idUser'];
+			$id_answer = trim($_POST['resposta_usuario']);
+			$query = `INSERT INTO `users_answers`(`id`, `user_id`, `title`, `anwer`) VALUES (DEFAULT, $id_user ,'$title' , '$id_answer' )`;
+			var_dump($query);
+		    //`INSERT INTO `users_answers`(`id`, `user_id`, `title`, `anwer`) VALUES (DEFAULT, $id_user ,'$title' ,[value-4])`
 	            //$settings =  json_encode($_POST, JSON_UNESCAPED_UNICODE);
 	            //$pdo = new Connect();
                     //$query = "UPDATE `users` SET `config`='".$settings."' WHERE id=".$_SESSION['idUser'].";" ;
