@@ -33,6 +33,85 @@
         Criei essas funções javascript
     -->
     <script>
+	    
+        function getAnswers(){
+            let xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //notification.innerHTML = this.responseText;
+                        let users = this.responseText;
+
+                        createTableUsers( JSON.parse(answers)  );
+                        
+                    }
+                  };
+                  xhttp.open("POST", "./app.php?action=getAnswers", true);
+                  xhttp.send();
+
+        }
+    
+       function createTableAnswers(users){
+           let table = document.getElementById(answers);
+           answers.forEach( (el)=>{
+               let tr =  document.createElement("tr")
+               //tr.id = el["id"]
+                    tr.innerHTML =  "<td>" + el["name"]+"</td>" +
+                                    "<td>" + el["user"]+ "</td>" +
+                                    "<td>" + el["role"]+ "</td>" +
+                                    "<td>" + el["mail"]+ "</td>"+
+                                    "<td> <div id="+ el["id"] +" class='btn-default "+el["status"]+"' onclick='inactivateUser(this)' ><div class='btnCheck'></div></div>  </td>"
+
+    
+                table.appendChild(tr);
+           } );
+       } 
+
+       function inactivateUser(el){
+            /*
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', "./app.php?action=inactivateUser", true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                let response = this.responseText;
+                        console.log(response)
+            };
+            xhr.send('user=person&pwd=password&organization=place&requiredkey=key');*/
+            let tClass = el.className.split(' ')[1]
+            let http = new XMLHttpRequest();
+            let url = "./app.php?action=inactivateUser";
+            let params = "";
+            http.open('POST', url, true);
+            if(tClass=="active"){
+                params = 'id='+el.id+'&class=inactive';                 
+            }else if("inactive"){
+                params = 'id='+el.id+'&class=active';                   
+            }
+
+
+            //Send the proper header information along with the request
+            http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            http.onreadystatechange = function() {  //Call a function when the state changes.
+                if(http.readyState == 4 && http.status == 200) {
+                    let response = this.responseText;
+                    console.log(response)
+                    if(response=="1"){
+                        console.log(response)
+                        document.getElementById(el.id).classList.remove(tClass)
+                        if(tClass=="active"){
+                            document.getElementById(el.id).classList.add("inactive")
+                        }else if("inactive"){
+                            document.getElementById(el.id).classList.add("active")
+                        }
+                    }
+                }
+            }
+            http.send(params);
+            
+       }
+
+    
+	    
 
     
     	
@@ -173,7 +252,11 @@
 		<input type="submit" value="Cadastrar">
 	    </form>
     <div>
-		
+	
+    <table id="answers">
+	    
+	    
+    </table>
 	
     
     <div id="notificacao"> </div>
