@@ -240,7 +240,7 @@
 	    <form method="post" action="./app.php?action=setModelAnswer">
 		<label>Categoria: </label>
 	    	<select name="lista_de_titulos_usuario" required>
-	    		<option value="respostas pessoais" selected >Respostas pessoais</option>
+	    		<option value="Respostas pessoais" selected >Respostas pessoais</option>
 		    </select>
 	    	<input type="text" name="nova_categoria" placeholder="Nova categoria(opcional)" maxlength="100" maxlength="100"> <br>
 		<label>Título da resposta: </label> 
