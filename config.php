@@ -39,9 +39,9 @@
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
-                        let users = this.responseText;
-
-                        createTableUsers( JSON.parse(answers)  );
+                        let answers = this.responseText;
+			console.log(answers);
+                        //createTableUsers( JSON.parse(answers)  );
                         
                     }
                   };
