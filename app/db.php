@@ -201,7 +201,7 @@
             session_start();
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
-			$category = trim($_POST['nova_categoria']) == "" ?  "respostas pessoais" : trim($_POST['nova_categoria']) ;
+			$category = trim($_POST['nova_categoria']) == "" ?  "Respostas pessoais" : trim($_POST['nova_categoria']) ;
 			$title = trim($_POST['titulo_usuario']) ; 
 			$sla  = trim($_POST['sla_usuario']) == "" ?  "3 dias úteis" : trim( $_POST['sla_usuario'] ) ;
 			$id_user = $_SESSION['idUser'];
