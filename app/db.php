@@ -201,20 +201,41 @@
             session_start();
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
-			$title = trim($_POST['titulo_usuario']) == "" ?  "respostas pessoais" : trim($_POST['titulo_usuario']) ; 
+			$category = trim($_POST['nova_categoria']) == "" ?  "respostas pessoais" : trim($_POST['nova_categoria']) ;
+			$title = trim($_POST['titulo_usuario']) ; 
+			$sla  = trim($_POST['sla_usuario']) == "" ?  "3 dias úteis" : trim( $_POST['sla_usuario'] ) ;
 			$id_user = $_SESSION['idUser'];
 			$id_answer = trim($_POST['resposta_usuario']);
-			$values= "DEFAULT, $id_user ,'$title' , '$id_answer'";
+			
+			$values= "DEFAULT, $id_user ,'$category' ,'$title' , '$sla' , '$id_answer'";
+			
 			var_dump($values);
-		    //`INSERT INTO `users_answers`(`id`, `user_id`, `title`, `anwer`) VALUES (DEFAULT, $id_user ,'$title' ,[value-4])`
-	            //$settings =  json_encode($_POST, JSON_UNESCAPED_UNICODE);
+		    //INSERT INTO `users_answers`(`id`, `user_id`, `category`, `title`, `sla`, `answer`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $pdo->create($db,"users_answers", $values);
 	        }
 	    }
 	    
-	    //header('location:config.php');
+	    header('location:config.php');
 	}
+	
+	if(isset($_GET['action']) && $_GET['action'] == "getAnswers"){
+            session_start();
+	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+		    $id_user = $_SESSION['idUser'];
+	            $query = "SELECT `id`, `category`,  `title`, `sla`, `answer` FROM `users_answers` WHERE `user_id` = $id_user"; 
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    $answer = $pdo->read($db, $query );
+                    $array = json_encode($answer);
+                   echo ( $array );	
+			
+	        }
+	    }
+	    
+	}
+
 
 ?>
