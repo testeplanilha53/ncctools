@@ -229,7 +229,8 @@
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $answer = $pdo->read($db, $query );
-                    $array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+			//$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+                    $array = json_encode($answer );
                    echo ( $array );	
 			
 	        }
