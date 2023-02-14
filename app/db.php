@@ -230,7 +230,7 @@
 	            $db = $pdo->connectOnDb();
 		    $answer = $pdo->read($db, $query );
 		    header('Content-Type: application/json');	
-		    $array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+		    $array = json_encode($answer, JSON_FORCE_OBJECT );
                    echo ( $array );	
 			
 	        }
