@@ -50,6 +50,8 @@
 
         }
     
+	getAnswers();	    
+	    
        function createTableAnswers(users){
            let table = document.getElementById(answers);
            answers.forEach( (el)=>{
