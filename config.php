@@ -54,13 +54,14 @@
 	    
        function createTableAnswers(answers){
            let table = document.getElementById("answers");
+	   console.log(answers)
            answers.forEach( (el)=>{
                let tr =  document.createElement("tr")
                //tr.id = el["id"]
-                    tr.innerHTML =  "<td>" + el["name"]+"</td>" +
-                                    "<td>" + el["user"]+ "</td>" +
-                                    "<td>" + el["role"]+ "</td>" +
-                                    "<td>" + el["mail"]+ "</td>"+
+                    tr.innerHTML =  "<td>" + el["category"]+"</td>" +
+                                    "<td>" + el["title"]+ "</td>" +
+                                    "<td>" + el["sla"]+ "</td>" +
+                                    "<td>" + el["answer"]+ "</td>"+
                                     "<td> <div id="+ el["id"] +" class='btn-default "+el["status"]+"' onclick='inactivateUser(this)' ><div class='btnCheck'></div></div>  </td>"
 
     
