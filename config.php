@@ -41,7 +41,7 @@
                         //notification.innerHTML = this.responseText;
                         let answers = this.responseText;
 			//console.log(answers);
-                        createTableUsers( JSON.parse(answers)  );
+                        createTableAnswers( JSON.parse(answers)  );
                         
                     }
                   };
