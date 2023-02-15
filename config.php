@@ -52,8 +52,8 @@
     
 	getAnswers();	    
 	    
-       function createTableAnswers(users){
-           let table = document.getElementById(answers);
+       function createTableAnswers(answers){
+           let table = document.getElementById("answers");
            answers.forEach( (el)=>{
                let tr =  document.createElement("tr")
                //tr.id = el["id"]
@@ -256,6 +256,12 @@
     <div>
 	
     <table id="answers">
+	    <tr>
+		    <td>Categoria</td>
+		    <td>Título</td>
+		    <td>SLA</td>
+		    <td>Resposta</td>
+	    </tr>
 	    
 	    
     </table>
