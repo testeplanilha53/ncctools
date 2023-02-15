@@ -56,17 +56,18 @@
            let divConteiner = document.getElementById("conteiner-respostas");
 	   console.log(answers)
            answers.forEach( (el)=>{
-               let tr =  document.createElement("div")
+               let div =  document.createElement("div")
 	       let textArea = document.createElement("textarea")
-               //tr.id = el["id"]
+	       textarea.innerHTML = el["answer"];
+               /*tr.id = el["id"]
                     tr.innerHTML =  "<td>" + el["category"]+"</td>" +
                                     "<td>" + el["title"]+ "</td>" +
                                     "<td>" + el["sla"]+ "</td>" +
                                     "<td>" + el["answer"]+ "</td>"+
                                     "<td> <div id="+ el["id"] +" onclick='' ><div class='btnCheck'></div></div>  </td>"
-
-    
-                divConteiner.appendChild(tr);
+		*/
+    		div.appendChild(textarea);
+                divConteiner.appendChild(div);
            } );
        } 
 
