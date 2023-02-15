@@ -53,10 +53,11 @@
 	getAnswers();	    
 	    
        function createTableAnswers(answers){
-           let table = document.getElementById("answers");
+           let divConteiner = document.getElementById("conteiner-respostas");
 	   console.log(answers)
            answers.forEach( (el)=>{
-               let tr =  document.createElement("tr")
+               let tr =  document.createElement("div")
+	       let textArea = document.createElement("textarea")
                //tr.id = el["id"]
                     tr.innerHTML =  "<td>" + el["category"]+"</td>" +
                                     "<td>" + el["title"]+ "</td>" +
@@ -65,7 +66,7 @@
                                     "<td> <div id="+ el["id"] +" onclick='' ><div class='btnCheck'></div></div>  </td>"
 
     
-                table.appendChild(tr);
+                divConteiner.appendChild(tr);
            } );
        } 
 
@@ -256,16 +257,10 @@
 	    </form>
     <div>
 	
-    <table id="answers">
-	    <tr>
-		    <td>Categoria</td>
-		    <td>Título</td>
-		    <td>SLA</td>
-		    <td>Resposta</td>
-	    </tr>
-	    
-	    
-    </table>
+   <div id="conteiner-respostas">
+	   
+   </div>
+	   
 	
     
     <div id="notificacao"> </div>
