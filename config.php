@@ -58,7 +58,7 @@
            answers.forEach( (el)=>{
                let div =  document.createElement("div")
 	       let textArea = document.createElement("textarea")
-	       textarea.innerHTML = el["answer"];
+	       textArea.innerHTML = el["answer"];
                /*tr.id = el["id"]
                     tr.innerHTML =  "<td>" + el["category"]+"</td>" +
                                     "<td>" + el["title"]+ "</td>" +
@@ -66,7 +66,7 @@
                                     "<td>" + el["answer"]+ "</td>"+
                                     "<td> <div id="+ el["id"] +" onclick='' ><div class='btnCheck'></div></div>  </td>"
 		*/
-    		div.appendChild(textarea);
+    		div.appendChild(textArea);
                 divConteiner.appendChild(div);
            } );
        } 
