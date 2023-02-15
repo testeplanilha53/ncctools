@@ -40,8 +40,8 @@
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
                         let answers = this.responseText;
-			console.log(answers);
-                        //createTableUsers( JSON.parse(answers)  );
+			//console.log(answers);
+                        createTableUsers( JSON.parse(answers)  );
                         
                     }
                   };
@@ -62,7 +62,7 @@
                                     "<td>" + el["title"]+ "</td>" +
                                     "<td>" + el["sla"]+ "</td>" +
                                     "<td>" + el["answer"]+ "</td>"+
-                                    "<td> <div id="+ el["id"] +" class='btn-default "+el["status"]+"' onclick='inactivateUser(this)' ><div class='btnCheck'></div></div>  </td>"
+                                    "<td> <div id="+ el["id"] +" onclick='' ><div class='btnCheck'></div></div>  </td>"
 
     
                 table.appendChild(tr);
