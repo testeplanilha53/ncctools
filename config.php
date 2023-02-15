@@ -58,7 +58,13 @@
            answers.forEach( (el)=>{
                let div =  document.createElement("div")
 	       let textArea = document.createElement("textarea")
+	       let labelCategory = document.createElement("label")
+	       let labelTitle = document.createElement("label")
+	       let labelSla = document.createElement("label")
 	       textArea.innerHTML = el["answer"];
+	       labelCategory.innerHTML = el["category"]
+	       labelTitle.innerHTML = el["title"]
+	       labelSla.innerHTML = el["sla"]
                /*tr.id = el["id"]
                     tr.innerHTML =  "<td>" + el["category"]+"</td>" +
                                     "<td>" + el["title"]+ "</td>" +
@@ -66,6 +72,9 @@
                                     "<td>" + el["answer"]+ "</td>"+
                                     "<td> <div id="+ el["id"] +" onclick='' ><div class='btnCheck'></div></div>  </td>"
 		*/
+		 div.appendChild(labelCategory);
+		 div.appendChild(labelTitle);
+		 div.appendChild(labelSla);
     		div.appendChild(textArea);
                 divConteiner.appendChild(div);
            } );
