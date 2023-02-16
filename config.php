@@ -63,6 +63,7 @@
 	       let labelCategory = document.createElement("label")
 	       let labelTitle = document.createElement("label")
 	       let labelSla = document.createElement("label")
+	       let delAnswer = document.createElement("btn")
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
 	       labelTitle.innerHTML = "Título: " + el["title"]
@@ -72,6 +73,7 @@
 		 div.appendChild(labelTitle);
 		 div.appendChild(labelSla);
     		div.appendChild(textArea);
+		div.appendChild(delAnswer);
                 divConteiner.appendChild(div);
            } );
        } 
