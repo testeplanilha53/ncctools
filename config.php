@@ -299,8 +299,7 @@
 		    }
 
 		    .txt-answers{
-		    	resize: horizontal;
-			resize: vertical;
+		    	width: 100%;
 		    }
 	
 	    </style>
