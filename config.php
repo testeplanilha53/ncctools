@@ -281,6 +281,14 @@
     <script src="funcoes/config.js"></script> 
 
 </body>
+	    
+	    
+	    <style>
+		    .conteiner-respostas{
+		    	width: 100%;
+			 backgroud: gray;
+		    }
+	    </style>
 
 </html>
 
