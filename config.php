@@ -59,6 +59,7 @@
                let div =  document.createElement("div")
 	       div.classList.add("div-answers");
 	       let textArea = document.createElement("textarea")
+	       textArea.classList.add("txt-answers");
 	       let labelCategory = document.createElement("label")
 	       let labelTitle = document.createElement("label")
 	       let labelSla = document.createElement("label")
@@ -296,6 +297,12 @@
 			    padding: 10px;
 			    margin: 0 !important;
 		    }
+
+		    .txt-answers{
+		    	resize: horizontal;
+			resize: vertical;
+		    }
+	
 	    </style>
 
 </html>
