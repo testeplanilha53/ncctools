@@ -62,16 +62,10 @@
 	       let labelTitle = document.createElement("label")
 	       let labelSla = document.createElement("label")
 	       textArea.innerHTML = el["answer"];
-	       labelCategory.innerHTML = el["category"]
-	       labelTitle.innerHTML = el["title"]
-	       labelSla.innerHTML = el["sla"]
-               /*tr.id = el["id"]
-                    tr.innerHTML =  "<td>" + el["category"]+"</td>" +
-                                    "<td>" + el["title"]+ "</td>" +
-                                    "<td>" + el["sla"]+ "</td>" +
-                                    "<td>" + el["answer"]+ "</td>"+
-                                    "<td> <div id="+ el["id"] +" onclick='' ><div class='btnCheck'></div></div>  </td>"
-		*/
+	       labelCategory.innerHTML = "Categoria: " + el["category"]
+	       labelTitle.innerHTML = "Título: " + el["title"]
+	       labelSla.innerHTML = "SLA" + el["sla"]
+
 		 div.appendChild(labelCategory);
 		 div.appendChild(labelTitle);
 		 div.appendChild(labelSla);
