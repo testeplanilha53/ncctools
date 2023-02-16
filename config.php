@@ -64,7 +64,7 @@
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
 	       labelTitle.innerHTML = "Título: " + el["title"]
-	       labelSla.innerHTML = "SLA" + el["sla"]
+	       labelSla.innerHTML = "SLA: " + el["sla"]
 
 		 div.appendChild(labelCategory);
 		 div.appendChild(labelTitle);
