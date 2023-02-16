@@ -57,6 +57,7 @@
 	   console.log(answers)
            answers.forEach( (el)=>{
                let div =  document.createElement("div")
+	       div.id = "div-answers";
 	       let textArea = document.createElement("textarea")
 	       let labelCategory = document.createElement("label")
 	       let labelTitle = document.createElement("label")
@@ -287,7 +288,10 @@
 		    .conteiner-respostas{
 		    	width: 100%;
 			 backgroud: gray;
-			   margin: 0 auto;
+			   
+		    }
+		    .div-answers{
+			    margin: 0 auto;
 		    }
 	    </style>
 
