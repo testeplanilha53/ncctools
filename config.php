@@ -288,10 +288,11 @@
 		    .conteiner-respostas{
 		    	width: 100%;
 			 backgroud: gray;
+			    margin: 0 auto !important;
 			   
 		    }
 		    .div-answers{
-			    margin: 0 auto;
+			    margin: 0 auto !important;
 		    }
 	    </style>
 
