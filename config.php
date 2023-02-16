@@ -286,7 +286,7 @@
 	    
 	    <style>
 		    
-		    #conteiner-respostas, cadastrar_resposta{
+		    #conteiner-respostas, #cadastrar_resposta{
 		    	border: solid 1px gray;
 			    padding: 10px;
 			   
