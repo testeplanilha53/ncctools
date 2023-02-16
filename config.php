@@ -57,7 +57,7 @@
 	   console.log(answers)
            answers.forEach( (el)=>{
                let div =  document.createElement("div")
-	       div.id = "div-answers";
+	       div.classList.add("div-answers");
 	       let textArea = document.createElement("textarea")
 	       let labelCategory = document.createElement("label")
 	       let labelTitle = document.createElement("label")
