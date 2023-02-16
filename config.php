@@ -63,7 +63,7 @@
 	       let labelCategory = document.createElement("label")
 	       let labelTitle = document.createElement("label")
 	       let labelSla = document.createElement("label")
-	       let delAnswer = document.createElement("btn")
+	       let delAnswer = document.createElement("button")
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
 	       labelTitle.innerHTML = "Título: " + el["title"]
