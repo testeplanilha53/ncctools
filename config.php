@@ -287,6 +287,7 @@
 		    .conteiner-respostas{
 		    	width: 100%;
 			 backgroud: gray;
+			   margin: 0 auto;
 		    }
 	    </style>
 
