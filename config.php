@@ -292,7 +292,7 @@
 			   
 		    }
 		    .div-answers{
-			    margin: 0 auto !important;
+			    border: solid 1px gray;
 			    padding: 10px;
 		    }
 	    </style>
