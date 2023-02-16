@@ -294,6 +294,7 @@
 		    .div-answers{
 			    border: solid 1px gray;
 			    padding: 10px;
+			    margin: 0 !important;
 		    }
 	    </style>
 
