@@ -60,9 +60,9 @@
 	       div.classList.add("div-answers");
 	       let textArea = document.createElement("textarea")
 	       textArea.classList.add("txt-answers");
-	       let labelCategory = document.createElement("label")
-	       let labelTitle = document.createElement("label")
-	       let labelSla = document.createElement("label")
+	       let labelCategory = document.createElement("p")
+	       let labelTitle = document.createElement("p")
+	       let labelSla = document.createElement("p")
 	       let delAnswer = document.createElement("button")
 	       delAnswer.innerHTML = "Remover"
 	       textArea.innerHTML = el["answer"];
