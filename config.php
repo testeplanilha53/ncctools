@@ -259,7 +259,7 @@
 	    	<textarea cols="60" rows="5" name="resposta_usuario" placeholder="Digite aqui sua resposta"></textarea><br>
 		<input type="submit" value="Cadastrar">
 	    </form>
-    <div>
+    </div>
 	
    <div id="conteiner-respostas">
 	   
