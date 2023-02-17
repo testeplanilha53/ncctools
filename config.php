@@ -58,7 +58,7 @@
            answers.forEach( (el)=>{
                let div =  document.createElement("div")
 	       div.classList.add("div-answers");
-		   div.innerHTML = '<buttom onclick="deletAnswer(el["id"])">Remover</buttom>';
+		   div.innerHTML = "<buttom onclick='deletAnswer(el["id"])'>Remover</buttom>";
 	       let textArea = document.createElement("textarea")
 	       textArea.classList.add("txt-answers");
 	       let labelCategory = document.createElement("p")
