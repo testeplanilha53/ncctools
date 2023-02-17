@@ -67,7 +67,7 @@
 	       let labelSla = document.createElement("p")
 	       let divRemove = document.createElement("div")
 	       divRemove.classList.add("div-btn"); 
-	       divRemove.innerHTML = "<button onclick="+ el["id"] +">Remover</button>"
+	       divRemove.innerHTML = "<button onclick=deleteAnswer("+ el["id"] +")>Remover</button>"
 		   
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
@@ -85,7 +85,7 @@
            } );
        } 
 
-       function deletAnswer(id){
+       function deleteAnswer(id){
 	       console.log("chamou");
 	     /*  
             let http = new XMLHttpRequest();
