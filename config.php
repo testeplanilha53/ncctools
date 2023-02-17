@@ -64,7 +64,7 @@
 	       let labelTitle = document.createElement("p")
 	       let labelSla = document.createElement("p")
 	       let btnRemove = document.createElement("button")
-	       btnRemove.value = "Remover"
+	       btnRemove.innerHTML = "Remover"
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
 	       labelTitle.innerHTML = "Título: " + el["title"]
