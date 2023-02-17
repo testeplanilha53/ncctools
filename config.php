@@ -58,12 +58,13 @@
            answers.forEach( (el)=>{
                let div =  document.createElement("div")
 	       div.classList.add("div-answers");
+		   div.innerHTML = '<buttom onclick="deletAnswer(el["id"])">Remover</buttom>';
 	       let textArea = document.createElement("textarea")
 	       textArea.classList.add("txt-answers");
 	       let labelCategory = document.createElement("p")
 	       let labelTitle = document.createElement("p")
 	       let labelSla = document.createElement("p")
-	       let delAnswer = document.createElement("button")
+	       
 	       delAnswer.innerHTML = "Remover"
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
@@ -74,32 +75,19 @@
 		 div.appendChild(labelTitle);
 		 div.appendChild(labelSla);
     		div.appendChild(textArea);
-		div.appendChild(delAnswer);
+		div 
+	
                 divConteiner.appendChild(div);
            } );
        } 
 
-       function inactivateUser(el){
-            /*
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', "./app.php?action=inactivateUser", true);
-            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            xhr.onload = function () {
-                let response = this.responseText;
-                        console.log(response)
-            };
-            xhr.send('user=person&pwd=password&organization=place&requiredkey=key');*/
-            let tClass = el.className.split(' ')[1]
+       function deletAnswer(id){
+	       console.log("chamou");
+	     /*  
             let http = new XMLHttpRequest();
-            let url = "./app.php?action=inactivateUser";
-            let params = "";
+            let url = "./app.php?action=deleteAnswer";
+            let params = "id="+id;
             http.open('POST', url, true);
-            if(tClass=="active"){
-                params = 'id='+el.id+'&class=inactive';                 
-            }else if("inactive"){
-                params = 'id='+el.id+'&class=active';                   
-            }
-
 
             //Send the proper header information along with the request
             http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -107,20 +95,11 @@
             http.onreadystatechange = function() {  //Call a function when the state changes.
                 if(http.readyState == 4 && http.status == 200) {
                     let response = this.responseText;
-                    console.log(response)
-                    if(response=="1"){
-                        console.log(response)
-                        document.getElementById(el.id).classList.remove(tClass)
-                        if(tClass=="active"){
-                            document.getElementById(el.id).classList.add("inactive")
-                        }else if("inactive"){
-                            document.getElementById(el.id).classList.add("active")
-                        }
-                    }
+                    //console.log(response)
                 }
             }
             http.send(params);
-            
+    		*/
        }
 
     
