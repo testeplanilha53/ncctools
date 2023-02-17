@@ -58,12 +58,13 @@
            answers.forEach( (el)=>{
                let div =  document.createElement("div")
 	       div.classList.add("div-answers");
-		   div.innerHTML = "<buttom onclick='deletAnswer(el["id"])'>Remover</buttom>";
 	       let textArea = document.createElement("textarea")
 	       textArea.classList.add("txt-answers");
 	       let labelCategory = document.createElement("p")
 	       let labelTitle = document.createElement("p")
 	       let labelSla = document.createElement("p")
+	       let btnRemove = document.createElement("button")
+	       btnRemove.value = "Remover"
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
 	       labelTitle.innerHTML = "Título: " + el["title"]
@@ -73,7 +74,7 @@
 		 div.appendChild(labelTitle);
 		 div.appendChild(labelSla);
     		div.appendChild(textArea);
-		div 
+		div.appendChild(btnRemove);
 	
                 divConteiner.appendChild(div);
            } );
