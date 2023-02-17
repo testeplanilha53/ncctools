@@ -66,7 +66,7 @@
 	       let labelTitle = document.createElement("p")
 	       let labelSla = document.createElement("p")
 	       let divRemove = document.createElement("div")
-	       divRemove.innerHTML = "<button onclick='el["id"];'>Remover</button>"
+	       divRemove.innerHTML = "<button onclick="+ el["id"] +">Remover</button>"
 		   
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
