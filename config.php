@@ -66,6 +66,7 @@
 	       let labelTitle = document.createElement("p")
 	       let labelSla = document.createElement("p")
 	       let divRemove = document.createElement("div")
+	       divRemove.add("div-btn"); 
 	       divRemove.innerHTML = "<button onclick="+ el["id"] +">Remover</button>"
 		   
 	       textArea.innerHTML = el["answer"];
@@ -285,6 +286,11 @@
 
 		    .txt-answers{
 		    	width: 100%;
+		    }
+		    
+		    .div-btn{
+		    	margin: 0 !important;
+			padding: 0 !important;
 		    }
 	
 	    </style>
