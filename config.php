@@ -63,18 +63,20 @@
 	       let labelCategory = document.createElement("p")
 	       let labelTitle = document.createElement("p")
 	       let labelSla = document.createElement("p")
-	       let btnRemove = document.createElement("button")
-	       btnRemove.innerHTML = "Remover"
+	       let divRemove = document.createElement("div")
+	       divRemove.innerHTML = "<button onclick='el["id"];'>Remover</button>"
+	       divRemove.appendChild(btnRemove);
 	       textArea.innerHTML = el["answer"];
 	       labelCategory.innerHTML = "Categoria: " + el["category"]
 	       labelTitle.innerHTML = "Título: " + el["title"]
 	       labelSla.innerHTML = "SLA: " + el["sla"]
-
-		 div.appendChild(labelCategory);
-		 div.appendChild(labelTitle);
-		 div.appendChild(labelSla);
+	       div.appendChild(labelCategory);
+	       div.appendChild(labelTitle);
+	       div.appendChild(labelSla);
     		div.appendChild(textArea);
-		div.appendChild(btnRemove);
+		div.appendChild(textArea);
+		   
+		div.appendChild(divRemove);
 	
                 divConteiner.appendChild(div);
            } );
