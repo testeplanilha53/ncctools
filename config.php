@@ -86,7 +86,7 @@
        } 
 
        function deleteAnswer(id){
-	       console.log("chamou");
+	       console.log("ID= " + id );
 	     /*  
             let http = new XMLHttpRequest();
             let url = "./app.php?action=deleteAnswer";
