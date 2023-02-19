@@ -87,7 +87,7 @@
 
        function deleteAnswer(id){
 	       console.log("ID= " + id );
-	     /*  
+	      
             let http = new XMLHttpRequest();
             let url = "./app.php?action=deleteAnswer";
             let params = "id="+id;
@@ -99,11 +99,11 @@
             http.onreadystatechange = function() {  //Call a function when the state changes.
                 if(http.readyState == 4 && http.status == 200) {
                     let response = this.responseText;
-                    //console.log(response)
+                    console.log(response)
                 }
             }
             http.send(params);
-    		*/
+    		
        }
 
     
