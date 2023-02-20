@@ -133,8 +133,7 @@
         			
         			
         			if($stmt->rowCount()  > 0 ){
-    			  		$settings = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    					return $settings;
+    					return $stmt->rowCount();
     				}else{
     	  			 	return false;
     	  			}
