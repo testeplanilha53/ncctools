@@ -249,12 +249,26 @@
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $answer = $pdo->$pdo->delete($db, $query);
-                   echo ( "$query" + $answer );	
+                   echo ( $answer );	
 			
 	        }
 	    }
 	    
 	}
 
+
+
+	if(isset($_GET['action']) && $_GET['action'] == "deleteAnswer"){
+            session_start();
+		    $id_user = $_SESSION['idUser'];
+		    $id_answer = $_POST['id'];
+	            $query = "DELETE FROM `users_answers` WHERE `id` = $id_answer;"; 
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    $answer = $pdo->$pdo->delete($db, $query);
+                   echo ( $answer );	
+			
+	}
+	  
 
 ?>
