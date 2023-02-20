@@ -84,16 +84,16 @@
         /*  Update user config */
 		public function update($db, $query){	   
 		    try{
-               		 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-               		 $stmt = $db->prepare($query);
-                	 $stmt->execute();
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $stmt = $db->prepare($query);
+                $stmt->execute();
                 
-                         return $stmt->rowCount();
+                return $stmt->rowCount();
                         
                
 			  	
 			}catch( PDOException $Exception){
-    				echo ( $Exception->getMessage()   ) ;
+    			echo ( $Exception->getMessage()   ) ;
 				echo ( (int)$Exception->getCode() );
 			}
 		    
@@ -101,7 +101,7 @@
 		}
 
         /*Read User data*/
-	public function read($db, $query){
+		public function read($db, $query){
 			try{
 			        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         			$stmt = $db->prepare($query);
@@ -117,9 +117,11 @@
         			  	
         			  	
 			}catch( PDOException $Exception){
-    				echo ( $Exception->getMessage()   ) ;
+    			echo ( $Exception->getMessage()   ) ;
 				echo ( (int)$Exception->getCode() );
 			}
+		}
+		
 	}
 
 ?>
