@@ -122,25 +122,4 @@
 			}
 	}
 
-	 /*Delete User data*/
-	public function delete($db, $query){
-			try{
-			        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        			$stmt = $db->prepare($query);
-        			$stmt->execute();
-        			
-        			
-        			if($stmt->rowCount()  > 0 ){
-    					return $stmt->rowCount();
-    				}else{
-    	  			 	return false;
-    	  			}
-        			  	
-        			  	
-			}catch( PDOException $Exception){
-    				echo ( $Exception->getMessage()   ) ;
-				echo ( (int)$Exception->getCode() );
-			}
-	}
-
 ?>
