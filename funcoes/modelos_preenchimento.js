@@ -578,3 +578,76 @@ function fun_token_sva (){
     descricao.value = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
 
 }
+
+
+
+
+//Estou adicionando funções a partir dessa linha
+//Essa função busca as respostas do banco ao carregar a página e acrescenta na página de modelos
+
+funcion getSavedAnswers(){
+    Console.log("Chamou a função getSavedAnswers")
+    
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+                //notification.innerHTML = this.responseText;
+                let answers = this.responseText;
+                //console.log(answers);
+                //createTableAnswers( JSON.parse(answers)  );
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getAnswers", true);
+    xhttp.send();
+
+}
+
+//getAnswers();
+
+/*
+function createTableAnswers(answers){
+           let divConteiner = document.getElementById("conteiner-respostas");
+	   console.log(answers)
+	   if(answers != false){
+		   answers.forEach( (el)=>{
+		       let div =  document.createElement("div")
+		       div.classList.add("div-answers");
+
+		       let textArea = document.createElement("textarea")
+		       textArea.classList.add("txt-answers");	   
+
+		       let labelCategory = document.createElement("p")
+		       let labelTitle = document.createElement("p")
+		       let labelSla = document.createElement("p")
+		       let divRemove = document.createElement("div")
+		       divRemove.classList.add("div-btn"); 
+		       divRemove.innerHTML = "<button onclick=deleteAnswer("+ el["id"] +")>Remover</button>"
+
+		       textArea.innerHTML = el["answer"];
+		       labelCategory.innerHTML = "Categoria: " + el["category"]
+		       labelTitle.innerHTML = "Título: " + el["title"]
+		       labelSla.innerHTML = "SLA: " + el["sla"]
+
+		       div.appendChild(labelCategory);
+		       div.appendChild(labelTitle);
+		       div.appendChild(labelSla);
+			div.appendChild(textArea);
+			div.appendChild(textArea);
+			div.appendChild(divRemove);
+
+			divConteiner.appendChild(div);
+		   } );
+	   }
+       } 
+*/
+
+
+
+//Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
+funcion copySavedAnswers(answer){
+    Console.log("Chamou a função copySavedAnswers")
+
+}
+
+
+
