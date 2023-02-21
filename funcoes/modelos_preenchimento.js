@@ -602,6 +602,26 @@ funcion getSavedAnswers(){
 
 }
 
+
+funcion getSavedCategory(){
+    Console.log("Chamou a função getSavedCategory")
+    
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+                //notification.innerHTML = this.responseText;
+                let answers = this.responseText;
+                console.log(answers);
+                //createTableAnswers( JSON.parse(answers)  );
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
+    xhttp.send();
+
+}
+
+
+
 //getAnswers();
 
 /*
