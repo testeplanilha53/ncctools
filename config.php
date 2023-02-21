@@ -61,8 +61,7 @@
 		       div.classList.add("div-answers");
 
 		       let textArea = document.createElement("textarea")
-		       textArea.classList.add("txt-answers");
-		       textArea.cols = "100"	   
+		       textArea.classList.add("txt-answers");	   
 
 		       let labelCategory = document.createElement("p")
 		       let labelTitle = document.createElement("p")
@@ -289,7 +288,8 @@
 		    }
 
 		    .txt-answers{
-		    	width: 100%;
+		    	width: 80%;
+			cols: 55;    
 		    }
 		    
 		    .div-btn{
