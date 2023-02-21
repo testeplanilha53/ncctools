@@ -15,7 +15,9 @@
 
 
 body{
-    width: 678px;
+    width: 700px;
+    display: block;
+    margin: auto;
 }
 
 div{
