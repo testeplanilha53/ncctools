@@ -256,6 +256,22 @@
 	    
 	}
 
-
-
+	//getAnswersCategory
+	if(isset($_GET['action']) && $_GET['action'] == "getAnswersCategory"){
+            session_start();
+	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+		    $id_user = $_SESSION['idUser'];
+	            $query = "SELECT DISTINCT `category` FROM `users_answers` WHERE `user_id` = $id_user ORDER BY `category` "; 
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    $answer = $pdo->read($db, $query );
+		    header('Content-Type: application/json');	
+		    $array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+                   echo ( $array );	
+			
+	        }
+	    }
+	    
+	}
 ?>
