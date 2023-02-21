@@ -249,7 +249,7 @@
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $answer = $pdo->delete($db, $query);
-                   echo ( $query );	
+                   echo ( $answer );	
 			
 	        }
 	    }
