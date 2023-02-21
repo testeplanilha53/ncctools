@@ -247,7 +247,7 @@
 		<label>SLA(PRAZO): </label> 
 	    	<input type="text" name="sla_usuario" placeholder="Opcional!"><br>
 		<label>Script personalizado</label><br>
-	    	<textarea cols="55" rows="5" name="resposta_usuario" placeholder="Digite aqui sua resposta" required></textarea><br>
+	    	<textarea rows="5" name="resposta_usuario" placeholder="Digite aqui sua resposta" required></textarea><br>
 		<input type="submit" value="Cadastrar">
 	    </form>
     </div>
@@ -280,6 +280,10 @@
 		    	border: solid 1px gray;
 			    padding: 10px;
 			   
+		    }
+		    
+		    #cadastrar_resposta textarea{
+		    	width: 100%;
 		    }
 		    .div-answers{
 			    border: solid 1px gray;
