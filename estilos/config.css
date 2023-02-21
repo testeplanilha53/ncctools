@@ -14,10 +14,13 @@
 }
 
 
+html, body{
+    margin: auto;
+    display: block;
+}
+
 body{
     width: 700px;
-    display: block;
-    margin: auto;
 }
 
 div{
