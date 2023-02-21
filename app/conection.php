@@ -133,8 +133,8 @@
     				return $stmt->rowCount() ;
 
 			}catch( PDOException $Exception){
-    				echo ( $Exception->getMessage()   ) ;
-				echo ( (int)$Exception->getCode() );
+    				return( $Exception->getMessage()   ) ;
+				//echo ( (int)$Exception->getCode() );
 			}
 		}
 
