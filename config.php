@@ -288,8 +288,7 @@
 		    }
 
 		    .txt-answers{
-		    	width: 80%;
-			cols: 55;    
+		    	width: 100%;   
 		    }
 		    
 		    .div-btn{
