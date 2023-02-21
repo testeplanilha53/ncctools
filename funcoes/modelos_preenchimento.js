@@ -604,7 +604,7 @@ funcion getSavedAnswers(){
 
 
 function getSavedCategory(){
-    Console.log("Chamou a função getSavedCategory")
+    Console.log("Chamou a função getSavedCategory ")
     
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
