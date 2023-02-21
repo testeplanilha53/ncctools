@@ -246,9 +246,9 @@
 		    $id_user = $_SESSION['idUser'];
 		    $id_answer = $_GET['id'];
 	            $query = "DELETE FROM `users_answers` WHERE `id` = $id_answer;"; 
-	            //$pdo = new Connect();
-	            //$db = $pdo->connectOnDb();
-		    //$answer = $pdo->$pdo->delete($db, $query);
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    $answer = $pdo->$pdo->delete($db, $query);
                    echo ( $query );	
 			
 	        }
