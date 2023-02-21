@@ -7,10 +7,9 @@
 }
 
 #sair{
-    position: absolute;
+    position: relative;
     left: 100%;
     top: 3%;
-    transform: translate(-50%, -50%); 
 }
 
 
