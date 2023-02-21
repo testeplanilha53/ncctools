@@ -244,7 +244,7 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 		    $id_user = $_SESSION['idUser'];
-		    $id_answer = $_GET['id'];
+		    $id_answer = $_POST['id'];
 	            $query = "DELETE FROM `users_answers` WHERE `id` =  $id_answer"; 
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
