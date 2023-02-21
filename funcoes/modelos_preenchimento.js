@@ -586,7 +586,7 @@ function fun_token_sva (){
 //Essa função busca as respostas do banco ao carregar a página e acrescenta na página de modelos
 
 function getSavedAnswers(){
-    Console.log("Chamou a função getSavedAnswers")
+    console.log("Chamou a função getSavedAnswers")
     
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -604,7 +604,7 @@ function getSavedAnswers(){
 
 
 function getSavedCategory(){
-    Console.log("Chamou a função getSavedCategory ")
+    console.log("Chamou a função getSavedCategory ")
     
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -668,7 +668,7 @@ function createTableAnswers(answers){
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
 function copySavedAnswers(answer){
-    Console.log("Chamou a função copySavedAnswers")
+    console.log("Chamou a função copySavedAnswers")
 
 }
 
