@@ -55,34 +55,36 @@
        function createTableAnswers(answers){
            let divConteiner = document.getElementById("conteiner-respostas");
 	   console.log(answers)
-           answers.forEach( (el)=>{
-               let div =  document.createElement("div")
-	       div.classList.add("div-answers");
-		   
-	       let textArea = document.createElement("textarea")
-	       textArea.classList.add("txt-answers");
-		   
-	       let labelCategory = document.createElement("p")
-	       let labelTitle = document.createElement("p")
-	       let labelSla = document.createElement("p")
-	       let divRemove = document.createElement("div")
-	       divRemove.classList.add("div-btn"); 
-	       divRemove.innerHTML = "<button onclick=deleteAnswer("+ el["id"] +")>Remover</button>"
-		   
-	       textArea.innerHTML = el["answer"];
-	       labelCategory.innerHTML = "Categoria: " + el["category"]
-	       labelTitle.innerHTML = "Título: " + el["title"]
-	       labelSla.innerHTML = "SLA: " + el["sla"]
-		   
-	       div.appendChild(labelCategory);
-	       div.appendChild(labelTitle);
-	       div.appendChild(labelSla);
-    		div.appendChild(textArea);
-		div.appendChild(textArea);
-		div.appendChild(divRemove);
-	
-                divConteiner.appendChild(div);
-           } );
+	   if(answers != false){
+		   answers.forEach( (el)=>{
+		       let div =  document.createElement("div")
+		       div.classList.add("div-answers");
+
+		       let textArea = document.createElement("textarea")
+		       textArea.classList.add("txt-answers");
+
+		       let labelCategory = document.createElement("p")
+		       let labelTitle = document.createElement("p")
+		       let labelSla = document.createElement("p")
+		       let divRemove = document.createElement("div")
+		       divRemove.classList.add("div-btn"); 
+		       divRemove.innerHTML = "<button onclick=deleteAnswer("+ el["id"] +")>Remover</button>"
+
+		       textArea.innerHTML = el["answer"];
+		       labelCategory.innerHTML = "Categoria: " + el["category"]
+		       labelTitle.innerHTML = "Título: " + el["title"]
+		       labelSla.innerHTML = "SLA: " + el["sla"]
+
+		       div.appendChild(labelCategory);
+		       div.appendChild(labelTitle);
+		       div.appendChild(labelSla);
+			div.appendChild(textArea);
+			div.appendChild(textArea);
+			div.appendChild(divRemove);
+
+			divConteiner.appendChild(div);
+		   } );
+	   }
        } 
 
        function deleteAnswer(id){
