@@ -603,7 +603,7 @@ funcion getSavedAnswers(){
 }
 
 
-funcion getSavedCategory(){
+function getSavedCategory(){
     Console.log("Chamou a função getSavedCategory")
     
    let xhttp = new XMLHttpRequest();
@@ -619,6 +619,9 @@ funcion getSavedCategory(){
     xhttp.send();
 
 }
+
+
+getSavedCategory();
 
 
 
