@@ -585,7 +585,7 @@ function fun_token_sva (){
 //Estou adicionando funções a partir dessa linha
 //Essa função busca as respostas do banco ao carregar a página e acrescenta na página de modelos
 
-funcion getSavedAnswers(){
+function getSavedAnswers(){
     Console.log("Chamou a função getSavedAnswers")
     
    let xhttp = new XMLHttpRequest();
