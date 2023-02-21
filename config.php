@@ -62,7 +62,7 @@
 
 		       let textArea = document.createElement("textarea")
 		       textArea.classList.add("txt-answers");
-		       textArea.cols = "55";	   
+		       textArea.cols = "100"	   
 
 		       let labelCategory = document.createElement("p")
 		       let labelTitle = document.createElement("p")
