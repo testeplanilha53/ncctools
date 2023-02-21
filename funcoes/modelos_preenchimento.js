@@ -667,7 +667,7 @@ function createTableAnswers(answers){
 
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
-funcion copySavedAnswers(answer){
+function copySavedAnswers(answer){
     Console.log("Chamou a função copySavedAnswers")
 
 }
