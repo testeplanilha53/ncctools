@@ -632,7 +632,7 @@ function createAnswers(respostas, categorias){
            //let divConteiner = document.getElementById("conteiner-respostas");
 	   console.log(respostas)
 	   console.log(categorias)
-	   if(category != false){
+	   if(categorias != false){
 		   category.forEach( (el)=>{
 			console.log(el);
 		  
