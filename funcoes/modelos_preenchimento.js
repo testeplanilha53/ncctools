@@ -632,7 +632,12 @@ function createAnswers(){
            //let divConteiner = document.getElementById("conteiner-respostas");
 	   let respostas = getSavedAnswers();
 	   let categorias = getSavedCategory();
+		
+		console.log(respostas)
+	      console.log(categorias)
 	
+	
+		/*
 	   if(categorias != false){
 		   categorias.forEach( (el)=>{
 			console.log(el);
@@ -645,7 +650,7 @@ function createAnswers(){
 
 			//divConteiner.appendChild(div);
 		   } );
-	  }
+	  }*/
 } 
 
 
