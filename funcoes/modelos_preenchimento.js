@@ -579,8 +579,7 @@ function fun_token_sva (){
 
 }
 
-var respostas;
-var categorias;
+
 
 
 //Estou adicionando funções a partir dessa linha
@@ -592,7 +591,7 @@ function getSavedAnswers(){
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-		respostas = this.responseText;
+		return this.responseText;
 			 //JSON.parse(answers);
           }
      };
@@ -610,7 +609,7 @@ function getSavedCategory(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                categorias = this.responseText;
+                return this.responseText;
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
@@ -624,8 +623,8 @@ function getSavedCategory(){
 
 function createAnswers(){
            //let divConteiner = document.getElementById("conteiner-respostas");
-	console.log(respostas)
-	console.log(categorias)
+	console.log( getSavedAnswers() )
+	console.log( getSavedCategory() )
 	
 	
 		/*
