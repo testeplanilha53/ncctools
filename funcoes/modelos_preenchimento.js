@@ -615,7 +615,7 @@ function getSavedCategory(){
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
     xhttp.send();
 	
-	retur "2";    
+	return "2";    
 }
 
 
