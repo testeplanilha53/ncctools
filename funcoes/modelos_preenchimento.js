@@ -591,14 +591,14 @@ function getSavedAnswers(){
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-		return this.responseText;
+		//this.responseText;
 			 //JSON.parse(answers);
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswers", true);
     xhttp.send();
     
-
+	return "3";
 }
 
 
@@ -609,13 +609,13 @@ function getSavedCategory(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                return this.responseText;
+                //return this.responseText;
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
     xhttp.send();
 	
-    
+	retur "2";    
 }
 
 
