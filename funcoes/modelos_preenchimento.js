@@ -585,6 +585,9 @@ function fun_token_sva (){
 //Estou adicionando funções a partir dessa linha
 //Essa função busca as respostas do banco ao carregar a página e acrescenta na página de modelos
 
+var respostas; // armazemam os resultados das funções abaixo
+var categorias;
+
 function getSavedAnswers(){
     console.log("Chamou a função getSavedAnswers")
     
@@ -593,8 +596,8 @@ function getSavedAnswers(){
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
                 let answers = this.responseText;
-                console.log(answers);
-                //createTableAnswers( JSON.parse(answers)  );
+                //console.log(answers);
+		respostas = JSON.parse(answers);
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswers", true);
@@ -603,7 +606,7 @@ function getSavedAnswers(){
 }
 
 
-getSavedAnswers();
+
 
 function getSavedCategory(){
     console.log("Chamou a função getSavedCategory ")
@@ -614,7 +617,7 @@ function getSavedCategory(){
                 //notification.innerHTML = this.responseText;
                 let category = this.responseText;
                 console.log(category);
-                createTableAnswers( JSON.parse(category)  );
+                categorias = JSON.parse(category);
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
@@ -623,15 +626,12 @@ function getSavedCategory(){
 }
 
 
-//getSavedCategory();
 
 
-
-//getAnswers();
-
-function createTableAnswers(category){
+function createAnswers(respostas, categoria){
            //let divConteiner = document.getElementById("conteiner-respostas");
-	   //console.log(category)
+	   console.log(respostas)
+	   console.log(categoria)
 	   if(category != false){
 		   category.forEach( (el)=>{
 			console.log(el);
@@ -648,6 +648,9 @@ function createTableAnswers(category){
 } 
 
 
+getSavedAnswers();
+getSavedCategory();
+createAnswers(respostas, categoria);
 
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
