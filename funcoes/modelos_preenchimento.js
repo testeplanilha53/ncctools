@@ -587,6 +587,7 @@ function fun_token_sva (){
 
 var respostas; // armazemam os resultados das funções abaixo
 var categorias;
+var bool_categoria; // recebe falso ou array 
 
 function getSavedAnswers(){
     console.log("Chamou a função getSavedAnswers")
@@ -615,7 +616,7 @@ function getSavedCategory(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                let category = this.responseText;
+                bool_categoria = this.responseText;
                 //console.log(category);
                 categorias = JSON.parse(category);
           }
@@ -633,7 +634,7 @@ function createAnswers(respostas, categorias){
 	   console.log(respostas)
 	   console.log(categorias)
 	   if(categorias != false){
-		   category.forEach( (el)=>{
+		   bool_categoria.forEach( (el)=>{
 			console.log(el);
 		  
 		       //textArea.classList.add("txt-answers");	   
