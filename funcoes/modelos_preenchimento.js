@@ -587,7 +587,7 @@ function fun_token_sva (){
 
 var respostas; // armazemam os resultados das funções abaixo
 var categorias;
-var bool_categoria; // recebe falso ou array 
+var bool_categoria = false; // recebe falso ou array 
 
 function getSavedAnswers(){
     console.log("Chamou a função getSavedAnswers")
@@ -616,7 +616,7 @@ function getSavedCategory(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                bool_categoria = this.responseText;
+                bool_categoria = JSON.parse(this.responseText);
                 //console.log(category);
                 categorias = JSON.parse(category);
           }
@@ -629,7 +629,7 @@ function getSavedCategory(){
 
 
 
-function createAnswers(respostas, categorias){
+function createAnswers(respostas, categorias, bool_categoria){
            //let divConteiner = document.getElementById("conteiner-respostas");
 	   console.log(respostas)
 	   console.log(categorias)
@@ -651,7 +651,7 @@ function createAnswers(respostas, categorias){
 
 getSavedAnswers();
 getSavedCategory();
-createAnswers(respostas, categorias);
+createAnswers(respostas, categorias, bool_categoria);
 
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
