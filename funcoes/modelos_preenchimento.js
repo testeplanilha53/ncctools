@@ -606,16 +606,17 @@ function getSavedAnswers(){
 
 function getSavedCategory(){
    let xhttp = new XMLHttpRequest();
+	var a;
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                return this.responseText;
+                a =  this.responseText;
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
     xhttp.send();
 	
-	//return "2";    
+	return a;    
 }
 
 
