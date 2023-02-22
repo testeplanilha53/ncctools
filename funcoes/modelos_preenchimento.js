@@ -579,7 +579,8 @@ function fun_token_sva (){
 
 }
 
-
+var respostas;
+var categorias;
 
 
 //Estou adicionando funções a partir dessa linha
@@ -587,7 +588,6 @@ function fun_token_sva (){
 
 function getSavedAnswers(){
     console.log("Chamou a função getSavedAnswers")
-   var respostas;
     
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -606,7 +606,6 @@ function getSavedAnswers(){
 
 
 function getSavedCategory(){
-   var categorias;
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
