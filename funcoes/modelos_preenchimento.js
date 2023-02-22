@@ -585,14 +585,13 @@ function fun_token_sva (){
 //Estou adicionando funções a partir dessa linha
 //Essa função busca as respostas do banco ao carregar a página e acrescenta na página de modelos
 
-function getSavedAnswers(){
-    console.log("Chamou a função getSavedAnswers")
-    
+function getSavedAnswers( category ){    
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-		return this.responseText;
-			 //JSON.parse(answers);
+		 if (JSON.parse(this.responseText) != false ){
+			createAnswers( category,  JSON.parse(this.responseText)  );
+		}
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswers", true);
@@ -606,26 +605,25 @@ function getSavedAnswers(){
 
 function getSavedCategory(){
    let xhttp = new XMLHttpRequest();
-	var a;
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-                //notification.innerHTML = this.responseText;
-                a =  this.responseText;
+                if (JSON.parse(this.responseText) != false ){
+			getSavedAnswers( JSON.parse(this.responseText );
+		}
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
     xhttp.send();
-	
-	return a;    
+ 
 }
 
 
 
 
-function createAnswers(){
+function createAnswers(category, anwers){
            //let divConteiner = document.getElementById("conteiner-respostas");
-	console.log( getSavedAnswers() )
-	console.log( getSavedCategory() )
+	console.log( category)
+	console.log( anwers )
 	
 	
 		/*
@@ -646,7 +644,7 @@ function createAnswers(){
 
 
 
-createAnswers();
+getSavedCategory();
 
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
