@@ -616,7 +616,7 @@ function getSavedCategory(){
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
                 let category = this.responseText;
-                console.log(category);
+                //console.log(category);
                 categorias = JSON.parse(category);
           }
      };
@@ -628,10 +628,10 @@ function getSavedCategory(){
 
 
 
-function createAnswers(respostas, categoria){
+function createAnswers(respostas, categorias){
            //let divConteiner = document.getElementById("conteiner-respostas");
 	   console.log(respostas)
-	   console.log(categoria)
+	   console.log(categorias)
 	   if(category != false){
 		   category.forEach( (el)=>{
 			console.log(el);
@@ -650,7 +650,7 @@ function createAnswers(respostas, categoria){
 
 getSavedAnswers();
 getSavedCategory();
-createAnswers(respostas, categoria);
+createAnswers(respostas, categorias);
 
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
