@@ -633,8 +633,8 @@ function createAnswers(){
 	   let respostas = getSavedAnswers();
 	   let categorias = getSavedCategory();
 		
-		console.log(respostas)
-	      console.log(categorias)
+		console.log(" res" + respostas)
+	      console.log("cat" + categorias)
 	
 	
 		/*
