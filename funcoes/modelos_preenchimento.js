@@ -630,7 +630,7 @@ getSavedCategory();
 function createTableAnswers(category){
            //let divConteiner = document.getElementById("conteiner-respostas");
 	   //console.log(category)
-	   if(answers != false){
+	   if(category != false){
 		   category.forEach( (el)=>{
 			console.log(el);
 		  
