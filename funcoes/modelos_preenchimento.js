@@ -614,9 +614,9 @@ function getSavedCategory(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                bool_categoria = JSON.parse(this.responseText);
+                let response = JSON.parse(this.responseText);
                 //console.log(category);
-                categorias = JSON.parse(category);
+                categorias = JSON.parse(response);
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
