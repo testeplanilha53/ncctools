@@ -614,7 +614,7 @@ function getSavedCategory(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                let response = JSON.parse(this.responseText);
+                let response = this.responseText;
                 //console.log(category);
                 categorias = JSON.parse(response);
           }
