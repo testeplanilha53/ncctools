@@ -593,7 +593,7 @@ function getSavedAnswers(){
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
                 let answers = this.responseText;
-                //console.log(answers);
+                console.log(answers);
                 //createTableAnswers( JSON.parse(answers)  );
           }
      };
@@ -602,6 +602,8 @@ function getSavedAnswers(){
 
 }
 
+
+getSavedAnswers();
 
 function getSavedCategory(){
     console.log("Chamou a função getSavedCategory ")
@@ -621,7 +623,7 @@ function getSavedCategory(){
 }
 
 
-getSavedCategory();
+//getSavedCategory();
 
 
 
