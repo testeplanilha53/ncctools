@@ -585,12 +585,9 @@ function fun_token_sva (){
 //Estou adicionando funções a partir dessa linha
 //Essa função busca as respostas do banco ao carregar a página e acrescenta na página de modelos
 
-var respostas; // armazemam os resultados das funções abaixo
-var categorias;
-var bool_categoria = false; // recebe falso ou array 
-
 function getSavedAnswers(){
     console.log("Chamou a função getSavedAnswers")
+   let respostas;
     
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -603,6 +600,7 @@ function getSavedAnswers(){
      };
     xhttp.open("POST", "./app.php?action=getAnswers", true);
     xhttp.send();
+    return respostas;
 
 }
 
@@ -611,7 +609,7 @@ function getSavedAnswers(){
 
 function getSavedCategory(){
     console.log("Chamou a função getSavedCategory ")
-    
+   let categorias;
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -623,18 +621,20 @@ function getSavedCategory(){
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
     xhttp.send();
+    return  categorias;
 
 }
 
 
 
 
-function createAnswers(respostas, categorias, bool_categoria){
+function createAnswers(){
            //let divConteiner = document.getElementById("conteiner-respostas");
-	   console.log(respostas)
-	   console.log(categorias)
+	   let respostas = getSavedAnswers();
+	   let categorias = getSavedCategory();
+	
 	   if(categorias != false){
-		   bool_categoria.forEach( (el)=>{
+		   categorias.forEach( (el)=>{
 			console.log(el);
 		  
 		       //textArea.classList.add("txt-answers");	   
@@ -649,9 +649,8 @@ function createAnswers(respostas, categorias, bool_categoria){
 } 
 
 
-getSavedAnswers();
-getSavedCategory();
-createAnswers(respostas, categorias, bool_categoria);
+
+createAnswers();
 
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
