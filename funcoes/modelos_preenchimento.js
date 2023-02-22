@@ -610,9 +610,9 @@ function getSavedCategory(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                let answers = this.responseText;
-                console.log(answers);
-                //createTableAnswers( JSON.parse(answers)  );
+                let category = this.responseText;
+                console.log(category);
+                createTableAnswers( JSON.parse(category)  );
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
@@ -627,42 +627,24 @@ getSavedCategory();
 
 //getAnswers();
 
-/*
-function createTableAnswers(answers){
-           let divConteiner = document.getElementById("conteiner-respostas");
-	   console.log(answers)
+function createTableAnswers(category){
+           //let divConteiner = document.getElementById("conteiner-respostas");
+	   //console.log(category)
 	   if(answers != false){
-		   answers.forEach( (el)=>{
-		       let div =  document.createElement("div")
-		       div.classList.add("div-answers");
+		   category.forEach( (el)=>{
+			console.log(el);
+		  
+		       //textArea.classList.add("txt-answers");	   
 
-		       let textArea = document.createElement("textarea")
-		       textArea.classList.add("txt-answers");	   
+		       //let labelCategory = document.createElement("p")
+		      
+		       //labelTitle.innerHTML = "Título: " + el["title"]
 
-		       let labelCategory = document.createElement("p")
-		       let labelTitle = document.createElement("p")
-		       let labelSla = document.createElement("p")
-		       let divRemove = document.createElement("div")
-		       divRemove.classList.add("div-btn"); 
-		       divRemove.innerHTML = "<button onclick=deleteAnswer("+ el["id"] +")>Remover</button>"
-
-		       textArea.innerHTML = el["answer"];
-		       labelCategory.innerHTML = "Categoria: " + el["category"]
-		       labelTitle.innerHTML = "Título: " + el["title"]
-		       labelSla.innerHTML = "SLA: " + el["sla"]
-
-		       div.appendChild(labelCategory);
-		       div.appendChild(labelTitle);
-		       div.appendChild(labelSla);
-			div.appendChild(textArea);
-			div.appendChild(textArea);
-			div.appendChild(divRemove);
-
-			divConteiner.appendChild(div);
+			//divConteiner.appendChild(div);
 		   } );
-	   }
-       } 
-*/
+	  }
+} 
+
 
 
 
