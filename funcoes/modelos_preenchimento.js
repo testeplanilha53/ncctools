@@ -592,15 +592,13 @@ function getSavedAnswers(){
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-                //notification.innerHTML = this.responseText;
-                let answers = this.responseText;
-                console.log(answers);
-		respostas = JSON.parse(answers);
+		respostas = this.responseText;
+			 //JSON.parse(answers);
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswers", true);
     xhttp.send();
-    //return respostas;
+    return respostas;
 
 }
 
@@ -608,21 +606,18 @@ function getSavedAnswers(){
 
 
 function getSavedCategory(){
-    console.log("Chamou a função getSavedCategory ")
    let categorias;
    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
-                let response = this.responseText;
-                console.log(response);
-                categorias = JSON.parse(response);
+                categorias = this.responseText;
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
     xhttp.send();
-    //return  categorias;
-
+	
+    return categorias;
 }
 
 
@@ -633,8 +628,8 @@ function createAnswers(){
 	   let respostas = getSavedAnswers();
 	   let categorias = getSavedCategory();
 		
-		//console.log(" res" + respostas)
-	      //console.log("cat" + categorias)
+		console.log(respostas)
+	      console.log(categorias)
 	
 	
 		/*
