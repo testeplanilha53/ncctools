@@ -593,12 +593,13 @@ function getSavedAnswers(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 		respostas = this.responseText;
+		return respostas;
 			 //JSON.parse(answers);
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswers", true);
     xhttp.send();
-    return respostas;
+    
 
 }
 
@@ -612,12 +613,13 @@ function getSavedCategory(){
         if (this.readyState == 4 && this.status == 200) {
                 //notification.innerHTML = this.responseText;
                 categorias = this.responseText;
+		return categorias;
           }
      };
     xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
     xhttp.send();
 	
-    return categorias;
+    
 }
 
 
