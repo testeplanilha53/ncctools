@@ -631,6 +631,7 @@ function createAnswers(category, anwers){
 			var strong = document.createElement("strong")
 			strong.innerHTML = el["category"]
 			var br = document.createElement("br")
+			var hr = document.createElement("hr")
 			
 			divConteiner.appendChild(br);
 			divConteiner.appendChild(strong);
@@ -648,6 +649,7 @@ function createAnswers(category, anwers){
 				   
 			   });
 			   
+			   divConteiner.appendChild(hr);
 		  
 		       //textArea.classList.add("txt-answers");	   
 
