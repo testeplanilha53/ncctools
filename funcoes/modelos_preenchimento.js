@@ -639,7 +639,7 @@ function createAnswers(category, anwers){
 			   
 			   anwers.forEach( (el1) =>{
 			   	//console.log(el1);
-				 if(el1['category'] == el2['category']){
+				 if(el1['category'] == el['category']){
 				 	var btn = document.createElement("btn")
 					divConteiner.appendChild(btn);
 				 }  
