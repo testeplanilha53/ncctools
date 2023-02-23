@@ -640,7 +640,7 @@ function createAnswers(category, anwers){
 			   anwers.forEach( (el1) =>{
 			   	//console.log(el1);
 				 if(el1['category'] == el['category']){
-				 	var btn = document.createElement("btn")
+				 	var btn = document.createElement("button")
 					divConteiner.appendChild(btn);
 				 }  
 				   
