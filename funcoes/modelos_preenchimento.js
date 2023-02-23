@@ -621,14 +621,13 @@ function getSavedCategory(){
 
 
 function createAnswers(category, anwers){
-           //let divConteiner = document.getElementById("conteiner-respostas");
+        let divConteiner = document.getElementById("botoes_auto_preenchidos");
 	console.log( category)
 	console.log( anwers )
 	
 	
-		/*
-	   if(categorias != false){
-		   categorias.forEach( (el)=>{
+	   if(category != false){
+		   category.forEach( (el)=>{
 			console.log(el);
 		  
 		       //textArea.classList.add("txt-answers");	   
@@ -639,7 +638,7 @@ function createAnswers(category, anwers){
 
 			//divConteiner.appendChild(div);
 		   } );
-	  }*/
+	  }
 } 
 
 
