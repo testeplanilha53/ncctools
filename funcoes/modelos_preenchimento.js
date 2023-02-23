@@ -639,6 +639,7 @@ function createAnswers(category, anwers){
 		      
 		       //labelTitle.innerHTML = "Título: " + el["title"]
 
+			divConteiner.appendChild(br);
 			divConteiner.appendChild(strong);
 			divConteiner.appendChild(br);
 		   } );
