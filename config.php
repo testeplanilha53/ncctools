@@ -45,7 +45,7 @@
 					var select = document.getElementById("select_lista_categoria");
 				 	lst_category.answers.forEach( (el)=>{
 						var opt = document.createElement("option")
-						opt.innerHTML  = lst_category["category"]
+						opt.innerHTML  = lst_category["category"] 
 						select.appendChild(opt);
 					});   
 				}
