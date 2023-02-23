@@ -34,6 +34,31 @@
     -->
     <script>
 	    
+	    
+	function getSavedAnswers( category ){    
+	   let xhttp = new XMLHttpRequest();
+	    xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			 if (JSON.parse(this.responseText) != false ){
+				var lst_category =  JSON.parse(this.responseText) 
+				if( lst_category != false  ){
+					var select = document.getElementById("select_lista_categoria");
+				 	lst_category.answers.forEach( (el)=>{
+						var opt = document.createElement("option")
+						opt.innerHTML  = lst_category["category"]
+						select.appendChild(opt);
+					});   
+				}
+			}
+		  }
+	     };
+	    xhttp.open("POST", "./app.php?action=getAnswers", true);
+	    xhttp.send();
+
+		//return "3";
+	}    
+	    
+	    
         function getAnswers(){
             let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
@@ -245,7 +270,7 @@
 	    <span id="titulo">  CADASTRAR MODELO DE RESPOSTA   </span> <br> <br>
 	    <form method="post" action="./app.php?action=setModelAnswer">
 		<label>Categoria: </label>
-	    	<select name="lista_de_titulos_usuario" required>
+	    	<select name="lista_de_titulos_usuario" required id="select_lista_categoria">
 	    		<option value="Respostas pessoais" selected >Respostas pessoais</option>
 		    </select>
 	    	<input type="text" name="nova_categoria" placeholder="Nova categoria(opcional)" maxlength="100" maxlength="100"> <br>
