@@ -631,7 +631,14 @@ function createAnswers(category, anwers){
 			var strong = document.createElement("strong")
 			strong.innerHTML = el["category"]
 			var br = document.createElement("br")
-			console.log(el);
+
+			
+			
+			   
+			   anwers.forEach( (el1) =>{
+			   	console.log(el1);
+			   });
+			   
 		  
 		       //textArea.classList.add("txt-answers");	   
 
