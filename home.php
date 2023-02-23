@@ -258,7 +258,7 @@
                     <hr><strong>SVA e Token</strong> <br>
                     <button class="btn btn-outline-dark" id="fun_sva" onclick="fun_sva()">Ativação de SVA’s</button> 
                     <button class="btn btn-outline-dark" id="fun_token_fatura" onclick="fun_token_fatura()">Token para acessar as faturas</button> 
-                    <button class="btn btn-outline-dark" id="fun_token_sva" onclick="fun_token_sva()">Token para ativar os SVA</button> 
+                    <button class="btn btn-outline-dark" id="fun_token_sva" onclick="fun_token_sva()">Token para ativar os SVA</button> <br> 
 
                 </div>
 
