@@ -644,7 +644,8 @@ function createAnswers(category, anwers){
 				 	var btn = document.createElement("button")
 					btn.innerHTML = "BTN"
 					divConteiner.appendChild(btn);
-					btn.classList.add("btn btn-outline-dark") 
+					btn.classList.add("btn"); 
+					btn.classList.add("btn-outline-dark");
 				 }  
 			   });
 			   
