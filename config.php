@@ -39,16 +39,14 @@
 	   let xhttp = new XMLHttpRequest();
 	    xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-			 if (JSON.parse(this.responseText) != false ){
-				var lst_category =  JSON.parse(this.responseText) 
-				if( lst_category != false  ){
-					var select = document.getElementById("select_lista_categoria");
-				 	lst_category.forEach( (el)=>{
-						var opt = document.createElement("option")
-						opt.innerHTML  = lst_category["category"] 
-						select.appendChild(opt);
-					});   
-				}
+			var lst_category =  JSON.parse(this.responseText) 
+			if( lst_category != false  ){
+				var select = document.getElementById("select_lista_categoria");
+				lst_category.forEach( (el)=>{
+					var opt = document.createElement("option")
+					opt.innerHTML  = el["category"] 
+					select.appendChild(opt);
+				});   
 			}
 		  }
 	     };
