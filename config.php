@@ -43,7 +43,7 @@
 				var lst_category =  JSON.parse(this.responseText) 
 				if( lst_category != false  ){
 					var select = document.getElementById("select_lista_categoria");
-				 	lst_category.answers.forEach( (el)=>{
+				 	lst_category.forEach( (el)=>{
 						var opt = document.createElement("option")
 						opt.innerHTML  = lst_category["category"] 
 						select.appendChild(opt);
