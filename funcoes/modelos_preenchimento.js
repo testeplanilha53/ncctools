@@ -646,18 +646,12 @@ function createAnswers(category, anwers){
 					divConteiner.appendChild(btn);
 				 }  
 				   
-				   
+				 divConteiner.appendChild(hr);  
 			   });
 			   
-			   divConteiner.appendChild(hr);
+			   //divConteiner.appendChild(hr);
 		  
-		       //textArea.classList.add("txt-answers");	   
-
-		       //let labelCategory = document.createElement("p")
-		      
-		       //labelTitle.innerHTML = "Título: " + el["title"]
-
-			
+		       //textArea.classList.add("txt-answers");	   			
 		   } );
 	  }
 } 
