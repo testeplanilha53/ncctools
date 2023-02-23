@@ -271,7 +271,7 @@
 		<label>Categoria: </label>
 	    	<select name="lista_de_titulos_usuario" required id="select_lista_categoria">
 	    		<option value="Respostas pessoais" selected >Respostas pessoais</option>
-		    </select>
+		    </select><br>
 		<label>Nova categoria: </label> 
 	    	<input type="text" name="nova_categoria" placeholder="Nova categoria(opcional)" maxlength="40"> <br>
 		<label>Título da resposta: </label> 
