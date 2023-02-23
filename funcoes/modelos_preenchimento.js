@@ -631,10 +631,20 @@ function createAnswers(category, anwers){
 			var strong = document.createElement("strong")
 			strong.innerHTML = el["category"]
 			var br = document.createElement("br")
+			
+			divConteiner.appendChild(br);
+			divConteiner.appendChild(strong);
+			divConteiner.appendChild(br);
 
 			   
 			   anwers.forEach( (el1) =>{
-			   	console.log(el1);
+			   	//console.log(el1);
+				 if(el1['category'] == el2['category']){
+				 	var btn = document.createElement("btn")
+					divConteiner.appendChild(btn);
+				 }  
+				   
+				   
 			   });
 			   
 		  
@@ -644,9 +654,7 @@ function createAnswers(category, anwers){
 		      
 		       //labelTitle.innerHTML = "Título: " + el["title"]
 
-			divConteiner.appendChild(br);
-			divConteiner.appendChild(strong);
-			divConteiner.appendChild(br);
+			
 		   } );
 	  }
 } 
