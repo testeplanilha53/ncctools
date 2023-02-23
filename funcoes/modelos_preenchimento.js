@@ -641,6 +641,7 @@ function createAnswers(category, anwers){
 			   	//console.log(el1);
 				 if(el1['category'] == el['category']){
 				 	var btn = document.createElement("button")
+					btn.innerHTML = "BTN"
 					divConteiner.appendChild(btn);
 				 }  
 				   
