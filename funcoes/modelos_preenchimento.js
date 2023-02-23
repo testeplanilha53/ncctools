@@ -631,7 +631,7 @@ function createAnswers(category, anwers){
 			var strong = document.createElement("strong")
 			strong.innerHTML = el["category"]
 			var br = document.createElement("br")
-			
+			var hr = document.createElement("hr")
 			
 			divConteiner.appendChild(br);
 			divConteiner.appendChild(strong);
@@ -639,17 +639,15 @@ function createAnswers(category, anwers){
 
 			   
 			   anwers.forEach( (el1) =>{
-			   	var hr = document.createElement("hr")
+			   	
 				 if(el1['category'] == el['category']){
 				 	var btn = document.createElement("button")
 					btn.innerHTML = "BTN"
 					divConteiner.appendChild(btn);
 				 }  
-				   
-				 divConteiner.appendChild(hr);  
 			   });
 			   
-			   //divConteiner.appendChild(hr);
+			   divConteiner.appendChild(hr);
 		  
 		       //textArea.classList.add("txt-answers");	   			
 		   } );
