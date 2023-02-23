@@ -4,7 +4,7 @@
 	//require_once(app/db.php);
 	
 	if( isset($_SESSION['idUser']) && !empty($_SESSION['idUser']) ){ 
-		if(   isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
+		if(   isset($_SESSION['role']) && $_SESSION['role'] == "admin"){ 
             header('location: add_user.php');
         }
 	?>
