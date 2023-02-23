@@ -628,6 +628,9 @@ function createAnswers(category, anwers){
 	
 	   if(category != false){
 		   category.forEach( (el)=>{
+			var strong = document.createElement("strong")
+			strong.innerHTML = el["category"]
+			var br = document.createElement("br")
 			console.log(el);
 		  
 		       //textArea.classList.add("txt-answers");	   
@@ -636,7 +639,8 @@ function createAnswers(category, anwers){
 		      
 		       //labelTitle.innerHTML = "Título: " + el["title"]
 
-			//divConteiner.appendChild(div);
+			divConteiner.appendChild(strong);
+			divConteiner.appendChild(br);
 		   } );
 	  }
 } 
