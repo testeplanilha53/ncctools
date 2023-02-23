@@ -35,7 +35,7 @@
     <script>
 	    
 	    
-	function getSavedAnswers( category ){    
+	window.onload = function getSavedCategory(){    
 	   let xhttp = new XMLHttpRequest();
 	    xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -52,10 +52,8 @@
 			}
 		  }
 	     };
-	    xhttp.open("POST", "./app.php?action=getAnswers", true);
+	    xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
 	    xhttp.send();
-
-		//return "3";
 	}    
 	    
 	    
