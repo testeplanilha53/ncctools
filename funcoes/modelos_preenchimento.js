@@ -632,8 +632,6 @@ function createAnswers(category, anwers){
 			strong.innerHTML = el["category"]
 			var br = document.createElement("br")
 
-			
-			
 			   
 			   anwers.forEach( (el1) =>{
 			   	console.log(el1);
