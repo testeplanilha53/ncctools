@@ -44,6 +44,7 @@
 				var select = document.getElementById("select_lista_categoria");
 				lst_category.forEach( (el)=>{
 					var opt = document.createElement("option")
+					opt.value = el["category"] 
 					opt.innerHTML  = el["category"] 
 					select.appendChild(opt);
 				});   
