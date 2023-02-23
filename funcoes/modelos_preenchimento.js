@@ -641,8 +641,8 @@ function createAnswers(category, anwers){
 			   anwers.forEach( (el1) =>{
 			   	
 				 if(el1['category'] == el['category']){
-				 	var btn = document.createElement("button")
-					btn.innerHTML = "BTN"
+				 	var btn = document.createElement("button");
+					btn.innerHTML = el1['title'];
 					divConteiner.appendChild(btn);
 					btn.classList.add("btn"); 
 					btn.classList.add("btn-outline-dark");
