@@ -643,6 +643,7 @@ function createAnswers(category, anwers){
 				 if(el1['category'] == el['category']){
 				 	var btn = document.createElement("button");
 					btn.innerHTML = el1['title'];
+					btn.id = el1['id'];
 					divConteiner.appendChild(btn);
 					btn.classList.add("btn"); 
 					btn.classList.add("btn-outline-dark");
@@ -667,5 +668,12 @@ function copySavedAnswers(answer){
 
 }
 
+function copy_anwer(id){
+    meu_id = window.document.getElementById("fun_token_sva")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
 
+    descricao.value = meu_id.value;
+
+}
 
