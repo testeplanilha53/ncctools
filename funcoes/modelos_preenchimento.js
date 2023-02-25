@@ -649,6 +649,7 @@ function createAnswers(category, anwers){
 					//btn.classList.add("btn-outline-dark");
 					 var label = document.createElement("label");
 					 label.innerHTML ="<button class='btn btn-outline-dark' id='"+ el1['id'] + ">" + el1['title'] +"</button>" ;
+					 divConteiner.appendChild(label);
 				 }  
 			   });
 			   
