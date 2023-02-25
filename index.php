@@ -19,8 +19,7 @@
         #resetMail:hover{
             color: red !important;
             transform: scale(1.1);
-            cursor: pointer;
-
+            cursor: pointer
         }
 
         svg:hover{        
@@ -37,7 +36,7 @@
             margin: 0;
             padding: 0;
             font-family: sans-serif;
-            background: linear-gradient(#141e30, #243b55);
+            background: linear-gradient(#141e30, #35363f);
         }
 
         .login-box {
@@ -91,7 +90,7 @@
         .login-box .user-box input:valid~label {
             top: -20px;
             left: 0;
-            color: #03e9f4;
+            color: #ffffff;
             font-size: 12px;
         }
 
@@ -99,7 +98,7 @@
             position: relative;
             display: inline-block;
             padding: 10px 20px;
-            color: #03e9f4;
+            color: #ffffff;
             font-size: 16px;
             text-decoration: none;
             text-transform: uppercase;
@@ -110,13 +109,13 @@
         }
 
         .login-box button:hover {
-            background: #03e9f4;
+            background: #f40303;
             color: #fff;
             border-radius: 5px;
-            box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+            box-shadow: 0 0 5px #ff0000,
+                0 0 25px #f40303,
+                0 0 50px #f40303,
+                0 0 100px #f40303;
         }
 
         .login-box button span {
@@ -135,7 +134,7 @@
             left: -100%;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #03e9f4);
+            background: linear-gradient(90deg, transparent, #f40303);
             animation: btn-anim1 1s linear infinite;
         }
 
@@ -155,7 +154,7 @@
             right: 0;
             width: 2px;
             height: 100%;
-            background: linear-gradient(180deg, transparent, #03e9f4);
+            background: linear-gradient(180deg, transparent, #f40303);
             animation: btn-anim2 1s linear infinite;
             animation-delay: .25s
         }
@@ -176,7 +175,7 @@
             right: -100%;
             width: 100%;
             height: 2px;
-            background: linear-gradient(270deg, transparent, #03e9f4);
+            background: linear-gradient(270deg, transparent, #f40303);
             animation: btn-anim3 1s linear infinite;
             animation-delay: .5s
         }
@@ -200,7 +199,7 @@
             left: 0;
             width: 2px;
             height: 100%;
-            background: linear-gradient(360deg, transparent, #03e9f4);
+            background: linear-gradient(360deg, transparent, #f40303);
             animation: btn-anim4 1s linear infinite;
             animation-delay: .75s
         }
@@ -233,8 +232,8 @@
         #footer a{
             color: white !important;
             text-decoration: none;
-            margin-left: 5px;
-            //border: 1px solid  white;
+            margin-left: 5px;    
+            text-align: center;
         }
 
     </style>
@@ -273,7 +272,7 @@
 
             <!--12/01 Acrescentado essa linha-->
             <span style="color: white; font-size: 14px; display: block; margin: 5px; auto; text-align: center;" id="resetMail" onclick="window.modalDialog.showModal();">
-            Esqueceu a senha? Clique aqui.</span> 
+            Esqueceu sua senha?</span> 
             
 
             <button>

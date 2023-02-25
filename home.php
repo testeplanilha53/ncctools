@@ -256,9 +256,7 @@
                     <hr><strong>SVA e Token</strong> <br>
                     <button class="btn btn-outline-dark" id="fun_sva" onclick="fun_sva()">Ativação de SVA’s</button> 
                     <button class="btn btn-outline-dark" id="fun_token_fatura" onclick="fun_token_fatura()">Token para acessar as faturas</button> 
-                    <button class="btn btn-outline-dark" id="fun_token_sva" onclick="fun_token_sva()">Token para ativar os SVA</button>
-		    <br>
-		    <hr>
+                    <button class="btn btn-outline-dark" id="fun_token_sva" onclick="fun_token_sva()">Token para ativar os SVA</button> 
 
                 </div>
 
@@ -286,7 +284,7 @@
                         <input type="text" id="protocolo_chat" placeholder="Protocolo do Chat" style="color: blue;">
                         <input type="text" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" style="color: red;"> <br>
 
-                        <input type="text" id="nome_cliente" placeholder="Nome do cliente" onchange="mudar_titulo()">
+                        <input type="text" id="nome_cliente" placeholder="Nome do cliente" onclick="copiar_nome_cliente()" onchange="mudar_titulo()">
                         <input type="tel" id="telefone" placeholder="(xx) y xxxx-xxxx"> <br> <br>
 
                         <input type="text" id="bfp" placeholder="BFP" value="Padrão Fibra"> <br>
