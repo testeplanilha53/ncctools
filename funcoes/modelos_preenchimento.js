@@ -648,7 +648,7 @@ function createAnswers(category, anwers){
 					//btn.classList.add("btn"); 
 					//btn.classList.add("btn-outline-dark");
 					 var label = document.createElement("label");
-					 label.innerHTML ="<button class='btn btn-outline-dark' id='"+ el1['id'] + "'>" + el1['title'] +"</button>"
+					 label.innerHTML ="<button class='btn btn-outline-dark' id='"+ el1['id'] + "' onclick(" + el1['id']  + "," + 'el1['answer']' " )>" + el1['title'] +"</button>"
 					 divConteiner.appendChild(label);
 				 }  
 			   });
@@ -671,12 +671,12 @@ function copySavedAnswers(answer){
 
 }
 
-function copy_anwer(id){
-    meu_id = window.document.getElementById("fun_token_sva")
-    change_color(meu_id)
-    meu_id.className = "btn btn-danger"
+function copy_anwer(id, value){
+    //meu_id = window.document.getElementById("id")
+    //change_color(meu_id)
+    //meu_id.className = "btn btn-danger"
 
-    descricao.value = meu_id.value;
+    descricao.value = value;
 
 }
 
