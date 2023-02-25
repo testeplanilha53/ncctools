@@ -641,12 +641,14 @@ function createAnswers(category, anwers){
 			   anwers.forEach( (el1) =>{
 			   	
 				 if(el1['category'] == el['category']){
-				 	var btn = document.createElement("button");
-					btn.innerHTML = el1['title'];
-					btn.id = el1['id'];
-					divConteiner.appendChild(btn);
-					btn.classList.add("btn"); 
-					btn.classList.add("btn-outline-dark");
+				 	//var btn = document.createElement("button");
+					//btn.innerHTML = el1['title'];
+					//btn.id = el1['id'];
+					//divConteiner.appendChild(btn);
+					//btn.classList.add("btn"); 
+					//btn.classList.add("btn-outline-dark");
+					 var label = document.createElement("label");
+					 label.innerHTML ="<button class='btn btn-outline-dark' id='"+ el1['id'] + ">" + el1['title'] +"</button>" ;
 				 }  
 			   });
 			   
