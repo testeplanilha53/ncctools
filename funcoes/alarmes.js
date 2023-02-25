@@ -29,7 +29,7 @@ var tempo2 = converter_segundos_string(intervalo) - converter_segundos(agora)
 var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 
 
-function alerta_exato(duration, display,msg_ativa=true) {
+async function alerta_exato(duration, display,msg_ativa=true) {
     var timer = duration, minutes, seconds;
     if (duration>0){
     setInterval(function () {
@@ -51,7 +51,7 @@ function alerta_exato(duration, display,msg_ativa=true) {
 }
 
 
-function alerta_2m(duration, display,msg_ativa=true) {
+async function alerta_2m(duration, display,msg_ativa=true) {
     var timer = duration, minutes, seconds;
     if (duration>0){
     setInterval(function () {
@@ -72,7 +72,7 @@ function alerta_2m(duration, display,msg_ativa=true) {
     }
 }
 
-function alerta_20m(duration, display,msg_ativa=true) {
+async function alerta_20m(duration, display,msg_ativa=true) {
     var timer = duration, minutes, seconds;
     if (duration>0){
         setInterval(function () {
@@ -121,7 +121,7 @@ window.onload = function (){
 
 
 
-function msg_alerta(){
+async function msg_alerta(){
 
     window.alert("Sua pausa é agora!")
     
@@ -138,7 +138,7 @@ function msg_alerta(){
 
 }
 
-function falta_2min(){
+async function falta_2min(){
     
     window.alert("Faltam 2 minutos para sua pausa")
     Notification.requestPermission(/* opcional: callback */);
@@ -153,7 +153,7 @@ function falta_2min(){
 
 }
 
-function falta_20min(){
+async function falta_20min(){
     
     window.alert("Faltam 20 minutos para o seu intervalo")
     Notification.requestPermission(/* opcional: callback */);
