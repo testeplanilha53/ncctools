@@ -672,7 +672,7 @@ function copySavedAnswers(answer){
 }
 
 function copy_answer(id, value){
-    meu_id = window.document.getElementById("id")
+    meu_id = window.document.getElementById(id)
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
