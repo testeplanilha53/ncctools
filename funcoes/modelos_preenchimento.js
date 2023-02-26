@@ -621,7 +621,7 @@ function getSavedCategory(){
 
 
 function createAnswers(category, anwers){
-        let divConteiner = document.getElementById("botoes_auto_preenchidos");
+        let divConteiner = document.getElementById("preenchidos_conteiner");
 	console.log( category)
 	console.log( anwers )
 	
@@ -666,10 +666,6 @@ getSavedCategory();
 
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
-function copySavedAnswers(answer){
-    console.log("Chamou a função copySavedAnswers")
-
-}
 
 function copy_answer(id, value){
     meu_id = window.document.getElementById(id)
