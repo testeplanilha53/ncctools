@@ -1,24 +1,24 @@
 #Salvar{
-    position: absolute;
-    left: 70%;
-    top: 78%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    left: 80% !important;
+    bottom: 200px;
+    margin: 0 !important;
+    display: inline;
 }
 
 #sair{
-    position: absolute;
+    position: relative;
     left: 100%;
-    top: 3%;
-    transform: translate(-50%, -50%); 
 }
 
 
-body{
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translate(-50%, -50%);
+html, body{
+    width: 700px;
+    margin: auto;
+    display: block;
 }
+
+
 
 div{
     color: white;

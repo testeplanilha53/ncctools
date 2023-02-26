@@ -121,7 +121,24 @@
 				echo ( (int)$Exception->getCode() );
 			}
 		}
-		
-	}
+	
+
+		 /*Delete User data*/
+		public function delete($db, $query){
+			try{
+			        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        			$stmt = $db->prepare($query);
+        			$stmt->execute();
+        			
+    				return $stmt->rowCount() ;
+
+			}catch( PDOException $Exception){
+    				echo( $Exception->getMessage()   ) ;
+				return ( (int)$Exception->getCode() );
+			}
+		}
+
+	
+	}//fim classe connect
 
 ?>

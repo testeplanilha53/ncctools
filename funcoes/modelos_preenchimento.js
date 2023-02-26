@@ -578,3 +578,101 @@ function fun_token_sva (){
     descricao.value = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
 
 }
+
+
+
+
+//Estou adicionando funções a partir dessa linha
+//Essa função busca as respostas do banco ao carregar a página e acrescenta na página de modelos
+
+function getSavedAnswers( category ){    
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+		 if (JSON.parse(this.responseText) != false ){
+			createAnswers( category,  JSON.parse(this.responseText)  );
+		}
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getAnswers", true);
+    xhttp.send();
+    
+	//return "3";
+}
+
+
+
+
+function getSavedCategory(){
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+                if (JSON.parse(this.responseText) != false ){
+			getSavedAnswers( JSON.parse(this.responseText)  );
+		}
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getAnswersCategory", true);
+    xhttp.send();
+ 
+}
+
+
+
+
+function createAnswers(category, anwers){
+        let divConteiner = document.getElementById("preenchidos_conteiner");
+	console.log( category)
+	console.log( anwers )
+	
+	
+	   if(category != false){
+		   category.forEach( (el)=>{
+			var strong = document.createElement("strong")
+			strong.innerHTML = el["category"]
+			var br = document.createElement("br")
+			var hr = document.createElement("hr")
+			
+			divConteiner.appendChild(br);
+			divConteiner.appendChild(strong);
+			divConteiner.appendChild(br);
+
+			   
+			   anwers.forEach( (el1) =>{
+			   	
+				 if(el1['category'] == el['category']){
+				 	//var btn = document.createElement("button");
+					//btn.innerHTML = el1['title'];
+					//btn.id = el1['id'];
+					//divConteiner.appendChild(btn);
+					//btn.classList.add("btn"); 
+					//btn.classList.add("btn-outline-dark");
+					 var label = document.createElement("label");
+					 label.innerHTML = `<button class='btn btn-outline-dark' id='${el1['id']}' onclick="copy_answer( ${el1['id']}  , '${el1['answer'] }')">  ${el1['title']} </button>` 
+					 divConteiner.appendChild(label);
+				 }  
+			   });
+			   
+			   divConteiner.appendChild(hr);
+		  
+		       //textArea.classList.add("txt-answers");	   			
+		   } );
+	  }
+} 
+
+
+
+getSavedCategory();
+
+
+//Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
+
+function copy_answer(id, value){
+    meu_id = window.document.getElementById(id)
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = value;
+    console.log(id, value);
+}
+
