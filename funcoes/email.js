@@ -9,7 +9,7 @@ document.getElementsByClassName("lastPass")[0].addEventListener('keyup', (e) => 
 document.getElementsByClassName("firstPass")[0].addEventListener('keyup', (e) => {
     let firstPass =   document.getElementsByClassName("firstPass")[0].value.trim();
     let lastPass  =   document.getElementsByClassName("lastPass")[0].value.trim();
-    let size = lastPass.length - 1;
+    let size = firstPass.length - 1;
     if(lastPass.length > 0){
         showAlert(lastPass[size] == firstPass[size]);   
     }
