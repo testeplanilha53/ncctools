@@ -242,6 +242,14 @@
                                     margin-left: 5px;    
                                     text-align: center;
                                 }
+                                
+                                
+                                .showAlert{
+                                    color: red;
+                                }
+                                .hiddenAlert{
+                                    display: none !important;
+                                }
 
                                 </style>
                     </head> 
