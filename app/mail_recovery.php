@@ -261,7 +261,7 @@
                                        > 
                                     <label>Confirme a senha</label>
 
-                                    <span class="showAlert hiddenAlert">As senhas não coincidem!</span>
+                                    <span class="hiddenAlert">As senhas não coincidem!</span>
                                 </div>
 
 
