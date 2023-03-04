@@ -642,7 +642,7 @@ function createAnswers(category, anwers){
 			   	
 				 if(el1['category'] == el['category']){
 					 var label = document.createElement("label");
-					 label.innerHTML = `<input type="text" class='${el1['id']}' value="${el1['answer'] }" style="visibility:hidden; position: absolute;"><button class='btn btn-outline-dark'  id='${el1['id']}' onclick="copy_answer( ${el1['id']} )">  ${el1['title']} </button>` 
+					 label.innerHTML = `<textarea class='${el1['id']}' value="${el1['answer'] }" style="visibility:hidden; position: absolute;"></textarea><button class='btn btn-outline-dark'  id='${el1['id']}' onclick="copy_answer( ${el1['id']} )">  ${el1['title']} </button>` 
 					 divConteiner.appendChild(label);
 				 }  
 			   });
