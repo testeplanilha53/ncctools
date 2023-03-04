@@ -1,9 +1,0 @@
-Login: admin_ncc on 27-01-2023 10:42:01
-Login: user_ncc on 27-01-2023 10:43:18
-Login: albislene.albino@ncc.faster.com.br on 27-01-2023 12:05:48
-Login: caroline.souza@ncc.faster.com.br on 27-01-2023 18:07:16
-Login: thais.oliveira@ncc.faster.com.br on 27-01-2023 18:11:02
-Login: user_ncc on 27-01-2023 20:53:17
-Login: user_ncc on 27-01-2023 21:13:05
-Logout: user_ncc on 27-01-2023 21:13:32
-Login: user_ncc on 27-01-2023 21:13:45
