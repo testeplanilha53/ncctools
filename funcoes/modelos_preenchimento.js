@@ -672,7 +672,7 @@ function copy_answer(id, value){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `"${value}"`;
+    //descricao.value = value;
     console.log(id, value);
 }
 
