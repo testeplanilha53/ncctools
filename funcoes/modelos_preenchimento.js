@@ -667,6 +667,6 @@ function copy_answer(id){
     meu_id.className = "btn btn-danger"
 
     descricao.value = document.getElementsByClassName(id).value;
-    console.log(id, value);
+    console.log(document.getElementsByClassName(id) );
 }
 
