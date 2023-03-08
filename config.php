@@ -283,7 +283,7 @@
 	    		<option value="padrao_azul" selected >Padrão aditivo [Azul]</option>
 			<option value="padrao_vermelho">Padrão completo [Vermelho]</option>
 		    </select><br>
-		<label>Script personalizado</label><br>
+		<label>Script personalizado</label><br> 
 	    	<textarea rows="5" name="resposta_usuario" placeholder="Digite aqui sua resposta" required></textarea><br>
 		<input type="submit" value="Cadastrar">
 	    </form>
