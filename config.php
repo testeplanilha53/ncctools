@@ -278,6 +278,11 @@
 	    	<input type="text" name="titulo_usuario" placeholder="Obrigatório!" maxlength="100" required><br>
 		<!-- <label>SLA(PRAZO): </label> -->
 	    	<!-- <input type="text" name="sla_usuario" placeholder="Opcional!"><br> -->
+		<label>Comportamento*: </label>
+	    	<select name="lista_comportamento" required id="select_lista_comportamento">
+	    		<option value="padrao_azul" selected >Padrão aditivo [Azul]</option>
+			<option value="padrao_vermelho">Padrão completo [Vermelho]</option>
+		    </select><br>
 		<label>Script personalizado</label><br>
 	    	<textarea rows="5" name="resposta_usuario" placeholder="Digite aqui sua resposta" required></textarea><br>
 		<input type="submit" value="Cadastrar">
