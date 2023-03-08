@@ -205,8 +205,9 @@
 			$sla  =  empty( trim($_POST['sla_usuario']) ) ?  "Sem sla" : trim( $_POST['sla_usuario'] ) ;
 			$id_user = $_SESSION['idUser'];
 			$id_answer = trim($_POST['resposta_usuario']);
+			$behavior = trim($_POST['lista_comportamento']);
 			
-			$values= "DEFAULT, $id_user ,'$category' ,'$title' , '$sla' , '$id_answer'";
+			$values= "DEFAULT, $id_user ,'$category' ,'$title' , '$sla' , '$id_answer', '$behavior' ";
 			
 			var_dump($values);
 		    //INSERT INTO `users_answers`(`id`, `user_id`, `category`, `title`, `sla`, `answer`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
