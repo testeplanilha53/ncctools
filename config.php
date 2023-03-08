@@ -279,7 +279,7 @@
 		<!-- <label>SLA(PRAZO): </label> -->
 	    	<!-- <input type="text" name="sla_usuario" placeholder="Opcional!"><br> -->
 		<label>Comportamento*: </label>
-	    	<select name="lista_comportamento" required id="select_lista_comportamento">
+	    	<select name="lista_comportamento" required id="select_lista_comportamento"> 
 	    		<option value="padrao_azul" selected >Padrão aditivo [Azul]</option>
 			<option value="padrao_vermelho">Padrão completo [Vermelho]</option>
 		    </select><br>
