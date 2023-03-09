@@ -4,15 +4,19 @@ var descricao = window.document.getElementById("descricao")
 
 var elements = document.querySelectorAll(`[id^="fun_"]`)
 function change_color(meu_id){
+	console.log(meu_id)
     elements.forEach(element => {
         if (element.id!="meu_id"){
-		console.log(meu_id)
+		
             element.className = "btn btn-outline-dark"
             
         }
                 
     });
 }
+
+
+
 
 //------------------------------------------------------
 //Equipamentos Ópticos
