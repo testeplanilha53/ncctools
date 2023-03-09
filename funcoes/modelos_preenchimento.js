@@ -662,7 +662,7 @@ getSavedCategory();
 
 function copy_answer(id){
     meu_id = window.document.getElementById("fun_" + id)
-    change_color(meu_id)
+    change_color(meu_id.className)
     meu_id.className = "btn btn-danger"
 
     descricao.value = document.getElementsByClassName("fun_"+id)[0].value;
