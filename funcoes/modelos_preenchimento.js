@@ -8,6 +8,7 @@ function change_color(meu_id){
     elements.forEach(element => {
         if (element.id!="meu_id"){
 		console.log(meu_id)
+		console.log(element)
             element.className = "btn btn-outline-dark"
             
         }
