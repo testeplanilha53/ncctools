@@ -665,7 +665,7 @@ function copy_answer(id){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = document.getElementsByClassName(id)[0].value;
-    console.log(document.getElementsByClassName(id)[0] );
+    descricao.value = document.getElementsByClassName("fun_"+id)[0].value;
+    console.log(document.getElementsByClassName("fun_"+id)[0] );
 }
 
