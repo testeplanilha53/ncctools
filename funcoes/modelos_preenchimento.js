@@ -645,7 +645,7 @@ function createAnswers(category, anwers){
 			   	
 				 if(el1['category'] == el['category']){
 					 var label = document.createElement("label");
-					 label.innerHTML = `<textarea class='fun_${el1['id']}' style="visibility:hidden; position: absolute;">${el1['answer'] }</textarea><button class='btn btn-outline-dark'  id='fun_${el1['id']}' onclick="copy_answer( ${el1['id']} )">  ${el1['title']} </button>` 
+					 label.innerHTML = `<textarea class='${el1['id']}' style="visibility:hidden; position: absolute;">${el1['answer'] }</textarea><button class='btn btn-outline-dark'  id='fun_${el1['id']}' onclick="copy_answer( ${el1['id']} )">  ${el1['title']} </button>` 
 					 divConteiner.appendChild(label);
 				 }  
 			   });
@@ -669,7 +669,6 @@ function copy_answer(id){
     change_color("fun_"+id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = document.getElementsByClassName("fun_"+id)[0].value;
-    console.log(document.getElementsByClassName("fun_"+id)[0] );
+    descricao.value = document.getElementsByClassName(id)[0].value;
 }
 
