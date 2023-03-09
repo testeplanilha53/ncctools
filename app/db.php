@@ -225,7 +225,7 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 		    $id_user = $_SESSION['idUser'];
-	            $query = "SELECT `id`, `category`,  `title`, `sla`, `answer` FROM `users_answers` WHERE `user_id` = $id_user ORDER BY `category` "; 
+	            $query = "SELECT `id`, `category`,  `title`, `sla`, `answer` , `behavior` FROM `users_answers` WHERE `user_id` = $id_user ORDER BY `category` "; 
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $answer = $pdo->read($db, $query );
