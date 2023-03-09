@@ -91,6 +91,7 @@
 		       let labelTitle = document.createElement("p")
 		       let labelSla = document.createElement("p")
 		       let divRemove = document.createElement("div")
+		       let labelBehavior = document.createElement("p")
 		       divRemove.classList.add("div-btn"); 
 		       divRemove.innerHTML = "<button onclick=deleteAnswer("+ el["id"] +")>Remover</button>"
 
@@ -98,10 +99,12 @@
 		       labelCategory.innerHTML = "Categoria: " + el["category"]
 		       labelTitle.innerHTML = "Título: " + el["title"]
 		       labelSla.innerHTML = "SLA: " + el["sla"]
+		       labelBehavior.innerHTML = "Comportamento: " + el["behavior"]	   
 
 		       div.appendChild(labelCategory);
 		       div.appendChild(labelTitle);
-		       div.appendChild(labelSla);
+		       div.appendChild(labelBehavior);
+		       //div.appendChild(labelSla);
 			div.appendChild(textArea);
 			div.appendChild(textArea);
 			div.appendChild(divRemove);
