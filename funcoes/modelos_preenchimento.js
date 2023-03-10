@@ -19,11 +19,12 @@ function change_color(meu_id){
 
 
 function db_change_color(meu_id){
-    //var db_elements = preenchidos_conteiner	
-    elements.forEach(element => {
+   let divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0]; 	
+   let db_elements = 	divConteiner.querySelectorAll(`[id^="fun_"]`)
+    db_elements.forEach(element => {
         if (element.id!="meu_id"){
 		console.log(meu_id)
-		console.log(element)
+		//console.log(element)
             element.className = "btn btn-outline-dark"
             
         }
@@ -681,7 +682,7 @@ getSavedCategory();
 
 function copy_answer(id){
     meu_id = window.document.getElementById("fun_" + id)
-    change_color("fun_"+id)
+    db_change_color("fun_"+id)
     meu_id.className = "btn btn-danger"
 
     descricao.value = document.getElementsByClassName(id)[0].value;
