@@ -171,7 +171,7 @@
                     </button>
                 </div>
                 <div class="modal-body" id="botoes_auto_preenchidos">
-		    <span id="preenchidos_conteiner">
+		    <span class="preenchidos_conteiner">
 		    </span>	
                     <strong>Equipamentos Ópticos</strong> <br>                    
                     <button class="btn btn-outline-dark" id="fun_Fiberhome" onclick="fun_Fiberhome()">Fiberhome</button>
