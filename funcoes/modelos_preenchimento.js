@@ -18,6 +18,20 @@ function change_color(meu_id){
 
 
 
+function db_change_color(meu_id){
+    //var db_elements = preenchidos_conteiner	
+    elements.forEach(element => {
+        if (element.id!="meu_id"){
+		console.log(meu_id)
+		console.log(element)
+            element.className = "btn btn-outline-dark"
+            
+        }
+                
+    });
+}
+
+
 
 //------------------------------------------------------
 //Equipamentos Ópticos
