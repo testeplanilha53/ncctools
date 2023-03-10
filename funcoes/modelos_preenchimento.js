@@ -661,7 +661,8 @@ function createAnswers(category, anwers){
 			   	
 				 if(el1['category'] == el['category']){
 					 var label = document.createElement("label");
-					 label.innerHTML = `<textarea class='${el1['id']}' style="visibility:hidden; position: absolute;">${el1['answer'] }</textarea><button class='btn btn-outline-dark'  id='fun_${el1['id']}' onclick="copy_answer( ${el1['id']} )">  ${el1['title']} </button>` 
+					 label.innerHTML = `<textarea class='${el1['id']}' style="visibility:hidden; position: absolute;">${el1['answer'] }</textarea><button class='btn btn-outline-dark'  id='fun_${el1['id']}' onclick="copy_answer( ${el1['id']}, ${el1['behavior
+']} )">  ${el1['title']} </button>` 
 					 divConteiner.appendChild(label);
 				 }  
 			   });
@@ -680,11 +681,15 @@ getSavedCategory();
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
 
-function copy_answer(id){
+function copy_answer(id, db_behavior){
     meu_id = window.document.getElementById("fun_" + id)
     db_change_color("fun_"+id)
-    meu_id.className = "btn btn-danger"
-
+    if(db_behavior == "padrao_azul"){
+	    meu_id.className = "btn btn-info";
+    }else{
+	    meu_id.className = "btn btn-danger";
+    }	
+    
     descricao.value = document.getElementsByClassName(id)[0].value;
 }
 
