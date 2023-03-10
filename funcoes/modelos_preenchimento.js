@@ -639,7 +639,7 @@ function getSavedCategory(){
 
 
 function createAnswers(category, anwers){
-        let divConteiner = document.getElementById("preenchidos_conteiner");
+        let divConteiner = querySelectorAll(".preenchidos_conteiner")[0];
 	console.log( category)
 	console.log( anwers )
 	
