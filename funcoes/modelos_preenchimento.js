@@ -691,3 +691,10 @@ function copy_answer(id, db_behavior){
     
 }
 
+
+//Adicionar tags html na resposta
+function add_tag(tag){
+	descricao.value += `${tag}`;	
+}
+
+
