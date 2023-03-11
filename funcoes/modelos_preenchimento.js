@@ -4,13 +4,9 @@ var descricao = window.document.getElementById("descricao")
 
 var elements = document.querySelectorAll(`[id^="fun_"]`)
 function change_color(meu_id){
-	
     elements.forEach(element => {
         if (element.id!="meu_id"){
-		console.log(meu_id)
-		console.log(element)
             element.className = "btn btn-outline-dark"
-            
         }
                 
     });
@@ -18,12 +14,11 @@ function change_color(meu_id){
 
 
 var divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0]; 	
-
+var db_elements =  divConteiner.querySelectorAll(`[id^="fun_"]`)
 function db_change_color(meu_id){
 	console.log(meu_id)
-	var db_elements =  divConteiner.querySelectorAll(`[id^="fun_"]`)
+	console.log("DB_ELEMENTS = " + db_elements )
     db_elements.forEach(element => {
-	    console.log(element)
         if (element.id!="meu_id"){
 		console.log(meu_id)
 		//console.log(element)
