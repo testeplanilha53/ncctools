@@ -294,8 +294,8 @@
                         <textarea id="descricao" cols="70" rows="8"
                             placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br>
 			<p id="tags_html">
-			   <button onclick="add_tag('br')">&lt;br&gt;</button>	
-			   <button onclick="add_tag('hr')">&lt;hr&gt;</button>
+			   <button onclick="add_tag('<br>')">&lt;br&gt;</button>	
+			   <button onclick="add_tag('<hr>')">&lt;hr&gt;</button>
 			</p>
                     </div>
 
