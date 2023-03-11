@@ -17,10 +17,9 @@ function change_color(meu_id){
 }
 
 
-
+var divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0]; 	
+var db_elements =  divConteiner.querySelectorAll(`[id^="fun_"]`)
 function db_change_color(meu_id){
-	let divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0]; 	
-	let db_elements = 	divConteiner.querySelectorAll(`[id^="fun_"]`)
     db_elements.forEach(element => {
         if (element.id!="meu_id"){
 		console.log(meu_id)
@@ -685,7 +684,8 @@ function copy_answer(id, db_behavior){
     
     if(db_behavior == "padrao_azul"){
 	    meu_id.className = "btn btn-info";
-    }(db_behavior == "padrao_vermelho"){
+    }
+    if(db_behavior == "padrao_vermelho"){
 	    db_change_color("fun_"+id)
 	    meu_id.className = "btn btn-danger";
     }	
