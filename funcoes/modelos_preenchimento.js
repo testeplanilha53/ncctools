@@ -682,10 +682,11 @@ getSavedCategory();
 
 function copy_answer(id, db_behavior){
     meu_id = window.document.getElementById("fun_" + id)
-    db_change_color("fun_"+id)
+    
     if(db_behavior == "padrao_azul"){
 	    meu_id.className = "btn btn-info";
     }else{
+	    db_change_color("fun_"+id)
 	    meu_id.className = "btn btn-danger";
     }	
     
