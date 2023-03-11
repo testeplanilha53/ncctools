@@ -680,12 +680,14 @@ function copy_answer(id, db_behavior){
     
     if(db_behavior == "padrao_azul"){
 	    meu_id.className = "btn btn-info";
+	    descricao.value += document.getElementsByClassName(id)[0].value;
     }
     if(db_behavior == "padrao_vermelho"){
 	    db_change_color("fun_"+id)
 	    meu_id.className = "btn btn-danger";
+	    descricao.value = document.getElementsByClassName(id)[0].value;
     }	
     
-    descricao.value = document.getElementsByClassName(id)[0].value;
+    
 }
 
