@@ -19,8 +19,8 @@ function change_color(meu_id){
 
 
 function db_change_color(meu_id){
-	var divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0]; 	
-	var db_elements = 	divConteiner.querySelectorAll(`[id^="fun_"]`)
+	let divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0]; 	
+	let db_elements = 	divConteiner.querySelectorAll(`[id^="fun_"]`)
     db_elements.forEach(element => {
         if (element.id!="meu_id"){
 		console.log(meu_id)
