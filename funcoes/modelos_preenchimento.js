@@ -19,6 +19,7 @@ function db_change_color(meu_id){
 	console.log(meu_id)
 	console.log("DB_ELEMENTS = " + db_elements )
     db_elements.forEach(element => {
+	    console.log(element)
         if (element.id!="meu_id"){
 		console.log(meu_id)
 		//console.log(element)
