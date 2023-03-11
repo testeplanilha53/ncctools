@@ -206,10 +206,10 @@
 			$id_user = $_SESSION['idUser'];
 			$id_answer = trim($_POST['resposta_usuario']);
 			
-			$values= "DEFAULT, $id_user ,'$category' ,'$title' , '$sla' , '$id_answer'";
+			$values= "DEFAULT, $id_user ,'$category' ,'$title' , '$sla' , '$id_answer', DEFAULT";
 			
 			var_dump($values);
-		    //INSERT INTO `users_answers`(`id`, `user_id`, `category`, `title`, `sla`, `answer`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
+		    //INSERT INTO `users_answers`(`id`, `user_id`, `category`, `title`, `sla`, `answer`, ) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $pdo->create($db,"users_answers", $values);
