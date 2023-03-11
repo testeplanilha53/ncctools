@@ -293,6 +293,11 @@
 
                         <textarea id="descricao" cols="70" rows="8"
                             placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br> <br>
+			<p>
+			   <button>BR</button>	
+			   <button>HR</button>
+                           <button>HR</button>
+			</p>
                     </div>
 
                     <div id="vs">
