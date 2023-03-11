@@ -296,7 +296,7 @@
 			<p id="tags_html">
 			   <button onclick="add_tag('<br>')">&lt;br&gt;</button>	
 			   <button onclick="add_tag('<hr>')">&lt;hr&gt;</button>
-			   <!--<button onclick="add_tag('<ul><li>altere aqui</li></ul>')">&lt;hr&gt;</button>-->
+			   <button onclick="add_tag('<ul><li>altere aqui</li></ul>')">&lt;ul+li&gt;</button>
 			</p>
                     </div>
 
