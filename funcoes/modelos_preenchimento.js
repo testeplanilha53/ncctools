@@ -695,9 +695,9 @@ function copy_answer(id, db_behavior){
 //Adicionar tags html na resposta
 function add_tag(tag){
 	let cursorPos = descricao.selectionStart;
-	const posicaoCursor = textarea.selectionStart;
-	const valorAntes = textarea.value.substring(0, posicaoCursor);
-	const valorDepois = textarea.value.substring(posicaoCursor);
+	const posicaoCursor = descricao.selectionStart;
+	const valorAntes = descricao.value.substring(0, posicaoCursor);
+	const valorDepois = descricao.value.substring(posicaoCursor);
 	const novoValor = valorAntes + `${tag}` + valorDepois;
 	descricao.value = novoValor;
 	//descricao.value += `${tag}`;	
