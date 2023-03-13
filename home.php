@@ -287,14 +287,13 @@
                         <input type="text" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" style="color: red;"> <br>
 
                         <input type="text" id="nome_cliente" placeholder="Nome do cliente" onclick="copiar_nome_cliente()" onchange="mudar_titulo()">
-                        <input type="tel" id="telefone" placeholder="(xx) y xxxx-xxxx"> <br> <br>
+                        <input type="text" id="telefone" placeholder="(xx) y xxxx-xxxx"> <br> <br>
 
                         <input type="text" id="bfp" placeholder="BFP" value="Padrão Fibra"> <br>
 
                         <textarea id="descricao" cols="70" rows="8"
                             placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br>
-			<p id="tags_html">
-			   <button onclick="add_tag('<br>')">&lt;br&gt;</button>	
+			<p id="tags_html" class="tags_show">
 			   <button onclick="add_tag('<hr>')">&lt;hr&gt;</button>
 			   <button onclick="add_tag('<b>')">&lt;b&gt;</button>
 			   <button onclick="add_tag('</b>')">&lt;/b&gt;</button>
