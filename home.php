@@ -296,11 +296,11 @@
 			<p id="tags_html">
 			   <button onclick="add_tag('<br>')">&lt;br&gt;</button>	
 			   <button onclick="add_tag('<hr>')">&lt;hr&gt;</button>
-			   <button onclick="add_tag('<ul><li>ITEM 1</li><li>ITEM 2</li></uL>')">&lt;ul&gt; + &ltli&gt;</button>
 			  <button onclick="add_tag('<ul>')">&lt;ul&gt;</button>	
-			   <button onclick="add_tag('</ul>')">&lt;/ul&gt;</button>
 			   <button onclick="add_tag('<li>')">&lt;li&gt;</button>
 			   <button onclick="add_tag('</li>')">&lt;/li&gt;</button>
+			   <button onclick="add_tag('</ul>')">&lt;/ul&gt;</button>
+			   <button onclick="add_tag('<ul><li>ITEM 1</li><li>ITEM 2</li></uL>')">&lt;ul&gt; + &ltli&gt;</button>
 			</p>
                     </div>
 
