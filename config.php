@@ -218,6 +218,15 @@
             
         </div>
         <br>
+	    
+	 <div id="tags">
+	   <label for="html">Habilitar tags</label><br>
+	    <input type="radio" id="html" name="show_tag" value="tags_on">
+  	  <label for="html">Desabilitar tags</label><br>
+  	  <input type="radio" id="css" name="show_tag" value="tags_off">
+    	</div>   
+	    
+	    
         <div id="chave_p">
             <label for="key_protocolo">Chave Protocolo: </label>        
             <select id="key_protocolo" name="key_protocol" required><!--Adicionei o required-->
@@ -260,13 +269,9 @@
 
     </div>  
     
-
-	
-
-
-
 </form><!--Acrescentei essa linha-->
-
+	
+	
 
     <div id="cadastrar_resposta">
 	    <span id="titulo">  CADASTRAR MODELO DE RESPOSTA   </span> <br> <br>
