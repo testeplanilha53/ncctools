@@ -700,6 +700,7 @@ function add_tag(tag){
 	const valorDepois = descricao.value.substring(posicaoCursor);
 	const novoValor = valorAntes + `${tag}` + valorDepois;
 	descricao.value = novoValor;
+	cursorPos = (valorAntes + `${tag}`).length;
 	//descricao.value += `${tag}`;	
 }
 
