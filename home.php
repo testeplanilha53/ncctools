@@ -297,7 +297,7 @@
 			   <button onclick="add_tag('<br>')">&lt;br&gt;</button>	
 			   <button onclick="add_tag('<hr>')">&lt;hr&gt;</button>
 			   <button onclick="add_tag('<b>')">&lt;b&gt;</button>
-			   <button onclick="add_tag('</b>')">&lt;b&gt;</button>
+			   <button onclick="add_tag('</b>')">&lt;/b&gt;</button>
 			   <!--<button onclick="add_tag('<li> ITEM ... </li>')">&lt;li&gt; + &lt;/li&gt;</button> -->
 			   <!--<button onclick="add_tag('<ul>\n \t <li>ITEM 1</li> \n \t <li>ITEM 2</li> \n </uL>')">&lt;ul&gt; + &ltli&gt;</button> -->
 			</p>
