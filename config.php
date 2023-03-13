@@ -220,9 +220,9 @@
         <br>
 	    
 	 <div id="tags">
-	   <label for="html">Habilitar tags</label><br>
+	   <label for="html">Habilitar tags</label>
 	    <input type="radio" id="html" name="show_tag" value="tags_on">
-  	  <label for="html">Desabilitar tags</label><br>
+  	  <label for="html">Desabilitar tags</label>
   	  <input type="radio" id="css" name="show_tag" value="tags_off">
     	</div>   
 	    
@@ -315,7 +315,7 @@
 	    
 	    <style>
 		    
-		    #conteiner-respostas, #cadastrar_resposta{
+		    #conteiner-respostas, #cadastrar_resposta, #tags{
 		    	border: solid 1px gray;
 			    padding: 10px;
 			   
