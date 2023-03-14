@@ -223,7 +223,7 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 		    $id_user = $_SESSION['idUser'];
-	            $query = "SELECT `tags_enable` FROM `users` WHERE `user_id` = $id_user "; 
+	            $query = "SELECT `tags_enable` FROM `users` WHERE `id` = $id_user "; 
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $answer = $pdo->read($db, $query );
