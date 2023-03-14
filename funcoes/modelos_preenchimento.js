@@ -711,7 +711,7 @@ function enableTags(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 if (JSON.parse(this.responseText) != false ){
-			getSavedAnswers( JSON.parse(this.responseText)  );
+			console.log( this.responseText );
 		}
           }
      };
@@ -719,6 +719,8 @@ function enableTags(){
     xhttp.send();
  
 }
+
+enableTags();
 
 
 
