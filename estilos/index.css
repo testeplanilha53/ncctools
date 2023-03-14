@@ -280,5 +280,8 @@ iframe {
     visibility: hidden !important;
 }
 
-
+#tag_submit{
+     position: relative; 
+     left: 80px;
+}
 
