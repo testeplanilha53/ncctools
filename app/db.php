@@ -204,16 +204,12 @@
 			
 			var_dump($_POST);
 			
-			/*
-			$enableTag = $_POST[]; 
+			
+			$enableTag = $_POST["enable_tag"]; 
 	            	$pdo = new Connect();
-                	$query = "UPDATE `users` SET `config`='".$settings."' WHERE id=".$_SESSION['idUser'].";" ;
+                	$query = "UPDATE `users` SET `tags_enable`= $enableTag WHERE id=".$_SESSION['idUser'].";" ;
 	            	$db = $pdo->connectOnDb();
 		        $pdo->update($db, $query);
-		    
-	            $pdo = new Connect();
-	            $db = $pdo->connectOnDb();
-		    $pdo->create($db,"users_answers", $values);*/
 	        }
 	    }
 	    
