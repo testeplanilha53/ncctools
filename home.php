@@ -171,7 +171,7 @@
                     </button>
                 </div>
                 <div class="modal-body" id="botoes_auto_preenchidos">
-		    <span id="preenchidos_conteiner">
+		    <span class="preenchidos_conteiner">
 		    </span>	
                     <strong>Equipamentos Ópticos</strong> <br>                    
                     <button class="btn btn-outline-dark" id="fun_Fiberhome" onclick="fun_Fiberhome()">Fiberhome</button>
@@ -274,7 +274,6 @@
     <div class="container" id="tela_atendimento">
         <div class="row">
             <!-- <div class="col">
-
             </div> -->
             
             <div class="col">
@@ -287,12 +286,19 @@
                         <input type="text" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" style="color: red;"> <br>
 
                         <input type="text" id="nome_cliente" placeholder="Nome do cliente" onclick="copiar_nome_cliente()" onchange="mudar_titulo()">
-                        <input type="tel" id="telefone" placeholder="(xx) y xxxx-xxxx"> <br> <br>
+                        <input type="text" id="telefone" placeholder="(xx) y xxxx-xxxx"> <br> <br>
 
                         <input type="text" id="bfp" placeholder="BFP" value="Padrão Fibra"> <br>
 
                         <textarea id="descricao" cols="70" rows="8"
-                            placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br> <br>
+                            placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br>
+			<p id="tags_html" class="tags_show">
+			   <button onclick="add_tag('<hr>')">&lt;hr&gt;</button>
+			   <button onclick="add_tag('<b>')">&lt;b&gt;</button>
+			   <button onclick="add_tag('</b>')">&lt;/b&gt;</button>
+			   <!--<button onclick="add_tag('<li> ITEM ... </li>')">&lt;li&gt; + &lt;/li&gt;</button> -->
+			   <!--<button onclick="add_tag('<ul>\n \t <li>ITEM 1</li> \n \t <li>ITEM 2</li> \n </uL>')">&lt;ul&gt; + &ltli&gt;</button> -->
+			</p>
                     </div>
 
                     <div id="vs">
@@ -361,7 +367,6 @@
 
 		<!--
             <div class="col">
-
             </div>-->
         </div>
         
@@ -370,14 +375,12 @@
     
     <!--
     <span>
-
         <button type="button" id="modelo_noc" class="btn btn-warning" data-toggle="modal" data-target="#padrao_noc"> 
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
                 <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
                 <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
               </svg>    
         </button>
-
         <button onclick="mudar_tema()" id="tema" type="button" class="btn btn btn-light" data-toggle="tooltip" data-placement="top" title="Mudar tema" >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
                 <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
@@ -385,7 +388,6 @@
         </button>
         
          <br>
-
         <a href="https://ncc.drozbase.cx/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share" target="_blank" id="link_atalho_chat"><button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Clique aqui para ver a lista de atalhos do Omini" >#</button></a>
     
         <a id="btn_sair" href="./logout.php" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Logout">              
