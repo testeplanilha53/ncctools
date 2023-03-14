@@ -227,9 +227,9 @@
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $answer = $pdo->read($db, $query );
-		    //header('Content-Type: application/json');	
-		    //$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
-                   echo ( $nswer);	
+		    header('Content-Type: application/json');	
+		    $array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+                   echo ( $array);	
 			
 	        }
 	    }
