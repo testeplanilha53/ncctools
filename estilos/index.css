@@ -281,7 +281,7 @@ iframe {
 }
 
 #tag_submit{
-     position: relative; 
-     left: 80px;
+     position: relative !important; 
+     left: 80px !important; 
 }
 
