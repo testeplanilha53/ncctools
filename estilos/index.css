@@ -272,12 +272,12 @@ iframe {
 
 
 .tags_show{
-    visibility: visible;
+    visibility: visible !important;
 }
 
 
 .tags_hide{
-    visibility: hidden;
+    visibility: hidden !important;
 }
 
 
