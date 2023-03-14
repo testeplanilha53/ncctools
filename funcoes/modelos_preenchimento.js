@@ -706,3 +706,21 @@ function add_tag(tag){
 
 
 
+function enableTags(){
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+                if (JSON.parse(this.responseText) != false ){
+			getSavedAnswers( JSON.parse(this.responseText)  );
+		}
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getTagsStatus", true);
+    xhttp.send();
+ 
+}
+
+
+
+
+
