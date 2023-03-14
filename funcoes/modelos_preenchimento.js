@@ -711,6 +711,11 @@ function enableTags(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 		console.log( JSON.parse( this.responseText) );
+		if( JSON.parse( this.responseText )[0]['tags_enable'] == "0" ){
+			document.getElementById("tags_html").className = "tags_hide";
+		}else{
+			document.getElementById("tags_html").className = "tags_show";
+		}
 		
           }
      };
