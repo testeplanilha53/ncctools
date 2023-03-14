@@ -270,6 +270,7 @@
 	   <input type="radio" id="html" name="show_tag" value="tags_on">
   	  <label for="html">Desabilitar tags</label>
   	  <input type="radio" id="css" name="show_tag" value="tags_off">
+          <input type="submit" value="Salvar">
 	</form>
     </div>   	
 	
