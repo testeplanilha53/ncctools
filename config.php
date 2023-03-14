@@ -268,9 +268,9 @@
 	 <form method="post" action="./app.php?action=enableTags">
 	  <label for="html">Habilitar tags</label>
 	   <input type="radio" id="html" name="enable_tag" value="1">
-  	  <label for="html">Desabilitar tags</label>
+  	  <label for="css">Desabilitar tags</label>
   	  <input type="radio" id="css" name="enable_tag" value="0">
-          <input type="submit" value="Salvar">
+          <input type="submit" value="Salvar" id="tag_submit">
 	</form>
     </div>   	
 	
