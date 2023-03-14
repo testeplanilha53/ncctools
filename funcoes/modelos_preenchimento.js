@@ -711,7 +711,7 @@ function enableTags(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 		var tag_status = JSON.parse( this.responseText)
-		console.log( tag_status[0] );
+		console.log( tag_status[0]['tags_enable'] );
 		if( tag_status[0]['tags_enable'] == "0" ){
 			document.getElementById("tags_html").className = "tags_hide";
 		}else{
