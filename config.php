@@ -219,13 +219,6 @@
         </div>
         <br>
 	    
-	 <div id="tags">
-	   <label for="html">Habilitar tags</label>
-	    <input type="radio" id="html" name="show_tag" value="tags_on">
-  	  <label for="html">Desabilitar tags</label>
-  	  <input type="radio" id="css" name="show_tag" value="tags_off">
-    	</div>   
-	    
 	    
         <div id="chave_p">
             <label for="key_protocolo">Chave Protocolo: </label>        
@@ -270,6 +263,15 @@
     </div>  
     
 </form><!--Acrescentei essa linha-->
+	
+    <div id="tags">
+	 <form method="post" action="./app.php?action=enableTags">
+	  <label for="html">Habilitar tags</label>
+	   <input type="radio" id="html" name="show_tag" value="tags_on">
+  	  <label for="html">Desabilitar tags</label>
+  	  <input type="radio" id="css" name="show_tag" value="tags_off">
+	</form>
+    </div>   	
 	
 	
 
