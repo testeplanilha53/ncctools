@@ -91,6 +91,7 @@
 		       let labelTitle = document.createElement("p")
 		       let labelSla = document.createElement("p")
 		       let divRemove = document.createElement("div")
+		       let labelBehavior = document.createElement("p")
 		       divRemove.classList.add("div-btn"); 
 		       divRemove.innerHTML = "<button onclick=deleteAnswer("+ el["id"] +")>Remover</button>"
 
@@ -98,10 +99,12 @@
 		       labelCategory.innerHTML = "Categoria: " + el["category"]
 		       labelTitle.innerHTML = "Título: " + el["title"]
 		       labelSla.innerHTML = "SLA: " + el["sla"]
+		       labelBehavior.innerHTML = "Comportamento: " + el["behavior"]	   
 
 		       div.appendChild(labelCategory);
 		       div.appendChild(labelTitle);
-		       div.appendChild(labelSla);
+		       div.appendChild(labelBehavior);
+		       //div.appendChild(labelSla);
 			div.appendChild(textArea);
 			div.appendChild(textArea);
 			div.appendChild(divRemove);
@@ -215,6 +218,8 @@
             
         </div>
         <br>
+	    
+	    
         <div id="chave_p">
             <label for="key_protocolo">Chave Protocolo: </label>        
             <select id="key_protocolo" name="key_protocol" required><!--Adicionei o required-->
@@ -228,7 +233,6 @@
             <!--
             Cor de fundo página principal: 
             <input type="color" id="cor_fundo" value="#35363f" onchange="mud_cor_fundo()"> <br><br>
-
             Cor das fontes: 
             <input type="color" id="cor_fundo" value="#FFFFFF" onchange="mud_cor_fonte()"> <br><br>
             -->
@@ -257,13 +261,19 @@
 
     </div>  
     
-
-	
-
-
-
 </form><!--Acrescentei essa linha-->
-
+	
+    <div id="tags">
+	 <form method="post" action="./app.php?action=enableTags">
+	  <label for="html">Habilitar tags</label>
+	   <input type="radio" id="html" name="enable_tag" value="1">
+  	  <label for="css">Desabilitar tags</label>
+  	  <input type="radio" id="css" name="enable_tag" value="0">
+          <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
+	</form>
+    </div>   	
+	
+	
 
     <div id="cadastrar_resposta">
 	    <span id="titulo">  CADASTRAR MODELO DE RESPOSTA   </span> <br> <br>
@@ -278,7 +288,12 @@
 	    	<input type="text" name="titulo_usuario" placeholder="Obrigatório!" maxlength="100" required><br>
 		<!-- <label>SLA(PRAZO): </label> -->
 	    	<!-- <input type="text" name="sla_usuario" placeholder="Opcional!"><br> -->
-		<label>Script personalizado</label><br>
+		<label>Comportamento*: </label>
+	    	<select name="lista_comportamento" required id="select_lista_comportamento"> 
+	    		<option value="padrao_azul">Padrão aditivo [Azul]</option>
+			<option value="padrao_vermelho" selected>Padrão completo [Vermelho]</option>
+		    </select><br>
+		<label>Script personalizado</label><br> 
 	    	<textarea rows="5" name="resposta_usuario" placeholder="Digite aqui sua resposta" required></textarea><br>
 		<input type="submit" value="Cadastrar">
 	    </form>
@@ -302,7 +317,7 @@
 	    
 	    <style>
 		    
-		    #conteiner-respostas, #cadastrar_resposta{
+		    #conteiner-respostas, #cadastrar_resposta, #tags{
 		    	border: solid 1px gray;
 			    padding: 10px;
 			   
