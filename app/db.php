@@ -195,6 +195,34 @@
         }   
 	}
     
+	
+	//setModelAnswer
+	if(isset($_GET['action']) && $_GET['action'] == "enableTags"){
+            session_start();
+	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+			
+			var_dump($_POST);
+			
+			/*
+			$enableTag = $_POST[]; 
+	            	$pdo = new Connect();
+                	$query = "UPDATE `users` SET `config`='".$settings."' WHERE id=".$_SESSION['idUser'].";" ;
+	            	$db = $pdo->connectOnDb();
+		        $pdo->update($db, $query);
+		    
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    $pdo->create($db,"users_answers", $values);*/
+	        }
+	    }
+	    
+	    header('location:config.php');
+	}//fim 
+
+
+
+
 	//setModelAnswer
 	if(isset($_GET['action']) && $_GET['action'] == "setModelAnswer"){
             session_start();
