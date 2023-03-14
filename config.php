@@ -270,7 +270,7 @@
 	   <input type="radio" id="html" name="enable_tag" value="1">
   	  <label for="css">Desabilitar tags</label>
   	  <input type="radio" id="css" name="enable_tag" value="0">
-          <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning">
+          <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
 	</form>
     </div>   	
 	
