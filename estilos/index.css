@@ -269,3 +269,16 @@ iframe {
     border: none;
     overflow: auto;
 }
+
+
+.tags_show{
+    visibility: visible;
+}
+
+
+.tags_hide{
+    visibility: hidden;
+}
+
+
+
