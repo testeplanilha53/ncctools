@@ -7,7 +7,21 @@ function change_color(meu_id){
     elements.forEach(element => {
         if (element.id!="meu_id"){
             element.className = "btn btn-outline-dark"
-            console.log(element)
+        }
+                
+    });
+}
+
+
+
+function db_change_color(meu_id){
+    var divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0]; 	
+    var db_elements =  divConteiner.querySelectorAll(`[id^="fun_"]`)
+    db_elements.forEach(element => {
+        if (element.id!="meu_id"){
+		console.log(meu_id)
+            element.className = "btn btn-outline-dark"
+            
         }
                 
     });
@@ -621,7 +635,7 @@ function getSavedCategory(){
 
 
 function createAnswers(category, anwers){
-        let divConteiner = document.getElementById("preenchidos_conteiner");
+        let divConteiner = document.querySelectorAll(".preenchidos_conteiner")[0];
 	console.log( category)
 	console.log( anwers )
 	
@@ -642,7 +656,7 @@ function createAnswers(category, anwers){
 			   	
 				 if(el1['category'] == el['category']){
 					 var label = document.createElement("label");
-					 label.innerHTML = `<textarea class='${el1['id']}' style="visibility:hidden; position: absolute;">${el1['answer'] }</textarea><button class='btn btn-outline-dark'  id='${el1['id']}' onclick="copy_answer( ${el1['id']} )">  ${el1['title']} </button>` 
+					 label.innerHTML = `<textarea class='${el1['id']}' style="visibility:hidden; position: absolute;">${el1['answer'] }</textarea><button class='btn btn-outline-dark'  id='fun_${el1['id']}' onclick="copy_answer( ${el1['id']}, '${el1['behavior']}' )">  ${el1['title']} </button>` 
 					 divConteiner.appendChild(label);
 				 }  
 			   });
@@ -661,12 +675,55 @@ getSavedCategory();
 
 //Essa função execura a cópia das respostas já criadas na página após a conulta no banco. 
 
-function copy_answer(id){
-    meu_id = window.document.getElementById(id)
-    change_color(meu_id)
-    meu_id.className = "btn btn-danger"
-
-    descricao.value = document.getElementsByClassName(id)[0].value;
-    console.log(document.getElementsByClassName(id)[0] );
+function copy_answer(id, db_behavior){
+    meu_id = window.document.getElementById("fun_" + id)
+    
+    if(db_behavior == "padrao_azul"){
+	    meu_id.className = "btn btn-info";
+	    descricao.value += document.getElementsByClassName(id)[0].value;
+    }
+    if(db_behavior == "padrao_vermelho"){
+	    db_change_color("fun_"+id)
+	    meu_id.className = "btn btn-danger";
+	    descricao.value = document.getElementsByClassName(id)[0].value;
+    }	
+    
+    
 }
+
+
+//Adicionar tags html na resposta
+function add_tag(tag){
+	let cursorPos = descricao.selectionStart;
+	const posicaoCursor = descricao.selectionStart;
+	const valorAntes = descricao.value.substring(0, posicaoCursor);
+	const valorDepois = descricao.value.substring(posicaoCursor);
+	const novoValor = valorAntes + `${tag}` + valorDepois;
+	descricao.value = novoValor;
+	cursorPos = (valorAntes + `${tag}`).length;
+	//descricao.value += `${tag}`;	
+}
+
+
+
+function enableTags(){
+   let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+		var tag_status = JSON.parse( this.responseText)
+		console.log( tag_status[0]['tags_enable'] );
+		if( tag_status[0]['tags_enable'] == "0" ){
+			document.getElementById("tags_html").className = "tags_hide";
+		}else{
+			document.getElementById("tags_html").className = "tags_show";
+		}
+		
+          }
+     };
+    xhttp.open("POST", "./app.php?action=getTagsStatus", true);
+    xhttp.send();
+ 
+}
+
+enableTags();
 
