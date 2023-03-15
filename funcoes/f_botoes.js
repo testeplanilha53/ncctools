@@ -112,6 +112,7 @@ function Apagar(){
 
 
 //  Função Máscara para o número de contato
+/*
 function mascara(o,f){
     v_obj=o
     v_fun=f
@@ -129,18 +130,18 @@ function mtel(v){
 function id( el ){
 	return document.getElementById( el );
 }
-/*
+
 window.onload = function(){
 	id('telefone').onkeyup = function(){
 		mascara( this, mtel );
 	}
 }
-*/
+
 window.onmousemove = function(){
     id('telefone').onkeyup = function(){
 		mascara( this, mtel );
 	}    
-}
+}*/
 
 
 /*
