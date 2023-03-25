@@ -178,8 +178,9 @@
             
             if(file_exists($_SERVER["SERVER_ROOT"]."/temp/".$file)){
                 unlink($_SERVER["SERVER_ROOT"]."/temp/".$file);
+		$pdo->create($db, "all_logs", "DEFAULT, 'Email - reset success:','".$email."', '".date("Y-m-d")."','".date("H:i:s")."'"   );     
                 $file = fopen($_SERVER["SERVER_ROOT"]."/all_logs/log-".date("d-m-Y").".txt", "a+");
-                fwrite($file, "Email - reset success:".$_SESSION['user']." on ".date("d-m-Y H:i:s")."\r\n" );
+                fwrite($file, "Email - reset success:".$email." on ".date("d-m-Y H:i:s")."\r\n" );
                 fclose($file);
             }
 
