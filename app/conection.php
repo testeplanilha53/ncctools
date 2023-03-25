@@ -41,10 +41,8 @@
                         $_SESSION['password'] = $password;
 
 			$this->create($db, "all_logs", "DEFAULT, 'login','".$username."', '".date("Y-m-d")."','".date("H:i:s")."'"   ); 
-			$file = fopen($_SERVER["SERVER_ROOT"]."/all_logs/log-".date("d-m-Y").".txt", "a+");
-                        //$file = fopen($_SERVER["SERVER_ROOT"]."/all_logs/log-".date("d-m-Y").".txt", "a+");
-                        //fwrite($file, "Login: ".$username." on ".date("d-m-Y H:i:s")."\r\n" );
-			fwrite($file, "DEFAULT, 'login','".$username."', '".date("Y-m-d")."' " );
+                        $file = fopen($_SERVER["SERVER_ROOT"]."/all_logs/log-".date("d-m-Y").".txt", "a+");
+                        fwrite($file, "Login: ".$username." on ".date("d-m-Y H:i:s")."\r\n" );
                         fclose($file);
 			
                         return true;
