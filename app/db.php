@@ -33,7 +33,7 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
                 $mail =  str_replace(' ', '', $_POST['mail']) == "" ?  "DEFAULT" : "'".$_POST['mail']."'" ;
-	            $values = "DEFAULT, DEFAULT, '". $_POST['role'] ."','". $_POST['username']."','".$_POST['user']."','".md5($_POST['password']). "',". $mail.", DEFAULT";             
+	            $values = "DEFAULT, DEFAULT, '". $_POST['role'] ."','". $_POST['username']."','".$_POST['user']."','".md5($_POST['password']). "',". $mail.", DEFAULT, DEFAULT";             
                 
                 $pdo = new Connect();
 	            
