@@ -272,7 +272,7 @@
 
             <!--12/01 Acrescentado essa linha-->
             <span style="color: white; font-size: 14px; display: block; margin: 5px; auto; text-align: center;" id="resetMail" onclick="window.modalDialog.showModal();">
-            Esqueceu sua senha?</span> 
+            Esqueceu sua senha? XXX</span> 
             
 
             <button>
