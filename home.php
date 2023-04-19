@@ -300,7 +300,9 @@
 			   <!--<button onclick="add_tag('<ul>\n \t <li>ITEM 1</li> \n \t <li>ITEM 2</li> \n </uL>')">&lt;ul&gt; + &ltli&gt;</button> -->
 			</p>
                     </div>
-
+		    <div id="btn_salvar_pendencia">
+			<button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho2()">Salvar pendência</button>
+		    </div>
                     <div id="vs">
                         <span id="t1">Horário de preferência:</span>
                         <span id="hpfr" onchange="fun_h_preferencia()">
@@ -316,9 +318,7 @@
                         <span id="t2">Ponto de referência:</span>                        
                         <input type="search" id="ponto_referencia">
                     </div>
-		    <div id="btn_salvar_pendencia">
-			<button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho2()">Salvar pendência</button>
-		    </div>
+
                     <br>
                     <div id="botoes">
                         <div class="container">
