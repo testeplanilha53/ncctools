@@ -348,10 +348,7 @@
                          echo('<script>window.error.showModal(); </script>');
                          echo('<script>
                          setTimeout(() => {
-                            var home = <?php echo $_SERVER["SERVER_NAME"];   ?>
-                            window.location.replace( home )
-                            }, "2000")
-                         </script>');
+                            window.location.replace('. $_SERVER["SERVER_NAME"] .') }, "2000") </script>');
                         
                     }
     
@@ -359,10 +356,7 @@
                          echo('<script>window.passwordSend.showModal() </script>');
                          echo('<script>
                          setTimeout(() => {
-                            var home = <?php echo $_SERVER["SERVER_NAME"];   ?>
-                            window.location.replace( home )
-                            }, "2000")
-                         </script>');
+                            window.location.replace('. $_SERVER["SERVER_NAME"] .') }, "2000") </script>');
                          
                         
                     }
@@ -371,21 +365,15 @@
                          echo('<script>window.errorSend.showModal(); </script>');
                          echo('<script>
                          setTimeout(() => {
-                            var home = <?php echo $_SERVER["SERVER_NAME"];   ?>
-                            window.location.replace( home )
-                            }, "2000")
-                         </script>');
+                            window.location.replace('. $_SERVER["SERVER_NAME"] .') }, "2000") </script>');
                         
                     }
     
                      if( isset($_GET['action']) && $_GET['action'] == "success" ){
                          echo('<script>window.success.showModal(); </script>');
                          echo('<script>
-                         setTimeout(() => {
-                            var home = <?php echo $_SERVER["SERVER_NAME"];   ?>
-                            window.location.replace( home )
-                            }, "2000")
-                         </script>');
+                            setTimeout(() => {
+                            window.location.replace('. $_SERVER["SERVER_NAME"] .') }, "2000") </script>');
                     }
 
  ?>
