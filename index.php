@@ -348,7 +348,8 @@
                          echo('<script>window.error.showModal(); </script>');
                          echo('<script>
                          setTimeout(() => {
-                            window.location.replace("https://ncctools.epizy.com")
+                            var home = <?php echo $_SERVER["SERVER_NAME"];   ?>
+                            window.location.replace( home )
                             }, "2000")
                          </script>');
                         
@@ -358,7 +359,8 @@
                          echo('<script>window.passwordSend.showModal() </script>');
                          echo('<script>
                          setTimeout(() => {
-                            window.location.replace("https://ncctools.epizy.com")
+                            var home = <?php echo $_SERVER["SERVER_NAME"];   ?>
+                            window.location.replace( home )
                             }, "2000")
                          </script>');
                          
@@ -369,7 +371,8 @@
                          echo('<script>window.errorSend.showModal(); </script>');
                          echo('<script>
                          setTimeout(() => {
-                            window.location.replace("https://ncctools.epizy.com")
+                            var home = <?php echo $_SERVER["SERVER_NAME"];   ?>
+                            window.location.replace( home )
                             }, "2000")
                          </script>');
                         
@@ -379,7 +382,8 @@
                          echo('<script>window.success.showModal(); </script>');
                          echo('<script>
                          setTimeout(() => {
-                            window.location.replace("https://ncctools.epizy.com")
+                            var home = <?php echo $_SERVER["SERVER_NAME"];   ?>
+                            window.location.replace( home )
                             }, "2000")
                          </script>');
                     }
