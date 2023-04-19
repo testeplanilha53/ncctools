@@ -10,7 +10,7 @@
 	
 <!-- 
     //Autor: Lucas Aguiar e Dione
-    //Ultima edição: 11/01/2023
+    //Ultima edição: 18/04/2024
 -->
 
 
@@ -316,6 +316,9 @@
                         <span id="t2">Ponto de referência:</span>                        
                         <input type="search" id="ponto_referencia">
                     </div>
+		    <div id="btn_salvar_pendencia">
+			<button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho2()">Salvar pendência</button>
+		    </div>
                     <br>
                     <div id="botoes">
                         <div class="container">
