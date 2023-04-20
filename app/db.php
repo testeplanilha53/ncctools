@@ -320,4 +320,33 @@
 	    
 	}
 
+
+
+	//Salvar dados do prtocolo no banco
+	//setModelAnswer
+	if(isset($_GET['action']) && $_GET['action'] == "setDataProtocol"){
+            session_start();
+	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+			$id_user = $_SESSION['idUser'];
+			var_dump($_POST);
+			
+			
+			//$values= "DEFAULT, $id_user ,'$category' ,'$title' , '$sla' , '$id_answer', '$behavior' ";
+			
+			//var_dump($values);
+		    //INSERT INTO `users_answers`(`id`, `user_id`, `category`, `title`, `sla`, `answer` , `behavior`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
+	            //$pdo = new Connect();
+	            //$db = $pdo->connectOnDb();
+		    //$pdo->create($db,"users_answers", $values);
+	        }
+	    }
+	    
+	    header('location:config.php');
+	}
+	
+
+	//Obter informações do protocolo no banco
+
+
 ?>
