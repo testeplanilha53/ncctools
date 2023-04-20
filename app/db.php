@@ -323,7 +323,6 @@
 
 
 	//Salvar dados do prtocolo no banco
-	//setModelAnswer
 	if(isset($_GET['action']) && $_GET['action'] == "setDataProtocol"){
             session_start();
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
@@ -347,6 +346,23 @@
 	
 
 	//Obter informações do protocolo no banco
+	if(isset($_GET['action']) && $_GET['action'] == "getDataProtocol"){
+            session_start();
+	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+		    $id_user = $_SESSION['idUser'];
+	            $query = "SELECT *  FROM `users_answers` WHERE `user_id` = $id_user ORDER BY `category` "; 
+	            //$pdo = new Connect();
+	            //$db = $pdo->connectOnDb();
+		    //$answer = $pdo->read($db, $query );
+		    //header('Content-Type: application/json');	
+		    //$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+                   //echo ( $array );	
+			
+	        }
+	    }
+	    
+	}
 
 
 ?>
