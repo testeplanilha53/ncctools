@@ -17,6 +17,15 @@ var b_copiar = window.document.getElementById("Copiar")
 var b_tranferir = window.document.getElementById("Transferir")
 var b_apagar = window.document.getElementById("Apagar")
 
+
+function salvar_pendencia(){
+    var question = window.confirm("Deseja salvar a pendência?")
+    // O if é executado se question==true 
+    if (question){
+        console.log("Pendência Salva")
+    }
+}
+
 // COPIA O PROTOCOLO DO ADM AO CLICAR
 function copiar_protocolo_adm(){
     
