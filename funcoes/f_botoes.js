@@ -23,6 +23,10 @@ function salvar_pendencia(){
     // O if é executado se question==true 
     if (question){
         console.log("Pendência Salva")
+        //protocolo chat
+        console.log(protocolo_chat.value)
+        //descrição
+        console.log(descricao.value)
     }
 }
 
