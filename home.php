@@ -295,18 +295,22 @@
 
                         <textarea id="descricao" cols="70" rows="8"
                             placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br>
-			<p id="tags_html" class="tags_show">
+			
+                         
+
+            <p id="tags_html" class="tags_show">
 			   <button onclick="add_tag('<hr>')">&lt;hr&gt;</button>
 			   <button onclick="add_tag('<b>')">&lt;b&gt;</button>
 			   <button onclick="add_tag('</b>')">&lt;/b&gt;</button>
+               <span type="button" id="" class="btn btn-info btn_salvar_pend" onclick="salvar_pendencia()"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks-fill" viewBox="0 0 16 16"> <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4z"/> <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1H4.268z"/> </svg>
+                    &nbspSalvar pendência
+                </span>   
 			   <!--<button onclick="add_tag('<li> ITEM ... </li>')">&lt;li&gt; + &lt;/li&gt;</button> -->
 			   <!--<button onclick="add_tag('<ul>\n \t <li>ITEM 1</li> \n \t <li>ITEM 2</li> \n </uL>')">&lt;ul&gt; + &ltli&gt;</button> -->
 			</p>
             			
-            <span type="button" id="" class="btn btn-info btn_salvar_pend" onclick="salvar_pendencia()"> 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks-fill" viewBox="0 0 16 16"> <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4z"/> <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1H4.268z"/> </svg>
-                &nbspSalvar pendência
-            </span>
+
 
 		    </div>
                     <div id="vs">
