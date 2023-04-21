@@ -231,7 +231,9 @@ body > header > div{
 }
 
 .btn_salvar_pend {
-    width: 180px;
+    width: 310px;
+    display: block;
+    left: 0%;
 }
 
 .btn_atalho {
