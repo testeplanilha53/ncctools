@@ -24,9 +24,9 @@ function salvar_pendencia(){
     if (question){
         console.log("Pendência Salva")
         //protocolo chat
-        console.log(protocolo_chat)
+        console.log(protocolo_chat.value)
         //descrição
-        console.log(descricao)
+        console.log(descricao.value)
     }
 }
 
