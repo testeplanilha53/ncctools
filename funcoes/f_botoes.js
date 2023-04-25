@@ -35,15 +35,14 @@ function salvar_pendencia(){
 
                         
                     }
-                  };
                   xhttp.open("POST", "./app.php?action=setDataProtocol&", true);
                   xhttp.send(params);
-			console.log(params)
-        }
+		console.log(params)
     }    
 }
 
 
+/*
 function buscar_pendencia(){
     let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
@@ -61,7 +60,7 @@ function buscar_pendencia(){
         }
     
 	
-}
+}*/
 
 //getAnswers();	
 
