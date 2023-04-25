@@ -36,9 +36,9 @@ function salvar_pendencia(){
                         
                     }
                   };
-                  xhttp.open("POST", "./app.php?action=setDataProtocol", true);
+                  xhttp.open("POST", "./app.php?action=setDataProtocol&", true);
                   xhttp.send(params);
-
+			console.log(params)
         }
     }    
 }
