@@ -328,20 +328,24 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 			$id_user = $_SESSION['idUser'];
-			var_dump($_POST);
+			$number_protocol = $_POST['number_protocol'];
+			$description = 	$_POST['description']
+				
+			
+			//var_dump($_POST);
 			
 			
-			//$values= "DEFAULT, $id_user ,'$category' ,'$title' , '$sla' , '$id_answer', '$behavior' ";
+			$values= "DEFAULT, $number_protocol ,'$description', '$id_user' ";
 			
 			//var_dump($values);
-		    //INSERT INTO `users_answers`(`id`, `user_id`, `category`, `title`, `sla`, `answer` , `behavior`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
-	            //$pdo = new Connect();
-	            //$db = $pdo->connectOnDb();
-		    //$pdo->create($db,"users_answers", $values);
+		    //INSERT INTO `saved_pending`(`id`, `number_protocol`, `description`, `user_id`) VALUES ([value-1],[value-2],[value-3],[value-4])
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    $pdo->create($db,"saved_pending", $values);
 	        }
 	    }
 	    
-	    header('location:config.php');
+	    //header('location:config.php');
 	}
 	
 
@@ -351,13 +355,15 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 		    $id_user = $_SESSION['idUser'];
-	            $query = "SELECT *  FROM `users_answers` WHERE `user_id` = $id_user ORDER BY `category` "; 
+	            $number_protocol = $_POST['number_protocol']			
+	            $query = "SELECT * FROM `saved_pending` WHERE number_protocol = $number_protocol"; 
 	            //$pdo = new Connect();
 	            //$db = $pdo->connectOnDb();
 		    //$answer = $pdo->read($db, $query );
 		    //header('Content-Type: application/json');	
 		    //$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
                    //echo ( $array );	
+		   echo $query;	
 			
 	        }
 	    }
