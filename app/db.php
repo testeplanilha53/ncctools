@@ -329,7 +329,7 @@
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 			$id_user = $_SESSION['idUser'];
 			$number_protocol = $_POST['number_protocol'];
-			$description = 	$_POST['description']
+			$description = 	$_POST['description'];
 				
 			
 			//var_dump($_POST);
