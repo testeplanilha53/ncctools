@@ -342,6 +342,7 @@
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $pdo->create($db,"saved_pending", $values);
+		    echo $pdo; 
 	        }
 	    }
 	    
