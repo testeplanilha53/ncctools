@@ -18,17 +18,61 @@ var b_tranferir = window.document.getElementById("Transferir")
 var b_apagar = window.document.getElementById("Apagar")
 
 
+
+/// Busca pendência se tiver salva no banco 
 function salvar_pendencia(){
     var question = window.confirm("Deseja salvar a pendência?")
-    // O if é executado se question==true 
-    if (question){
-        console.log("Pendência Salva")
-        //protocolo chat
-        console.log(protocolo_chat.value)
-        //descrição
-        console.log(descricao.value)
+    var descricao = document.getElementById("descricao").value
+    var numero_protocolo = document.getElementById("protocolo_chat").value
+    var params = ""
+    if( descricao !== "" && numero_protocolo !== "" ){
+	params = 'number_protocol='+description+'&description='+description
+    	let xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //notification.innerHTML = this.responseText;
+                        //let answers = this.responseText;
+			//console.log(answers);
+                        //createTableAnswers( JSON.parse(answers)  );
+                        
+                    }
+                  };
+                  xhttp.open("POST", "./app.php?action=setDataProtocol", true);
+                  xhttp.send(params);
+
+        }
     }
+
+    
 }
+
+
+function buscar_pendencia(){
+    let xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //notification.innerHTML = this.responseText;
+                        let pendencia = this.responseText;
+			//console.log(answers);
+                        //createTableAnswers( JSON.parse(answers)  );
+                        
+                    }
+                  };
+                  xhttp.open("POST", "./app.php?action=getDataProtocol", true);
+                  xhttp.send();
+
+        }
+    
+	
+}
+
+//getAnswers();	
+
+
+function getAnswers(){}
+            
+
+/// 
 
 // COPIA O PROTOCOLO DO ADM AO CLICAR
 function copiar_protocolo_adm(){
