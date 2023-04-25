@@ -30,10 +30,9 @@ function salvar_pendencia(){
     	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                        //notification.innerHTML = this.responseText;
-                        //let answers = this.responseText;
-			//console.log(answers);
-                        //createTableAnswers( JSON.parse(answers)  );
+                        var retorno = this.responseText;
+			console.log(retorno);
+
                         
                     }
                   };
