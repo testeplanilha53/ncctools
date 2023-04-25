@@ -331,7 +331,7 @@
 			$number_protocol = $_POST['number_protocol'];
 			$description = 	$_POST['description'];
 				
-			
+			/*
 			//var_dump($_POST);
 			
 			
@@ -341,7 +341,7 @@
 		    //INSERT INTO `saved_pending`(`id`, `number_protocol`, `description`, `user_id`) VALUES ([value-1],[value-2],[value-3],[value-4])
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
-		    $pdo->create($db,"saved_pending", $values);
+		    $pdo->create($db,"saved_pending", $values);*/
 	        }
 	    }
 	    
@@ -350,6 +350,7 @@
 	
 
 	//Obter informações do protocolo no banco
+	/*
 	if(isset($_GET['action']) && $_GET['action'] == "getDataProtocol"){
             session_start();
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
@@ -369,6 +370,8 @@
 	    }
 	    
 	}
+	*/
+
 
 
 ?>
