@@ -26,7 +26,7 @@ function salvar_pendencia(){
     var numero_protocolo = document.getElementById("protocolo_chat").value
     var params = ""
     if( descricao !== "" && numero_protocolo !== "" ){
-	params = 'number_protocol='+description+'&description='+description
+	params = 'number_protocol='+numero_protocolo+'&description='+description
     	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
