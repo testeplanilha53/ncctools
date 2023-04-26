@@ -48,8 +48,8 @@ function salvar_pendencia(){
 
 function buscar_pendencia(){
     var numero_protocolo = document.getElementById("protocolo_chat").value.trim()
-    if( numero_protocolo !== "" && numero_protocolo.isInteger )
-    	let xhttp = new XMLHttpRequest()
+    if( numero_protocolo !== "" && numero_protocolo.isInteger() )
+    	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
