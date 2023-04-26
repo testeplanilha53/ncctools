@@ -61,8 +61,6 @@ function buscar_pendencia(){
                   };
                   xhttp.open("POST", "./app.php?action=getDataProtocol", true);
                   xhttp.send();
-
-        }	
 }
 
             
