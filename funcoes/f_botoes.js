@@ -65,7 +65,7 @@ function buscar_pendencia(){
 //getAnswers();	
 
 
-function getAnswers(){}
+//function getAnswers(){}
             
 
 /// 
