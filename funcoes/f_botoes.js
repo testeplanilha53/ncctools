@@ -53,6 +53,8 @@ function buscar_pendencia(){
                         //notification.innerHTML = this.responseText;
                         let pendencia = this.responseText;
 			console.log(pendencia);
+			    
+			var question = window.confirm("Existe uma pendência salva")    
                         //createTableAnswers( JSON.parse(answers)  );
                         
                     }
@@ -521,6 +523,9 @@ function transferir(){
         nome_cliente.value = (dados.substring(p_nome+6,p_telefone)).replace("?","")
         telefone.value = (dados.substring(p_telefone+12,p_email)).replace(/[^0-9]/g,'')
         protocolo_chat.value = (dados.substring(p_numProtocolo+20,p_classificacao)).replace(/[^0-9]/g,'')
+	    
+	buscar_pendencia();    
+	    
     });  
 }
 
