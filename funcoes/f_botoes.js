@@ -47,7 +47,7 @@ function salvar_pendencia(){
 
 
 function buscar_pendencia(){
-    var numero_protocolo = document.getElementById("protocolo_chat").value.trim()
+    var numero_protocolo = document.getElementById("protocolo_chat").value
     if( numero_protocolo !== "" )
     	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
