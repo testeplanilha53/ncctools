@@ -55,7 +55,7 @@ function buscar_pendencia(){
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
                         let pendencia = JSON.parse( this.responseText );
-			console.log(pendencia['number_protocol]'] );
+			console.log(pendencia[0]['number_protocol]'] );
 			
 			 if( pendencia['number_protocol'] == numero_protocolo){
 			 	var question = window.confirm("Existe uma pendência salva para esse protocolo")  
