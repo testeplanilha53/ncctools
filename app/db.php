@@ -351,7 +351,6 @@
 	
 
 	//Obter informações do protocolo no banco
-	/*
 	if(isset($_GET['action']) && $_GET['action'] == "getDataProtocol"){
             session_start();
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
@@ -359,19 +358,19 @@
 		    $id_user = $_SESSION['idUser'];
 	            $number_protocol = $_POST['number_protocol'];			
 	            $query = "SELECT * FROM `saved_pending` WHERE number_protocol = $number_protocol"; 
-	            //$pdo = new Connect();
-	            //$db = $pdo->connectOnDb();
-		    //$answer = $pdo->read($db, $query );
-		    //header('Content-Type: application/json');	
-		    //$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
-                   //echo ( $array );	
-		   echo $query;	
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    $answer = $pdo->read($db, $query );
+		    header('Content-Type: application/json');	
+		    $array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+                   echo ( $array );	
+
 			
 	        }
 	    }
 	    
 	}
-	*/
+	
 
 
 
