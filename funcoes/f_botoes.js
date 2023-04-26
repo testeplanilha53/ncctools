@@ -47,6 +47,7 @@ function salvar_pendencia(){
 
 
 function buscar_pendencia(){
+    var numero_protocolo = document.getElementById("protocolo_chat").value
     let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
@@ -60,8 +61,11 @@ function buscar_pendencia(){
                     }
                   };
                   xhttp.open("POST", "./app.php?action=getDataProtocol", true);
-                  xhttp.send();
+		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                  xhttp.send("number_protocol="+numero_protocolo);
 }
+
+
 
             
 
