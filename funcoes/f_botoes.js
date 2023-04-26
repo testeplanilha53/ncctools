@@ -24,7 +24,8 @@ function salvar_pendencia(){
     var question = window.confirm("Deseja salvar a pendência?")
     var descricao = document.getElementById("descricao").value
     var numero_protocolo = document.getElementById("protocolo_chat").value
-    var params = "" /*
+    var params = ""
+    /*
     if( descricao !== "" && numero_protocolo !== "" ){
 	params = 'number_protocol='+numero_protocolo+'&description='+descricao
     	let xhttp = new XMLHttpRequest();
