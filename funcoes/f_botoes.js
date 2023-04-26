@@ -47,15 +47,16 @@ function salvar_pendencia(){
 
 
 function buscar_pendencia(){
-    var numero_protocolo = document.getElementById("protocolo_chat").value
-    let xhttp = new XMLHttpRequest();
+    var numero_protocolo = document.getElementById("protocolo_chat").value.trim()
+    if( numero_protocolo !== "" && numero_protocolo.isInteger )
+    	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
                         let pendencia = this.responseText;
 			console.log(pendencia);
 			    
-			var question = window.confirm("Existe uma pendência salva")    
+			//var question = window.confirm("Existe uma pendência salva")    
                         //createTableAnswers( JSON.parse(answers)  );
                         
                     }
@@ -63,6 +64,7 @@ function buscar_pendencia(){
                   xhttp.open("POST", "./app.php?action=getDataProtocol", true);
 		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                   xhttp.send("number_protocol="+numero_protocolo);
+     }
 }
 
 
