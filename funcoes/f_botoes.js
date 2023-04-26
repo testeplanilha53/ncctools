@@ -45,14 +45,14 @@ function salvar_pendencia(){
 }
 
 
-/*
+
 function buscar_pendencia(){
     let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
                         let pendencia = this.responseText;
-			//console.log(answers);
+			console.log(pendencia);
                         //createTableAnswers( JSON.parse(answers)  );
                         
                     }
@@ -60,15 +60,9 @@ function buscar_pendencia(){
                   xhttp.open("POST", "./app.php?action=getDataProtocol", true);
                   xhttp.send();
 
-        }
-    
-	
-}*/
+        }	
+}
 
-//getAnswers();	
-
-
-//function getAnswers(){}
             
 
 /// 
