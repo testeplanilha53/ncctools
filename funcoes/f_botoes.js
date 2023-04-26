@@ -48,13 +48,20 @@ function salvar_pendencia(){
 
 function buscar_pendencia(){
     var numero_protocolo = document.getElementById("protocolo_chat").value
+     var descricao = document.getElementById("descricao")
     if( numero_protocolo !== "" ){
     	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
-                        let pendencia = this.responseText;
+                        let pendencia = JSON.parse( this.responseText );
 			console.log(pendencia);
+			
+			 if( pendencia['number_protocol'] == numero_protocolo){
+			 	var question = window.confirm("Existe uma pendência salva para esse protocolo")  
+			        descricao.value = pendencia['description']
+			 
+			 }
 			    
 			//var question = window.confirm("Existe uma pendência salva")    
                         //createTableAnswers( JSON.parse(answers)  );
