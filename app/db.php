@@ -332,7 +332,7 @@
 			$description = 	$_POST['description'];
 				
 			
-			//var_dump($_POST);
+			var_dump($_POST);
 			
 			
 			$values= "DEFAULT, $number_protocol ,'$description', '$id_user' ";
@@ -342,6 +342,7 @@
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $pdo->create($db,"saved_pending", $values);
+		
 	        }
 	    }
 	    
