@@ -38,6 +38,7 @@ function salvar_pendencia(){
                     }
 		  }
                   xhttp.open("POST", "./app.php?action=setDataProtocol&", true);
+	    	  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                   xhttp.send(params);
     }   
     console.log(params)
