@@ -335,7 +335,7 @@
 			var_dump($_POST);
 			
 			
-			$values= "DEFAULT, $number_protocol ,'$description', '$id_user' ";
+			$values= "DEFAULT, '$number_protocol' ,'$description', '$id_user' ";
 			
 			//var_dump($values);
 		    //INSERT INTO `saved_pending`(`id`, `number_protocol`, `description`, `user_id`) VALUES ([value-1],[value-2],[value-3],[value-4])
