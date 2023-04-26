@@ -25,7 +25,7 @@ function salvar_pendencia(){
     var descricao = document.getElementById("descricao").value
     var numero_protocolo = document.getElementById("protocolo_chat").value
     var params = ""
-    /*
+    
     if( descricao !== "" && numero_protocolo !== "" ){
 	params = 'number_protocol='+numero_protocolo+'&description='+descricao
     	let xhttp = new XMLHttpRequest();
@@ -39,7 +39,7 @@ function salvar_pendencia(){
                   xhttp.open("POST", "./app.php?action=setDataProtocol&", true);
                   xhttp.send(params);
 		console.log(params)
-    }   */
+    }   
     console.log("salvou pendência")
 }
 
