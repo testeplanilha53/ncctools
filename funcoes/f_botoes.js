@@ -24,9 +24,10 @@ function salvar_pendencia(){
     var question = window.confirm("Deseja salvar a pendência?")
     var descricao = document.getElementById("descricao").value
     var numero_protocolo = document.getElementById("protocolo_chat").value
+    var adm_protocolo = document.getElementById("protocolo_adm").value
     var params = params = 'number_protocol='+numero_protocolo+'&description='+descricao
     
-    if( descricao !== "" && numero_protocolo !== "" ){
+    if( descricao.trim() !== "" && numero_protocolo.trim() !== "" && adm_protocolo.trim() !== "" ){
 	
     	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
@@ -40,6 +41,8 @@ function salvar_pendencia(){
                   xhttp.open("POST", "./app.php?action=setDataProtocol&", true);
 	    	  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                   xhttp.send(params);
+    }else{
+    	 window.confirm("Protocolo do chat, adm e a descrição são obrigatórios")
     }   
     console.log(params)
 }
