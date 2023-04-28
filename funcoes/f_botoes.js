@@ -60,7 +60,7 @@ function buscar_pendencia(){
 			
 			 if( pendencia['number_protocol'] == numero_protocolo){
 			 	var question = window.confirm("Existe uma pendência salva para esse protocolo")  
-			        descricao.value = pendencia['description']
+			        descricao.value = pendencia[0].description
 			 
 			 }
 			    
