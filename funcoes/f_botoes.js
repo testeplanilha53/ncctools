@@ -58,7 +58,7 @@ function buscar_pendencia(){
 			console.log(pendencia.description);
 			console.log(pendencia[0].description);
 			
-			 if( pendencia['number_protocol'] == numero_protocolo){
+			 if( pendencia[0].number_protocol == numero_protocolo){
 			 	var question = window.confirm("Existe uma pendência salva para esse protocolo")  
 			        descricao.value = pendencia[0].description
 			 
