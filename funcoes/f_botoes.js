@@ -27,7 +27,7 @@ function salvar_pendencia(){
     var adm_protocolo = document.getElementById("protocolo_adm").value
     var params = params = 'number_protocol='+numero_protocolo+'&description='+descricao+'&adm_protocol='+adm_protocolo
     
-    if( descricao.trim() !== "" && numero_protocolo.trim() !== "" && adm_protocolo.trim() !== "" ){
+    if( descricao !== "" && numero_protocolo !== "" && adm_protocolo !== "" ){
 	
     	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
