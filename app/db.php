@@ -328,26 +328,29 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 			$id_user = $_SESSION['idUser'];
-			$number_protocol = $_POST['number_protocol'];
-			$description = 	$_POST['description'];
+			$number_protocol = isset( $_POST['number_protocol'] ) ? $_POST['number_protocol'] ;
+			$description = 	isset( $_POST['description'] )  ?  $_POST['description'] ;
+			$adm_protocol = isset( $_POST['adm_protocol'] )  ?  $_POST['adm_protocol'] ;
 				
-			
-			var_dump($_POST);
-			
-			
-			$values= "DEFAULT, '$number_protocol' ,'$description', '$id_user' ";
+
+			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol) ){
+				
+				$values= "DEFAULT, '$number_protocol' ,'$description', '$id_user', '$adm_protocol' ";
 			
 			//var_dump($values);
-		    //INSERT INTO `saved_pending`(`id`, `number_protocol`, `description`, `user_id`) VALUES ([value-1],[value-2],[value-3],[value-4])
-	            $pdo = new Connect();
-	            $db = $pdo->connectOnDb();
-		    $pdo->create($db,"saved_pending", $values);
-		
+		    	//INSERT INTO `saved_pending`(`id`, `number_protocol`, `description`, `user_id`, `adm_protocol`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])
+	            		$pdo = new Connect();
+	            		$db = $pdo->connectOnDb();
+		    		$pdo->create($db,"saved_pending", $values);
+				
+			}else{
+			
+				echo "Algum campo está vazio! Não foi possível adicionar informação no banco de dados.";
+			}
 	        }
 	    }
 	    
-	    //header('location:config.php');
-	}
+	}//end function
 	
 
 	//Obter informações do protocolo no banco
