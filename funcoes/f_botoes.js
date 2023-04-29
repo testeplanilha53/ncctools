@@ -52,6 +52,7 @@ function salvar_pendencia(){
 function buscar_pendencia(){
     var numero_protocolo = document.getElementById("protocolo_chat").value
      var descricao = document.getElementById("descricao")
+     var adm_protocolo = document.getElementById("protocolo_adm") 
     if( numero_protocolo !== "" ){
     	let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
@@ -64,6 +65,7 @@ function buscar_pendencia(){
 			 if( pendencia[0].number_protocol == numero_protocolo){
 			 	var question = window.confirm("Existe uma pendência salva para esse protocolo")  
 			        descricao.value = pendencia[0].description
+				adm_protocolo.value = pendencia[0].adm_protocol
 			 
 			 }
 			    
