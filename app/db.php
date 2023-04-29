@@ -333,8 +333,9 @@
 			$adm_protocol = !isset(    $_POST['adm_protocol']    )    ?  $_POST['adm_protocol'] ;
 				
 
-			echo( $_POST['number_protocol'].$_POST['description'].$_POST['adm_protocol']   );
-			
+			echo( $_POST['number_protocol']  );
+			echo  $_POST['description'];
+			echo  $_POST['adm_protocol']; 
 			/*
 			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol)    ){ 
 				
@@ -348,7 +349,7 @@
 				
 			}else{
 			
-				var_dump( $_POST );
+				//var_dump( $_POST );
 			}*/
 	        }
 	    }
