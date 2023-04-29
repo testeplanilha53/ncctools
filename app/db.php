@@ -336,7 +336,7 @@
 			echo( $_POST['number_protocol'].$_POST['description'].$_POST['adm_protocol']   );
 			
 			/*
-			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol)    ){
+			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol)    ){ 
 				
 				$values= "DEFAULT, '$number_protocol' ,'$description', '$id_user', '$adm_protocol' ";
 			
