@@ -328,14 +328,15 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 			$id_user = $_SESSION['idUser'];
-			$number_protocol = !isset( $_POST['number_protocol'] ) ? $_POST['number_protocol'] ;
-			$description = 	!isset( $_POST['description'] )  ?  $_POST['description'] ;
-			$adm_protocol = !isset( $_POST['adm_protocol'] )  ?  $_POST['adm_protocol'] ;
+			$number_protocol = !isset( $_POST['number_protocol'] )    ?  $_POST['number_protocol'] ;
+			$description = 	!isset(    $_POST['description']     )    ?  $_POST['description'] ;
+			$adm_protocol = !isset(    $_POST['adm_protocol']    )    ?  $_POST['adm_protocol'] ;
 				
 
-			var_dump( $_POST );
+			echo( $_POST['number_protocol'].$_POST['description'].$_POST['adm_protocol']   );
 			
-			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol) ){
+			/*
+			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol)    ){
 				
 				$values= "DEFAULT, '$number_protocol' ,'$description', '$id_user', '$adm_protocol' ";
 			
@@ -348,7 +349,7 @@
 			}else{
 			
 				var_dump( $_POST );
-			}
+			}*/
 	        }
 	    }
 	    
