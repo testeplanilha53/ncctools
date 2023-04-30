@@ -346,15 +346,16 @@
 				
 				//executa a query que verifica se já existe um protocolo salvo
 				$tuple = $pdo->read($db, $query[0]);
+
+               			//var_dump($tuple);
 				
 				for($cont = 1; $cont <= 2; $cont++){
-					
-					if($tuple >= 1){
+					if($tuple == false){
+                        			//se não existir ele insere as informações
+						$pdo->create( $db,"saved_pending", $query[1] ) ;
+					}else{
 						//se existir ele apenas atualiza as informações
 						$pdo->update($db, $query[2]);
-					}else{
-						//se não existir ele insere as informações
-						$pdo->create( $db,"saved_pending", $query[1] ) ;
 					}
 					
 				}
