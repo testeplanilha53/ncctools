@@ -333,15 +333,31 @@
 			$adm_protocol = $_POST['adm_protocol'] ;
 			
 			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol)    ){ 
-				
-				$values= "DEFAULT, '$number_protocol' ,'$description', '$id_user', '$adm_protocol' ";
-			
-			//var_dump($values);
-		    	//INSERT INTO `saved_pending`(`id`, `number_protocol`, `description`, `user_id`, `adm_protocol`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])
 	            		$pdo = new Connect();
 	            		$db = $pdo->connectOnDb();
-		    		$pdo->create($db,"saved_pending", $values);
+		    	
 				
+				$query[0] = "SELECT * FROM `saved_pending` WHERE `number_protocol` = '$number_protocol' "; 
+				$query[1] = "DEFAULT, '$number_protocol' ,'$description', '$id_user', '$adm_protocol' ";
+				$query[2] = "UPDATE `saved_pending` SET `description`='$description', `adm_protocol`='$adm_protocol' WHERE `number_protocol` = '$number_protocol' ";
+				
+				
+				//UPDATE `saved_pending` SET `description`=$description, `user_id`=[value-4], `adm_protocol`= $adm_protocol WHERE `number_protocol` = '$number_protocol' ";
+				
+				//executa a query que verifica se já existe um protocolo salvo
+				$tuple = $pdo->read($db, $query[0]);
+				
+				for($cont = 1; $cont <= 2; $cont++){
+					
+					if($tuple >= 1){
+						//se existir ele apenas atualiza as informações
+						$pdo->update($db, $query[2]);
+					}else{
+						//se não existir ele insere as informações
+						$pdo->create( $db,"saved_pending", $query[1] ) ;
+					}
+					
+				}
 			} 
 	        }
 	    }
