@@ -337,28 +337,10 @@
 	            		$db = $pdo->connectOnDb();
 		    	
 				
-				$query[0] = "SELECT * FROM `saved_pending` WHERE `number_protocol` = '$number_protocol' "; 
-				$query[1] = "DEFAULT, '$number_protocol' ,'$description', '$id_user', '$adm_protocol' ";
-				$query[2] = "UPDATE `saved_pending` SET `description`='$description', `adm_protocol`='$adm_protocol' WHERE `number_protocol` = '$number_protocol' ";
+				$query = "DEFAULT, '$number_protocol' ,'$description', '$id_user', '$adm_protocol', ON DUPLICATE KEY UPDATE `description`='$description', `adm_protocol`='$adm_protocol' ";
 				
-				
-				//UPDATE `saved_pending` SET `description`=$description, `user_id`=[value-4], `adm_protocol`= $adm_protocol WHERE `number_protocol` = '$number_protocol' ";
-				
-				//executa a query que verifica se já existe um protocolo salvo
-				$tuple = $pdo->read($db, $query[0]);
+				$pdo->create( $db,"saved_pending", $query ) ;
 
-               			//var_dump($tuple);
-				
-				for($cont = 1; $cont <= 2; $cont++){
-					if($tuple == false){
-                        			//se não existir ele insere as informações
-						$pdo->create( $db,"saved_pending", $query[1] ) ;
-					}else{
-						//se existir ele apenas atualiza as informações
-						$pdo->update($db, $query[2]);
-					}
-					
-				}
 			} 
 	        }
 	    }
