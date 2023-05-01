@@ -328,9 +328,9 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 			$id_user = $_SESSION['idUser'];
-			$number_protocol =  !isset($_POST['number_protocol'] ) ? md5($_POST['number_protocol']) : null ;
+			$number_protocol =  isset($_POST['number_protocol'] ) ? md5($_POST['number_protocol']) : null ;
 			$description = 	$_POST['description'] ;
-			$adm_protocol = !isset( $_POST['adm_protocol'] ) ? md5( $_POST['adm_protocol'] ) : null;
+			$adm_protocol = isset( $_POST['adm_protocol'] ) ? md5( $_POST['adm_protocol'] ) : null;
 			
 			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol)    ){ 
 	            		$pdo = new Connect();
