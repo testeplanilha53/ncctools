@@ -337,7 +337,9 @@
 	            		$db = $pdo->connectOnDb();
 		    	
 				
-				$query = "DEFAULT, '$number_protocol' ,'$description', '$id_user', '$adm_protocol', ON DUPLICATE KEY UPDATE `description`='$description', `adm_protocol`='$adm_protocol' ";
+				$query = "$number_protocol,'$description', '$id_user', '$adm_protocol' ";
+                		$condition =   " ON DUPLICATE KEY UPDATE `description`='$description', `adm_protocol`='$adm_protocol' ";
+				
 				
 				$pdo->create( $db,"saved_pending", $query ) ;
 
