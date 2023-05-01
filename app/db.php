@@ -355,8 +355,9 @@
 	    if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 		    $id_user = $_SESSION['idUser'];
-	            $number_protocol = $_POST['number_protocol'];			
-	            $query = "SELECT * FROM `saved_pending` WHERE number_protocol = $number_protocol"; 
+	            $number_protocol = !isset($_POST['number_protocol']) ? md5( $_POST['adm_protocol'] ) : null ;
+			
+	            $query = "SELECT * FROM `saved_pending` WHERE number_protocol = '$number_protocol'"; 
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    $answer = $pdo->read($db, $query );
