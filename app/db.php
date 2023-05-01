@@ -338,10 +338,9 @@
 		    	
 				
 				$query = "$number_protocol,'$description', '$id_user', '$adm_protocol' ";
-                		$condition =   " ON DUPLICATE KEY UPDATE `description`='$description', `adm_protocol`='$adm_protocol' ";
+               			$condition =   " ON DUPLICATE KEY UPDATE `description`='$description', `adm_protocol`='$adm_protocol' ";
 				
-				
-				$pdo->create( $db,"saved_pending", $query ) ;
+				$pdo->create( $db,"saved_pending", $query, $condition ) ;
 
 			} 
 	        }
