@@ -61,9 +61,9 @@
 		
 		
         /*Insert data*/
-        public function create($db, $table, $values){
+        public function create($db, $table, $values, $condition = "" ){
       
-            $arr = array( "INSERT INTO `".$table."` VALUES (".$values.") ;" ); 
+            $arr = array( "INSERT INTO `".$table."` VALUES (".$values.") ".$condition.";" ); 
             
 		    
 		    try{
