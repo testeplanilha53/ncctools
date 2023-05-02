@@ -61,12 +61,13 @@ function buscar_pendencia(){
                         let pendencia = JSON.parse( this.responseText );
 			console.log(pendencia );
 			    
-			 if( pendencia[0].number_protocol == numero_protocolo){
-			 	var question = window.confirm("Existe uma pendência salva para esse protocolo")  
-			        descricao.value = pendencia[0].description
-				adm_protocolo.value = pendencia[0].adm_protocol
-			 
-			 }
+			if(pendencia != false){
+				if( pendencia[0].number_protocol == numero_protocolo && ){
+			 		var question = window.confirm("Existe uma pendência salva para esse protocolo")  
+			        	descricao.value = pendencia[0].description
+					adm_protocolo.value = pendencia[0].adm_protocol
+				 }
+			}    
                     }
                   };
                   xhttp.open("POST", "./app.php?action=getDataProtocol", true);
