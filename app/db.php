@@ -363,7 +363,7 @@
 		    $answer = $pdo->read($db, $query );
 		
 			if( $answer != false ){
-				$answer[0]['number_protocol'] = $number_protocol;
+				$answer[0]['number_protocol'] = $_POST['number_protocol'];
 				$answer[0]['adm_protocol'] = base64_decode( $answer[0]['adm_protocol'] );
                    		$answer[0]['description'] = base64_decode( $answer[0]['description'] );
 			}
