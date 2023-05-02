@@ -68,10 +68,6 @@ function buscar_pendencia(){
 				adm_protocolo.value = pendencia[0].adm_protocol
 			 
 			 }
-			    
-			//var question = window.confirm("Existe uma pendência salva")    
-                        //createTableAnswers( JSON.parse(answers)  );
-                        
                     }
                   };
                   xhttp.open("POST", "./app.php?action=getDataProtocol", true);
