@@ -329,8 +329,8 @@
 	        if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 			$id_user = $_SESSION['idUser'];
 			$number_protocol =   md5($_POST['number_protocol']);
-			$description = 	$_POST['description'] ;
-			$adm_protocol =   md5( $_POST['adm_protocol'] );
+			$description = 	base64_encode( $_POST['description'] );
+			$adm_protocol =  base64_encode( $_POST['adm_protocol']);
 			
 			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol)    ){ 
 	            		$pdo = new Connect();
