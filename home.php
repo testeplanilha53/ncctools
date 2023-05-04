@@ -145,11 +145,14 @@
                     </button>
                 </div>
                 <div class="modal-body" id="campo_padrao_verificao">                    
+                    <input type="text" class="campo_valor1" placeholder="Valor: R$ X,XX "> 
+                    <!--
                     <input type="text" class="campo_valor1" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor1" placeholder="Vencimento: DD/MM/AAAA"><br>
                     <input type="text" class="campo_valor2" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor2" placeholder="Vencimento: DD/MM/AAAA"><br>
                     <input type="text" class="campo_valor3" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor3" placeholder="Vencimento: DD/MM/AAAA"><br>
                     <input type="text" class="campo_valor4" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor4" placeholder="Vencimento: DD/MM/AAAA"><br>
                     <input type="text" class="campo_valor5" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor5" placeholder="Vencimento: DD/MM/AAAA"><br>                  
+                    -->
                 </div>
                 <div class="modal-footer">                    
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
