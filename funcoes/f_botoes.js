@@ -567,4 +567,9 @@ function copiar_modelo_financeiro(){
     }
 
     texto = texto + `Acesse por meio do Painel Financeiro no site da FasterNet: https://www2.fasternet.com.br/financa/default.asp`
+
+    console.log(texto)
+    
+    //Passando para a área de transferência
+    navigator.clipboard.writeText(texto.value);
 }
