@@ -551,18 +551,23 @@ function copiar_modelo_financeiro(){
 
     var texto = `Nesse cadastro, consta em atraso a(s) seguinte(s) fatura(s): \n`
     if ((v1!=null)&&(d1!=null)){
+        d1 = d1.split('-').reverse().join('/')
         texto = texto + `Valor: ${v1} | Vencimento: ${d1}\n`
     }
     if ((v2!=null)&&(d1!=null)){
+        d2 = d2.split('-').reverse().join('/')
         texto = texto + `Valor: ${v2} | Vencimento: ${d2}\n`
     }
     if ((v3!=null)&&(d1!=null)){
+        d3 = d3.split('-').reverse().join('/')
         texto = texto + `Valor: ${v3} | Vencimento: ${d3}\n`
     }
     if ((v4!=null)&&(d1!=null)){
+        d4 = d4.split('-').reverse().join('/')
         texto = texto + `Valor: ${v4} | Vencimento: ${d4}\n`
     }
     if ((v5!=null)&&(d1!=null)){
+        d5 = d5.split('-').reverse().join('/')
         texto = texto + `Valor: ${v5} | Vencimento: ${d5}\n`
     }
 
@@ -570,6 +575,6 @@ function copiar_modelo_financeiro(){
 
     console.log(texto)
     
-    //Passando para a área de transferência
-    navigator.clipboard.writeText(texto.value);
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(texto);
 }
