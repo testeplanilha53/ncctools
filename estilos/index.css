@@ -231,7 +231,7 @@ body > header > div{
 }
 
 .btn_salvar_pend {
-    width: 260px;        
+    width: 180px;        
     position: relative;
     left: calc(100% - 500px)
 }
