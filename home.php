@@ -71,16 +71,15 @@
               Padrão NOC
             </a>
             
-            
-            <a class="dropdown-item" href="https://ncc.drozbase.cx/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share"   title="Atalhos para o chat"    target="_blank" id="link_atalho_chat"><svg xmlns="http://www.w3.org/2000/svg" style="width: 15px;"   viewBox="0 0 448 512"><path d="M181.3 32.4c17.4 2.9 29.2 19.4 26.3 36.8L197.8 128h95.1l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3s29.2 19.4 26.3 36.8L357.8 128H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H347.1L325.8 320H384c17.7 0 32 14.3 32 32s-14.3 32-32 32H315.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8l9.8-58.7H155.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8L90.2 384H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l21.3-128H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3zM187.1 192L165.8 320h95.1l21.3-128H187.1z"/></svg>  Atalhos chat</a>
-            
             <a class="  dropdown-item" id="modelo_financeiro" title="Modelo Financeiro" class="btn btn-warning" data-toggle="modal" data-target="#padrao_noc">            
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
                     <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
                 </svg>                
                 &nbsp Financeiro
             </a>
-
+            
+            <a class="dropdown-item" href="https://ncc.drozbase.cx/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share"   title="Atalhos para o chat"    target="_blank" id="link_atalho_chat"><svg xmlns="http://www.w3.org/2000/svg" style="width: 15px;"   viewBox="0 0 448 512"><path d="M181.3 32.4c17.4 2.9 29.2 19.4 26.3 36.8L197.8 128h95.1l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3s29.2 19.4 26.3 36.8L357.8 128H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H347.1L325.8 320H384c17.7 0 32 14.3 32 32s-14.3 32-32 32H315.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8l9.8-58.7H155.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8L90.2 384H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l21.3-128H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3zM187.1 192L165.8 320h95.1l21.3-128H187.1z"/></svg>  Atalhos chat</a>
+            
 
             <a class="dropdown-item" onclick="mudar_tema()" id="tema"  title="Mudar tema" >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16"   >
@@ -134,12 +133,28 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal Notificação de novidades -->
-    <div class="modal fade" id="notificacaoNovidades" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    
+    <!-- Modal PADRÃO FINANCEIRO -->
+    <div class="modal fade" id="modelo_financeiro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <!-- COLOCAR AQUI NO FUTURO -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PADRÃO DE REPASSE FINANCEIRO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="campo_padrao_verificao">                    
+                    <input type="text" class="campo_valor1" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor1" placeholder="Vencimento: DD/MM/AAAA"><br>
+                    <input type="text" class="campo_valor2" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor2" placeholder="Vencimento: DD/MM/AAAA"><br>
+                    <input type="text" class="campo_valor3" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor3" placeholder="Vencimento: DD/MM/AAAA"><br>
+                    <input type="text" class="campo_valor4" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor4" placeholder="Vencimento: DD/MM/AAAA"><br>
+                    <input type="text" class="campo_valor5" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor5" placeholder="Vencimento: DD/MM/AAAA"><br>                  
+                </div>
+                <div class="modal-footer">                    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success" onclick="copiar_modelo_financeiro()">Copiar</button>
+                </div>
             </div>
         </div>
     </div>
