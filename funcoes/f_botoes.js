@@ -552,6 +552,7 @@ function copiar_modelo_financeiro(){
     var texto = `Nesse cadastro, consta em atraso a(s) seguinte(s) fatura(s): \n`
     if ((v1!="")&&(d1!=null)){
         d1 = d1.split('-').reverse().join('/')
+        v1=v1.replace(/(\d)(\d{0})$/,`$1R$$2`); //Coloca hífen entre o quarto e o quinto dígitos
         texto = texto + `-Valor: ${v1} | Vencimento: ${d1}\n`
     }
     if ((v2!="")&&(d1!=null)){
