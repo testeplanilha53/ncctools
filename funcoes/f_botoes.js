@@ -536,18 +536,18 @@ function tema_escuro(){
 //Função do modal do modelo financeiro
 function copiar_modelo_financeiro(){
     // valores
-    var v1 =getElementById("campo_valor1").value
-    var v2 =getElementById("campo_valor2").value
-    var v3 =getElementById("campo_valor3").value
-    var v4 =getElementById("campo_valor4").value
-    var v5 =getElementById("campo_valor5").value
+    var v1 =document.getElementById("campo_valor1").value
+    var v2 =document.getElementById("campo_valor2").value
+    var v3 =document.getElementById("campo_valor3").value
+    var v4 =document.getElementById("campo_valor4").value
+    var v5 =document.getElementById("campo_valor5").value
 
     // datas
-    var d1 =getElementById("data_valor1").value
-    var d2 =getElementById("data_valor2").value
-    var d3 =getElementById("data_valor3").value
-    var d4 =getElementById("data_valor4").value
-    var d5 =getElementById("data_valor5").value
+    var d1 =document.getElementById("data_valor1").value
+    var d2 =document.getElementById("data_valor2").value
+    var d3 =document.getElementById("data_valor3").value
+    var d4 =document.getElementById("data_valor4").value
+    var d5 =document.getElementById("data_valor5").value
 
     var texto = `Nesse cadastro, consta em atraso a(s) seguinte(s) fatura(s): \n`
     if ((v1!=null)&&(d1!=null)){
