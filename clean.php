@@ -1,0 +1,11 @@
+ 	<?php
+		
+		require_once('conection.php');
+
+		$query = "DELETE FROM `saved_pending` ";
+
+		$pdo = new Connect();
+		$db = $pdo->connectOnDb();
+		$answer = $pdo->delete($db, $query);
+
+	?>
