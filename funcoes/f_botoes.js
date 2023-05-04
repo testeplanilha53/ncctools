@@ -531,3 +531,40 @@ function tema_escuro(){
     t1.style.color = "white"
     t2.style.color = "white"
 }
+
+
+//Função do modal do modelo financeiro
+function copiar_modelo_financeiro(){
+    // valores
+    var v1 =getElementById("campo_valor1").value
+    var v2 =getElementById("campo_valor2").value
+    var v3 =getElementById("campo_valor3").value
+    var v4 =getElementById("campo_valor4").value
+    var v5 =getElementById("campo_valor5").value
+
+    // datas
+    var d1 =getElementById("data_valor1").value
+    var d2 =getElementById("data_valor2").value
+    var d3 =getElementById("data_valor3").value
+    var d4 =getElementById("data_valor4").value
+    var d5 =getElementById("data_valor5").value
+
+    var texto = `Nesse cadastro, consta em atraso a(s) seguinte(s) fatura(s): \n`
+    if ((v1!=null)&&(d1!=null)){
+        texto = texto + `Valor: ${v1} | Vencimento: ${d1}\n`
+    }
+    if ((v2!=null)&&(d1!=null)){
+        texto = texto + `Valor: ${v2} | Vencimento: ${d2}\n`
+    }
+    if ((v3!=null)&&(d1!=null)){
+        texto = texto + `Valor: ${v3} | Vencimento: ${d3}\n`
+    }
+    if ((v4!=null)&&(d1!=null)){
+        texto = texto + `Valor: ${v4} | Vencimento: ${d4}\n`
+    }
+    if ((v5!=null)&&(d1!=null)){
+        texto = texto + `Valor: ${v5} | Vencimento: ${d5}\n`
+    }
+
+    texto = texto + `Acesse por meio do Painel Financeiro no site da FasterNet: https://www2.fasternet.com.br/financa/default.asp`
+}

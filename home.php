@@ -152,10 +152,8 @@
                     <input type="text" class="campo_valor5" placeholder="Valor: R$ X,XX "> - <input type="date" class="data_valor5" placeholder="Vencimento: DD/MM/AAAA"><br>                                      
                 </div>
                 <div class="modal-footer">                    
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <!--
-                        <button type="button" class="btn btn-success" onclick="copiar_modelo_financeiro()">Copiar</button>
-                    -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>                    
+                    <button type="button" class="btn btn-success" onclick="copiar_modelo_financeiro()">Copiar</button>                    
                 </div>
             </div>
         </div>
