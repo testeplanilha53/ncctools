@@ -135,7 +135,7 @@
     </div>
     
     <!-- Modal PADRÃO FINANCEIRO -->
-    <div class="modal fade" id="modelo_financeiro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="modelo_financeiro" tabindex="-2" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -156,7 +156,9 @@
                 </div>
                 <div class="modal-footer">                    
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-success" onclick="copiar_modelo_financeiro()">Copiar</button>
+                    <!--
+                        <button type="button" class="btn btn-success" onclick="copiar_modelo_financeiro()">Copiar</button>
+                    -->
                 </div>
             </div>
         </div>
