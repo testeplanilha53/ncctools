@@ -272,7 +272,7 @@
 
             <!--12/01 Acrescentado essa linha-->
             <span style="color: white; font-size: 14px; display: block; margin: 5px; auto; text-align: center;" id="resetMail" onclick="window.modalDialog.showModal();">
-            Esqueceu sua senha?</span> 
+            Esqueceu sua senha? </span> 
             
 
             <button>
@@ -348,9 +348,7 @@
                          echo('<script>window.error.showModal(); </script>');
                          echo('<script>
                          setTimeout(() => {
-                            window.location.replace("https://ncctools.epizy.com")
-                            }, "2000")
-                         </script>');
+                            window.location.replace('. $_SERVER["SERVER_NAME"] .') }, "2000") </script>');
                         
                     }
     
@@ -358,9 +356,7 @@
                          echo('<script>window.passwordSend.showModal() </script>');
                          echo('<script>
                          setTimeout(() => {
-                            window.location.replace("https://ncctools.epizy.com")
-                            }, "2000")
-                         </script>');
+                            window.location.replace('. $_SERVER["SERVER_NAME"] .') }, "2000") </script>');
                          
                         
                     }
@@ -369,19 +365,15 @@
                          echo('<script>window.errorSend.showModal(); </script>');
                          echo('<script>
                          setTimeout(() => {
-                            window.location.replace("https://ncctools.epizy.com")
-                            }, "2000")
-                         </script>');
+                            window.location.replace('. $_SERVER["SERVER_NAME"] .') }, "2000") </script>');
                         
                     }
     
                      if( isset($_GET['action']) && $_GET['action'] == "success" ){
                          echo('<script>window.success.showModal(); </script>');
                          echo('<script>
-                         setTimeout(() => {
-                            window.location.replace("https://ncctools.epizy.com")
-                            }, "2000")
-                         </script>');
+                            setTimeout(() => {
+                            window.location.replace('. $_SERVER["SERVER_NAME"] .') }, "2000") </script>');
                     }
 
  ?>

@@ -10,7 +10,7 @@
 	
 <!-- 
     //Autor: Lucas Aguiar e Dione
-    //Ultima edição: 11/01/2023
+    //Ultima edição: 18/04/2024
 -->
 
 
@@ -31,6 +31,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!--FONTAWOSONE-->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 
 
 
@@ -324,15 +327,24 @@
 
                         <textarea id="descricao" cols="70" rows="8"
                             placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br>
-			<p id="tags_html" class="tags_show">
-			   <button onclick="add_tag('<hr>')">&lt;hr&gt;</button>
-			   <button onclick="add_tag('<b>')">&lt;b&gt;</button>
-			   <button onclick="add_tag('</b>')">&lt;/b&gt;</button>
+			
+                         
+
+            <p id="tags_html" class="tags_show">
+			   <button class="btn btn-outline-light" onclick="add_tag('<hr>')">&lt;hr&gt;</button>
+			   <button class="btn btn-outline-light" onclick="add_tag('<b>')">&lt;b&gt;</button>
+			   <button class="btn btn-outline-light" onclick="add_tag('</b>')">&lt;/b&gt;</button>
+               <span type="button" id="" class="btn btn-outline-light btn_salvar_pend" onclick="salvar_pendencia()"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks-fill" viewBox="0 0 16 16"> <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4z"/> <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1H4.268z"/> </svg>
+                    &nbspSalvar Atend.
+                </span>   
 			   <!--<button onclick="add_tag('<li> ITEM ... </li>')">&lt;li&gt; + &lt;/li&gt;</button> -->
 			   <!--<button onclick="add_tag('<ul>\n \t <li>ITEM 1</li> \n \t <li>ITEM 2</li> \n </uL>')">&lt;ul&gt; + &ltli&gt;</button> -->
 			</p>
-                    </div>
+            			
 
+
+		    </div>
                     <div id="vs">
                         <span id="t1">Horário de preferência:</span>
                         <span id="hpfr" onchange="fun_h_preferencia()">
@@ -348,6 +360,7 @@
                         <span id="t2">Ponto de referência:</span>                        
                         <input type="search" id="ponto_referencia">
                     </div>
+
                     <br>
                     <div id="botoes">
                         <div class="container">

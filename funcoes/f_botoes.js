@@ -17,6 +17,71 @@ var b_copiar = window.document.getElementById("Copiar")
 var b_tranferir = window.document.getElementById("Transferir")
 var b_apagar = window.document.getElementById("Apagar")
 
+
+
+/// Busca pendência se tiver salva no banco 
+function salvar_pendencia(){
+    var question = window.confirm("Deseja salvar a pendência?")
+    var descricao = document.getElementById("descricao").value
+    var numero_protocolo = document.getElementById("protocolo_chat").value
+    var adm_protocolo = document.getElementById("protocolo_adm").value
+    var params = params = 'number_protocol='+numero_protocolo+'&description='+descricao+'&adm_protocol='+adm_protocolo
+    
+    if( descricao.trim() !== "" && numero_protocolo.trim() !== "" && adm_protocolo.trim() !== "" ){
+	
+    	let xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var retorno = this.responseText;
+			console.log("=" + retorno);
+
+                        
+                    }
+		  }
+                  xhttp.open("POST", "./app.php?action=setDataProtocol&", true);
+	    	  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                  xhttp.send(params);
+    }else{
+    	 window.confirm("Protocolo do chat, adm e a descrição são obrigatórios")
+    }   
+    console.log(params)
+}
+
+
+
+function buscar_pendencia(){
+    var numero_protocolo = document.getElementById("protocolo_chat").value
+     var descricao = document.getElementById("descricao")
+     var adm_protocolo = document.getElementById("protocolo_adm") 
+    if( numero_protocolo !== "" ){
+    	let xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //notification.innerHTML = this.responseText;
+                        let pendencia = JSON.parse( this.responseText );
+			console.log(pendencia );
+			    
+			if(pendencia != false){
+				if( pendencia[0].number_protocol == numero_protocolo ){
+			 		var question = window.confirm("Existe uma pendência salva para esse protocolo")  
+			        	descricao.value = pendencia[0].description
+					adm_protocolo.value = pendencia[0].adm_protocol
+				 }
+			}    
+                    }
+                  };
+                  xhttp.open("POST", "./app.php?action=getDataProtocol", true);
+		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                  xhttp.send("number_protocol="+numero_protocolo);
+     }
+}
+
+
+
+            
+
+/// 
+
 // COPIA O PROTOCOLO DO ADM AO CLICAR
 function copiar_protocolo_adm(){
     
@@ -471,6 +536,9 @@ function transferir(){
         nome_cliente.value = (dados.substring(p_nome+6,p_telefone)).replace("?","")
         telefone.value = (dados.substring(p_telefone+12,p_email)).replace(/[^0-9]/g,'')
         protocolo_chat.value = (dados.substring(p_numProtocolo+20,p_classificacao)).replace(/[^0-9]/g,'')
+	    
+	buscar_pendencia();    
+	    
     });  
 }
 

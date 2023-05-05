@@ -230,7 +230,11 @@ body > header > div{
 
 }
 
-
+.btn_salvar_pend {
+    width: 180px;        
+    position: relative;
+    left: calc(100% - 410px)
+}
 
 .btn_atalho {
     width: 310px;
