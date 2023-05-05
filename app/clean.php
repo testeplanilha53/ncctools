@@ -2,7 +2,7 @@
 		
 		require_once('conection.php');
 
-		$query = "DELETE FROM `saved_pending`  WHERE  `date` <= CURRENT_DATE - INTERVAL 1 DAY "; 
+		$query = "DELETE FROM `saved_pending`  WHERE  `date` <= CURRENT_DATE - INTERVAL 2 DAY "; 
 
 		$pdo = new Connect();
 		$db = $pdo->connectOnDb();
