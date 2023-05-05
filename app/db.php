@@ -335,10 +335,13 @@
 			if( !empty($number_protocol) && !empty($description) && !empty($adm_protocol)    ){ 
 	            		$pdo = new Connect();
 	            		$db = $pdo->connectOnDb();
-		    	
+		    		
+				$current_date = date("Y-m-d");
+				$current_time = date("H:i:s");
 				
-				$query = " '$number_protocol','$description', '$id_user', '$adm_protocol' ";
-               			$condition =   " ON DUPLICATE KEY UPDATE `description`='$description', `adm_protocol`='$adm_protocol' ";
+				
+				$query = " '$number_protocol','$description', '$id_user', '$adm_protocol', '$current_date', '$current_time'  ";
+               			$condition =   " ON DUPLICATE KEY UPDATE `description`='$description', `adm_protocol`='$adm_protocol', `date`='$current_date', `time`='$current_time'";
 				
 				$pdo->create( $db,"saved_pending", $query, $condition ) ;
 
