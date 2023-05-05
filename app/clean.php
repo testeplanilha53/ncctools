@@ -2,7 +2,7 @@
 		
 		require_once('conection.php');
 
-		$query = "DELETE FROM `saved_pending` ";
+		$query = "DELETE FROM `saved_pending`  WHERE  `date` >= CURRENT_DATE) "; 
 
 		$pdo = new Connect();
 		$db = $pdo->connectOnDb();
