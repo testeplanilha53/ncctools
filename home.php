@@ -43,7 +43,7 @@
     <!-- rgb(40,42,54) -->
 
     <!-- Image and text -->
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark nav_cor">
         <a class="navbar-brand" href="#">        
             NCCTools        
         </a>
