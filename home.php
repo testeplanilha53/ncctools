@@ -50,8 +50,11 @@
         <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-dark p-4">
-            <h4 class="text-white">Collapsed content</h4>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
+                <h4 class="text-white">Desenvolvedores:</h4>
+                <span class="text-muted">                    
+                    dione.mourao@ncc.faster.com.br
+                    lucas.aguiar@ncc.faster.com.br
+                </span>
             </div>
         </div>
         <nav class="navbar navbar-dark bg-dark">
