@@ -43,7 +43,7 @@
     <!-- rgb(40,42,54) -->
 
     <!-- Image and text -->
-    <nav class="navbar nav_cor">
+    <nav class="navbar navbar-dark nav_cor">
         <a class="navbar-brand" href="#">        
             NCCTools        
         </a>
@@ -57,7 +57,7 @@
                     </span>
                 </div>
             </div>
-            <nav class="navbar nav_cor">
+            <nav class="navbar navbar-dark nav_cor">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
