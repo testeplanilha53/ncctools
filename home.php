@@ -51,7 +51,7 @@
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-dark p-4">
                     <h4 class="text-white">Desenvolvedores:</h4>
-                    <span class="text-muted">                    
+                    <span class="text-white">                    
                         dione.mourao@ncc.faster.com.br <br>
                         lucas.aguiar@ncc.faster.com.br
                     </span>
