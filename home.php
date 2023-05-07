@@ -49,7 +49,7 @@
         </a>
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-dark p-4">
+                <div class="rounded bg-dark p-4">
                     <h4 class="text-white">Desenvolvedores:</h4>
                     <span class="text-muted">                    
                         dione.mourao@ncc.faster.com.br <br>
