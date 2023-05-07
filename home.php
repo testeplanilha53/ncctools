@@ -43,25 +43,25 @@
     <!-- rgb(40,42,54) -->
 
     <!-- Image and text -->
-    <nav class="navbar navbar-dark bg-dark nav_cor">
+    <nav class="navbar nav_cor">
         <a class="navbar-brand" href="#">        
             NCCTools        
         </a>
         <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <h4 class="text-white">Desenvolvedores:</h4>
-                <span class="text-muted">                    
-                    dione.mourao@ncc.faster.com.br
-                    lucas.aguiar@ncc.faster.com.br
-                </span>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <h4 class="text-white">Desenvolvedores:</h4>
+                    <span class="text-muted">                    
+                        dione.mourao@ncc.faster.com.br <br>
+                        lucas.aguiar@ncc.faster.com.br
+                    </span>
+                </div>
             </div>
-        </div>
-        <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+            <nav class="navbar nav_cor">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
         </div>
     </nav>
 
