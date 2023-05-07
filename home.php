@@ -44,9 +44,9 @@
 
     <!-- Image and text -->
     <nav class="navbar nav_cor">
-        <a class="navbar-brand" href="#">        
+        <span class="navbar-brand">        
             NCCTools        
-        </a>
+        </span>
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="rounded bg-dark p-4">
