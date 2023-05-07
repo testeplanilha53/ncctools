@@ -42,13 +42,13 @@
 <body style="background-color: #35363f;" onmousemove="mudar_titulo()" id="corpo_tela_principal">
     <!-- rgb(40,42,54) -->
 
-<!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
-  </a>
-</nav>
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        NCCTools
+    </a>
+    </nav>
 
     <header>
         
