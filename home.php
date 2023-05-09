@@ -169,7 +169,8 @@ height: 100vh;
       Tools  
     </a>
     </label>
-    <---
+	  
+    <!--
     <label class="navbar-item d-flex justify-content-center _header_label _clock d-flex d-flex justify-content-around px-3">
       <span class="col">  1º </span>
       <svg class="col" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 20 20">
@@ -179,7 +180,7 @@ height: 100vh;
       <span class="col">00:23:30</span>
       
       
-    </label>--->
+    </label> -->
     
     <label class="navbar-item d-flex justify-content-end _header_label">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 18 18" onclick="menu()">
