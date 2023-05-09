@@ -52,6 +52,7 @@ footer {
     transform: translate(-50%, -50%);*/
 }
 
+/*
 body header{
   width: 100%;
   max-width: 700px;
@@ -61,7 +62,7 @@ body header{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+}*/
 
 
 body > span{
