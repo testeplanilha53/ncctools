@@ -251,26 +251,12 @@ height: 100vh;
             <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
             <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
           </svg>
-          <span class="mx-2">Organização</span>
+          <span class="mx-2">Sair</span>
         </a>
       </li>
     </ul>
 
-    <hr>
-	<!---	  
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle text-white" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="/public/images/mdo.jpeg" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>Fulaninha</strong>
-      </a>
-      <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
-        <!-- <li><a class="dropdown-item" href="#">New project...</a></li> -->
-        <li><a class="dropdown-item" href="/settings">Configurações</a></li>
-        <li><a class="dropdown-item" href="/setting">Perfil</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="/logout">Sair</a></li>
-      </ul>
-    </div>--->
+	
 
 </nav>  
 	
