@@ -115,8 +115,19 @@ height: 100vh;
 }
 
 		</style>
+	
+		<script>
+			function menu(){
+    				document.querySelector(".Menu").classList.toggle("menu-show");
+			}
+
+		
+		</script>
+		
 
 </head>
+	
+	
 
 <body style="background-color: #35363f;" onmousemove="mudar_titulo()" id="corpo_tela_principal">
     <!-- rgb(40,42,54) -->
