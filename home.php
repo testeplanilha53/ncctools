@@ -36,34 +36,83 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 
 	<style>
-		.Menu{
-		display: block;
-		width: 100%;
-		height: 100%;
-		max-width: 500px;
-		position: absolute;
-		z-index: 2000;
-		top: 0;
-		right: -500px;
-		transition: .5s;
-		}
+		._header{
+border-bottom: solid 2px #151854;
+background-color: #00004d;
+position: sticky;
+}
 
-		._menu-sidebar{
-		background-color: #3944bc;
-		color: white;
-		height: 100vh;
-		}
+._header_label{
+ width: 33% !important; 
+ max-width: 150px !important;
+}
 
+._clock{
 
-		.menu-show{
-  		right: 0;
-  		transition: .5s;
-		}
+  border: solid 1px white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
 
 
-		.sidebar_item:hover{
-  		border: 2px solid white;
-		}
+._window{
+ width: 500px;
+ height: 500px;
+ display: block;
+ background: white;
+ margin: 10px;
+ border-radius: 10px;
+ border: solid 1px #00004d;
+}
+
+
+.form-signin{
+  width: 100%;
+  max-width: 300px;
+  /* background-color: blueviolet; */
+  display: block;
+  margin: auto;
+}
+
+
+.conteiner-itens{
+/*width: calc(100% / 3);*/
+}
+
+
+
+
+.Menu{
+display: block;
+width: 100%;
+height: 100%;
+max-width: 500px;
+position: absolute;
+z-index: 2000;
+top: 0;
+right: -500px;
+transition: .5s;
+}
+
+._menu-sidebar{
+background-color: #3944bc;
+color: white;
+height: 100vh;
+}
+
+
+.menu-show{
+  right: 0;
+  transition: .5s;
+}
+
+
+.sidebar_item:hover{
+  border: 2px solid white;
+}
 
 		</style>
 
@@ -211,7 +260,7 @@
       </ul>
     </div>
 
-</nav>   
+</nav>  
 	
 	
 	
