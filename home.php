@@ -257,6 +257,7 @@ height: 100vh;
     </ul>
 
     <hr>
+	<!---	  
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle text-white" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="/public/images/mdo.jpeg" alt="" width="32" height="32" class="rounded-circle me-2">
@@ -269,7 +270,7 @@ height: 100vh;
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="/logout">Sair</a></li>
       </ul>
-    </div>
+    </div>--->
 
 </nav>  
 	
