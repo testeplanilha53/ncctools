@@ -38,7 +38,7 @@
 	<style>
 		._header{
 border-bottom: solid 2px #151854;
-background-color: #00004d;
+background-color: #152238;
 position: sticky;
 }
 
@@ -98,7 +98,7 @@ transition: .5s;
 }
 
 ._menu-sidebar{
-background-color: #3944bc;
+background-color: #23395d;
 color: white;
 height: 100vh;
 }
