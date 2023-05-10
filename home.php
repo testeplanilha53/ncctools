@@ -434,11 +434,11 @@ height: 100vh;
                     </button>
                 </div>
                 <div class="modal-body" id="campo_padrao_verificao">                                        
-                    R$ <input type="text" id="campo_valor1" placeholder="Valor: R$ X,XX "> - Data: <input type="date" id="data_valor1" placeholder="Vencimento: DD/MM/AAAA"><br>
-                    R$ <input type="text" id="campo_valor2" placeholder="Valor: R$ X,XX "> - Data: <input type="date" id="data_valor2" placeholder="Vencimento: DD/MM/AAAA"><br>
-                    R$ <input type="text" id="campo_valor3" placeholder="Valor: R$ X,XX "> - Data: <input type="date" id="data_valor3" placeholder="Vencimento: DD/MM/AAAA"><br>
-                    R$ <input type="text" id="campo_valor4" placeholder="Valor: R$ X,XX "> - Data: <input type="date" id="data_valor4" placeholder="Vencimento: DD/MM/AAAA"><br>
-                    R$ <input type="text" id="campo_valor5" placeholder="Valor: R$ X,XX "> - Data: <input type="date" id="data_valor5" placeholder="Vencimento: DD/MM/AAAA"><br>                                      
+                    R$ <input type="text" id="campo_valor1" placeholder="Valor: R$ X,XX "> - Data: <input type="text" id="data_valor1" placeholder="Vencimento: DD/MM/AAAA"><br>
+                    R$ <input type="text" id="campo_valor2" placeholder="Valor: R$ X,XX "> - Data: <input type="text" id="data_valor2" placeholder="Vencimento: DD/MM/AAAA"><br>
+                    R$ <input type="text" id="campo_valor3" placeholder="Valor: R$ X,XX "> - Data: <input type="text" id="data_valor3" placeholder="Vencimento: DD/MM/AAAA"><br>
+                    R$ <input type="text" id="campo_valor4" placeholder="Valor: R$ X,XX "> - Data: <input type="text" id="data_valor4" placeholder="Vencimento: DD/MM/AAAA"><br>
+                    R$ <input type="text" id="campo_valor5" placeholder="Valor: R$ X,XX "> - Data: <input type="text" id="data_valor5" placeholder="Vencimento: DD/MM/AAAA"><br>                                      
                 </div>
                 <div class="modal-footer">                    
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>                    
