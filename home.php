@@ -275,7 +275,7 @@ height: 100vh;
 	
 	
 
-	<!---
+	
     <header>
         
         <button type="button" id="fechar" class="btn btn-danger" onclick="javascript:window.close()">Fechar</button>        
@@ -361,7 +361,7 @@ height: 100vh;
         </div>
     </header>
 
-	 -->
+	 
 
 
     <!-- Modal Notificação de novidades -->
