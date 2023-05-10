@@ -295,3 +295,7 @@ iframe {
      left: 80px !important; 
 }
 
+#botoes_mais_usuais {
+    display: block;
+    text-align: center;
+}
