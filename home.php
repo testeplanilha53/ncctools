@@ -161,7 +161,7 @@ height: 100vh;
 	
 	<!--HEADER-->
 <header class="conteiner-fluid _header">
-  <nav class="navbar text-white m-auto p-2" style="max-width: 1920px;">
+  <nav class="navbar text-white m-auto p-2" style="max-width: 1920px; background: rgb(246, 246, 246);">
     <!--MENU-NAV-->
     <label class="navbar-item text-white _header_label">
       <a href="#" class="navbar-brand text-white p-0 m-0 ">
@@ -198,7 +198,7 @@ height: 100vh;
 	<!--SIDEBAR-->
 <nav class="Menu">
       
-  <div class="d-flex flex-column flex-shrink-0 p-3 _menu-sidebar " style="height: 100%;">
+  <div class="d-flex flex-column flex-shrink-0 p-3 _menu-sidebar " style="height: 100%; background: rgb(246, 246, 246);">
     
     <form class="d-flex" method="get" action="https://ncc.drozbase.cx/search?" target="_blank">
         <label class="navbar-item d-flex justify-content-start _header_label text-white">
