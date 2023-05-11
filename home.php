@@ -389,7 +389,7 @@ height: 100vh;
     </header>
     -->
 	 
-    <br><span id="notificacao"> </span>
+    <span id="notificacao"> </span>
 
 
     <!-- Modal Notificação de novidades -->
