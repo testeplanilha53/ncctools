@@ -163,8 +163,7 @@ height: 100vh;
         <a href="./home.php" target="_blank" id="novo">
             <button type="button" class="btn btn-success">Nova Aba</button>
         </a>
-
-        <br><span id="notificacao"> </span>
+        
     </span>
 
     <span>
@@ -390,6 +389,7 @@ height: 100vh;
     </header>
     -->
 	 
+    <br><span id="notificacao"> </span>
 
 
     <!-- Modal Notificação de novidades -->
