@@ -165,8 +165,7 @@ height: 100vh;
         </a>
                 
     </span>
-    
-    <span id="notificacao"> </span>
+        
 
     <span>
         <br>                     
@@ -284,7 +283,7 @@ height: 100vh;
 	
 	
 	
-	
+<span id="notificacao"> </span>
 	
 	
 	
