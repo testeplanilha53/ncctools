@@ -299,9 +299,12 @@ iframe {
 }
 
 #botoes_mais_usuais {
-    display: block;
+    display: inline-block;
     text-align: center;
-    width: 100%;
-    position: absolute;
-    z-index: 5;
+    width: 500px;
+    position: relative;
+    z-index: 2;
+    left: 0%;
+    right: auto;
+    margin: 0 auto;
 }
