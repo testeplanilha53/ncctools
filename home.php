@@ -186,7 +186,7 @@ height: 100vh;
 	<!--SIDEBAR-->
 <nav class="Menu">
       
-  <div class="d-flex flex-column flex-shrink-0 p-3 _menu-sidebar " style="height: 100%; background: rgb(21, 34, 56);">
+  <div class="d-flex flex-column flex-shrink-0 p-3 _menu-sidebar " onmouseleave="menu()" style="height: 100%; background: rgb(21, 34, 56);">
     
     <form class="d-flex" method="get" action="https://ncc.drozbase.cx/search?" target="_blank">
         <label class="navbar-item d-flex justify-content-start _header_label text-white">
