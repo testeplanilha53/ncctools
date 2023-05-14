@@ -1,3 +1,8 @@
+#nav_cor{
+    background-color: 35363f;
+    color: white;
+}
+
 #tela_atendimento {
     position: relative;
 }
@@ -47,6 +52,7 @@ footer {
     transform: translate(-50%, -50%);*/
 }
 
+/*
 body header{
   width: 100%;
   max-width: 700px;
@@ -56,7 +62,7 @@ body header{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+}*/
 
 
 body > span{
@@ -139,12 +145,15 @@ body > header > div{
 
 
 #notificacao {
-    position: relative;
+    position: absolute;
     width: 100%;
-    max-width: 700px;
-    top: -30px;
+    max-width: 100%;
     z-index: 5;
+    text-align: center;
+    display: block;
+    left: 0%;
 }
+
 
 #protocolo_chat {
     font-size: 12pt;
@@ -289,3 +298,13 @@ iframe {
      left: 80px !important; 
 }
 
+#botoes_mais_usuais {
+    display: inline-block;
+    text-align: center;
+    width: 500px;
+    position: relative;
+    z-index: 2;
+    left: 0%;
+    right: auto;
+    margin: 0 auto;
+}
