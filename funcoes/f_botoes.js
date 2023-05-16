@@ -693,11 +693,11 @@ function apagar_modelo_financeiro(){
     var elements1 = document.querySelectorAll(`[class^="campo_valor"]`)
     var elements2 = document.querySelectorAll(`[class^="data_valor"]`)
 
-    array.forEach(elements1 => {
-        elements1.value=""
+    elements1.forEach(e => {
+        e.value=""
     });
 
-    array.forEach(elements2 => {
-        elements1.value=""
+    elements2.forEach(e => {
+        e.value=""
     });
 }
