@@ -695,8 +695,4 @@ function apagar_modelo_financeiro(){
     elements1.forEach(e => {
         e.value=""
     });
-
-    elements2.forEach(e => {
-        e.value=""
-    });
 }
