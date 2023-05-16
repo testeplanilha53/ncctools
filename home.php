@@ -435,7 +435,7 @@ height: 100vh;
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Motivo da verificação"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Nome e n° de telefone do cliente"> <br> <br> 
                     <button type="button" class="btn btn-danger" >Apresenta risco de acidente?</button>
-                    <select class="campo_preenchimento_ncc" style="width: 40px">
+                    <select class="campo_preenchimento_ncc" style="width: 90px">
                         <option value=""></option>
                         <option value="Não">Não</option>    
                         <option value="Sim">Sim</option>                                                  
