@@ -687,3 +687,17 @@ function copiar_modelo_financeiro(){
     // Passando as informações para a área de transferência
     navigator.clipboard.writeText(texto);
 }
+
+
+function apagar_modelo_financeiro(){
+    var elements1 = document.querySelectorAll(`[class^="campo_valor"]`)
+
+    elements1.forEach(e => {
+        e.value=""
+    });
+}
+
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
