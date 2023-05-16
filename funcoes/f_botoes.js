@@ -691,7 +691,6 @@ function copiar_modelo_financeiro(){
 
 function apagar_modelo_financeiro(){
     var elements1 = document.querySelectorAll(`[class^="campo_valor"]`)
-    var elements2 = document.querySelectorAll(`[class^="data_valor"]`)
 
     elements1.forEach(e => {
         e.value=""
