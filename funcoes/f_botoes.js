@@ -705,12 +705,21 @@ $(function () {
 
 
 function muda_title(){
-    var atalho1.value = localStorage.getItem('txt_atalho1')
-    var atalho2.value = localStorage.getItem('txt_atalho2')
-    var atalho3.value = localStorage.getItem('txt_atalho3')    
-    var atalho4.value = localStorage.getItem('txt_atalho4')
-    var atalho5.value = localStorage.getItem('txt_atalho5')
-    var atalho6.value = localStorage.getItem('txt_atalho6')
+
+    var atalho1
+var atalho2
+var atalho3
+
+var atalho4
+var atalho5
+var atalho6
+
+    atalho1.value = localStorage.getItem('txt_atalho1')
+    atalho2.value = localStorage.getItem('txt_atalho2')
+    atalho3.value = localStorage.getItem('txt_atalho3')    
+    atalho4.value = localStorage.getItem('txt_atalho4')
+    atalho5.value = localStorage.getItem('txt_atalho5')
+    atalho6.value = localStorage.getItem('txt_atalho6')
 
     var elementsx = document.querySelectorAll(`[class^="atalho"]`)
     elementsx[0].setAttribute("title",atalho1.value)
