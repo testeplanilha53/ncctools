@@ -653,7 +653,7 @@ height: 100vh;
                                 </div>
                                 <div class="col">
                                     <a href="LGPD.php" target="_blank"> <button type="button" id=""
-                                            class="btn btn-secondary btn_atalho2" onclick="">LGPD</button> </a>
+                                            class="btn btn-secondary btn_atalho2" onclick="" data-toggle="tooltip" data-placement="top" title="Modelo automático LGPD">LGPD</button> </a>
                                 </div>
                                 <div class="w-100"></div> <br> <div class="w-100"></div>
                                 <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho1()">Atalho 1</button> </div>
