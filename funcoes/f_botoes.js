@@ -712,12 +712,12 @@ function muda_title(){
     atalho5.value = localStorage.getItem('txt_atalho5')
     atalho6.value = localStorage.getItem('txt_atalho6')
 
-    var elements = document.querySelectorAll(`[class^="atalho"]`)
-    elements[0].setAttribute("title",atalho1.value)
-    elements[1].setAttribute("title",atalho2.value)
-    elements[2].setAttribute("title",atalho3.value)
-    elements[3].setAttribute("title",atalho4.value)
-    elements[4].setAttribute("title",atalho5.value)
-    elements[5].setAttribute("title",atalho6.value)
+    var elementsx = document.querySelectorAll(`[class^="atalho"]`)
+    elementsx[0].setAttribute("title",atalho1.value)
+    elementsx[1].setAttribute("title",atalho2.value)
+    elementsx[2].setAttribute("title",atalho3.value)
+    elementsx[3].setAttribute("title",atalho4.value)
+    elementsx[4].setAttribute("title",atalho5.value)
+    elementsx[5].setAttribute("title",atalho6.value)
 
 }
