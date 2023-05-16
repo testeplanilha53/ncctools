@@ -696,3 +696,8 @@ function apagar_modelo_financeiro(){
         e.value=""
     });
 }
+
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
