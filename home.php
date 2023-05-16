@@ -433,7 +433,13 @@ height: 100vh;
                     <input type="text" class="campo_preenchimento_ncc" placeholder="Plano"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Endereço"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Motivo da verificação"> <br>
-                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Nome e n° de telefone do cliente"> <br>                    
+                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Nome e n° de telefone do cliente"> <br> <br> 
+                    <button type="button" class="btn btn-danger" >Apresenta risco de acidente?</button>
+                    <select>
+                    <option value=""></option>
+                        <option value="Não">Não</option>    
+                        <option value="Sim">Sim</option>                                                  
+                    </select>                    
                 </div>
                 <div class="modal-footer">                    
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -655,6 +661,7 @@ height: 100vh;
                                 <div class="w-100"></div>
                                 <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho5()">Atalho 5</button></div>
                                 <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" onclick="atalho6()">Atalho 6</button> </div>
+                                
                             </div>
                         </div>
 
