@@ -713,11 +713,11 @@ function muda_title(){
     atalho6.value = localStorage.getItem('txt_atalho6')
 
     var elements = document.querySelectorAll(`[class^="atalho"]`)
-    elements[0].title = atalho1.value
-    elements[1].title = atalho2.value
-    elements[2].title = atalho3.value
-    elements[3].title = atalho4.value
-    elements[4].title = atalho5.value
-    elements[5].innerText = atalho6.value
+    elements[0]..setAttribute("title",atalho1.value)
+    elements[1]..setAttribute("title",atalho2.value)
+    elements[2]..setAttribute("title",atalho3.value)
+    elements[3]..setAttribute("title",atalho4.value)
+    elements[4]..setAttribute("title",atalho5.value)
+    elements[5]..setAttribute("title",atalho6.value)
 
 }
