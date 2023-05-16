@@ -656,14 +656,14 @@ height: 100vh;
                                             class="btn btn-secondary btn_atalho2" onclick="" data-toggle="tooltip" data-placement="top" title="Modelo automático LGPD">LGPD</button> </a>
                                 </div>
                                 <div class="w-100"></div> <br> <div class="w-100"></div>
-                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho1()">Atalho 1</button> </div>
-                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho2()">Atalho 2</button></div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho1()">Atalho 1</button> </div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho2()">Atalho 2</button></div>
                                 <div class="w-100"></div>
-                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho3()">Atalho 3</button> </div>                                
-                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho4()">Atalho 4</button> </div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho3()">Atalho 3</button> </div>                                
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho4()">Atalho 4</button> </div>
                                 <div class="w-100"></div>
-                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho5()">Atalho 5</button></div>
-                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho6()">Atalho 6</button> </div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho5()">Atalho 5</button></div>
+                                <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho" data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()" onclick="atalho6()">Atalho 6</button> </div>
                                 
                             </div>
                         </div>

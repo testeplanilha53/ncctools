@@ -712,11 +712,12 @@ function muda_title(){
     atalho5.value = localStorage.getItem('txt_atalho5')
     atalho6.value = localStorage.getItem('txt_atalho6')
 
-    var elements = document.querySelectorAll(`[class^="btn_atalho"]`)
+    var elements = document.querySelectorAll(`[class^="atalho"]`)
     elements[0].title = atalho1.value
     elements[1].title = atalho2.value
     elements[2].title = atalho3.value
     elements[3].title = atalho4.value
     elements[4].title = atalho5.value
-    elements[5].title = atalho6.value
+    elements[5].innerText = atalho6.value
+
 }
