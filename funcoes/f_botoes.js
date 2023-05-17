@@ -704,29 +704,12 @@ $(function () {
 
 
 
-function muda_title(){
-
-    var atalho1
-var atalho2
-var atalho3
-
-var atalho4
-var atalho5
-var atalho6
-
-    atalho1.value = localStorage.getItem('txt_atalho1')
-    atalho2.value = localStorage.getItem('txt_atalho2')
-    atalho3.value = localStorage.getItem('txt_atalho3')    
-    atalho4.value = localStorage.getItem('txt_atalho4')
-    atalho5.value = localStorage.getItem('txt_atalho5')
-    atalho6.value = localStorage.getItem('txt_atalho6')
-
-    var elementsx = document.querySelectorAll(`[class^="atalho"]`)
-    elementsx[0].setAttribute("title",atalho1.value)
-    elementsx[1].setAttribute("title",atalho2.value)
-    elementsx[2].setAttribute("title",atalho3.value)
-    elementsx[3].setAttribute("title",atalho4.value)
-    elementsx[4].setAttribute("title",atalho5.value)
-    elementsx[5].setAttribute("title",atalho6.value)
-
+function muda_title(){    
+    var elementsx = document.getElementsByClassName('atalho')
+    elementsx[0].setAttribute("data-original-title",localStorage.getItem('txt_atalho1'))
+    elementsx[1].setAttribute("data-original-title",localStorage.getItem('txt_atalho2'))
+    elementsx[2].setAttribute("data-original-title",localStorage.getItem('txt_atalho3'))
+    elementsx[3].setAttribute("data-original-title",localStorage.getItem('txt_atalho4'))
+    elementsx[4].setAttribute("data-original-title",localStorage.getItem('txt_atalho5'))
+    elementsx[5].setAttribute("data-original-title",localStorage.getItem('txt_atalho6'))
 }
