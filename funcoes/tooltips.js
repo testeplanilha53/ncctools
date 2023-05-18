@@ -2,7 +2,7 @@
 //Equipamentos Ópticos
 //------------------------------------------------------
 
-function fun_Fiberhome(){        
+function tooltips_fun_Fiberhome(){        
     meu_id = window.document.getElementById("fun_Fiberhome")    
 
     meu_id.className = "btn btn-info"
@@ -13,7 +13,7 @@ function fun_Fiberhome(){
 
 }
 
-function fun_ONU_NOKIA(){    
+function tooltips_fun_ONU_NOKIA(){    
     meu_id = window.document.getElementById("fun_ONU_NOKIA")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -23,7 +23,7 @@ function fun_ONU_NOKIA(){
 }
 
 
-function fun_Conversor_NOKIA(){
+function tooltips_fun_Conversor_NOKIA(){
     meu_id = window.document.getElementById("fun_Conversor_NOKIA")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -32,7 +32,7 @@ function fun_Conversor_NOKIA(){
 
 }
 
-function fun_Datacom(){
+function tooltips_fun_Datacom(){
     meu_id = window.document.getElementById("fun_Datacom")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -46,7 +46,7 @@ function fun_Datacom(){
 //SUPORTE
 //------------------------------------------------------
 
-function fun_sup_falta_de_conexao (){
+function tooltips_fun_sup_falta_de_conexao (){
     meu_id = window.document.getElementById("fun_sup_falta_de_conexao")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -54,7 +54,7 @@ function fun_sup_falta_de_conexao (){
     var txt = `Cliente relata falta de conexão. `
 
 }
-function fun_sup_lentidao (){
+function tooltips_fun_sup_lentidao (){
     meu_id = window.document.getElementById("fun_sup_lentidao")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -62,7 +62,7 @@ function fun_sup_lentidao (){
     var txt = `Cliente relata lentidão. `
 
 }
-function fun_sup_oscilação (){
+function tooltips_fun_sup_oscilação (){
     meu_id = window.document.getElementById("fun_sup_oscilação")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -72,7 +72,7 @@ function fun_sup_oscilação (){
 }
 
 
-function fun_sup_reinicio (){
+function tooltips_fun_sup_reinicio (){
     meu_id = window.document.getElementById("fun_sup_reinicio")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -80,7 +80,7 @@ function fun_sup_reinicio (){
     var txt = `Feito o reinício da conexão via sistema e solicitado o reinício manual dos equipamentos. `
 
 }
-function fun_sup_checagem_cabos (){
+function tooltips_fun_sup_checagem_cabos (){
     meu_id = window.document.getElementById("fun_sup_checagem_cabos")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -88,7 +88,7 @@ function fun_sup_checagem_cabos (){
     var txt = `Realizado a checagem dos cabos nos dispositivos. `
 
 }
-function fun_sup_teste_de_velocidade(){
+function tooltips_fun_sup_teste_de_velocidade(){
     meu_id = window.document.getElementById("fun_sup_teste_de_velocidade")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -97,7 +97,7 @@ function fun_sup_teste_de_velocidade(){
 
 }
 
-function fun_sup_conexao_normalizada (){
+function tooltips_fun_sup_conexao_normalizada (){
     meu_id = window.document.getElementById("fun_sup_conexao_normalizada")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -105,7 +105,7 @@ function fun_sup_conexao_normalizada (){
     var txt = `\n\nConexão normalizada. `
 
 }
-function fun_sup_envio_de_vs (){
+function tooltips_fun_sup_envio_de_vs (){
     meu_id = window.document.getElementById("fun_sup_envio_de_vs")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -114,7 +114,7 @@ function fun_sup_envio_de_vs (){
 
 }
 
-function fun_ver_noc (){
+function tooltips_fun_ver_noc (){
     meu_id = window.document.getElementById("fun_ver_noc")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -123,7 +123,7 @@ function fun_ver_noc (){
 
 }
 
-function fun_ver_sup (){
+function tooltips_fun_ver_sup (){
     meu_id = window.document.getElementById("fun_ver_sup")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -132,7 +132,7 @@ function fun_ver_sup (){
 
 }
 
-function fun_ver_escr (){
+function tooltips_fun_ver_escr (){
     meu_id = window.document.getElementById("fun_ver_escr")
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
@@ -145,7 +145,7 @@ function fun_ver_escr (){
 //------------------------------------------------------
 // Serviços
 //------------------------------------------------------
-function fun_Montagem_de_Rede(){
+function tooltips_fun_Montagem_de_Rede(){
     meu_id = window.document.getElementById("fun_Montagem_de_Rede")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -154,7 +154,7 @@ function fun_Montagem_de_Rede(){
 
 }
 
-function fun_Mudanca_de_comodo(){
+function tooltips_fun_Mudanca_de_comodo(){
     meu_id = window.document.getElementById("fun_Mudanca_de_comodo")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -162,7 +162,7 @@ function fun_Mudanca_de_comodo(){
     var txt = `Cliente solicita mudança de cômodo. Ciente do valor de R$ 50,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer.`
 
 }
-function fun_Mudanca_de_comodo_amparo(){
+function tooltips_fun_Mudanca_de_comodo_amparo(){
     meu_id = window.document.getElementById("fun_Mudanca_de_comodo_amparo")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -170,7 +170,7 @@ function fun_Mudanca_de_comodo_amparo(){
     var txt = `Cliente solicita mudança de cômodo. Ciente do valor de R$ 50,00 (em parcela única), do prazo máximo de 7 dias úteis para ocorrer.`
 
 }
-function fun_Transferência_de_endereço(){
+function tooltips_fun_Transferência_de_endereço(){
     meu_id = window.document.getElementById("fun_Transferência_de_endereço")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -178,7 +178,7 @@ function fun_Transferência_de_endereço(){
     var txt = `Cliente solicita transferência de endereço. Ciente do valor de R$ 50,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer, e que é necessário levar os dispositivos ao novo endereço. Cliente já está no novo endereço. \n<hr> <b> Novo endereço: </b>. \n<hr> Confirmada a disponibilidade de conexão no local por:\n`
 
 }
-function fun_Transferência_de_endereço_amparo(){
+function tooltips_fun_Transferência_de_endereço_amparo(){
     meu_id = window.document.getElementById("fun_Transferência_de_endereço_amparo")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -192,7 +192,7 @@ function fun_Transferência_de_endereço_amparo(){
 //------------------------------------------------------
 //Financeiro 
 //------------------------------------------------------
-function fun_desb3001 (){
+function tooltips_fun_desb3001 (){
     meu_id = window.document.getElementById("fun_desb3001")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -200,7 +200,7 @@ function fun_desb3001 (){
     var txt = `Cliente entrou em contato solicitando o desbloqueio da conexão, ciente dos valores em pendência assim como o prazo de 3 a 5 dias corridos do desbloqueio. Orientado a realizar o reinicio manual do equipamento durante 15 minutos. Sem mais dúvidas.\n\n<b>Pendências em atraso no sistema:</b>`
 
 }
-function fun_desb3001_indisp (){
+function tooltips_fun_desb3001_indisp (){
     meu_id = window.document.getElementById("fun_desb3001_indisp")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -208,7 +208,7 @@ function fun_desb3001_indisp (){
     var txt = `Cliente solicita desbloqueio da conexão. Identificado bloqueio 3001. Ciente de que não é possível liberar o acesso em sistema, uma vez que já foi concedido o desbloqueio por 5 dias corridos. Repassados os valores atualizados e prazos das pendências, assim como as formas de pagamento disponíveis, sem mais dúvidas.\n\n<b>Pendências em atraso:</b>`
 
 }
-function fun_desb3001_pag_efetuado (){
+function tooltips_fun_desb3001_pag_efetuado (){
     meu_id = window.document.getElementById("fun_desb3001_pag_efetuado")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -216,7 +216,7 @@ function fun_desb3001_pag_efetuado (){
     var txt = `Cliente relata falta de conexão após o pagamento da pendência. Identificado bloqueio 3001. Ciente de que ainda não ocorreu o reconhecimento bancário do pagamento realizado, sendo necessário aguardar o prazo máximo de 72 horas úteis. Sem mais dúvidas.`
 
 }
-function fun_bloqueio_verde (){
+function tooltips_fun_bloqueio_verde (){
     meu_id = window.document.getElementById("fun_bloqueio_verde")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -224,7 +224,7 @@ function fun_bloqueio_verde (){
     var txt = `Cliente solicita desbloqueio da conexão. Identificado bloqueio verde. Ciente de que não é possível liberar o acesso em sistema e ciente dos valores atualizados e prazos das pendências. Repassadas as formas de pagamento disponíveis, sem mais dúvidas.\n\n<b>Pendências em atraso:</b>`
 
 }
-function fun_bloqueio_azul (){
+function tooltips_fun_bloqueio_azul (){
     meu_id = window.document.getElementById("fun_bloqueio_azul")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -237,7 +237,7 @@ function fun_bloqueio_azul (){
 //Senha Wi-FI 
 //------------------------------------------------------
 
-function fun_senha_wifi_ip (){
+function tooltips_fun_senha_wifi_ip (){
     meu_id = window.document.getElementById("fun_senha_wifi_ip")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -245,7 +245,7 @@ function fun_senha_wifi_ip (){
     var txt = `Cliente solicita troca de senha wi-fi. Feito o acesso às configurações do roteador pelo IP padrão. Alteração feita com sucesso. Sem mais dúvidas.`
 
 }
-function fun_senha_wifi_app (){
+function tooltips_fun_senha_wifi_app (){
     meu_id = window.document.getElementById("fun_senha_wifi_app")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -260,7 +260,7 @@ function fun_senha_wifi_app (){
 //Cancelamento e Troca de titularidade
 //------------------------------------------------------
 
-function fun_can_titular (){
+function tooltips_fun_can_titular (){
     meu_id = window.document.getElementById("fun_can_titular")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -269,7 +269,7 @@ function fun_can_titular (){
 
 }
 
-function fun_can_com_pendencia (){
+function tooltips_fun_can_com_pendencia (){
     meu_id = window.document.getElementById("fun_can_com_pendencia")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -278,7 +278,7 @@ function fun_can_com_pendencia (){
 
 }
 
-function fun_can_outra_pessoa (){
+function tooltips_fun_can_outra_pessoa (){
     meu_id = window.document.getElementById("fun_can_outra_pessoa")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -287,7 +287,7 @@ function fun_can_outra_pessoa (){
 
 }
 
-function fun_troca_titularidade (){
+function tooltips_fun_troca_titularidade (){
     meu_id = window.document.getElementById("fun_troca_titularidade")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -300,7 +300,7 @@ function fun_troca_titularidade (){
 //Problemas na conexão
 //------------------------------------------------------
 
-function fun_nao_repassou_cpf (){
+function tooltips_fun_nao_repassou_cpf (){
     meu_id = window.document.getElementById("fun_nao_repassou_cpf")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -309,7 +309,7 @@ function fun_nao_repassou_cpf (){
 
 }
 
-function fun_normalizada_sem_procedimento (){
+function tooltips_fun_normalizada_sem_procedimento (){
     meu_id = window.document.getElementById("fun_normalizada_sem_procedimento")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -318,7 +318,7 @@ function fun_normalizada_sem_procedimento (){
 
 }
 
-function fun_recusa_procedimento (){
+function tooltips_fun_recusa_procedimento (){
     meu_id = window.document.getElementById("fun_recusa_procedimento")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -327,7 +327,7 @@ function fun_recusa_procedimento (){
 
 }
 
-function fun_ip_de_bloqueio (){
+function tooltips_fun_ip_de_bloqueio (){
     meu_id = window.document.getElementById("fun_ip_de_bloqueio")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -336,7 +336,7 @@ function fun_ip_de_bloqueio (){
 
 }
 
-function fun_prob_ext_conclusao (){
+function tooltips_fun_prob_ext_conclusao (){
     meu_id = window.document.getElementById("fun_prob_ext_conclusao")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -345,7 +345,7 @@ function fun_prob_ext_conclusao (){
 
 }
 
-function fun_prob_ext_suporte (){
+function tooltips_fun_prob_ext_suporte (){
     meu_id = window.document.getElementById("fun_prob_ext_suporte")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -354,7 +354,7 @@ function fun_prob_ext_suporte (){
 
 }
 
-function fun_nao_esta_no_local (){
+function tooltips_fun_nao_esta_no_local (){
     meu_id = window.document.getElementById("fun_nao_esta_no_local")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -367,7 +367,7 @@ function fun_nao_esta_no_local (){
 //Problemas na conexão
 //------------------------------------------------------
 
-function fun_tv_normalizado (){
+function tooltips_fun_tv_normalizado (){
     meu_id = window.document.getElementById("fun_tv_normalizado")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -376,7 +376,7 @@ function fun_tv_normalizado (){
 
 }
 
-function fun_tv_nao_normalizado (){
+function tooltips_fun_tv_nao_normalizado (){
     meu_id = window.document.getElementById("fun_tv_nao_normalizado")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -385,7 +385,7 @@ function fun_tv_nao_normalizado (){
 
 }
 
-function fun_tv_normalizado_sem_verificacao (){
+function tooltips_fun_tv_normalizado_sem_verificacao (){
     meu_id = window.document.getElementById("fun_tv_normalizado_sem_verificacao")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -400,7 +400,7 @@ function fun_tv_normalizado_sem_verificacao (){
 //Informação sobre visita técnica
 //------------------------------------------------------
 
-function fun_dentro_do_prazo_vs (){
+function tooltips_fun_dentro_do_prazo_vs (){
     meu_id = window.document.getElementById("fun_dentro_do_prazo_vs")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -410,7 +410,7 @@ function fun_dentro_do_prazo_vs (){
 }
 
 
-function fun_fora_do_prazo_vs (){
+function tooltips_fun_fora_do_prazo_vs (){
     meu_id = window.document.getElementById("fun_fora_do_prazo_vs")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -419,7 +419,7 @@ function fun_fora_do_prazo_vs (){
 
 }
 
-function fun_escritorio_indisp (){
+function tooltips_fun_escritorio_indisp (){
     meu_id = window.document.getElementById("fun_escritorio_indisp")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -428,7 +428,7 @@ function fun_escritorio_indisp (){
 
 }
 
-function fun_cancelamento_vs (){
+function tooltips_fun_cancelamento_vs (){
     meu_id = window.document.getElementById("fun_cancelamento_vs")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -442,7 +442,7 @@ function fun_cancelamento_vs (){
 //Informação sobre pendências
 //------------------------------------------------------
 
-function fun_pendencias_atraso (){
+function tooltips_fun_pendencias_atraso (){
     meu_id = window.document.getElementById("fun_pendencias_atraso")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -451,7 +451,7 @@ function fun_pendencias_atraso (){
 
 }
 
-function fun_negociacao_pendencias (){
+function tooltips_fun_negociacao_pendencias (){
     meu_id = window.document.getElementById("fun_negociacao_pendencias")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -460,7 +460,7 @@ function fun_negociacao_pendencias (){
 
 }
 
-function fun_pag_duplicado (){
+function tooltips_fun_pag_duplicado (){
     meu_id = window.document.getElementById("fun_pag_duplicado")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -469,7 +469,7 @@ function fun_pag_duplicado (){
 
 }
 
-function fun_data_vencimento (){
+function tooltips_fun_data_vencimento (){
     meu_id = window.document.getElementById("fun_data_vencimento")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -478,7 +478,7 @@ function fun_data_vencimento (){
 
 }
 
-function fun_formas_pagamento (){
+function tooltips_fun_formas_pagamento (){
     meu_id = window.document.getElementById("fun_formas_pagamento")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -495,7 +495,7 @@ function fun_formas_pagamento (){
 //Emissão de 2ª via da fatura
 //------------------------------------------------------
 
-function fun_instrucao_via_site (){
+function tooltips_fun_instrucao_via_site (){
     meu_id = window.document.getElementById("fun_instrucao_via_site")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -504,7 +504,7 @@ function fun_instrucao_via_site (){
 
 }
 
-function fun_via_sms (){
+function tooltips_fun_via_sms (){
     meu_id = window.document.getElementById("fun_via_sms")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -514,7 +514,7 @@ function fun_via_sms (){
 }
 
 
-function fun_nota_fical (){
+function tooltips_fun_nota_fical (){
     meu_id = window.document.getElementById("fun_nota_fical")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -523,7 +523,7 @@ function fun_nota_fical (){
 
 }
 
-function fun_troca_plano (){
+function tooltips_fun_troca_plano (){
     meu_id = window.document.getElementById("fun_troca_plano")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -537,7 +537,7 @@ function fun_troca_plano (){
 //SVA e TOKEN
 //------------------------------------------------------
 
-function fun_sva (){
+function tooltips_fun_sva (){
     meu_id = window.document.getElementById("fun_sva")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -546,7 +546,7 @@ function fun_sva (){
 
 }
 
-function fun_token_fatura (){
+function tooltips_fun_token_fatura (){
     meu_id = window.document.getElementById("fun_token_fatura")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
@@ -555,7 +555,7 @@ function fun_token_fatura (){
 
 }
 
-function fun_token_sva (){
+function tooltips_fun_token_sva (){
     meu_id = window.document.getElementById("fun_token_sva")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
