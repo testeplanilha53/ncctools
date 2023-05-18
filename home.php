@@ -377,51 +377,51 @@ height: 100vh;
 		    <span class="preenchidos_conteiner">
 		    </span>	
                     <strong>Equipamentos Ópticos</strong> <br>                    
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Fiberhome" onclick="fun_Fiberhome()">Fiberhome</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Datacom" onclick="fun_Datacom()">Datacom</button> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ONU_NOKIA" onclick="fun_ONU_NOKIA()">ONU NOKIA</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Conversor_NOKIA" onclick="fun_Conversor_NOKIA()">Conversor NOKIA</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Fiberhome" onclick="fun_Fiberhome()" onmouseover="tooltips_fun_Fiberhome()">Fiberhome</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Datacom" onclick="fun_Datacom()" onmouseover="tooltips_fun_Datacom()">Datacom</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ONU_NOKIA" onclick="fun_ONU_NOKIA()" onmouseover="tooltips_fun_ONU_NOKIA()">ONU NOKIA</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Conversor_NOKIA" onclick="fun_Conversor_NOKIA()" onmouseover="tooltips_fun_Conversor_NOKIA()">Conversor NOKIA</button>
                     
 
                     <hr><strong>Suporte</strong> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_falta_de_conexao" onclick="fun_sup_falta_de_conexao()">Falta de conexão</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_lentidao" onclick="fun_sup_lentidao()">Lentidão</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_oscilação" onclick="fun_sup_oscilação()">Oscilação</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_falta_de_conexao" onclick="fun_sup_falta_de_conexao()" onmouseover="tooltips_fun_sup_falta_de_conexao()">Falta de conexão</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_lentidao" onclick="fun_sup_lentidao()" onmouseover="tooltips_fun_sup_lentidao()">Lentidão</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_oscilação" onclick="fun_sup_oscilação()" onmouseover="tooltips_fun_sup_oscilação()">Oscilação</button>
                     <br> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_reinicio" onclick="fun_sup_reinicio()">Reinício</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_checagem_cabos" onclick="fun_sup_checagem_cabos()">Checagem de cabo</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_teste_de_velocidade" onclick="fun_sup_teste_de_velocidade()">Teste de velocidade</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_reinicio" onclick="fun_sup_reinicio()" onmouseover="tooltips_fun_sup_reinicio()">Reinício</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_checagem_cabos" onclick="fun_sup_checagem_cabos()" onmouseover="tooltips_fun_sup_checagem_cabos()">Checagem de cabo</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_teste_de_velocidade" onclick="fun_sup_teste_de_velocidade()" onmouseover="tooltips_fun_sup_teste_de_velocidade()">Teste de velocidade</button>
                     <br> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_conexao_normalizada" onclick="fun_sup_conexao_normalizada()">Conexão normalizada</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_envio_de_vs" onclick="fun_sup_envio_de_vs()">Envio de VS</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_conexao_normalizada" onclick="fun_sup_conexao_normalizada()" onmouseover="tooltips_fun_sup_conexao_normalizada()">Conexão normalizada</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_envio_de_vs" onclick="fun_sup_envio_de_vs()" onmouseover="tooltips_fun_sup_envio_de_vs()">Envio de VS</button>
                     <br> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_noc" onclick="fun_ver_noc()">Verificação com o NOC</button><br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_sup" onclick="fun_ver_sup()">Verificação com a SUPERVISÃO</button><br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_escr" onclick="fun_ver_escr()">Verificação com o ESCRITÓRIO</button><br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_noc" onclick="fun_ver_noc()" onmouseover="tooltips_fun_ver_noc()">Verificação com o NOC</button><br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_sup" onclick="fun_ver_sup()" onmouseover="tooltips_fun_ver_sup()">Verificação com a SUPERVISÃO</button><br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_escr" onclick="fun_ver_escr()" onmouseover="tooltips_fun_ver_escr()">Verificação com o ESCRITÓRIO</button><br>
 
                     <hr><strong>Serviços</strong> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Montagem_de_Rede" onclick="fun_Montagem_de_Rede()">Montagem de rede</button> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Mudanca_de_comodo" onclick="fun_Mudanca_de_comodo()">Mudança de cômodo</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Mudanca_de_comodo_amparo" onclick="fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Transferência_de_endereço" onclick="fun_Transferência_de_endereço()">Transf. de endereço</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Transferência_de_endereço_amparo" onclick="fun_Transferência_de_endereço_amparo()">Transf. de endereço - AMPARO</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Montagem_de_Rede" onclick="fun_Montagem_de_Rede()" onmouseover="tooltips_fun_Montagem_de_Rede()">Montagem de rede</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Mudanca_de_comodo" onclick="fun_Mudanca_de_comodo()" onmouseover="tooltips_fun_Mudanca_de_comodo()">Mudança de cômodo</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Mudanca_de_comodo_amparo" onclick="fun_Mudanca_de_comodo_amparo()" onmouseover="tooltips_fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Transferência_de_endereço" onclick="fun_Transferência_de_endereço()" onmouseover="tooltips_fun_Transferência_de_endereço()">Transf. de endereço</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Transferência_de_endereço_amparo" onclick="fun_Transferência_de_endereço_amparo()" onmouseover="tooltips_fun_Transferência_de_endereço_amparo()">Transf. de endereço - AMPARO</button> <br>
                     
                     <hr><strong>Financeiro</strong> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001" onclick="fun_desb3001()">Desbl. 3001 disponível</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001_indisp" onclick="fun_desb3001_indisp()">Desbl. 3001 indisponível</button> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001_pag_efetuado" onclick="fun_desb3001_pag_efetuado()">Desbl. 3001 indisponível - pagamento já efetuado</button> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_bloqueio_verde" onclick="fun_bloqueio_verde()">Bloqueio verde</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_bloqueio_azul" onclick="fun_bloqueio_azul()">Bloqueio azul</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001" onclick="fun_desb3001()" onmouseover="tooltips_fun_desb3001()">Desbl. 3001 disponível</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001_indisp" onclick="fun_desb3001_indisp()" onmouseover="tooltips_fun_desb3001_indisp()">Desbl. 3001 indisponível</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001_pag_efetuado" onclick="fun_desb3001_pag_efetuado()" onmouseover="tooltips_fun_desb3001_pag_efetuado()">Desbl. 3001 indisponível - pagamento já efetuado</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_bloqueio_verde" onclick="fun_bloqueio_verde()" onmouseover="tooltips_fun_bloqueio_verde()">Bloqueio verde</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_bloqueio_azul" onclick="fun_bloqueio_azul()" onmouseover="tooltips_fun_bloqueio_azul()">Bloqueio azul</button> <br>
 
                     <hr><strong>Alteração de senha wi-fi</strong> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_senha_wifi_ip" onclick="fun_senha_wifi_ip()">Pelo IP de acesso</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_senha_wifi_app" onclick="fun_senha_wifi_app()">Pelo aplicativo</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_senha_wifi_ip" onclick="fun_senha_wifi_ip()" onmouseover="tooltips_fun_senha_wifi_ip()">Pelo IP de acesso</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_senha_wifi_app" onclick="fun_senha_wifi_app()" onmouseover="tooltips_fun_senha_wifi_app()">Pelo aplicativo</button>
 
                     <hr><strong>Cancelamento e Troca de titularidade</strong> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_titular" onclick="fun_can_titular()">Solicitado pelo titular do cadastro</button> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_com_pendencia" onclick="fun_can_com_pendencia()">Cadastro com pendências</button> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_outra_pessoa" onclick="fun_can_outra_pessoa()">Solicitado por outra pessoa</button> <br> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_troca_titularidade" onclick="fun_troca_titularidade()">Troca de titularidade</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_titular" onclick="fun_can_titular()" onmouseover="tooltips_fun_can_titular()">Solicitado pelo titular do cadastro</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_com_pendencia" onclick="fun_can_com_pendencia()" onmouseover="tooltips_fun_can_com_pendencia()">Cadastro com pendências</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_outra_pessoa" onclick="fun_can_outra_pessoa()" onmouseover="tooltips_fun_can_outra_pessoa()">Solicitado por outra pessoa</button> <br> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_troca_titularidade" onclick="fun_troca_titularidade()" onmouseover="tooltips_fun_troca_titularidade()">Troca de titularidade</button> <br>
 
                     <!--NOVO-->
                     <hr><strong>Problemas na conexão</strong> <br>
