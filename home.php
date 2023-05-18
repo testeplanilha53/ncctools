@@ -617,6 +617,7 @@ height: 100vh;
     <script src="funcoes/alarmes.js"></script>
     <script src="funcoes/modelos_preenchimento.js"></script>
     <script src="funcoes/padrao_noc.js"></script>
+    <script src="funcoes/tooltips.js"></script>
     
 
 </body>
