@@ -425,43 +425,43 @@ height: 100vh;
 
                     <!--NOVO-->
                     <hr><strong>Problemas na conexão</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_nao_repassou_cpf" onclick="fun_nao_repassou_cpf()" onmouseover="tooltips_fun_nao_repassou_cpf()">Não soube repassar o CPF</button> 
-                    <button class="btn btn-outline-dark" id="fun_normalizada_sem_procedimento" onclick="fun_normalizada_sem_procedimento()" onmouseover="tooltips_fun_normalizada_sem_procedimento()">Conexão normalizada sem procedimento</button>
-                    <button class="btn btn-outline-dark" id="fun_recusa_procedimento" onclick="fun_recusa_procedimento()" onmouseover="tooltips_fun_recusa_procedimento()">Por recusa de procedimento</button>
-                    <button class="btn btn-outline-dark" id="fun_ip_de_bloqueio" onclick="fun_ip_de_bloqueio()" onmouseover="tooltips_fun_ip_de_bloqueio()">IP de bloqueio</button>
-                    <button class="btn btn-outline-dark" id="fun_prob_ext_conclusao" onclick="fun_prob_ext_conclusao()" onmouseover="tooltips_fun_prob_ext_conclusao()">Problema externo (conclusão de protocolo)</button>
-                    <button class="btn btn-outline-dark" id="fun_prob_ext_suporte" onclick="fun_prob_ext_suporte()" onmouseover="tooltips_fun_prob_ext_suporte()">Problema externo (protocolo em suporte)</button>
-                    <button class="btn btn-outline-dark" id="fun_nao_esta_no_local" onclick="fun_nao_esta_no_local()" onmouseover="tooltips_fun_nao_esta_no_local()">Cliente não está no local de instalação</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_nao_repassou_cpf" onclick="fun_nao_repassou_cpf()" onmouseover="tooltips_fun_nao_repassou_cpf()">Não soube repassar o CPF</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_normalizada_sem_procedimento" onclick="fun_normalizada_sem_procedimento()" onmouseover="tooltips_fun_normalizada_sem_procedimento()">Conexão normalizada sem procedimento</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_recusa_procedimento" onclick="fun_recusa_procedimento()" onmouseover="tooltips_fun_recusa_procedimento()">Por recusa de procedimento</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ip_de_bloqueio" onclick="fun_ip_de_bloqueio()" onmouseover="tooltips_fun_ip_de_bloqueio()">IP de bloqueio</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_prob_ext_conclusao" onclick="fun_prob_ext_conclusao()" onmouseover="tooltips_fun_prob_ext_conclusao()">Problema externo (conclusão de protocolo)</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_prob_ext_suporte" onclick="fun_prob_ext_suporte()" onmouseover="tooltips_fun_prob_ext_suporte()">Problema externo (protocolo em suporte)</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_nao_esta_no_local" onclick="fun_nao_esta_no_local()" onmouseover="tooltips_fun_nao_esta_no_local()">Cliente não está no local de instalação</button>
                     
                     <hr><strong>Problemas na TV Faster</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_tv_normalizado" onclick="fun_tv_normalizado()" onmouseover="tooltips_fun_tv_normalizado()">Normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
-                    <button class="btn btn-outline-dark" id="fun_tv_nao_normalizado" onclick="fun_tv_nao_normalizado()" onmouseover="tooltips_fun_tv_nao_normalizado()">Não normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
-                    <button class="btn btn-outline-dark" id="fun_tv_normalizado_sem_verificacao" onclick="fun_tv_normalizado_sem_verificacao()" onmouseover="tooltips_fun_tv_normalizado_sem_verificacao()">Normalizada pós-procedimento (sem verf. com o Rodrigo Frag.)</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_tv_normalizado" onclick="fun_tv_normalizado()" onmouseover="tooltips_fun_tv_normalizado()">Normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_tv_nao_normalizado" onclick="fun_tv_nao_normalizado()" onmouseover="tooltips_fun_tv_nao_normalizado()">Não normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_tv_normalizado_sem_verificacao" onclick="fun_tv_normalizado_sem_verificacao()" onmouseover="tooltips_fun_tv_normalizado_sem_verificacao()">Normalizada pós-procedimento (sem verf. com o Rodrigo Frag.)</button> 
 
                     <hr><strong>Informação sobre visita técnica</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_dentro_do_prazo_vs" onclick="fun_dentro_do_prazo_vs()" onmouseover="tooltips_fun_dentro_do_prazo_vs()">Dentro do prazo de 3 dias úteis</button> 
-                    <button class="btn btn-outline-dark" id="fun_fora_do_prazo_vs" onclick="fun_fora_do_prazo_vs()" onmouseover="tooltips_fun_fora_do_prazo_vs()">Fora do prazo de 3 dias úteis</button> 
-                    <button class="btn btn-outline-dark" id="fun_escritorio_indisp" onclick="fun_escritorio_indisp()" onmouseover="tooltips_fun_escritorio_indisp()">Escritório indisponível para verificação</button> 
-                    <button class="btn btn-outline-dark" id="fun_cancelamento_vs" onclick="fun_cancelamento_vs()" onmouseover="tooltips_fun_cancelamento_vs()">Cancelamento da visita antes de ocorrer</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_dentro_do_prazo_vs" onclick="fun_dentro_do_prazo_vs()" onmouseover="tooltips_fun_dentro_do_prazo_vs()">Dentro do prazo de 3 dias úteis</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_fora_do_prazo_vs" onclick="fun_fora_do_prazo_vs()" onmouseover="tooltips_fun_fora_do_prazo_vs()">Fora do prazo de 3 dias úteis</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_escritorio_indisp" onclick="fun_escritorio_indisp()" onmouseover="tooltips_fun_escritorio_indisp()">Escritório indisponível para verificação</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_cancelamento_vs" onclick="fun_cancelamento_vs()" onmouseover="tooltips_fun_cancelamento_vs()">Cancelamento da visita antes de ocorrer</button> 
 
                     <hr><strong>Informação sobre pendências</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_pendencias_atraso" onclick="fun_pendencias_atraso()" onmouseover="tooltips_fun_pendencias_atraso()">Pendências em atraso</button> 
-                    <button class="btn btn-outline-dark" id="fun_negociacao_pendencias" onclick="fun_negociacao_pendencias()" onmouseover="tooltips_fun_negociacao_pendencias()">Negociação de pendências</button> 
-                    <button class="btn btn-outline-dark" id="fun_pag_duplicado" onclick="fun_pag_duplicado()" onmouseover="tooltips_fun_pag_duplicado()">Pagamento duplicado</button> 
-                    <button class="btn btn-outline-dark" id="fun_data_vencimento" onclick="fun_data_vencimento()" onmouseover="tooltips_fun_data_vencimento()">Alterar data de vencimento das faturas</button> 
-                    <button class="btn btn-outline-dark" id="fun_formas_pagamento" onclick="fun_formas_pagamento()" onmouseover="tooltips_fun_formas_pagamento()">Formas de pagamento disponíveis</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_pendencias_atraso" onclick="fun_pendencias_atraso()" onmouseover="tooltips_fun_pendencias_atraso()">Pendências em atraso</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_negociacao_pendencias" onclick="fun_negociacao_pendencias()" onmouseover="tooltips_fun_negociacao_pendencias()">Negociação de pendências</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_pag_duplicado" onclick="fun_pag_duplicado()" onmouseover="tooltips_fun_pag_duplicado()">Pagamento duplicado</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_data_vencimento" onclick="fun_data_vencimento()" onmouseover="tooltips_fun_data_vencimento()">Alterar data de vencimento das faturas</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_formas_pagamento" onclick="fun_formas_pagamento()" onmouseover="tooltips_fun_formas_pagamento()">Formas de pagamento disponíveis</button> 
 
                     
                     <hr><strong>Emissão de 2ª via da fatura</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_instrucao_via_site" onclick="fun_instrucao_via_site()" onmouseover="tooltips_fun_instrucao_via_site()">Instrução através do site</button> 
-                    <button class="btn btn-outline-dark" id="fun_via_sms" onclick="fun_via_sms()" onmouseover="tooltips_fun_via_sms()">Enviado via SMS</button> 
-                    <button class="btn btn-outline-dark" id="fun_nota_fical" onclick="fun_nota_fical()" onmouseover="tooltips_fun_nota_fical()">Emissão de nota fiscal</button> 
-                    <button class="btn btn-outline-dark" id="fun_troca_plano" onclick="fun_troca_plano()" onmouseover="tooltips_fun_troca_plano()">Troca de plano</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_instrucao_via_site" onclick="fun_instrucao_via_site()" onmouseover="tooltips_fun_instrucao_via_site()">Instrução através do site</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_via_sms" onclick="fun_via_sms()" onmouseover="tooltips_fun_via_sms()">Enviado via SMS</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_nota_fical" onclick="fun_nota_fical()" onmouseover="tooltips_fun_nota_fical()">Emissão de nota fiscal</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_troca_plano" onclick="fun_troca_plano()" onmouseover="tooltips_fun_troca_plano()">Troca de plano</button> 
 
                     <hr><strong>SVA e Token</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_sva" onclick="fun_sva()" onmouseover="tooltips_fun_sva()">Ativação de SVA’s</button> 
-                    <button class="btn btn-outline-dark" id="fun_token_fatura" onclick="fun_token_fatura()" onmouseover="tooltips_fun_token_fatura()">Token para acessar as faturas</button> 
-                    <button class="btn btn-outline-dark" id="fun_token_sva" onclick="fun_token_sva()" onmouseover="tooltips_fun_token_sva()">Token para ativar os SVA</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sva" onclick="fun_sva()" onmouseover="tooltips_fun_sva()">Ativação de SVA’s</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_token_fatura" onclick="fun_token_fatura()" onmouseover="tooltips_fun_token_fatura()">Token para acessar as faturas</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_token_sva" onclick="fun_token_sva()" onmouseover="tooltips_fun_token_sva()">Token para ativar os SVA</button> 
 
                 </div>
 
