@@ -288,99 +288,6 @@ height: 100vh;
 	
 <span id="notificacao"> </span>
 	
-	
-	
-	
-	
-	
-	
-
-	<!--
-    <header>
-        
-        <button type="button" id="fechar" class="btn btn-danger" onclick="javascript:window.close()">Fechar</button>        
-    
-        <button type="button" id="modelos" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
-                    <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
-                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
-                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
-                </svg> &nbsp Modelos de preenchimento 
-        </button>
-        
-        <button class="dropdown show" style="background: none; border: none;" >
-            
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wrench-adjustable" viewBox="0 0 16 16">
-                    <path d="M16 4.5a4.492 4.492 0 0 1-1.703 3.526L13 5l2.959-1.11c.027.2.041.403.041.61Z"/>
-                    <path d="M11.5 9c.653 0 1.273-.139 1.833-.39L12 5.5 11 3l3.826-1.53A4.5 4.5 0 0 0 7.29 6.092l-6.116 5.096a2.583 2.583 0 1 0 3.638 3.638L9.908 8.71A4.49 4.49 0 0 0 11.5 9Zm-1.292-4.361-.596.893.809-.27a.25.25 0 0 1 .287.377l-.596.893.809-.27.158.475-1.5.5a.25.25 0 0 1-.287-.376l.596-.893-.809.27a.25.25 0 0 1-.287-.377l.596-.893-.809.27-.158-.475 1.5-.5a.25.25 0 0 1 .287.376ZM3 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
-                </svg>
-            </a>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" title="Verificação com NOC">            
-            
-            <a class="  dropdown-item" id="modelo_noc" class="btn btn-warning" data-toggle="modal" data-target="#padrao_noc">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace"   viewBox="0 0 16 16">
-                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
-                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
-              </svg> &nbsp
-              Padrão NOC
-            </a>
-            
-            <a class="  dropdown-item" id="modelo_financeiro" title="Modelo Financeiro" class="btn btn-warning" data-toggle="modal" data-target="#modal_modelo_financeiro">            
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
-                    <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
-                </svg>                
-                &nbsp Financeiro
-            </a>
-            
-            <a class="dropdown-item" href="https://ncc.drozbase.cx/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share"   title="Atalhos para o chat"    target="_blank" id="link_atalho_chat"><svg xmlns="http://www.w3.org/2000/svg" style="width: 15px;"   viewBox="0 0 448 512"><path d="M181.3 32.4c17.4 2.9 29.2 19.4 26.3 36.8L197.8 128h95.1l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3s29.2 19.4 26.3 36.8L357.8 128H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H347.1L325.8 320H384c17.7 0 32 14.3 32 32s-14.3 32-32 32H315.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8l9.8-58.7H155.1l-11.5 69.3c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8L90.2 384H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l21.3-128H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h68.9l11.5-69.3c2.9-17.4 19.4-29.2 36.8-26.3zM187.1 192L165.8 320h95.1l21.3-128H187.1z"/></svg>  Atalhos chat</a>
-            
-
-            <a class="dropdown-item" onclick="mudar_tema()" id="tema"  title="Mudar tema" >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16"   >
-                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
-                </svg>&nbsp Tema
-            </a>
-
-            
-             <a class="dropdown-item" href="config.php"  > 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16px"  height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                </svg>
-                &nbsp
-                Configurações
-            </a>
-            
-
-
-            
-            <a class="dropdown-item" id="btn_sair" href="./logout.php" class="btn "   data-toggle="tooltip" data-placement="top" title="Logout">              
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5    12.5v-2a.5.5 0 0 1 1 0v2z"/>
-            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-            </svg> &nbsp Logout
-            
-            </a>
-            
-            
-
-
-           
-
-        </div>
-        </button>
-
-
-        <a href="./home.php" target="_blank" id="novo"><button type="button" class="btn btn-success">Nova Aba</button></a>
-        <div>
-            <br>             
-            <div id="notificacao"> </div>
-            <span id="timer"></span>           
-            
-        </div>
-    </header>
-    -->	     
 
 
     <!-- Modal Notificação de novidades -->
@@ -470,91 +377,91 @@ height: 100vh;
 		    <span class="preenchidos_conteiner">
 		    </span>	
                     <strong>Equipamentos Ópticos</strong> <br>                    
-                    <button class="btn btn-outline-dark" id="fun_Fiberhome" onclick="fun_Fiberhome()">Fiberhome</button>
-                    <button class="btn btn-outline-dark" id="fun_Datacom" onclick="fun_Datacom()">Datacom</button> <br>
-                    <button class="btn btn-outline-dark" id="fun_ONU_NOKIA" onclick="fun_ONU_NOKIA()">ONU NOKIA</button>
-                    <button class="btn btn-outline-dark" id="fun_Conversor_NOKIA" onclick="fun_Conversor_NOKIA()">Conversor NOKIA</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Fiberhome" onclick="fun_Fiberhome()" onmouseover="tooltips_fun_Fiberhome()">Fiberhome</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Datacom" onclick="fun_Datacom()" onmouseover="tooltips_fun_Datacom()">Datacom</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ONU_NOKIA" onclick="fun_ONU_NOKIA()" onmouseover="tooltips_fun_ONU_NOKIA()">ONU NOKIA</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Conversor_NOKIA" onclick="fun_Conversor_NOKIA()" onmouseover="tooltips_fun_Conversor_NOKIA()">Conversor NOKIA</button>
                     
 
                     <hr><strong>Suporte</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_sup_falta_de_conexao" onclick="fun_sup_falta_de_conexao()">Falta de conexão</button>
-                    <button class="btn btn-outline-dark" id="fun_sup_lentidao" onclick="fun_sup_lentidao()">Lentidão</button>
-                    <button class="btn btn-outline-dark" id="fun_sup_oscilação" onclick="fun_sup_oscilação()">Oscilação</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_falta_de_conexao" onclick="fun_sup_falta_de_conexao()" onmouseover="tooltips_fun_sup_falta_de_conexao()">Falta de conexão</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_lentidao" onclick="fun_sup_lentidao()" onmouseover="tooltips_fun_sup_lentidao()">Lentidão</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_oscilação" onclick="fun_sup_oscilação()" onmouseover="tooltips_fun_sup_oscilação()">Oscilação</button>
                     <br> <br>
-                    <button class="btn btn-outline-dark" id="fun_sup_reinicio" onclick="fun_sup_reinicio()">Reinício</button>
-                    <button class="btn btn-outline-dark" id="fun_sup_checagem_cabos" onclick="fun_sup_checagem_cabos()">Checagem de cabo</button>
-                    <button class="btn btn-outline-dark" id="fun_sup_teste_de_velocidade" onclick="fun_sup_teste_de_velocidade()">Teste de velocidade</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_reinicio" onclick="fun_sup_reinicio()" onmouseover="tooltips_fun_sup_reinicio()">Reinício</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_checagem_cabos" onclick="fun_sup_checagem_cabos()" onmouseover="tooltips_fun_sup_checagem_cabos()">Checagem de cabo</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_teste_de_velocidade" onclick="fun_sup_teste_de_velocidade()" onmouseover="tooltips_fun_sup_teste_de_velocidade()">Teste de velocidade</button>
                     <br> <br>
-                    <button class="btn btn-outline-dark" id="fun_sup_conexao_normalizada" onclick="fun_sup_conexao_normalizada()">Conexão normalizada</button>
-                    <button class="btn btn-outline-dark" id="fun_sup_envio_de_vs" onclick="fun_sup_envio_de_vs()">Envio de VS</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_conexao_normalizada" onclick="fun_sup_conexao_normalizada()" onmouseover="tooltips_fun_sup_conexao_normalizada()">Conexão normalizada</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_envio_de_vs" onclick="fun_sup_envio_de_vs()" onmouseover="tooltips_fun_sup_envio_de_vs()">Envio de VS</button>
                     <br> <br>
-                    <button class="btn btn-outline-dark" id="fun_ver_noc" onclick="fun_ver_noc()">Verificação com o NOC</button><br>
-                    <button class="btn btn-outline-dark" id="fun_ver_sup" onclick="fun_ver_sup()">Verificação com a SUPERVISÃO</button><br>
-                    <button class="btn btn-outline-dark" id="fun_ver_escr" onclick="fun_ver_escr()">Verificação com o ESCRITÓRIO</button><br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_noc" onclick="fun_ver_noc()" onmouseover="tooltips_fun_ver_noc()">Verificação com o NOC</button><br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_sup" onclick="fun_ver_sup()" onmouseover="tooltips_fun_ver_sup()">Verificação com a SUPERVISÃO</button><br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ver_escr" onclick="fun_ver_escr()" onmouseover="tooltips_fun_ver_escr()">Verificação com o ESCRITÓRIO</button><br>
 
                     <hr><strong>Serviços</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_Montagem_de_Rede" onclick="fun_Montagem_de_Rede()">Montagem de rede</button> <br>
-                    <button class="btn btn-outline-dark" id="fun_Mudanca_de_comodo" onclick="fun_Mudanca_de_comodo()">Mudança de cômodo</button>
-                    <button class="btn btn-outline-dark" id="fun_Mudanca_de_comodo_amparo" onclick="fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br>
-                    <button class="btn btn-outline-dark" id="fun_Transferência_de_endereço" onclick="fun_Transferência_de_endereço()">Transf. de endereço</button>
-                    <button class="btn btn-outline-dark" id="fun_Transferência_de_endereço_amparo" onclick="fun_Transferência_de_endereço_amparo()">Transf. de endereço - AMPARO</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Montagem_de_Rede" onclick="fun_Montagem_de_Rede()" onmouseover="tooltips_fun_Montagem_de_Rede()">Montagem de rede</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Mudanca_de_comodo" onclick="fun_Mudanca_de_comodo()" onmouseover="tooltips_fun_Mudanca_de_comodo()">Mudança de cômodo</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Mudanca_de_comodo_amparo" onclick="fun_Mudanca_de_comodo_amparo()" onmouseover="tooltips_fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Transferência_de_endereço" onclick="fun_Transferência_de_endereço()" onmouseover="tooltips_fun_Transferência_de_endereço()">Transf. de endereço</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_Transferência_de_endereço_amparo" onclick="fun_Transferência_de_endereço_amparo()" onmouseover="tooltips_fun_Transferência_de_endereço_amparo()">Transf. de endereço - AMPARO</button> <br>
                     
                     <hr><strong>Financeiro</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_desb3001" onclick="fun_desb3001()">Desbl. 3001 disponível</button>
-                    <button class="btn btn-outline-dark" id="fun_desb3001_indisp" onclick="fun_desb3001_indisp()">Desbl. 3001 indisponível</button> <br>
-                    <button class="btn btn-outline-dark" id="fun_desb3001_pag_efetuado" onclick="fun_desb3001_pag_efetuado()">Desbl. 3001 indisponível - pagamento já efetuado</button> <br>
-                    <button class="btn btn-outline-dark" id="fun_bloqueio_verde" onclick="fun_bloqueio_verde()">Bloqueio verde</button>
-                    <button class="btn btn-outline-dark" id="fun_bloqueio_azul" onclick="fun_bloqueio_azul()">Bloqueio azul</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001" onclick="fun_desb3001()" onmouseover="tooltips_fun_desb3001()">Desbl. 3001 disponível</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001_indisp" onclick="fun_desb3001_indisp()" onmouseover="tooltips_fun_desb3001_indisp()">Desbl. 3001 indisponível</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_desb3001_pag_efetuado" onclick="fun_desb3001_pag_efetuado()" onmouseover="tooltips_fun_desb3001_pag_efetuado()">Desbl. 3001 indisponível - pagamento já efetuado</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_bloqueio_verde" onclick="fun_bloqueio_verde()" onmouseover="tooltips_fun_bloqueio_verde()">Bloqueio verde</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_bloqueio_azul" onclick="fun_bloqueio_azul()" onmouseover="tooltips_fun_bloqueio_azul()">Bloqueio azul</button> <br>
 
                     <hr><strong>Alteração de senha wi-fi</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_senha_wifi_ip" onclick="fun_senha_wifi_ip()">Pelo IP de acesso</button>
-                    <button class="btn btn-outline-dark" id="fun_senha_wifi_app" onclick="fun_senha_wifi_app()">Pelo aplicativo</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_senha_wifi_ip" onclick="fun_senha_wifi_ip()" onmouseover="tooltips_fun_senha_wifi_ip()">Pelo IP de acesso</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_senha_wifi_app" onclick="fun_senha_wifi_app()" onmouseover="tooltips_fun_senha_wifi_app()">Pelo aplicativo</button>
 
                     <hr><strong>Cancelamento e Troca de titularidade</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_can_titular" onclick="fun_can_titular()">Solicitado pelo titular do cadastro</button> <br>
-                    <button class="btn btn-outline-dark" id="fun_can_com_pendencia" onclick="fun_can_com_pendencia()">Cadastro com pendências</button> <br>
-                    <button class="btn btn-outline-dark" id="fun_can_outra_pessoa" onclick="fun_can_outra_pessoa()">Solicitado por outra pessoa</button> <br> <br>
-                    <button class="btn btn-outline-dark" id="fun_troca_titularidade" onclick="fun_troca_titularidade()">Troca de titularidade</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_titular" onclick="fun_can_titular()" onmouseover="tooltips_fun_can_titular()">Solicitado pelo titular do cadastro</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_com_pendencia" onclick="fun_can_com_pendencia()" onmouseover="tooltips_fun_can_com_pendencia()">Cadastro com pendências</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_outra_pessoa" onclick="fun_can_outra_pessoa()" onmouseover="tooltips_fun_can_outra_pessoa()">Solicitado por outra pessoa</button> <br> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_troca_titularidade" onclick="fun_troca_titularidade()" onmouseover="tooltips_fun_troca_titularidade()">Troca de titularidade</button> <br>
 
                     <!--NOVO-->
                     <hr><strong>Problemas na conexão</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_nao_repassou_cpf" onclick="fun_nao_repassou_cpf()">Não soube repassar o CPF</button> 
-                    <button class="btn btn-outline-dark" id="fun_normalizada_sem_procedimento" onclick="fun_normalizada_sem_procedimento()">Conexão normalizada sem procedimento</button>
-                    <button class="btn btn-outline-dark" id="fun_recusa_procedimento" onclick="fun_recusa_procedimento()">Por recusa de procedimento</button>
-                    <button class="btn btn-outline-dark" id="fun_ip_de_bloqueio" onclick="fun_ip_de_bloqueio()">IP de bloqueio</button>
-                    <button class="btn btn-outline-dark" id="fun_prob_ext_conclusao" onclick="fun_prob_ext_conclusao()">Problema externo (conclusão de protocolo)</button>
-                    <button class="btn btn-outline-dark" id="fun_prob_ext_suporte" onclick="fun_prob_ext_suporte()">Problema externo (protocolo em suporte)</button>
-                    <button class="btn btn-outline-dark" id="fun_nao_esta_no_local" onclick="fun_nao_esta_no_local()">Cliente não está no local de instalação</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_nao_repassou_cpf" onclick="fun_nao_repassou_cpf()" onmouseover="tooltips_fun_nao_repassou_cpf()">Não soube repassar o CPF</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_normalizada_sem_procedimento" onclick="fun_normalizada_sem_procedimento()" onmouseover="tooltips_fun_normalizada_sem_procedimento()">Conexão normalizada sem procedimento</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_recusa_procedimento" onclick="fun_recusa_procedimento()" onmouseover="tooltips_fun_recusa_procedimento()">Por recusa de procedimento</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_ip_de_bloqueio" onclick="fun_ip_de_bloqueio()" onmouseover="tooltips_fun_ip_de_bloqueio()">IP de bloqueio</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_prob_ext_conclusao" onclick="fun_prob_ext_conclusao()" onmouseover="tooltips_fun_prob_ext_conclusao()">Problema externo (conclusão de protocolo)</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_prob_ext_suporte" onclick="fun_prob_ext_suporte()" onmouseover="tooltips_fun_prob_ext_suporte()">Problema externo (protocolo em suporte)</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_nao_esta_no_local" onclick="fun_nao_esta_no_local()" onmouseover="tooltips_fun_nao_esta_no_local()">Cliente não está no local de instalação</button>
                     
                     <hr><strong>Problemas na TV Faster</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_tv_normalizado" onclick="fun_tv_normalizado()">Normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
-                    <button class="btn btn-outline-dark" id="fun_tv_nao_normalizado" onclick="fun_tv_nao_normalizado()">Não normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
-                    <button class="btn btn-outline-dark" id="fun_tv_normalizado_sem_verificacao" onclick="fun_tv_normalizado_sem_verificacao()">Normalizada pós-procedimento (sem verf. com o Rodrigo Frag.)</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_tv_normalizado" onclick="fun_tv_normalizado()" onmouseover="tooltips_fun_tv_normalizado()">Normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_tv_nao_normalizado" onclick="fun_tv_nao_normalizado()" onmouseover="tooltips_fun_tv_nao_normalizado()">Não normalizada pós-procedimento e verf. com o Rodrigo Frag.</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_tv_normalizado_sem_verificacao" onclick="fun_tv_normalizado_sem_verificacao()" onmouseover="tooltips_fun_tv_normalizado_sem_verificacao()">Normalizada pós-procedimento (sem verf. com o Rodrigo Frag.)</button> 
 
                     <hr><strong>Informação sobre visita técnica</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_dentro_do_prazo_vs" onclick="fun_dentro_do_prazo_vs()">Dentro do prazo de 3 dias úteis</button> 
-                    <button class="btn btn-outline-dark" id="fun_fora_do_prazo_vs" onclick="fun_fora_do_prazo_vs()">Fora do prazo de 3 dias úteis</button> 
-                    <button class="btn btn-outline-dark" id="fun_escritorio_indisp" onclick="fun_escritorio_indisp()">Escritório indisponível para verificação</button> 
-                    <button class="btn btn-outline-dark" id="fun_cancelamento_vs" onclick="fun_cancelamento_vs()">Cancelamento da visita antes de ocorrer</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_dentro_do_prazo_vs" onclick="fun_dentro_do_prazo_vs()" onmouseover="tooltips_fun_dentro_do_prazo_vs()">Dentro do prazo de 3 dias úteis</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_fora_do_prazo_vs" onclick="fun_fora_do_prazo_vs()" onmouseover="tooltips_fun_fora_do_prazo_vs()">Fora do prazo de 3 dias úteis</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_escritorio_indisp" onclick="fun_escritorio_indisp()" onmouseover="tooltips_fun_escritorio_indisp()">Escritório indisponível para verificação</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_cancelamento_vs" onclick="fun_cancelamento_vs()" onmouseover="tooltips_fun_cancelamento_vs()">Cancelamento da visita antes de ocorrer</button> 
 
                     <hr><strong>Informação sobre pendências</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_pendencias_atraso" onclick="fun_pendencias_atraso()">Pendências em atraso</button> 
-                    <button class="btn btn-outline-dark" id="fun_negociacao_pendencias" onclick="fun_negociacao_pendencias()">Negociação de pendências</button> 
-                    <button class="btn btn-outline-dark" id="fun_pag_duplicado" onclick="fun_pag_duplicado()">Pagamento duplicado</button> 
-                    <button class="btn btn-outline-dark" id="fun_data_vencimento" onclick="fun_data_vencimento()">Alterar data de vencimento das faturas</button> 
-                    <button class="btn btn-outline-dark" id="fun_formas_pagamento" onclick="fun_formas_pagamento()">Formas de pagamento disponíveis</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_pendencias_atraso" onclick="fun_pendencias_atraso()" onmouseover="tooltips_fun_pendencias_atraso()">Pendências em atraso</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_negociacao_pendencias" onclick="fun_negociacao_pendencias()" onmouseover="tooltips_fun_negociacao_pendencias()">Negociação de pendências</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_pag_duplicado" onclick="fun_pag_duplicado()" onmouseover="tooltips_fun_pag_duplicado()">Pagamento duplicado</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_data_vencimento" onclick="fun_data_vencimento()" onmouseover="tooltips_fun_data_vencimento()">Alterar data de vencimento das faturas</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_formas_pagamento" onclick="fun_formas_pagamento()" onmouseover="tooltips_fun_formas_pagamento()">Formas de pagamento disponíveis</button> 
 
                     
                     <hr><strong>Emissão de 2ª via da fatura</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_instrucao_via_site" onclick="fun_instrucao_via_site()">Instrução através do site</button> 
-                    <button class="btn btn-outline-dark" id="fun_via_sms" onclick="fun_via_sms()">Enviado via SMS</button> 
-                    <button class="btn btn-outline-dark" id="fun_nota_fical" onclick="fun_nota_fical()">Emissão de nota fiscal</button> 
-                    <button class="btn btn-outline-dark" id="fun_troca_plano" onclick="fun_troca_plano()">Troca de plano</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_instrucao_via_site" onclick="fun_instrucao_via_site()" onmouseover="tooltips_fun_instrucao_via_site()">Instrução através do site</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_via_sms" onclick="fun_via_sms()" onmouseover="tooltips_fun_via_sms()">Enviado via SMS</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_nota_fical" onclick="fun_nota_fical()" onmouseover="tooltips_fun_nota_fical()">Emissão de nota fiscal</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_troca_plano" onclick="fun_troca_plano()" onmouseover="tooltips_fun_troca_plano()">Troca de plano</button> 
 
                     <hr><strong>SVA e Token</strong> <br>
-                    <button class="btn btn-outline-dark" id="fun_sva" onclick="fun_sva()">Ativação de SVA’s</button> 
-                    <button class="btn btn-outline-dark" id="fun_token_fatura" onclick="fun_token_fatura()">Token para acessar as faturas</button> 
-                    <button class="btn btn-outline-dark" id="fun_token_sva" onclick="fun_token_sva()">Token para ativar os SVA</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sva" onclick="fun_sva()" onmouseover="tooltips_fun_sva()">Ativação de SVA’s</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_token_fatura" onclick="fun_token_fatura()" onmouseover="tooltips_fun_token_fatura()">Token para acessar as faturas</button> 
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_token_sva" onclick="fun_token_sva()" onmouseover="tooltips_fun_token_sva()">Token para ativar os SVA</button> 
 
                 </div>
 
@@ -710,6 +617,7 @@ height: 100vh;
     <script src="funcoes/alarmes.js"></script>
     <script src="funcoes/modelos_preenchimento.js"></script>
     <script src="funcoes/padrao_noc.js"></script>
+    <script src="funcoes/tooltips.js"></script>
     
 
 </body>
