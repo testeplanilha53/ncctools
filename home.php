@@ -618,6 +618,7 @@ height: 100vh;
     <script src="funcoes/modelos_preenchimento.js"></script>
     <script src="funcoes/padrao_noc.js"></script>
     <script src="funcoes/tooltips.js"></script>
+    <script src="funcoes/cronometro.js"></script>
     
 
 </body>
