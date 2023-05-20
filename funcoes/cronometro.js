@@ -50,7 +50,7 @@ function cronometroDecrescente(segundos) {
       var txt = formatado.toString()
       //campo_timer.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`
       //campo_timer.innerHtml = `<button class="btn btn-outline-light"> ${txt} </button>`      
-      campo_timer.innerHTML = '<div class="alert alert-success" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de colar no ADM! </div>'
+      campo_timer.innerHTML = `<button class="btn btn-outline-light"> teste </button>` 
   
       segundos--;
     }, 1000);
