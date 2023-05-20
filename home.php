@@ -168,9 +168,7 @@ height: 100vh;
         </a>
 
         <span id="cronometro_pausas">
-            <button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa">
-                00:00
-            </button>
+
         </span>
                 
     </span>

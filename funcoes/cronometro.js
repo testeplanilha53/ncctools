@@ -31,21 +31,23 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 var campo = document.getElementById("cronometro_pausas")
   
 function cronometroDecrescente(segundos) {
-    const intervalo = setInterval(() => {
-      const horas = Math.floor(segundos / 3600);
-      const minutos = Math.floor((segundos % 3600) / 60);
-      const segundosRestantes = segundos % 60;
+    var intervalo = setInterval(() => {
+      var horas = Math.floor(segundos / 3600);
+      var minutos = Math.floor((segundos % 3600) / 60);
+      var segundosRestantes = segundos % 60;
   
-      const formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
-      //console.log(formatado);
+      var formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
+      console.log(formatado);
       
   
       if (segundos <= 0) {
         clearInterval(intervalo);
-        console.log("Tempo esgotado!");
         formatado = `--:--`
+        console.log(formatado);
+        console.log("Tempo esgotado!");        
       }
-      campo.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`
+      //campo.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`
+      campo.innerHtml = `<button class="btn btn-outline-light"> ${formatado} </button>`
   
       segundos--;
     }, 1000);
