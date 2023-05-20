@@ -28,7 +28,7 @@ var tempo2 = converter_segundos_string(intervalo) - converter_segundos(agora)
 var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 
 
-var campo = document.getElementById("cronometro_pausas").innerHtml
+var campo = document.getElementById("cronometro_pausas")
   
 function cronometroDecrescente(segundos) {
     const intervalo = setInterval(() => {
