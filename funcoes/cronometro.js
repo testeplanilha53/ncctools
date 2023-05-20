@@ -30,9 +30,9 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 
 
   
-function cronometroDecrescente(segundos) {
-    var campo_timer = document.getElementById("cronometro_pausas")    
+function cronometroDecrescente(segundos) {    
     var intervalo = setInterval(() => {
+      var campo_timer = document.getElementById("cronometro_pausas")    
       var horas = Math.floor(segundos / 3600);
       var minutos = Math.floor((segundos % 3600) / 60);
       var segundosRestantes = segundos % 60;
