@@ -166,6 +166,12 @@ height: 100vh;
         <a href="./home.php" target="_blank" id="novo">
             <button type="button" class="btn btn-success">Nova Aba</button>
         </a>
+
+        <span id="cronometro_pausas">
+            <button class="btn btn-outline-light">
+                00:00
+            </button>
+        </span>
                 
     </span>
         

@@ -37,6 +37,7 @@ function cronometroDecrescente(segundos) {
   
       const formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
       console.log(formatado);
+      window.documento.getElement
   
       if (segundos <= 0) {
         clearInterval(intervalo);
