@@ -49,8 +49,8 @@ function cronometroDecrescente(segundos) {
 
       var txt = formatado.toString()
       //campo_timer.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`
-      //campo_timer.innerHtml = `<button class="btn btn-outline-light"> ${txt} </button>`      
-      campo_timer.innerHTML = `<button class="btn btn-outline-light"> teste </button>` 
+      campo_timer.innerHtml = `<button class="btn btn-outline-light"> ${txt} </button>`      
+      //campo_timer.innerHTML = `<button class="btn btn-outline-light"> teste </button>` 
   
       segundos--;
     }, 1000);
