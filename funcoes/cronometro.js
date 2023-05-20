@@ -28,6 +28,7 @@ var tempo2 = converter_segundos_string(intervalo) - converter_segundos(agora)
 var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 
 
+var campo = document.getElementById("cronometro_pausas").innerHtml
   
 function cronometroDecrescente(segundos) {
     const intervalo = setInterval(() => {
@@ -36,13 +37,15 @@ function cronometroDecrescente(segundos) {
       const segundosRestantes = segundos % 60;
   
       const formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
-      console.log(formatado);
-      window.documento.getElement
+      //console.log(formatado);
+      
   
       if (segundos <= 0) {
         clearInterval(intervalo);
         console.log("Tempo esgotado!");
+        formatado = `--:--`
       }
+      campo.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`
   
       segundos--;
     }, 1000);
