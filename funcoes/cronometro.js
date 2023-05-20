@@ -28,9 +28,10 @@ var tempo2 = converter_segundos_string(intervalo) - converter_segundos(agora)
 var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 
 
-var campo_timer = document.getElementById("cronometro_pausas")
+
   
 function cronometroDecrescente(segundos) {
+    var campo_timer = document.getElementById("cronometro_pausas")    
     var intervalo = setInterval(() => {
       var horas = Math.floor(segundos / 3600);
       var minutos = Math.floor((segundos % 3600) / 60);
@@ -38,10 +39,8 @@ function cronometroDecrescente(segundos) {
   
       var formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
       console.log(formatado);
-      
-      var txt = formatado.toString()
-      txt = `<button class="btn btn-outline-light"> ${txt.value} </button>`  
-      campo_timer.innerHtml = txt
+            
+      campo_timer.innerHTML = `<button class="btn btn-outline-light"> ${formatado} </button>`        
   
       if (segundos <= 0) {
         clearInterval(intervalo);
