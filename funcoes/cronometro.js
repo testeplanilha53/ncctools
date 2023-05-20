@@ -38,7 +38,7 @@ function cronometroDecrescente(segundos) {
       const formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
       console.log(formatado);
   
-      if (segundos === 0) {
+      if (segundos <= 0) {
         clearInterval(intervalo);
         console.log("Tempo esgotado!");
       }
@@ -48,5 +48,5 @@ function cronometroDecrescente(segundos) {
   }
   
   // Exemplo de uso:
-  //cronometroDecrescente(tempo1); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  cronometroDecrescente(tempo1); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
   
