@@ -46,8 +46,10 @@ function cronometroDecrescente(segundos) {
         console.log(formatado);
         console.log("Tempo esgotado!");        
       }
+
+      var txt = formatado.toString()
       //campo.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`
-      campo.innerHtml = `<button class="btn btn-outline-light"> ${formatado} </button>`
+      campo.innerHtml = `<button class="btn btn-outline-light"> ${txt} </button>`
   
       segundos--;
     }, 1000);
