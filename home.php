@@ -167,7 +167,7 @@ height: 100vh;
             <button type="button" class="btn btn-success">Nova Aba</button>
         </a>
 
-        <span id="timer">
+        <span>
             <button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa">
                 <span id="cronometro_pausas">
             
