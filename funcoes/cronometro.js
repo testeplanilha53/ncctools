@@ -28,7 +28,7 @@ var tempo2 = converter_segundos_string(intervalo) - converter_segundos(agora)
 var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 
 
-var campo = document.getElementById("cronometro_pausas")
+var campo_timer = document.getElementById("cronometro_pausas")
   
 function cronometroDecrescente(segundos) {
     var intervalo = setInterval(() => {
@@ -48,8 +48,9 @@ function cronometroDecrescente(segundos) {
       }
 
       var txt = formatado.toString()
-      //campo.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`
-      campo.innerHtml = `<button class="btn btn-outline-light"> ${txt} </button>`
+      //campo_timer.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`
+      //campo_timer.innerHtml = `<button class="btn btn-outline-light"> ${txt} </button>`      
+      campo_timer.innerHTML = '<div class="alert alert-success" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de colar no ADM! </div>'
   
       segundos--;
     }, 1000);
