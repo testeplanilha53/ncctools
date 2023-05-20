@@ -40,7 +40,7 @@ function cronometroDecrescente(segundos) {
       var formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
       console.log(formatado);
             
-      campo_timer.innerHTML = `<button class="btn btn-outline-light"> ${formatado} </button>`        
+      campo_timer.innerHTML = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`        
   
       if (segundos <= 0) {
         clearInterval(intervalo);
