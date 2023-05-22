@@ -53,7 +53,9 @@ function cronometroDecrescente(segundos,campo_timer,button_clock) {
       console.log(formatado);
             
       //campo_timer.innerHTML = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`        
-      campo_timer.innerHTML = `${formatado}`        
+      if (segundos <= 6000) {
+        campo_timer.innerHTML = `${formatado}`        
+      }      
       
       if (segundos <= 0) {
         clearInterval(intervalo);
