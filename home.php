@@ -167,6 +167,8 @@ height: 100vh;
             <button type="button" class="btn btn-success">Nova Aba</button>
         </a>
 
+        <!--RELÓGIOS-->
+        <span id="relogios">
                 
     </span>
         	  
@@ -180,8 +182,7 @@ height: 100vh;
   <!--END MENU-NAV-->
 </header>
 
-    <!--RELÓGIOS-->
-    <span id="relogios">
+    
             <span id="button_clock1">
                 <button  class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a 1ª pausa">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
