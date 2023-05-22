@@ -45,7 +45,7 @@ function cronometroDecrescente(segundos) {
       //campo_timer.innerHTML = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`        
       campo_timer.innerHTML = `${formatado}`        
       
-      if (segundos <= 600) {
+      if (segundos <= 6000) {
         setInterval(async function () {
           button_clock.classList.remove('btn-outline-light');
           button_clock.classList.add('btn-outline-danger');
