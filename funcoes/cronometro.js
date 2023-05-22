@@ -29,10 +29,17 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 
 
 
+  // Exemplo de uso:
+  var campo_timer1 = document.getElementById("cronometro_pausas1")  
+  var campo_timer2 = document.getElementById("cronometro_pausas2")  
+  var campo_timer3 = document.getElementById("cronometro_pausas3")  
+  cronometroDecrescente(tempo1,campo_timer1); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  cronometroDecrescente(tempo2,campo_timer2); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  cronometroDecrescente(tempo3,campo_timer3); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
   
-function cronometroDecrescente(segundos) {    
+function cronometroDecrescente(segundos,campo_timer1) {    
     var intervalo = setInterval(() => {
-      var campo_timer = document.getElementById("cronometro_pausas")    
+        
       var button_clock = document.getElementById("button_clock")    
 
       var horas = Math.floor(segundos / 3600);
@@ -57,7 +64,7 @@ function cronometroDecrescente(segundos) {
         }, 2000);
 
       }*/
-      
+
       if (segundos <= 0) {
         clearInterval(intervalo);
         formatado = `--:--`
@@ -72,6 +79,5 @@ function cronometroDecrescente(segundos) {
     }, 1000);
   }
   
-  // Exemplo de uso:
-  cronometroDecrescente(tempo1); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+
   
