@@ -33,15 +33,18 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
   var campo_timer1 = document.getElementById("cronometro_pausas1")  
   var campo_timer2 = document.getElementById("cronometro_pausas2")  
   var campo_timer3 = document.getElementById("cronometro_pausas3")  
-  cronometroDecrescente(tempo1,campo_timer1); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
-  cronometroDecrescente(tempo2,campo_timer2); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
-  cronometroDecrescente(tempo3,campo_timer3); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
-  
-function cronometroDecrescente(segundos,campo_timer) {    
-    var intervalo = setInterval(() => {
-        
-      var button_clock = document.getElementById("button_clock")    
 
+  var button_clock1 = document.getElementById("button_clock1")  
+  var button_clock2 = document.getElementById("button_clock2")  
+  var button_clock3 = document.getElementById("button_clock3")  
+
+  cronometroDecrescente(tempo1,campo_timer1,button_clock1); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  cronometroDecrescente(tempo2,campo_timer2,button_clock2); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  cronometroDecrescente(tempo3,campo_timer3,button_clock3); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  
+function cronometroDecrescente(segundos,campo_timer,button_clock) {    
+    var intervalo = setInterval(() => {
+              
       var horas = Math.floor(segundos / 3600);
       var minutos = Math.floor((segundos % 3600) / 60);
       var segundosRestantes = segundos % 60;
@@ -56,6 +59,7 @@ function cronometroDecrescente(segundos,campo_timer) {
         clearInterval(intervalo);
         formatado = `--:--`
         campo_timer.innerHTML = `${formatado}`   
+        button_clock.innerHTML=``
         console.log(formatado);
         console.log("Tempo esgotado!");        
       }
