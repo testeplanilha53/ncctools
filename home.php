@@ -162,27 +162,13 @@ height: 100vh;
                 </span>
         </button>
         
-
+        
         <a href="./home.php" target="_blank" id="novo">
             <button type="button" class="btn btn-success">Nova Aba</button>
         </a>
 
         <!--RELÓGIOS-->
         <span id="relogios">
-                
-    </span>
-        	  
-    
-    <label class="navbar-item d-flex justify-content-end _header_label">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 18 18" onclick="menu()" onmouseover="menu()">
-        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-      </svg>
-    </label>
-  </nav>
-  <!--END MENU-NAV-->
-</header>
-
-    
             <span id="button_clock1">
                 <button  class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a 1ª pausa">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
@@ -194,7 +180,7 @@ height: 100vh;
                     </span>
                 </button>
             </span>
-            <br>
+            
             <span id="button_clock2">
                 <button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para o intervalo">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
@@ -206,7 +192,7 @@ height: 100vh;
                     </span>
                 </button>
             </span>
-            <br>
+            
             <span id="button_clock3">
                 <button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a 2ª pausa">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
@@ -219,9 +205,20 @@ height: 100vh;
                 </button>
             </span>               
         </span>
-        
-	
-	<!--SIDEBAR-->
+        		                
+    </span>
+        	  
+    
+    <label class="navbar-item d-flex justify-content-end _header_label">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 18 18" onclick="menu()" onmouseover="menu()">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </label>
+  </nav>
+  <!--END MENU-NAV-->
+</header>
+
+    <!--SIDEBAR-->
 <nav class="Menu">
       
   <div class="d-flex flex-column flex-shrink-0 p-3 _menu-sidebar " onmouseleave="menu()" style="height: 100%; background: rgb(21, 34, 56);">
