@@ -51,23 +51,15 @@ function cronometroDecrescente(segundos,campo_timer,button_clock) {
   
       var formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
       console.log(formatado);
-            
-      //campo_timer.innerHTML = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`        
+                  
       if (minutos <= 10) {
         campo_timer.innerHTML = `${formatado}`        
       }      
       
       if (segundos <= 0) {
         clearInterval(intervalo);
-        formatado = `--:--`
-        campo_timer.innerHTML = `${formatado}`   
-        button_clock.innerHTML=``
-        console.log(formatado);
-        console.log("Tempo esgotado!");        
+        button_clock.innerHTML=``                
       }
-
-      //campo_timer.innerHtml = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`      
-      //campo_timer.innerHTML = `<button class="btn btn-outline-light"> teste </button>` 
   
       segundos--;
     }, 1000);
