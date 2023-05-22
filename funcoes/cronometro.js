@@ -37,7 +37,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
   cronometroDecrescente(tempo2,campo_timer2); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
   cronometroDecrescente(tempo3,campo_timer3); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
   
-function cronometroDecrescente(segundos,campo_timer1) {    
+function cronometroDecrescente(segundos,campo_timer) {    
     var intervalo = setInterval(() => {
         
       var button_clock = document.getElementById("button_clock")    
