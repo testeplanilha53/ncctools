@@ -168,6 +168,7 @@ height: 100vh;
         </a>
 
         <!--RELÓGIOS-->
+        <br>
         <span id="relogios">
             <span id="button_clock1">
                 <button  class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a 1ª pausa">
