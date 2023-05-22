@@ -33,6 +33,8 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 function cronometroDecrescente(segundos) {    
     var intervalo = setInterval(() => {
       var campo_timer = document.getElementById("cronometro_pausas")    
+      var button_clock = document.getElementById("button_clock")    
+
       var horas = Math.floor(segundos / 3600);
       var minutos = Math.floor((segundos % 3600) / 60);
       var segundosRestantes = segundos % 60;
@@ -42,7 +44,18 @@ function cronometroDecrescente(segundos) {
             
       //campo_timer.innerHTML = `<button class="btn btn-outline-light" data-toggle="tooltip" data-placement="top" title="Cronometro para a próxima pausa"> ${formatado} </button>`        
       campo_timer.innerHTML = `${formatado}`        
-  
+      
+      if (segundos <= 600) {
+        setInterval(async function () {
+          button_clock.classList.remove('btn-outline-light');
+          button_clock.classList.add('btn-outline-danger');
+        }, 2000);
+        setInterval(async function () {
+          button_clock.classList.remove('btn-outline-danger');
+          button_clock.classList.add('btn-outline-light');
+        }, 2000);
+
+      }
       if (segundos <= 0) {
         clearInterval(intervalo);
         formatado = `--:--`
