@@ -46,11 +46,11 @@ function cronometroDecrescente(segundos) {
       campo_timer.innerHTML = `${formatado}`        
       
       if (segundos <= 6000) {
-        setInterval(async function () {
+        setInterval(function () {
           button_clock.classList.remove('btn-outline-light');
           button_clock.classList.add('btn-outline-danger');
         }, 2000);
-        setInterval(async function () {
+        setInterval(function () {
           button_clock.classList.remove('btn-outline-danger');
           button_clock.classList.add('btn-outline-light');
         }, 2000);
