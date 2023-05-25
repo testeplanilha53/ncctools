@@ -6,12 +6,22 @@ var pausa_2 = localStorage.getItem('txt_pausa_2') // fica no formato 00:00
 
 var agora = new Date()//pega o "tempo" atual
 
+/*
 // FUNÇAO PARA CONVERTER TUDO EM SEGUNDOS
 function converter_segundos(tempo){
     var hora = tempo.getHours() // Pega a hora
-    var min = tempo.getMinutes()// Pega os minutos
+    var min = tempo.getMinutes()// Pega os minutos    
     tempo = hora*60*60 + min*60 // transforma tudo em segundos
     return tempo
+}*/
+
+// FUNÇAO PARA CONVERTER TUDO EM SEGUNDOS
+function converter_segundos(tempo){
+  var hora = tempo.getHours() // Pega a hora
+  var min = tempo.getMinutes()// Pega os minutos    
+  var segundos = tempo.getSeconds()	// pega os segundos
+  tempo = hora*60*60 + min*60 +segundos // transforma tudo em segundos
+  return tempo
 }
 
 function converter_segundos_string(pausa){
