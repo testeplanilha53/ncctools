@@ -11,7 +11,8 @@ var agora = new Date()//pega o "tempo" atual
 function converter_segundos(tempo){
     var hora = tempo.getHours() // Pega a hora
     var min = tempo.getMinutes()// Pega os minutos
-    tempo = hora*60*60 + min*60 // transforma tudo em segundos
+    var segundos = tempo.getSeconds()	// pega os segundos
+    tempo = hora*60*60 + min*60 +segundos // transforma tudo em segundos
     return tempo
 }
 
