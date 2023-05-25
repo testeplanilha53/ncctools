@@ -124,7 +124,7 @@ window.onload = function (){
 
 async function msg_alerta(){
 
-    window.alert("Sua pausa é agora!")
+    //window.alert("Sua pausa é agora!")
     
 
     Notification.requestPermission(/* opcional: callback */);
@@ -141,7 +141,7 @@ async function msg_alerta(){
 
 async function falta_2min(){
     
-    window.alert("Faltam 2 minutos para sua pausa")
+    //window.alert("Faltam 2 minutos para sua pausa")
     Notification.requestPermission(/* opcional: callback */);
     
     var notification = new Notification("ALERTA", {
@@ -156,7 +156,7 @@ async function falta_2min(){
 
 async function falta_20min(){
     
-    window.alert("Faltam 20 minutos para o seu intervalo")
+    //window.alert("Faltam 20 minutos para o seu intervalo")
     Notification.requestPermission(/* opcional: callback */);
     
     var notification = new Notification("ALERTA", {
