@@ -697,9 +697,17 @@ function apagar_modelo_financeiro(){
     });
 }
 
-
+/*
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
+    
+  })
+  */
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip({     
+        'delay': { show: 2000, hide: 100 }
+    })    
   })
 
 
