@@ -112,15 +112,15 @@ function copiar(){
         var email_novo = email.substring(0,2)+"********"+ email.substring(arroba,email.length)
         
         texto_completo = texto_completo + ` e ${email_novo}`
-        /*
-        if (email.search('hotmail')>1){
-            notificacao.innerHTML = '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
+    
+        if (email.search('hotmail')>=1){
+            notificacao.innerHTML += '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
             window.setTimeout(function() {
                 $(".alert").fadeTo(500, 0).slideUp(500, function(){
                     $(this).remove(); 
                 });
-            }, 3000);
-        }*/
+            }, 6000);
+        }
     }
 
     texto_completo = texto_completo + `. Deseja remover ou adicionar algum contato?`
@@ -130,7 +130,7 @@ function copiar(){
 
     // Exibindo a notificação de texto copiado por 2 segundos
     let notificacao = document.getElementById("notificacao")
-    notificacao.innerHTML = '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
+    notificacao.innerHTML += '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
     window.setTimeout(function() {
         $(".alert").fadeTo(500, 0).slideUp(500, function(){
             $(this).remove(); 
