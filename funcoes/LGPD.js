@@ -116,7 +116,7 @@ function copiar(){
         if (email.search('hotmail')>=1){
             console.log('achou')            
             let notificacao2 = document.getElementById("notificacao2")
-            notificacao2.innerHTML += '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
+            notificacao2.innerHTML += '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atenção!</strong> Cliente usa domínio @hotmail. </div>'
             window.setTimeout(function() {
                 $(".alert").fadeTo(500, 0).slideUp(500, function(){
                     $(this).remove(); 
