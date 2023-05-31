@@ -41,7 +41,7 @@
     <div id="botoes">
         <button type="button" id="transferir" class="btn btn-info" onclick="transferir_dados()">Transferir dados</button>        <br>   <br>
         <button type="button" id="copiar" class="btn btn-info" onclick="copiar()">Copiar</button>             
-        <button type="button" id="copiar" class="btn btn-danger" onclick="apagar()">Apagar</button>
+        <button type="button" id="apagar" class="btn btn-danger" onclick="apagar()">Apagar</button>
     </div>
     <!--
     <br><br>
