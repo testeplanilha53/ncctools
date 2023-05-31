@@ -219,7 +219,7 @@ function retorna_contato(dados){
 
 
 function apagar(){    
-    var el = document.querySelector(".campo_editavel")
+    var el = document.getElementsByClassName("campo_editavel")
     el.forEach(element => {
         element.value = ""
     });
