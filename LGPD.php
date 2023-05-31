@@ -55,6 +55,7 @@
     
     <br><br>
     <div id="notificacao"></div>
+    <div id="notificacao2"></div>
 
     <script src="/funcoes/LGPD.js"></script>
 
