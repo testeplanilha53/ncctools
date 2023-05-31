@@ -706,7 +706,7 @@ $(function () {
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip({     
-        'delay': { show: 2000, hide: 100 }
+        'delay': { show: 1500, hide: 100 }
     })    
   })
 
