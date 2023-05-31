@@ -697,11 +697,18 @@ function apagar_modelo_financeiro(){
     });
 }
 
-
+/*
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
+    
   })
+  */
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip({     
+        'delay': { show: 5000, hide: 3000 }
+    })    
+  })
 
 
 function muda_title(){    
