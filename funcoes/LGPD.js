@@ -216,3 +216,12 @@ function retorna_contato(dados){
         txt_tel4.value = (dados.substring(inicio+4,inicio+15)).replace(/[^0-9]/g,'')
 
 }
+
+
+function apagar(){    
+    var el = document.querySelector(".campo_editavel")
+    el.forEach(element => {
+        element.value = ""
+    });
+
+}

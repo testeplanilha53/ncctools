@@ -31,16 +31,17 @@
 <body style="background-color: rgb(53, 54, 63);">  <!-- rgb(40,42,54) --> 
     <h1>Atualização de contatos</h1>
     <section id="at_contatos">
-        Telefone 01 : <input type="text" id="tel1"> <br>
-        Telefone 02 : <input type="text" id="tel2"> <br>
-        Telefone 03 : <input type="text" id="tel3"> <br>
-        Telefone 04 : <input type="text" id="tel4"> <br> <br>
-        E-mail: <input type="text" id="email"> <br>
+        Telefone 01 : <input type="text" id="tel1" class="campo_editavel"> <br>
+        Telefone 02 : <input type="text" id="tel2" class="campo_editavel"> <br>
+        Telefone 03 : <input type="text" id="tel3" class="campo_editavel"> <br>
+        Telefone 04 : <input type="text" id="tel4" class="campo_editavel"> <br> <br>
+        E-mail: <input type="text" id="email" class="campo_editavel"> <br>
     </section>
     <br>
     <div id="botoes">
         <button type="button" id="transferir" class="btn btn-info" onclick="transferir_dados()">Transferir dados</button>        <br>   <br>
         <button type="button" id="copiar" class="btn btn-info" onclick="copiar()">Copiar</button>             
+        <button type="button" id="copiar" class="btn btn-danger" onclick="apagar()">Apagar</button>
     </div>
     <!--
     <br><br>
