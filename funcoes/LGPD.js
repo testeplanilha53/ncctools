@@ -218,10 +218,10 @@ function retorna_contato(dados){
 }
 
 
-function apagar(){    
-    var el = document.getElementsByClassName("campo_editavel")
-    el.forEach(element => {
-        element.value = ""
-    });
+function apagar(){
+    var elements1 = document.querySelectorAll(`[class^="campo_editavel"]`)
 
+    elements1.forEach(e => {
+        e.value=""
+    });
 }
