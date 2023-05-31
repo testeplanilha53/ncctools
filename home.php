@@ -10,7 +10,7 @@
 	
 <!-- 
     //Autor: Lucas Aguiar e Dione
-    //Ultima edição: 18/04/2024
+    //Ultima edição: 30/05/2023
 -->
 
 
@@ -34,20 +34,7 @@
 
     <!--FONTAWOSONE-->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-
-	<style>
-
-
-		</style>
 	
-		<script>
-			function menu(){
-    				document.querySelector(".Menu").classList.toggle("menu-show");
-			}
-
-		
-		</script>
-		
 
 </head>
 	
