@@ -713,3 +713,8 @@ function muda_title(){
     elementsx[4].setAttribute("data-original-title",localStorage.getItem('txt_atalho5'))
     elementsx[5].setAttribute("data-original-title",localStorage.getItem('txt_atalho6'))
 }
+
+// Função do menu lateral
+function menu(){
+    document.querySelector(".Menu").classList.toggle("menu-show");
+}

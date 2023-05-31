@@ -112,7 +112,15 @@ function copiar(){
         var email_novo = email.substring(0,2)+"********"+ email.substring(arroba,email.length)
         
         texto_completo = texto_completo + ` e ${email_novo}`
-
+        /*
+        if (email.search('hotmail')>1){
+            notificacao.innerHTML = '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
+            window.setTimeout(function() {
+                $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                    $(this).remove(); 
+                });
+            }, 3000);
+        }*/
     }
 
     texto_completo = texto_completo + `. Deseja remover ou adicionar algum contato?`
@@ -215,4 +223,13 @@ function retorna_contato(dados){
         var inicio = dados.search("DDD:")
         txt_tel4.value = (dados.substring(inicio+4,inicio+15)).replace(/[^0-9]/g,'')
 
+}
+
+
+function apagar(){
+    var elements1 = document.querySelectorAll(`[class^="campo_editavel"]`)
+
+    elements1.forEach(e => {
+        e.value=""
+    });
 }

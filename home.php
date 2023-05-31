@@ -10,7 +10,7 @@
 	
 <!-- 
     //Autor: Lucas Aguiar e Dione
-    //Ultima edição: 18/04/2024
+    //Ultima edição: 30/05/2023
 -->
 
 
@@ -34,99 +34,7 @@
 
     <!--FONTAWOSONE-->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-
-	<style>
-		body{
-			overflow-x: hidden !important;
-		}
-		._header{
-border-bottom: solid 2px #151854;
-background-color: #152238;
-position: sticky;
-}
-
-._header_label{
- width: 33% !important; 
- max-width: 150px !important;
-}
-
-._clock{
-
-  border: solid 1px white;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-}
-
-
-._window{
- width: 500px;
- height: 500px;
- display: block;
- background: white;
- margin: 10px;
- border-radius: 10px;
- border: solid 1px #00004d;
-}
-
-
-.form-signin{
-  width: 100%;
-  max-width: 300px;
-  /* background-color: blueviolet; */
-  display: block;
-  margin: auto;
-}
-
-
-.conteiner-itens{
-/*width: calc(100% / 3);*/
-}
-
-
-
-
-.Menu{
-display: block;
-width: 100%;
-height: 100%;
-max-width: 500px;
-position: absolute;
-z-index: 2000;
-top: 0;
-right: -500px;
-transition: .5s;
-}
-
-._menu-sidebar{
-background-color: #23395d;
-color: white;
-height: 100vh;
-}
-
-
-.menu-show{
-  right: 0;
-  transition: .5s;
-}
-
-
-.sidebar_item:hover{
-  border: 2px solid white;
-}
-
-		</style>
 	
-		<script>
-			function menu(){
-    				document.querySelector(".Menu").classList.toggle("menu-show");
-			}
-
-		
-		</script>
-		
 
 </head>
 	
@@ -139,7 +47,7 @@ height: 100vh;
   <nav class="navbar text-white m-auto p-2" style="max-width: 1920px; background: rgb(53, 54, 63);">
     <!--MENU-NAV-->
     <label class="navbar-item text-white _header_label">
-      <a href="#" class="navbar-brand text-white p-0 m-0 " data-toggle="tooltip" data-placement="bottom" title="Para atendimentos Faster...">
+      <a href="#Criadores|_LUCAS_AGUIAR_|_DIONE_MOURAO" class="navbar-brand text-white p-0 m-0 " data-toggle="tooltip" data-placement="bottom" title="Para atendimentos Faster...">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-speedometer2" viewBox="0 0 18 18">
             <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
             <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
@@ -181,47 +89,7 @@ height: 100vh;
             <span id="button_clock3">
 
             </span>               
-        </span>
-        		   
-        <!--
-        <span id="relogios">
-            <span id="button_clock1">
-                <button  class="btn btn-outline-light clock_new" data-toggle="tooltip" data-placement="top" title="Cronometro para a 1ª pausa">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
-                        <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
-                        <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
-                    </svg>
-                    <span id="cronometro_pausas1">
-                
-                    </span>
-                </button>
-            </span>
-            
-            <span id="button_clock2">
-                <button class="btn btn-outline-light clock_new" data-toggle="tooltip" data-placement="top" title="Cronometro para o intervalo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
-                        <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
-                        <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
-                    </svg>
-                    <span id="cronometro_pausas2">
-                
-                    </span>
-                </button>
-            </span>
-            
-            <span id="button_clock3">
-                <button class="btn btn-outline-light clock_new" data-toggle="tooltip" data-placement="top" title="Cronometro para a 2ª pausa">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
-                        <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"/>
-                        <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"/>
-                    </svg>
-                    <span id="cronometro_pausas3">
-                
-                    </span>
-                </button>
-            </span>               
-        </span>
-        -->		                
+        </span>        		                   
     </span>
         	  
     
@@ -553,9 +421,7 @@ height: 100vh;
                <span type="button" id="" class="btn btn-outline-light btn_salvar_pend" onclick="salvar_pendencia()" data-toggle="tooltip" data-placement="top" title="Salve seus atendimentos para que o prox. operador resgate todas informações nas transferências"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks-fill" viewBox="0 0 16 16"> <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4z"/> <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1H4.268z"/> </svg>
                     &nbspSalvar Atend.
-                </span>   
-			   <!--<button onclick="add_tag('<li> ITEM ... </li>')">&lt;li&gt; + &lt;/li&gt;</button> -->
-			   <!--<button onclick="add_tag('<ul>\n \t <li>ITEM 1</li> \n \t <li>ITEM 2</li> \n </uL>')">&lt;ul&gt; + &ltli&gt;</button> -->
+                </span>   			   
 			</p>
             			
 
@@ -627,39 +493,11 @@ height: 100vh;
                 </section>
             </div>
 
-		<!--
-            <div class="col">
-            </div>-->
         </div>
         
 
     </div>
-    
-    <!--
-    <span>
-        <button type="button" id="modelo_noc" class="btn btn-warning" data-toggle="modal" data-target="#padrao_noc"> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
-                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
-                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
-              </svg>    
-        </button>
-        <button onclick="mudar_tema()" id="tema" type="button" class="btn btn btn-light" data-toggle="tooltip" data-placement="top" title="Mudar tema" >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
-                <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-        </button>
-        
-         <br>
-        <a href="https://ncc.drozbase.cx/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share" target="_blank" id="link_atalho_chat"><button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Clique aqui para ver a lista de atalhos do Omini" >#</button></a>
-    
-        <a id="btn_sair" href="./logout.php" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Logout">              
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5    12.5v-2a.5.5 0 0 1 1 0v2z"/>
-            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-            </svg>
-        </a>
-    </span>-->
-    
+       
 
     <script src="funcoes/f_botoes.js"></script>
     <script src="funcoes/alarmes.js"></script>
