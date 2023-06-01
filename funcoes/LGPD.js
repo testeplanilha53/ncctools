@@ -117,6 +117,10 @@ function copiar(){
 
     texto_completo = texto_completo + `. Deseja remover ou adicionar algum contato?`
 
+    if (email=""){      
+        texto_completo = texto_completo + `\n\nNão há e-mail cadastrado em sistema, deseja adicionar?`    
+    }
+
 
     if (email.search('hotmail')>=1){
         console.log('achou')            
