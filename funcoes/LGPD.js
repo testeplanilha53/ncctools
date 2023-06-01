@@ -106,7 +106,8 @@ function copiar(){
     }
 
 
-    if (email!=""){
+    /*if (email!=""){*/
+    if (email.search('@')>=1){        
         tamanho = email.length
         var arroba = email.search('@')
         var email_novo = email.substring(0,2)+"********"+ email.substring(arroba,email.length)
