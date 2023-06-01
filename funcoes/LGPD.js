@@ -119,6 +119,7 @@ function copiar(){
 
     if (email=""){      
         texto_completo = texto_completo + `\n\nNão há e-mail cadastrado em sistema, deseja adicionar?`    
+        
     }
 
 
