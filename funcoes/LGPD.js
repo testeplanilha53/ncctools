@@ -106,7 +106,8 @@ function copiar(){
     }
 
 
-    if (email!=""){
+    /*if (email!=""){*/
+    if (email.search('@')>=1){        
         tamanho = email.length
         var arroba = email.search('@')
         var email_novo = email.substring(0,2)+"********"+ email.substring(arroba,email.length)
@@ -116,6 +117,11 @@ function copiar(){
     }
 
     texto_completo = texto_completo + `. Deseja remover ou adicionar algum contato?`
+
+    if (email.search('@')<=1){      
+        texto_completo = texto_completo + `\n\nIdentificamos que não há e-mail cadastrado em sistema, deseja adicionar algum?`    
+
+    }
 
 
     if (email.search('hotmail')>=1){
@@ -128,7 +134,7 @@ function copiar(){
             });
         }, 6000);
         
-        texto_completo = texto_completo + `\n\nTambém identificamos que você usa um e-mail @hotmail, mas geralmente esse tipo de e-mail identifica nossas mensagens como SPAM, você possui outro e-mail para cadastrarmos?`
+        texto_completo = texto_completo + `\n\nE-mails com domínio @hotmail, tem apresentado problemas para receber comunicados que enviamos. Você tem outro e-mail com domínio diferente?\nExemplo: @gmail, @yahoo, @icloud, etc. `
     }
 
     
