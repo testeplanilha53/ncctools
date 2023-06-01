@@ -706,6 +706,13 @@ $(function () {
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip({     
+        'delay': { show: 1000, hide: 100 }
+    })    
+  })
+
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip({     
         'delay': { show: 2000, hide: 100 }
     })    
   })
