@@ -128,7 +128,7 @@ function copiar(){
             });
         }, 6000);
         
-        texto_completo = texto_completo + `\n\n E-mails com domínio @hotmail, tem apresentado problemas para receber comunicados que enviamos. Você tem outro e-mail com domínio diferente?\nExemplo: @gmail, @yahoo, @icloud, etc. `
+        texto_completo = texto_completo + `\n\nE-mails com domínio @hotmail, tem apresentado problemas para receber comunicados que enviamos. Você tem outro e-mail com domínio diferente?\nExemplo: @gmail, @yahoo, @icloud, etc. `
     }
 
     
