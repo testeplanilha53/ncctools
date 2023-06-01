@@ -239,5 +239,9 @@ function apagar(){
 
     elements1.forEach(e => {
         e.value=""
+        var notificacao2 = document.getElementById("notificacao2")
+        var notificacao = document.getElementById("notificacao")
+        notificacao.innerHTML = ""
+        notificacao2.innerHTML = ""
     });
 }
