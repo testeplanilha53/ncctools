@@ -117,9 +117,9 @@ function copiar(){
 
     texto_completo = texto_completo + `. Deseja remover ou adicionar algum contato?`
 
-    if (email=""){      
+    if (email==""){      
         texto_completo = texto_completo + `\n\nNão há e-mail cadastrado em sistema, deseja adicionar?`    
-        
+
     }
 
 
