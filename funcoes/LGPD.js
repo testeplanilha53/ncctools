@@ -127,9 +127,11 @@ function copiar(){
                 $(this).remove(); 
             });
         }, 6000);
+        
+        texto_completo = texto_completo + `\nTambém identificamos que você usa um e-mail @hotmail, mas geralmente esse tipo de e-mail identifica nossas mensagens como SPAM, você possui outro e-mail para cadastrarmos? .`
     }
 
-    texto_completo = texto_completo + `\nTambém identificamos que você usa um e-mail @hotmail, mas geralmente esse tipo de e-mail identifica nossas mensagens como SPAM, você possui outro e-mail para cadastrarmos? .`
+    
 
     // Passando as informações para a área de transferência
     navigator.clipboard.writeText(texto_completo)    
