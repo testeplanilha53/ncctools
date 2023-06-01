@@ -711,6 +711,12 @@ $(function () {
   })
 
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip({     
+        'delay': { show: 2000, hide: 100 }
+    })    
+  })
+
 
 function muda_title(){    
     var elementsx = document.getElementsByClassName('atalho')

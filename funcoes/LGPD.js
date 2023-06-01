@@ -112,25 +112,33 @@ function copiar(){
         var email_novo = email.substring(0,2)+"********"+ email.substring(arroba,email.length)
         
         texto_completo = texto_completo + ` e ${email_novo}`
-        /*
-        if (email.search('hotmail')>1){
-            notificacao.innerHTML = '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
-            window.setTimeout(function() {
-                $(".alert").fadeTo(500, 0).slideUp(500, function(){
-                    $(this).remove(); 
-                });
-            }, 3000);
-        }*/
+    
     }
 
     texto_completo = texto_completo + `. Deseja remover ou adicionar algum contato?`
+
+
+    if (email.search('hotmail')>=1){
+        console.log('achou')            
+        let notificacao2 = document.getElementById("notificacao2")
+        notificacao2.innerHTML += '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atenção!</strong> Cliente usa domínio @hotmail. </div>'
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 6000);
+        
+        texto_completo = texto_completo + `\n\nTambém identificamos que você usa um e-mail @hotmail, mas geralmente esse tipo de e-mail identifica nossas mensagens como SPAM, você possui outro e-mail para cadastrarmos?`
+    }
+
+    
 
     // Passando as informações para a área de transferência
     navigator.clipboard.writeText(texto_completo)    
 
     // Exibindo a notificação de texto copiado por 2 segundos
     let notificacao = document.getElementById("notificacao")
-    notificacao.innerHTML = '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
+    notificacao.innerHTML += '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
     window.setTimeout(function() {
         $(".alert").fadeTo(500, 0).slideUp(500, function(){
             $(this).remove(); 
@@ -231,5 +239,9 @@ function apagar(){
 
     elements1.forEach(e => {
         e.value=""
+        var notificacao2 = document.getElementById("notificacao2")
+        var notificacao = document.getElementById("notificacao")
+        notificacao.innerHTML = ""
+        notificacao2.innerHTML = ""
     });
 }
