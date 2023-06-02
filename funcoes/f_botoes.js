@@ -279,7 +279,7 @@ function protocolo(){
         trecho = trecho + descricao_aux[i]                 
     }        
     
-	if(protocolo_chat.value !=  ''){
+
 	
 	
     	// Montando o texto padrão para colar no ADM
@@ -299,7 +299,7 @@ function protocolo(){
     	}, 2000);
 		
 
-	}//end if
+
 
 }
 
