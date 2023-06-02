@@ -279,21 +279,27 @@ function protocolo(){
         trecho = trecho + descricao_aux[i]                 
     }        
     
-    // Montando o texto padrão para colar no ADM
-    let texto_completo = `${trecho}<hr><b><font color=blue> Protocolo do Chat: ${protocolo_chat.value} </b></font><hr>`
+	if(protocolo_chat.value !=  ''){
+	
+	
+    	// Montando o texto padrão para colar no ADM
+   	 let texto_completo = `${trecho}<hr><b><font color=blue> Protocolo do Chat: ${protocolo_chat.value} </b></font><hr>`
     
-    // Passando as informações para a área de transferência
-    navigator.clipboard.writeText(texto_completo);
-     //copyToClipboard(texto_completo)
+    	// Passando as informações para a área de transferência
+    	navigator.clipboard.writeText(texto_completo);
+     	//copyToClipboard(texto_completo)
     
-    // Exibindo a notificação de texto copiado por 2 segundos
-    let notificacao = document.getElementById("notificacao")
-    notificacao.innerHTML = '<div class="alert alert-warning" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de colar no ADM! </div>'
-    window.setTimeout(function() {
-        $(".alert").fadeTo(500, 0).slideUp(500, function(){
-            $(this).remove(); 
-        });
-    }, 2000);
+    	// Exibindo a notificação de texto copiado por 2 segundos
+    	let notificacao = document.getElementById("notificacao")
+    	notificacao.innerHTML = '<div class="alert alert-warning" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de colar no ADM! </div>'
+   	 window.setTimeout(function() {
+        	$(".alert").fadeTo(500, 0).slideUp(500, function(){
+            	$(this).remove(); 
+        	});
+    	}, 2000);
+		
+
+	}//end if
 
 }
 
