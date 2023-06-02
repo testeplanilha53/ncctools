@@ -416,6 +416,7 @@
 
             <p id="tags_html" class="tags_show">
 			   <button class="btn btn-outline-light" onclick="add_tag('<hr>')" data-toggle="tooltip" data-placement="top" title="Adiciona a quebra de texto com uma linha (--)">&lt;hr&gt;</button>
+		    	   <button class="btn btn-outline-light" onclick="add_tag('<br>')" data-toggle="tooltip" data-placement="top" title="Adiciona a quebra de linha (--)">&lt;br&gt;</button>
 			   <button class="btn btn-outline-light" onclick="add_tag('<b>')"  data-toggle="tooltip" data-placement="top" title="Tag referente ao inicio do negrito">&lt;b&gt;</button>
 			   <button class="btn btn-outline-light" onclick="add_tag('</b>')" data-toggle="tooltip" data-placement="top" title="Tag referente ao final do negrito">&lt;/b&gt;</button>
                <span type="button" id="" class="btn btn-outline-light btn_salvar_pend" onclick="salvar_pendencia()" data-toggle="tooltip" data-placement="top" title="Salve seus atendimentos para que o prox. operador resgate todas informações nas transferências"> 
