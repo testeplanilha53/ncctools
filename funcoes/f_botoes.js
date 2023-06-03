@@ -249,6 +249,11 @@ function protocolo(){
 // Função protocolo novo 2023
 function protocolo(){
     
+	if (protocolo_chat.value == ''){
+		window.alert("Verifique se as informações estão preenchidas!")
+	
+	}else{
+
     // Nessa parte do código ele ira criar uma variável "trecho", com o texto até a PONTO_OU_VIRGULA="."
     descricao_aux = descricao.value // pegando o valor
     let tamanho = descricao_aux.length // pegando o tamanho do "vetor"
@@ -299,7 +304,7 @@ function protocolo(){
     	}, 2000);
 		
 
-
+	}//end if
 
 }
 
