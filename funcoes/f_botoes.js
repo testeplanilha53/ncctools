@@ -250,7 +250,54 @@ function protocolo(){
 function protocolo(){
     
 	if (protocolo_chat.value == '' || protocolo_chat.value == null){
-		window.alert("Verifique se as informações estão preenchidas!")
+		// Nessa parte do código ele ira criar uma variável "trecho", com o texto até a PONTO_OU_VIRGULA="."
+    descricao_aux = descricao.value // pegando o valor
+    let tamanho = descricao_aux.length // pegando o tamanho do "vetor"
+    // let PONTO_OU_VIRGULA = "."
+    let PONTO_OU_VIRGULA = "";
+    
+    
+    console.log(  localStorage.getItem('txt_key_protocolo')  )
+    
+    if( localStorage.getItem('txt_key_protocolo') == "op1" ){
+        PONTO_OU_VIRGULA = ".";
+    }
+    if( localStorage.getItem('txt_key_protocolo') == "op2" ){
+        PONTO_OU_VIRGULA = ",";
+    }
+    if( localStorage.getItem('txt_key_protocolo') == "op3" ){
+        PONTO_OU_VIRGULA = ";";
+    }
+    
+    
+    let posi = 0
+    var trecho = ""
+    for (var i = 0; i < tamanho; i++){                     
+        if (descricao_aux[i]==PONTO_OU_VIRGULA){
+            posi = i  
+            break
+        }
+        trecho = trecho + descricao_aux[i]                 
+    }        
+    
+
+	
+	
+    	// Montando o texto padrão para colar no ADM
+   	 let texto_completo = `${trecho}<hr><b>`
+    
+    	// Passando as informações para a área de transferência
+    	navigator.clipboard.writeText(texto_completo);
+     	//copyToClipboard(texto_completo)
+    
+    	// Exibindo a notificação de texto copiado por 2 segundos
+    	let notificacao = document.getElementById("notificacao")
+    	notificacao.innerHTML = '<div class="alert alert-warning" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de colar no ADM! </div>'
+   	 window.setTimeout(function() {
+        	$(".alert").fadeTo(500, 0).slideUp(500, function(){
+            	$(this).remove(); 
+        	});
+    	}, 2000);
 	
 	}else{
 
