@@ -249,7 +249,7 @@ function protocolo(){
 // Função protocolo novo 2023
 function protocolo(){
     
-	if (protocolo_chat.value == ''){
+	if (protocolo_chat.value == '' || protocolo_chat.value == null){
 		window.alert("Verifique se as informações estão preenchidas!")
 	
 	}else{
