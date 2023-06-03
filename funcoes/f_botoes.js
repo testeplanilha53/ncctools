@@ -310,6 +310,11 @@ function protocolo(){
 
 // Função copiar
 function copiar(){
+	
+    if (protocolo_chat.value == '' || protocolo_chat.value == null){
+		window.alert("Verifique se as informações estão preenchidas!")
+	
+	}else{
     
     // Coletando a data atual para registrar no protocolo
     let data = new Date()
@@ -350,6 +355,9 @@ function copiar(){
             $(this).remove(); 
         });
     }, 2000);
+		
+		
+	}//end if
 
 }
 
