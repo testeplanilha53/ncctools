@@ -284,7 +284,7 @@ function protocolo(){
 	
 	
     	// Montando o texto padrão para colar no ADM
-   	 let texto_completo = `${trecho}<hr><b>`
+   	 let texto_completo = `${trecho}<hr>`
     
     	// Passando as informações para a área de transferência
     	navigator.clipboard.writeText(texto_completo);
