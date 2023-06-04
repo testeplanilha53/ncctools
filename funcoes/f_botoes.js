@@ -249,6 +249,58 @@ function protocolo(){
 // Função protocolo novo 2023
 function protocolo(){
     
+	if (protocolo_chat.value == '' || protocolo_chat.value == null){
+		// Nessa parte do código ele ira criar uma variável "trecho", com o texto até a PONTO_OU_VIRGULA="."
+    descricao_aux = descricao.value // pegando o valor
+    let tamanho = descricao_aux.length // pegando o tamanho do "vetor"
+    // let PONTO_OU_VIRGULA = "."
+    let PONTO_OU_VIRGULA = "";
+    
+    
+    console.log(  localStorage.getItem('txt_key_protocolo')  )
+    
+    if( localStorage.getItem('txt_key_protocolo') == "op1" ){
+        PONTO_OU_VIRGULA = ".";
+    }
+    if( localStorage.getItem('txt_key_protocolo') == "op2" ){
+        PONTO_OU_VIRGULA = ",";
+    }
+    if( localStorage.getItem('txt_key_protocolo') == "op3" ){
+        PONTO_OU_VIRGULA = ";";
+    }
+    
+    
+    let posi = 0
+    var trecho = ""
+    for (var i = 0; i < tamanho; i++){                     
+        if (descricao_aux[i]==PONTO_OU_VIRGULA){
+            posi = i  
+            break
+        }
+        trecho = trecho + descricao_aux[i]                 
+    }        
+    
+
+	
+	
+    	// Montando o texto padrão para colar no ADM
+   	 let texto_completo = `${trecho}<hr>`
+    
+    	// Passando as informações para a área de transferência
+    	navigator.clipboard.writeText(texto_completo);
+     	//copyToClipboard(texto_completo)
+    
+    	// Exibindo a notificação de texto copiado por 2 segundos
+    	let notificacao = document.getElementById("notificacao")
+    	notificacao.innerHTML = '<div class="alert alert-warning" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de colar no ADM! </div>'
+   	 window.setTimeout(function() {
+        	$(".alert").fadeTo(500, 0).slideUp(500, function(){
+            	$(this).remove(); 
+        	});
+    	}, 2000);
+	
+	}else{
+
     // Nessa parte do código ele ira criar uma variável "trecho", com o texto até a PONTO_OU_VIRGULA="."
     descricao_aux = descricao.value // pegando o valor
     let tamanho = descricao_aux.length // pegando o tamanho do "vetor"
@@ -299,12 +351,55 @@ function protocolo(){
     	}, 2000);
 		
 
-
+	}//end if
 
 }
 
 // Função copiar
 function copiar(){
+	
+    if (protocolo_chat.value == '' || protocolo_chat.value == null){
+		// Coletando a data atual para registrar no protocolo
+    let data = new Date()
+    //let dia = data.getUTCDate() //alterei aqui
+    let dia = data.getDate()
+    let mes = data.getMonth()+1
+    if (dia<10){
+        dia = String(dia)
+        dia = '0'+dia
+    }
+    if (mes<10){
+        mes = String(mes)
+        mes = '0'+mes
+    }
+    dia = String(dia)
+    mes = String(mes)
+    
+    // Montando o texto padrão para colar no ADM
+    let texto_completo = `${dia}/${mes}→ Atendimento realizado com Sr(a). ${nome_cliente.value} via chat no número ${telefone.value}. <br> ${descricao.value}`
+    
+    // Condição em caso de VS
+    // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
+    
+    var h_preferencia = window.document.getElementById("h_preferencia")
+    if (ponto_referencia.value!=h_preferencia.value){                
+        var texto_vs = `<hr> <b>Horário de preferência:</b> ${h_preferencia.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
+        texto_completo = texto_completo + texto_vs
+    }
+
+    // Passando as informações para a área de transferência
+    navigator.clipboard.writeText(texto_completo)    
+    
+    // Exibindo a notificação de texto copiado por 2 segundos
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML = '<div class="alert alert-success" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de colar no ADM! </div>'
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+        });
+    }, 2000);
+	
+	}else{
     
     // Coletando a data atual para registrar no protocolo
     let data = new Date()
@@ -345,6 +440,9 @@ function copiar(){
             $(this).remove(); 
         });
     }, 2000);
+		
+		
+	}//end if
 
 }
 
