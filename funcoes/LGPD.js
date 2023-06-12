@@ -35,6 +35,11 @@ window.onload = function(){
 
 
 function copiar(){
+    
+    // Apagando o histórico do alert
+    let notificacao = document.getElementById("notificacao")
+    notificacao.innerHTML =""
+
     var tel1 = document.getElementById("tel1").value
     var tel2 = document.getElementById("tel2").value
     var tel3 = document.getElementById("tel3").value
