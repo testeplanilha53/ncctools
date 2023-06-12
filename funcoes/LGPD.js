@@ -39,6 +39,7 @@ function copiar(){
     // Apagando o histórico do alert
     let notificacao = document.getElementById("notificacao")
     notificacao.innerHTML =""
+    
     let notificacao2 = document.getElementById("notificacao2")
     notificacao2.innerHTML =""
 
