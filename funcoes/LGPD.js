@@ -147,8 +147,7 @@ function copiar(){
     // Passando as informações para a área de transferência
     navigator.clipboard.writeText(texto_completo)    
 
-    // Exibindo a notificação de texto copiado por 2 segundos
-    let notificacao = document.getElementById("notificacao")
+    // Exibindo a notificação de texto copiado por 2 segundos    
     notificacao.innerHTML += '<div class="alert alert-info" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Copiado!</strong> Verifique as informações antes de enviar para o cliente </div>'
     window.setTimeout(function() {
         $(".alert").fadeTo(500, 0).slideUp(500, function(){
