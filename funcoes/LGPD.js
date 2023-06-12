@@ -39,6 +39,8 @@ function copiar(){
     // Apagando o histórico do alert
     let notificacao = document.getElementById("notificacao")
     notificacao.innerHTML =""
+    let notificacao2 = document.getElementById("notificacao2")
+    notificacao2.innerHTML =""
 
     var tel1 = document.getElementById("tel1").value
     var tel2 = document.getElementById("tel2").value
@@ -130,8 +132,7 @@ function copiar(){
 
 
     if (email.search('hotmail')>=1){
-        console.log('achou')            
-        let notificacao2 = document.getElementById("notificacao2")
+        //console.log('achou')                    
         notificacao2.innerHTML += '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Atenção!</strong> Cliente usa domínio @hotmail. </div>'
         window.setTimeout(function() {
             $(".alert").fadeTo(500, 0).slideUp(500, function(){
