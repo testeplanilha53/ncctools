@@ -40,7 +40,7 @@
 	
 	
 
-<body style="background-color: #35363f;" onmousemove="mudar_titulo()" id="corpo_tela_principal">
+<body style="background-color: #35363f; overflow-x: hidden;" onmousemove="mudar_titulo()" id="corpo_tela_principal">
 	
 	<!--HEADER-->
 <header class="conteiner-fluid _header">
