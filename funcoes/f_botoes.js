@@ -1,7 +1,7 @@
 //Autor: Lucas Aguiar
 //Ultima edição: 12/01/2023
 
-document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2047-harry-potter-cursor.svg'), auto";
+//document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2047-harry-potter-cursor.svg'), auto";
 
 // Variáveis principais
 
