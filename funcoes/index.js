@@ -792,5 +792,3 @@ function loadAddress(value) {
 }
 
 */
-
-document.getElementsByTagName("body")[0].style.cursor = "url('https://cursor.style/cursors/2047-harry-potter-cursor.svg'), auto";
