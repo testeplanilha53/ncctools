@@ -838,3 +838,14 @@ function muda_title(){
 function menu(){
     document.querySelector(".Menu").classList.toggle("menu-show");
 }
+
+
+function mudar_tema_link(){
+    var link = document.getElementById("mudar_tema_link").value
+    document.body.style.backgroundImage = `url(${link})`;
+}
+
+function mudar_tema_cor(){
+    var cor = document.getElementById("mudar_tema_cor").value
+    document.body.style.backgroundColor = cor;
+}
