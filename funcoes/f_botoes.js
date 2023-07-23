@@ -870,6 +870,7 @@ function mudar_tema_cor(){
         cor = cor_salvo
     }     
     document.body.style.backgroundColor = cor;
+    localStorage.setItem('mudar_tema_cor', cor) 
     //document.body.style.backgroundImage = null
     localStorage.setItem('mudar_tema_link', "")  
 
