@@ -840,6 +840,11 @@ function menu(){
 }
 
 
+window.onload = function(){
+    mudar_tema_link()
+}
+
+
 function mudar_tema_link(){
     var link_salvo = localStorage.getItem('mudar_tema_link')
     var link = document.getElementById("mudar_tema_link").value
