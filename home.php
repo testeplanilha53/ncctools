@@ -220,6 +220,26 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal MUDANÇA TEMA -->
+    <div class="modal fade" id="modal_mudar_tema" tabindex="3" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">MUDAR TEMA</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">  
+                     Imagem de fundo: <br>                                      
+                     <input type="text" placeholder="Insira o link da imagem que vc quer como plano de fundo" id="mudar_tema_link"> <hr>
+                     Cor de fundo de fundo: <br>                                      
+                     <input type="color" id="mudar_tema_cor"> <hr>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Modal PADRÃO FINANCEIRO -->
     <div class="modal fade" id="modal_modelo_financeiro" tabindex="3" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
