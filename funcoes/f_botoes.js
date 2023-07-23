@@ -842,6 +842,7 @@ function menu(){
 
 window.onload = function(){
     mudar_tema_link()
+    console.log("Abriu aqui o onload")
 }
 
 
