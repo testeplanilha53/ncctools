@@ -851,12 +851,13 @@ function mudar_tema_link(){
         localStorage.setItem('mudar_tema_link', link)    
     }else{
         link = link_salvo
-    }     
-    document.body.style.backgroundImage = `url(${link})`;   
+    }          
     
     if ((link_salvo=="")&&(link=="")){
         mudar_tema_cor()
         console.log("Chegou nesse if")
+    }else{
+        document.body.style.backgroundImage = `url(${link})`;  
     }
 }
 
