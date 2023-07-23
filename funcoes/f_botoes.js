@@ -849,7 +849,7 @@ function mudar_tema_link(){
     var link_salvo = localStorage.getItem('mudar_tema_link')
     var link = document.getElementById("mudar_tema_link").value
 
-    if (link_salvo!=link){
+    if ((link_salvo!=link)&&(link!="")){
         localStorage.setItem('mudar_tema_link', link)    
     }else{
         link = link_salvo
