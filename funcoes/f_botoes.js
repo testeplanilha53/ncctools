@@ -125,6 +125,9 @@ function copiar_nome_cliente(){
 
 // Mudar o titulo
 function mudar_titulo(){
+    
+    mudar_tema_link()
+
     var titulo = window.document.getElementById("titulo")
     if (nome_cliente.value!=''){
         titulo.innerText = nome_cliente.value
@@ -837,12 +840,6 @@ function muda_title(){
 // Função do menu lateral
 function menu(){
     document.querySelector(".Menu").classList.toggle("menu-show");
-}
-
-
-window.onload = function(){
-    mudar_tema_link()
-    console.log("Abriu aqui o onload")
 }
 
 
