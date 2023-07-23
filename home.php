@@ -233,9 +233,9 @@
                 </div>
                 <div class="modal-body">  
                      Imagem de fundo: <br>                                      
-                     <input type="text" placeholder="Insira o link da imagem que vc quer como plano de fundo" id="mudar_tema_link"> <hr>
+                     <input type="text" placeholder="Insira o link da imagem que vc quer como plano de fundo" id="mudar_tema_link" onchange="mudar_tema_link()"> <hr>
                      Cor de fundo de fundo: <br>                                      
-                     <input type="color" id="mudar_tema_cor"> <hr>
+                     <input type="color" id="mudar_tema_cor" onchange="mudar_tema_cor()"> <hr>
                 </div>
             </div>
         </div>
