@@ -864,7 +864,7 @@ function mudar_tema_cor(){
     var cor_salvo = localStorage.getItem('mudar_tema_cor')
     var cor = document.getElementById("mudar_tema_cor").value
 
-    if ((cor_salvo!=cor)&&(cor!="")){
+    if ((cor_salvo!=cor)&&(cor!="#000000")){
         localStorage.setItem('mudar_tema_cor', cor)    
     }else{
         cor = cor_salvo
