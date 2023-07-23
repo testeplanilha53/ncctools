@@ -411,3 +411,8 @@ transition: .5s;
 .sidebar_item:hover{
 border: 2px solid white;
 }
+
+
+#mudar_tema_link{
+    width: 450px;
+}
