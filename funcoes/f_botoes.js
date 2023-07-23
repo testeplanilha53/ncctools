@@ -854,8 +854,9 @@ function mudar_tema_link(){
     }     
     document.body.style.backgroundImage = `url(${link})`;   
     
-    if ((link_salvo=="")&&(link="")){
+    if ((link_salvo=="")&&(link=="")){
         mudar_tema_cor()
+        console.log("Chegou nesse if")
     }
 }
 
