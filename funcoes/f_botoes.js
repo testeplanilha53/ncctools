@@ -841,8 +841,15 @@ function menu(){
 
 
 function mudar_tema_link(){
+    var link_salvo = localStorage.getItem('mudar_tema_link')
     var link = document.getElementById("mudar_tema_link").value
-    document.body.style.backgroundImage = `url(${link})`;
+
+    if (link_salvo!=link){
+        localStorage.setItem('mudar_tema_link', link)    
+    }else{
+        link = link_salvo
+    }     
+    document.body.style.backgroundImage = `url(${link})`;    
 }
 
 function mudar_tema_cor(){
