@@ -869,7 +869,8 @@ function mudar_tema_cor(){
         cor = link_salvo
     }     
     document.body.style.backgroundColor = cor;
-    document.body.style.backgroundImage = ``
+    document.body.style.backgroundImage = null
+    localStorage.setItem('mudar_tema_link', "")  
 
     /*
     var cor = document.getElementById("mudar_tema_cor").value
