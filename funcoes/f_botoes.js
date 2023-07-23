@@ -867,7 +867,7 @@ function mudar_tema_cor(){
     if ((cor_salvo!=cor)&&(cor!="")){
         localStorage.setItem('mudar_tema_cor', cor)    
     }else{
-        cor = link_salvo
+        cor = cor_salvo
     }     
     document.body.style.backgroundColor = cor;
     //document.body.style.backgroundImage = null
