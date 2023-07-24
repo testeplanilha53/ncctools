@@ -125,6 +125,9 @@ function copiar_nome_cliente(){
 
 // Mudar o titulo
 function mudar_titulo(){
+    
+    mudar_tema_link()
+
     var titulo = window.document.getElementById("titulo")
     if (nome_cliente.value!=''){
         titulo.innerText = nome_cliente.value
@@ -837,4 +840,43 @@ function muda_title(){
 // Função do menu lateral
 function menu(){
     document.querySelector(".Menu").classList.toggle("menu-show");
+}
+
+
+function mudar_tema_link(){
+    var link_salvo = localStorage.getItem('mudar_tema_link')
+    var link = document.getElementById("mudar_tema_link").value
+
+    if ((link_salvo!=link)&&(link!="")){
+        localStorage.setItem('mudar_tema_link', link)    
+    }else{
+        link = link_salvo
+    }          
+    
+    if ((link_salvo=="")&&(link=="")){
+        mudar_tema_cor()
+        console.log("Chegou nesse if")
+    }else{
+        document.body.style.backgroundImage = `url(${link})`;  
+    }
+}
+
+function mudar_tema_cor(){
+    var cor_salvo = localStorage.getItem('mudar_tema_cor')
+    var cor = document.getElementById("mudar_tema_cor").value
+
+    if ((cor_salvo!=cor)&&(cor!="#000000")){
+        localStorage.setItem('mudar_tema_cor', cor)    
+    }else{
+        cor = cor_salvo
+    }     
+    document.body.style.backgroundColor = cor;
+    localStorage.setItem('mudar_tema_cor', cor) 
+    //document.body.style.backgroundImage = null
+    localStorage.setItem('mudar_tema_link', "")  
+
+    /*
+    var cor = document.getElementById("mudar_tema_cor").value
+    document.body.style.backgroundColor = cor;
+    localStorage.setItem('mudar_tema_cor', cor)    */
 }
