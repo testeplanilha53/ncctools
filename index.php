@@ -237,10 +237,62 @@
             text-align: center;
         }
 
+
+
+        /* Estilos para o modal */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+          background-color: #fff;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 60%;
+        }
+        
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
     </style>
 </head>
 
 <body>
+
+    <!-- O modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Uma nova plataforma foi lançada!</h2>
+        <p>Todos os principais recursos foram implementados com melhoriras. Acesse através do link.
+            <p>Não é necessário criar nova conta. Entre com o login do NCC Tools</p>
+
+            <a href="https://silvadevbr.rf.gd">Clique aqui</a>
+            ou cole no seu navegador https://silvadevbr.rf.gd 
+        </p>
+          
+      </div>
+    </div>
+    
 
 
     <div class="login-box">
@@ -328,6 +380,27 @@
 
       
         <script>
+            // Quando a página for carregada, exibir o modal
+            window.onload = function() {
+              var modal = document.getElementById("myModal");
+              var span = document.getElementsByClassName("close")[0];
+            
+              modal.style.display = "block";
+            
+              // Fechar o modal quando clicar no botão "x"
+              span.onclick = function() {
+                modal.style.display = "none";
+              };
+            
+              // Fechar o modal quando clicar fora do conteúdo
+              window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              };
+            };
+
+            
             function delBtn(el){
                 setTimeout(() => {
                     el.remove()
