@@ -282,12 +282,10 @@
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Uma nova plataforma foi lançada!</h2>
-        <p>Todos os principais recursos foram implementados com melhoriras. Acesse através do link.
-            <p>Não é necessário criar nova conta. Entre com o login do NCC Tools</p>
-
-            <a href="https://silvadevbr.rf.gd">Clique aqui</a>
-            ou cole no seu navegador https://silvadevbr.rf.gd 
+        <h2>Uma nova plataforma foi lançadacomo alternativa ao NCC Tools!</h2>
+           <p>Não é necessário criar nova conta. Entre com o login do NCC Tools</p>
+        <p>Todos os principais recursos foram implementados com melhoriras. Tenha acesso a novos recursos que facilitarão no seu dia a dia. Acesse clicando nesse link. <a href="https://silvadevbr.rf.gd">  Clique aqui</a> <p></p>
+           
         </p>
           
       </div>
