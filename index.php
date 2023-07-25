@@ -279,6 +279,7 @@
 <body>
 
     <!-- O modal -->
+      <!--
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -288,6 +289,22 @@
            
         </p>
           
+      </div>
+    </div>
+    -->
+
+        <!-- O modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Temos uma nova versão da plataforma de atendimento!</h2>
+        <p>Não é necessário criar nova conta. Entre com o login e senha já criado para o NCC Tools</p>
+        <p>Todos os principais recursos foram implementados com melhorias. <br> 
+           Tenha acesso a novos recursos que facilitarão no seu dia a dia. <br>
+           Acesse clicando nesse link. <a href="https://silvadevbr.rf.gd">  Clique aqui</a> <p>ou cole no seu navegador  https://silvadevbr.rf.gd     
+        </p>
+        <br><hr>
+            <p>Caso queira permanecer nessa versão basta fechar essa mensagem 🐳..</p>
       </div>
     </div>
     
