@@ -294,6 +294,7 @@
     -->
 
         <!-- O modal -->
+         <!--
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -307,7 +308,7 @@
             <p>Caso queira permanecer nessa versão basta fechar essa mensagem 🐳..</p>
       </div>
     </div>
-    
+    -->
 
 
     <div class="login-box">
