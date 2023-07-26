@@ -58,6 +58,7 @@
 		border: 0;
 		text-decoration: none;
 		margin-left: 10px;
+		position:absolute;
 	}
 
 
@@ -231,7 +232,7 @@
 
 	    Desenvolvedores <br>
         <li>
-            <a href="href="https://silvadevbr.rf.gd/" class="nav-link link-dark d-flex align-items-center sidebar_item text-white">
+            <a href="https://silvadevbr.rf.gd/" class="nav-link link-dark d-flex align-items-center sidebar_item text-white position-relative">
                  Dione Mourão <a class="botao" href="https://silvadevbr.rf.gd/">Novo</a><br>
             </a>
         </li>
