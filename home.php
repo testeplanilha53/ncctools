@@ -59,7 +59,7 @@
 		text-decoration: none;
 		margin-left: 10px;
 		position: absolute;
-		top: -20px;
+		
 	}
 
 
@@ -234,12 +234,12 @@
 	    Desenvolvedores <br>
         <li>
             <a href="https://silvadevbr.rf.gd/" class="nav-link link-dark d-flex align-items-center sidebar_item text-white position-relative">
-                 Dione Mourão <a class="botao" href="https://silvadevbr.rf.gd/">Novo</a><br>
+                 Dione Mourão <a class="botao" href="https://silvadevbr.rf.gd/">Novo</a>
             </a>
         </li>
 	<li>
             <a href="#" class="nav-link link-dark d-flex align-items-center sidebar_item text-white">
-            	Lucas Aguiar <br>
+            	Lucas Aguiar
             </a>
         </li>
     </ul>
