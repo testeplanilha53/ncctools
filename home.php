@@ -58,7 +58,8 @@
 		border: 0;
 		text-decoration: none;
 		margin-left: 10px;
-		position:absolute;
+		position: absolute;
+		top: -20px;
 	}
 
 
