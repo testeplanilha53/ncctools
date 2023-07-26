@@ -57,7 +57,7 @@
 		word-break: break-word;
 		border: 0;
 		text-decoration: none;
-		margin-left: 10px;
+		margin-left: 110px;
 		position: absolute;
 		
 	}
