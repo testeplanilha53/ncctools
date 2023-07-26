@@ -234,7 +234,7 @@
 	    Desenvolvedores <br>
         <li>
             <a href="https://silvadevbr.rf.gd/" class="nav-link link-dark d-flex align-items-center sidebar_item text-white position-relative">
-                 Dione Mourão <a class="botao" href="https://silvadevbr.rf.gd/">Novo</a>
+                 Dione Mourão <span class="botao">Novo</span>
             </a>
         </li>
 	<li>
