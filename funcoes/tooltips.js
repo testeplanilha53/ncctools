@@ -79,7 +79,7 @@ function tooltips_fun_sup_oscilação (){
     //change_color(meu_id)
     //meu_id.className = "btn btn-info"
 
-    var txt = `Cliente relata oscilação. `
+    var txt = `Cliente relata quedas de conexão. `
 
     meu_id.setAttribute("data-original-title",txt)
 

@@ -96,7 +96,7 @@ function fun_sup_oscilação (){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `Cliente relata oscilação. `
+    descricao.value += `Cliente relata quedas de conexão. `
 
 }
 
