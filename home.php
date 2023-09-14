@@ -367,7 +367,7 @@
                     <hr><strong>Suporte</strong> <br>
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_falta_de_conexao" onclick="fun_sup_falta_de_conexao()" onmouseover="tooltips_fun_sup_falta_de_conexao()">Falta de conexão</button>
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_lentidao" onclick="fun_sup_lentidao()" onmouseover="tooltips_fun_sup_lentidao()">Lentidão</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_oscilação" onclick="fun_sup_oscilação()" onmouseover="tooltips_fun_sup_oscilação()">Oscilação</button>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_oscilação" onclick="fun_sup_oscilação()" onmouseover="tooltips_fun_sup_oscilação()">Quedas de conexão</button>
                     <br> <br>
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_reinicio" onclick="fun_sup_reinicio()" onmouseover="tooltips_fun_sup_reinicio()">Reinício</button>
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_sup_checagem_cabos" onclick="fun_sup_checagem_cabos()" onmouseover="tooltips_fun_sup_checagem_cabos()">Checagem de cabo</button>
