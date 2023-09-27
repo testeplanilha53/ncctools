@@ -210,7 +210,8 @@
         </form>
 
         <form method="POST" action="">
-                <div>
+                <div id=codADM>
+                    <span id="titulo3">  CADASTRAR CÓDIGO ADM  </span> <br> <br>
                     <input type="text" class="texto_atalho" id="cod_adm" name="cod_adm" placeholder="Código ADM" required>
                     <button type="submit" id="CadastrarCod" class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
                 </div>

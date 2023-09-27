@@ -51,7 +51,7 @@ h1{
     right: 50%;
 }
 
-#titulo2{
+#titulo2,#titulo3{
     border: 1px solid;
     border-color: #65707a;
     width: 100%;
@@ -60,7 +60,7 @@ h1{
     right: 50%;
 }
 
-#atalhos{
+#atalhos,#codADM{
     display: block;
     border: 2px solid;
     border-color: #65707a;
