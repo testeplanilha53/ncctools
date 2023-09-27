@@ -209,6 +209,13 @@
 
         </form>
 
+        <form method="POST" action="">
+                <div>
+                    <input type="text" class="texto_atalho" id="cod_adm" name="cod_adm" placeholder="Código ADM" required>
+                    <button type="submit" id="CadastrarCod" class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
+                </div>
+        </form>
+
 
    
             <table id="users" >
