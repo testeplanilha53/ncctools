@@ -394,7 +394,7 @@
 	            $db = $pdo->connectOnDb();
 				
 				//$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, $code)"
-				$query = "'$adm_code'"
+				$query = "'$adm_code'";
 				$condition =   " ON DUPLICATE KEY UPDATE `code`='$adm_code'";
 				$pdo->create( $db,"adm_code", $query, $condition );
 			
