@@ -113,6 +113,7 @@
 
     
        function getAdmCode(){
+            let admCodeEl = document.getElementById("cod_adm")
             let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
@@ -120,6 +121,7 @@
                         let users = this.responseText;
 
                         console.log(this.responseText[0])
+                        admCodeEl.value = "0000"
                         
                     }
                   };
@@ -131,7 +133,7 @@
 
 
         function setAdmCode(){
-            let admCode = document.getElementById("cod_adm")
+            let admCode = document.getElementById("cod_adm").value
             let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
@@ -143,7 +145,7 @@
                     }
                   };
                   xhttp.open("POST", "./app.php?action=setAdmCode", true);
-                  xhttp.send("admCode=");
+                  xhttp.send("admCode="+admCode);
 
         }
 
@@ -252,7 +254,8 @@
                 <div id=codADM>
                     <span id="titulo3">  CADASTRAR CÓDIGO ADM  </span> <br> <br>
                     <input type="text" class="texto_atalho" id="cod_adm" name="cod_adm" placeholder="Código ADM" required> <br> <br>
-                    <button onclick="setAdmCode()" id="CadastrarCod" class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
+                    <button onclick="setAdmCode()" class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
+                    <button onclick="getAdmCode()"  class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
                 </div>
         </div>
 
