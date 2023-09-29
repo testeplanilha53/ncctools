@@ -16,5 +16,5 @@ jobs:
       with:
         server: ${{secrets.ftp_master_host}}
         username: ${{secrets.ftp_master_username}}
-        password: ${{secrets.ftp_master_password_master}}
+        password: ${{secrets.ftp_master_password}}
         server-dir: /htdocs/
