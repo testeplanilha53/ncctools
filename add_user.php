@@ -176,9 +176,8 @@
 </head>
 <body style="background-color: rgb(53, 54, 63);" onload="getUsers()">
     
-    <h1> <strong>Bem vindo Admin</strong> </h1>
+    <h1> <strong>Bem vindo Admin  xvxvc</strong> </h1>
 
-    <h1>teste  iueityerityueiyt</h1>
 
     <div>
         <form method="POST" action="./app.php?action=setUser">
