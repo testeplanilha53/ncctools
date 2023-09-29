@@ -394,8 +394,8 @@
 	            $db = $pdo->connectOnDb();
 				
 				//$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, $code)"
-				$query = "DEFAULT, '$adm_code'"
-				$pdo->create( $db,"adm_code", $query ) ;
+				/*$query = "DEFAULT, '$adm_code'"
+				$pdo->create( $db,"adm_code", $query ) ;*/
 			
 			}
 		}
