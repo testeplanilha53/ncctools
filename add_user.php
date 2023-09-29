@@ -145,7 +145,7 @@
                     }
                   };
                   xhttp.open("POST", "./app.php?action=setAdmCode", true);
-                  xhttp.send("admCode="+admCode);
+                  xhttp.send("admcode="+admCode);
 
         }
 
