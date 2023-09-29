@@ -134,6 +134,7 @@
 
         function setAdmCode(){
             let admCode = document.getElementById("cod_adm").value
+            let vars = "admcode="+admCode
             let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
@@ -145,7 +146,7 @@
                     }
                   };
                   xhttp.open("POST", "./app.php?action=setAdmCode", true);
-                  xhttp.send("admcode="+admCode);
+                  xhttp.send(vars);
 
         }
 
