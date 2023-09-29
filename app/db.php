@@ -381,6 +381,37 @@
 	    }
 	    
 	}
+
+
+	//Salvar dados do prtocolo no banco
+	if(isset($_GET['action']) && $_GET['action'] == "setAdmCode"){
+		session_start();
+		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+				
+				
+			
+			}
+		}
+		
+	}//end function
+
+
+	//Obter informações do protocolo no banco
+	if(isset($_GET['action']) && $_GET['action'] == "getAdmCode"){
+			session_start();
+		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+					
+				header('Content-Type: application/json');	
+				$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+				echo ( "000000" );	
+
+			
+			}
+		}
+		
+	}
 	
 
 

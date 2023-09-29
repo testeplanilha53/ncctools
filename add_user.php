@@ -112,6 +112,43 @@
        }
 
     
+       function getAdmCode(){
+            let xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //notification.innerHTML = this.responseText;
+                        let users = this.responseText;
+
+                        console.log(this.responseText[0])
+                        
+                    }
+                  };
+                  xhttp.open("POST", "./app.php?action=getAdmCode", true);
+                  xhttp.send();
+
+        }
+    
+
+
+        function setAdmCode(){
+            let admCode = document.getElementById("cod_adm")
+            let xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //notification.innerHTML = this.responseText;
+                        let users = this.responseText;
+
+                        console.log(this.responseText[0])
+                        
+                    }
+                  };
+                  xhttp.open("POST", "./app.php?action=setAdmCode", true);
+                  xhttp.send("admCode=");
+
+        }
+
+
+
     </script>
 
     <style>
@@ -176,7 +213,7 @@
 </head>
 <body style="background-color: rgb(53, 54, 63);" onload="getUsers()">
     
-    <h1> <strong>Bem vindo Admin  xvxvc</strong> </h1>
+    <h1> <strong>Bem vindo Admin </strong> </h1>
 
 
     <div>
@@ -210,13 +247,14 @@
         </form>
 
         <br> <br>
-        <form method="POST" action="">
+
+        <div>
                 <div id=codADM>
                     <span id="titulo3">  CADASTRAR CÓDIGO ADM  </span> <br> <br>
                     <input type="text" class="texto_atalho" id="cod_adm" name="cod_adm" placeholder="Código ADM" required> <br> <br>
-                    <button type="submit" id="CadastrarCod" class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
+                    <button onclick="setAdmCode()" id="CadastrarCod" class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
                 </div>
-        </form>
+        </div>
 
 
    
