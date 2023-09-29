@@ -389,7 +389,7 @@
 		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 				//INSERT INTO `adm_code`(`id`, `code`) VALUES ([value-1],[value-2])
-				$adm_code =  isset( $_POST['admcode'] ) ? $_POST['admcode'] : 000;
+				$adm_code =  isset( $_POST['admcode'] ) ? $_POST['admcode'] : 1012;
 				$pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 				
