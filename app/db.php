@@ -389,13 +389,13 @@
 		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 				//INSERT INTO `adm_code`(`id`, `code`) VALUES ([value-1],[value-2])
-				$code =  $_POST['admcode']
+				$adm_code =  $_POST['admcode']
 				$pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 				
 				//$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, $code)"
-				$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, 000)"
-				$pdo->create( $db,"adm_code", $query, $condition ) ;
+				$query = "DEFAULT, '$adm_code'"
+				$pdo->create( $db,"adm_code", $query ) ;
 			
 			}
 		}
