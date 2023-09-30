@@ -413,7 +413,7 @@
 				//SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1;
 
 
-				$query = " SELECT * FROM  `code` "; 
+				$query = " SELECT * FROM  `code`;"; 
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    	$answer = $pdo->read($db, $query );
@@ -430,6 +430,29 @@
 		}
 		
 	}
+
+	//Obter informações do protocolo no banco
+	if(isset($_GET['action']) && $_GET['action'] == "getAdmCode2"){
+		
+			
+			//SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1;
+
+
+			$query = " SELECT * FROM  `code`;"; 
+			$pdo = new Connect();
+			$db = $pdo->connectOnDb();
+			$answer = $pdo->read($db, $query );
+	
+			if( $answer != false ){
+				
+			}
+
+			header('Content-Type: application/json');	
+			$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+			echo ( $array );	
+		
+	}
+
 	
 
 
