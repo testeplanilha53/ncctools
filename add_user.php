@@ -111,17 +111,18 @@
             
        }
 
-    
+  
+
        function getAdmCode(){
             let admCodeEl = document.getElementById("cod_adm")
             let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
-                        let code = this.responseText;
+                        let codeAdm =  JSON.parse( this.responseText );
 
-                        console.log( JSON.parse(code) )
-                        admCodeEl.value = "0000"
+                        console.log( code )
+                        admCodeEl.value = codeAdm[0]
                         
                     }
                   };
