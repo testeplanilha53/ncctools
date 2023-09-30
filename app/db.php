@@ -413,7 +413,7 @@
 				//SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1;
 
 
-				$query = " SELECT * FROM  `code`;"; 
+				$query = " SELECT * FROM  `adm_code`;"; 
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    	$answer = $pdo->read($db, $query );
@@ -438,7 +438,7 @@
 			//SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1;
 
 
-			$query = " SELECT * FROM  `code`;"; 
+			$query = " SELECT * FROM  `adm_code`;"; 
 			$pdo = new Connect();
 			$db = $pdo->connectOnDb();
 			$answer = $pdo->read($db, $query );
