@@ -389,14 +389,14 @@
 		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
 				//INSERT INTO `adm_code`(`id`, `code`) VALUES ([value-1],[value-2])
-				$adm_code =  isset( $_POST['admcode'] ) ? $_POST['admcode'] : 1012;
+				$adm_code =  isset( $_GET['admcode'] ) ? $_GET['admcode'] : 1012;
 				$pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 				
 				//$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, $code)"
-				$query = "'$adm_code'";
-				$condition =   " ON DUPLICATE KEY UPDATE `code`='$adm_code'";
-				$pdo->create( $db,"adm_code", $query, $condition );
+				$query = "UPDATE `adm_code` SET `code`='$adm_code' ";
+				$db = $pdo->connectOnDb();
+		        $pdo->update($db, $query);
 			
 			}
 		}
@@ -413,7 +413,7 @@
 				//SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1;
 
 
-				$query = " SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1; "; 
+				$query = " SELECT * FROM  `code` "; 
 	            $pdo = new Connect();
 	            $db = $pdo->connectOnDb();
 		    	$answer = $pdo->read($db, $query );
