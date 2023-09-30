@@ -134,22 +134,23 @@
 
         function setAdmCode(){
             let admCode = document.getElementById("cod_adm").value
-            let vars = "admcode="+admCode
-            let xhttp = new XMLHttpRequest();
-                  xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        //notification.innerHTML = this.responseText;
-                        let users = this.responseText;
-
-                        console.log(this.responseText[0])
-                        
-                    }
-                  };
-                  xhttp.open("POST", "./app.php?action=setAdmCode", true);
-                  xhttp.send(vars);
+            var http = new XMLHttpRequest (); // nova instância de HttpRequest 
+            var url = "./app.php?action=setAdmCode"; // URL do seu arquivo PHP 
+            var vars = "admcode=" + admCode; // variável com o valor do código de administrador 
+            http.open("POST", url, true); // abre a conexão com o método POST e modo assíncrono 
+            http.setRequestHeader ("Content-type", "application/x-www-form-urlencoded"); // define o cabeçalho do tipo de conteúdo 
+            http.onreadystatechange = function () { // define uma função para ser chamada quando o estado da requisição mudar 
+                if (http.readyState == 4 && http.status == 200) { // se a requisição for concluída com sucesso 
+                    // faça algo com a resposta 
+                    console.log (http.responseText); // imprime a resposta no console 
+                } 
+            }; 
+            http.send (vars); // envia os dados para o servidor
 
         }
 
+
+        
 
 
     </script>
