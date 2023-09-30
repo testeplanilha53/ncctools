@@ -135,7 +135,7 @@
         function setAdmCode(){
             let admCode = document.getElementById("cod_adm").value
             var http = new XMLHttpRequest (); // nova instância de HttpRequest 
-            var url = "./app.php?action=setAdmCode"; // URL do seu arquivo PHP 
+            var url = "./app.php?action=setAdmCode&admcode=" + admcode; // URL do seu arquivo PHP 
             var vars = "admcode=" + admCode; // variável com o valor do código de administrador 
             http.open("POST", url, true); // abre a conexão com o método POST e modo assíncrono 
             http.setRequestHeader ("Content-type", "application/x-www-form-urlencoded"); // define o cabeçalho do tipo de conteúdo 
