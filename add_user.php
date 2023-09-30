@@ -118,9 +118,9 @@
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         //notification.innerHTML = this.responseText;
-                        let users = this.responseText;
+                        let code = this.responseText;
 
-                        console.log(this.responseText[0])
+                        console.log( JSON.parse(code) )
                         admCodeEl.value = "0000"
                         
                     }
