@@ -141,7 +141,7 @@
             http.onreadystatechange = function () { // define uma função para ser chamada quando o estado da requisição mudar 
                 if (http.readyState == 4 && http.status == 200) { // se a requisição for concluída com sucesso 
                     // faça algo com a resposta 
-                    console.log (http.responseText); // imprime a resposta no console 
+                    console.log ("código enviado com sucesso!"); // imprime a resposta no console 
                 } 
             }; 
             http.send (); // envia os dados para o servidor   

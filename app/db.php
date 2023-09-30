@@ -409,11 +409,22 @@
 			session_start();
 		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
-					
-				header('Content-Type: application/json');	
-				$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
-				echo ( "000000" );	
+				
+				//SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1;
 
+
+				$query = " SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1; "; 
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    	$answer = $pdo->read($db, $query );
+		
+				if( $answer != false ){
+					
+				}
+	
+		    	header('Content-Type: application/json');	
+		   		$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+                echo ( $array );	
 			
 			}
 		}
