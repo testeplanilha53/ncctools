@@ -121,8 +121,8 @@
                         //notification.innerHTML = this.responseText;
                         let codeAdm =  JSON.parse( this.responseText );
 
-                        console.log( codeAdm[0]['code'] )
-                        admCodeEl.value = codeAdm[0]['code']
+                        console.log( codeAdm[0].code )
+                        admCodeEl.value = codeAdm[0].code
                         
                     }
                   };
