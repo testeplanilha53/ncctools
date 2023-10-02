@@ -381,8 +381,59 @@
 	    }
 	    
 	}
-	
 
+
+	//Salvar dados do prtocolo no banco
+	if(isset($_GET['action']) && $_GET['action'] == "setAdmCode"){
+		session_start();
+		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+				//INSERT INTO `adm_code`(`id`, `code`) VALUES ([value-1],[value-2])
+				$adm_code =  isset( $_GET['admcode'] ) ? $_GET['admcode'] : 1012;
+				$pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+				
+				//$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, $code)"
+				$query = "UPDATE `adm_code` SET `code`='$adm_code' ";
+				$db = $pdo->connectOnDb();
+		        $pdo->update($db, $query);
+			
+			}
+		}
+		
+	}//end function
+
+
+	//Obter informações do protocolo no banco
+	if(isset($_GET['action']) && $_GET['action'] == "getAdmCode"){
+			session_start();
+		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+				
+				//SELECT * FROM  `code` ORDER BY created_at DESC LIMIT 1;
+
+
+				$query = " SELECT * FROM  `adm_code`;"; 
+	            $pdo = new Connect();
+	            $db = $pdo->connectOnDb();
+		    	$answer = $pdo->read($db, $query );
+		
+				if( $answer != false ){
+					
+				}
+	
+		    	header('Content-Type: application/json');	
+		   		$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+                echo ( $array );	
+			
+			}
+		}
+		
+	}
+
+
+
+	
 
 
 ?>

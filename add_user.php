@@ -111,7 +111,48 @@
             
        }
 
+  
+
+       function getAdmCode(){
+            let admCodeEl = document.getElementById("cod_adm")
+            let xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //notification.innerHTML = this.responseText;
+                        let codeAdm =  JSON.parse( this.responseText );
+
+                        console.log( codeAdm[0].code )
+                        admCodeEl.value = codeAdm[0].code
+                        
+                    }
+                  };
+                  xhttp.open("POST", "./app.php?action=getAdmCode", true);
+                  xhttp.send();
+
+        }
     
+
+
+        function setAdmCode(){
+            let admCode = document.getElementById("cod_adm").value
+            var http = new XMLHttpRequest (); // nova instância de HttpRequest 
+            var url = "./app.php?action=setAdmCode&admcode=" + admCode; // URL do seu arquivo PHP 
+            http.open("POST", url, true); // abre a conexão com o método POST e modo assíncrono 
+            http.setRequestHeader ("Content-type", "application/x-www-form-urlencoded"); // define o cabeçalho do tipo de conteúdo 
+            http.onreadystatechange = function () { // define uma função para ser chamada quando o estado da requisição mudar 
+                if (http.readyState == 4 && http.status == 200) { // se a requisição for concluída com sucesso 
+                    // faça algo com a resposta 
+                    console.log ("código enviado com sucesso!"); // imprime a resposta no console 
+                } 
+            }; 
+            http.send (); // envia os dados para o servidor   
+
+        }
+
+
+        
+
+
     </script>
 
     <style>
@@ -176,9 +217,9 @@
 </head>
 <body style="background-color: rgb(53, 54, 63);" onload="getUsers()">
     
-    <h1> <strong>Bem vindo Admin</strong> </h1>
+    <h1> <strong>Bem vindo Admin </strong> </h1>
 
-    
+
     <div>
         <form method="POST" action="./app.php?action=setUser">
             
@@ -210,13 +251,15 @@
         </form>
 
         <br> <br>
-        <form method="POST" action="">
+
+        <div>
                 <div id=codADM>
                     <span id="titulo3">  CADASTRAR CÓDIGO ADM  </span> <br> <br>
                     <input type="text" class="texto_atalho" id="cod_adm" name="cod_adm" placeholder="Código ADM" required> <br> <br>
-                    <button type="submit" id="CadastrarCod" class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
+                    <button onclick="getAdmCode()" class="btn btn-warning" >Visualizar Código</button> <!-- onclick="cadastrar()" -->
+                    <button onclick="setAdmCode()"  class="btn btn-warning" >Salvar Código</button> <!-- onclick="cadastrar()" -->
                 </div>
-        </form>
+        </div>
 
 
    
