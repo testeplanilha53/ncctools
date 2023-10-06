@@ -451,6 +451,44 @@ function copiar(){
 
 }
 
+// Gerar código
+function getAdmCode(){
+    // let admCodeEl = document.getElementById("cod_adm")
+    let xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //notification.innerHTML = this.responseText;
+                let codeAdm =  JSON.parse( this.responseText );
+
+                console.log( codeAdm[0].code )
+                return (codeAdm[0].code)
+                // admCodeEl.value = codeAdm[0].code
+                
+            }
+          };
+          xhttp.open("POST", "./app.php?action=getAdmCode", true);
+          xhttp.send();
+}
+
+
+function cpfADM(){
+    var token = getAdmCode()
+    
+    // Pegando a informação do local Storage
+    var cpf = localStorage.getItem('txt_cpf');
+
+    if (cpf.value!=""){
+        var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
+
+        var left = (screen.width - largura) / 2;
+        var top = (screen.height - altura) / 2;
+    
+        window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);    
+    }
+
+}
+
+
 
 // Função CPF
 function x(){
@@ -901,39 +939,3 @@ function link_protocolo() {
 
 }
 
-
-function getAdmCode(){
-    // let admCodeEl = document.getElementById("cod_adm")
-    let xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                //notification.innerHTML = this.responseText;
-                let codeAdm =  JSON.parse( this.responseText );
-
-                console.log( codeAdm[0].code )
-                return (codeAdm[0].code)
-                // admCodeEl.value = codeAdm[0].code
-                
-            }
-          };
-          xhttp.open("POST", "./app.php?action=getAdmCode", true);
-          xhttp.send();
-}
-
-
-function cpfADM(){
-    var token = getAdmCode()
-    
-    // Pegando a informação do local Storage
-    var cpf = localStorage.getItem('txt_cpf');
-
-    if (cpf.value!=""){
-        var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
-
-        var left = (screen.width - largura) / 2;
-        var top = (screen.height - altura) / 2;
-    
-        window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);    
-    }
-
-}
