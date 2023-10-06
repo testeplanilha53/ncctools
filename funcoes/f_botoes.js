@@ -500,56 +500,33 @@ function cpfADM(){
 
 
 // Verificar CPF
-function validaCPF(cpf) {
-    cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
+function validaCPF(strCPF) {
+    var Soma;
+    var Resto;
+    Soma = 0;
+    if (strCPF == "00000000000") return false;
+
+    for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+    Resto = (Soma * 10) % 11;
+
+        if ((Resto == 10) || (Resto == 11))  Resto = 0;
+        if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
+
+    Soma = 0;
+        for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+        Resto = (Soma * 10) % 11;
+
+        if ((Resto == 10) || (Resto == 11))  Resto = 0;
+        if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
+        return true;
+}
   
-    if (cpf.length !== 11 || !Array.from(cpf).every((digit) => digit === cpf[0])) {
-      return false; // Verifica se o CPF tem 11 dígitos e não é uma sequência repetida
-    }
+//   Exemplo de uso:
+  const cpf1 = '123.456.789-09';
+  const cpf2 = '111.222.333-44';
   
-    let soma = 0;
-    for (let i = 0; i < 9; i++) {
-      soma += parseInt(cpf.charAt(i)) * (10 - i);
-    }
-  
-    let resto = soma % 11;
-  
-    if (resto === 0 || resto === 1) {
-      resto = 0;
-    } else {
-      resto = 11 - resto;
-    }
-  
-    if (resto !== parseInt(cpf.charAt(9))) {
-      return false; // Verifica o primeiro dígito verificador
-    }
-  
-    soma = 0;
-    for (let i = 0; i < 10; i++) {
-      soma += parseInt(cpf.charAt(i)) * (11 - i);
-    }
-  
-    resto = soma % 11;
-  
-    if (resto === 0 || resto === 1) {
-      resto = 0;
-    } else {
-      resto = 11 - resto;
-    }
-  
-    if (resto !== parseInt(cpf.charAt(10))) {
-      return false; // Verifica o segundo dígito verificador
-    }
-  
-    return true; // CPF válido
-  }
-  
-  // Exemplo de uso:
-//   const cpf1 = '123.456.789-09';
-//   const cpf2 = '111.222.333-44';
-  
-//   console.log(validaCPF(cpf1)); // Deve imprimir true
-//   console.log(validaCPF(cpf2)); // Deve imprimir false
+  console.log(validaCPF(cpf1)); // Deve imprimir true
+  console.log(validaCPF(cpf2)); // Deve imprimir false
   
 
 
