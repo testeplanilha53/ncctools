@@ -461,7 +461,9 @@ function getAdmCode(){
                 let codeAdm =  JSON.parse( this.responseText );
 
                 console.log( codeAdm[0].code )
+                localStorage.setItem('token', codeAdm[0].code)    
                 return (codeAdm[0].code)
+                
                 // admCodeEl.value = codeAdm[0].code
                 
             }
@@ -472,7 +474,8 @@ function getAdmCode(){
 
 
 function cpfADM(){
-    var token = getAdmCode()
+    getAdmCode()
+    var token = localStorage.getItem('token');
     console.log(`Token: ${token}`)
     
     // Pegando a informação do local Storage
