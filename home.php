@@ -467,11 +467,7 @@
 
 
                         <input type="text" id="protocolo_chat" placeholder="Protocolo do Chat" style="color: blue;">
-                        <div class="input-group">
-                            <div class="input-group-text" id="btnGroupAddon">@</div>
-                            <input type="text" class="form-control" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" style="color: red;" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                        </div>
-                        <!-- <input type="text" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" style="color: red;"> <br> -->
+                        <input type="text" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" style="color: red;"> <br>
 
                         <input type="text" id="nome_cliente" placeholder="Nome do cliente" onclick="copiar_nome_cliente()" onchange="mudar_titulo()">
                         <input type="text" id="telefone" placeholder="(xx) y xxxx-xxxx"> <br> <br>
