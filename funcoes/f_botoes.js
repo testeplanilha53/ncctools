@@ -5,6 +5,8 @@
 
 // Variáveis principais
 
+
+
 var protocolo_chat = window.document.getElementById("protocolo_chat")
 var protocolo_adm = window.document.getElementById("protocolo_adm")
 var nome_cliente = window.document.getElementById("nome_cliente")
@@ -991,3 +993,9 @@ function link_protocolo() {
 
 }
 
+
+// Carregando o código do ADM ao carregar a página
+window.onload = (event) => {
+    getAdmCode()
+    console.log("page is fully loaded");
+};
