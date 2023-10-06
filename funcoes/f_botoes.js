@@ -900,7 +900,7 @@ function link_protocolo() {
 
 
 function getAdmCode(){
-    let admCodeEl = document.getElementById("cod_adm")
+    // let admCodeEl = document.getElementById("cod_adm")
     let xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -909,7 +909,7 @@ function getAdmCode(){
 
                 console.log( codeAdm[0].code )
                 return (codeAdm[0].code)
-                admCodeEl.value = codeAdm[0].code
+                // admCodeEl.value = codeAdm[0].code
                 
             }
           };
