@@ -473,6 +473,7 @@ function getAdmCode(){
 
 function cpfADM(){
     var token = getAdmCode()
+    console.log(`Token: ${token}`)
     
     // Pegando a informação do local Storage
     var cpf = localStorage.getItem('txt_cpf');
