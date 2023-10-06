@@ -473,6 +473,7 @@ function getAdmCode(){
 }
 
 
+
 function cpfADM(){
     getAdmCode()
     var token = localStorage.getItem('token');
@@ -503,21 +504,33 @@ function x(){
 
     // Pegando a informação do local Storage
     var atalho = localStorage.getItem('txt_cpf');
+    
+    var cpfValido = validaCPF(atalho)
+    if (cpfValido){
+        // Abrindo no adm
+        cpfADM()
 
-    // Abrindo no adm
-    cpfADM()
+        // Passando as informações para a área de transferência
+        navigator.clipboard.writeText(atalho)
 
-    // Passando as informações para a área de transferência
-    navigator.clipboard.writeText(atalho)
-
-    // Exibindo a notificação de texto copiado por 2 segundos
-    let notificacao = document.getElementById("notificacao")
-    notificacao.innerHTML = '<div class="alert alert-dark" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>CPF COPIADO COM SUCESSO!</strong></div>'
-    window.setTimeout(function() {
-        $(".alert").fadeTo(500, 0).slideUp(500, function(){
-            $(this).remove(); 
-        });
-    }, 2000);
+        // Exibindo a notificação de texto copiado por 2 segundos
+        let notificacao = document.getElementById("notificacao")
+        notificacao.innerHTML = '<div class="alert alert-dark" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>CPF COPIADO COM SUCESSO!</strong></div>'
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 2000);
+    } else{
+        // Exibindo a notificação de texto copiado por 2 segundos
+        let notificacao = document.getElementById("notificacao")
+        notificacao.innerHTML = '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>CPF INVÁLIDO !!!</strong></div>'
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 2000);
+    }
 
 }
 
@@ -947,3 +960,57 @@ function link_protocolo() {
 
 }
 
+
+
+// Verificar CPF
+function validaCPF(cpf) {
+    cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
+  
+    if (cpf.length !== 11 || !Array.from(cpf).every((digit) => digit === cpf[0])) {
+      return false; // Verifica se o CPF tem 11 dígitos e não é uma sequência repetida
+    }
+  
+    let soma = 0;
+    for (let i = 0; i < 9; i++) {
+      soma += parseInt(cpf.charAt(i)) * (10 - i);
+    }
+  
+    let resto = soma % 11;
+  
+    if (resto === 0 || resto === 1) {
+      resto = 0;
+    } else {
+      resto = 11 - resto;
+    }
+  
+    if (resto !== parseInt(cpf.charAt(9))) {
+      return false; // Verifica o primeiro dígito verificador
+    }
+  
+    soma = 0;
+    for (let i = 0; i < 10; i++) {
+      soma += parseInt(cpf.charAt(i)) * (11 - i);
+    }
+  
+    resto = soma % 11;
+  
+    if (resto === 0 || resto === 1) {
+      resto = 0;
+    } else {
+      resto = 11 - resto;
+    }
+  
+    if (resto !== parseInt(cpf.charAt(10))) {
+      return false; // Verifica o segundo dígito verificador
+    }
+  
+    return true; // CPF válido
+  }
+  
+  // Exemplo de uso:
+//   const cpf1 = '123.456.789-09';
+//   const cpf2 = '111.222.333-44';
+  
+//   console.log(validaCPF(cpf1)); // Deve imprimir true
+//   console.log(validaCPF(cpf2)); // Deve imprimir false
+  
