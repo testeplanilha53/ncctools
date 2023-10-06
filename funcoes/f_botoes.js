@@ -880,3 +880,17 @@ function mudar_tema_cor(){
     document.body.style.backgroundColor = cor;
     localStorage.setItem('mudar_tema_cor', cor)    */
 }
+
+
+
+function link_protocolo() {
+    var largura = 1400; // Largura da nova janela em pixels
+    var altura = 400; // Altura da nova janela em pixels
+    var url = `http://adm.fasternet.com.br/tarefas_mostra.php?tarefa=${protocolo_adm.value}`
+
+    var left = (screen.width - largura) / 2;
+    var top = (screen.height - altura) / 2;
+
+    window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+    
+}
