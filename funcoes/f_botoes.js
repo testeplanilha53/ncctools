@@ -482,7 +482,7 @@ function cpfADM(){
 
 
     if (cpf.value!=""){
-        var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
+        var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token.value}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
 
         var left = (screen.width - largura) / 2;
         var top = (screen.height - altura) / 2;
