@@ -477,6 +477,10 @@ function cpfADM(){
     // Pegando a informação do local Storage
     var cpf = localStorage.getItem('txt_cpf');
 
+    var largura = 1400; // Largura da nova janela em pixels
+    var altura = 400; // Altura da nova janela em pixels
+
+
     if (cpf.value!=""){
         var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
 
