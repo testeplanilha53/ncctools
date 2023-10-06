@@ -882,15 +882,18 @@ function mudar_tema_cor(){
 }
 
 
-
+// Função par abrir o protocolo
 function link_protocolo() {
     var largura = 1400; // Largura da nova janela em pixels
     var altura = 400; // Altura da nova janela em pixels
-    var url = `http://adm.fasternet.com.br/tarefas_mostra.php?tarefa=${protocolo_adm.value}`
 
-    var left = (screen.width - largura) / 2;
-    var top = (screen.height - altura) / 2;
+    if (protocolo_adm.value!=""){
+        var url = `http://adm.fasternet.com.br/tarefas_mostra.php?tarefa=${protocolo_adm.value}`
 
-    window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);
+        var left = (screen.width - largura) / 2;
+        var top = (screen.height - altura) / 2;
     
+        window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);    
+    }
+
 }
