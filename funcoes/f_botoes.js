@@ -554,8 +554,9 @@ function x(){
                 $(this).remove(); 
             });
         }, 2000);
-    } else{
-        // Exibindo a notificação de texto copiado por 2 segundos
+
+    } else {
+        // Exibindo a notificação de CPF inválido
         let notificacao = document.getElementById("notificacao")
         notificacao.innerHTML = '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>CPF INVÁLIDO !!!</strong></div>'
         window.setTimeout(function() {
