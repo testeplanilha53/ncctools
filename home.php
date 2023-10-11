@@ -569,6 +569,7 @@
        
 
     <script src="funcoes/f_botoes.js"></script>
+    <script src="funcoes/f_cpf.js"></script>
     <script src="funcoes/alarmes.js"></script>
     <script src="funcoes/modelos_preenchimento.js"></script>
     <script src="funcoes/padrao_noc.js"></script>
