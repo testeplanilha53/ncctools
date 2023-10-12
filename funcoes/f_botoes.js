@@ -1003,6 +1003,7 @@ function link_protocolo() {
 
 // Carregando o código do ADM ao carregar a página
 window.onload = (event) => {
-    getAdmCode()
     console.log("page is fully loaded");
+    getAdmCode()
 };
+
