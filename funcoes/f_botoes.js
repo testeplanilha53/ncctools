@@ -1061,5 +1061,6 @@ function link_protocolo() {
 window.onload = (event) => {
     console.log("page is fully loaded");
     getAdmCode()
+    getAdmCode()
 };
 
