@@ -638,7 +638,7 @@ function cpf_corrigir(){
 }
 
 function cpf(){
-
+        
     navigator.clipboard
     .readText()
     .then((clipText) => (document.getElementById("btn_cpf").innerText = clipText));
@@ -657,7 +657,11 @@ function cpf(){
 
         // Salva o CPF corrigido no localStorage, para ser copiado em outra função
         localStorage.setItem('txt_cpf', cpf)        
+
+        //Pega o código do banco de dados
+        getAdmCode()
    },100);
+
    
 }
 
