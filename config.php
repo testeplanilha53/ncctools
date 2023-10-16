@@ -273,6 +273,15 @@
 	</form>
     </div>   	
 	
+
+    <div >        
+        <label>Habilitar links rápidos</label>
+        <input type="radio" id="html" name="enable_tag" value="1">
+        
+        <label>Desabilitar links rápidos</label>
+        <input type="radio" id="css" name="enable_tag" value="0">
+    </div>   	
+
 	
 
     <div id="cadastrar_resposta">
