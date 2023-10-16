@@ -467,7 +467,8 @@
 
 
                         <input type="text" id="protocolo_chat" placeholder="Protocolo do Chat" style="color: blue;">                        
-                        <input type="text" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" ondblclick="link_protocolo()" style="color: red;"> <br>
+                        <!-- <input type="text" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" ondblclick="link_protocolo()" style="color: red;"> <br> -->
+                        <input type="number" id="protocolo_adm" placeholder="Protocolo do ADM" onclick="copiar_protocolo_adm()" ondblclick="link_protocolo()" style="color: red;"> <br>
 
                         <input type="text" id="nome_cliente" placeholder="Nome do cliente" onclick="copiar_nome_cliente()" onchange="mudar_titulo()">
                         <input type="text" id="telefone" placeholder="(xx) y xxxx-xxxx"> <br> <br>
