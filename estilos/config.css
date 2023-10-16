@@ -85,3 +85,12 @@ h1{
     margin: auto 0% auto 0%;
     padding: 10px;
 }
+
+
+.borda{
+    border: 2px solid;
+    border-color: #65707a;
+    width: 420px;
+    margin: auto 0% auto 0%;
+    padding: 10px;
+}
