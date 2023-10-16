@@ -280,6 +280,8 @@
         <br>
         <label>Desabilitar links rápidos</label>
         <input type="radio" id="css" name="enable_tag" value="0">
+
+        <input type="submit" value="Salvar" class="btn btn-warning" style="position: relative; left: 80px; ">
     </div>   	
 
 	
