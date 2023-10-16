@@ -247,6 +247,17 @@
             
         <br> <br>
 
+        <div class="borda">        
+            <label>Habilitar links rápidos</label>
+            <input type="radio" id="html" name="enable_tag" value="1">
+            <br>
+            <label>Desabilitar links rápidos</label>
+            <input type="radio" id="css" name="enable_tag" value="0">
+
+            <input type="submit" value="Salvar" class="btn btn-warning" style="position: relative; left: 80px; ">
+        </div>   
+
+
     </div>
 
     <div id="Salvar">    
@@ -264,25 +275,17 @@
 </form><!--Acrescentei essa linha-->
 	
     <div id="tags">
-	 <form method="post" action="./app.php?action=enableTags">
-	  <label for="html">Habilitar tags</label>
-	   <input type="radio" id="html" name="enable_tag" value="1">
-  	  <label for="css">Desabilitar tags</label>
-  	  <input type="radio" id="css" name="enable_tag" value="0">
-          <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
-	</form>
+        <form method="post" action="./app.php?action=enableTags">
+        <label for="html">Habilitar tags</label>
+        <input type="radio" id="html" name="enable_tag" value="1">
+        <label for="css">Desabilitar tags</label>
+        <input type="radio" id="css" name="enable_tag" value="0">
+            <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
+        </form>
     </div>   	
 	
 
-    <div class="borda">        
-        <label>Habilitar links rápidos</label>
-        <input type="radio" id="html" name="enable_tag" value="1">
-        <br>
-        <label>Desabilitar links rápidos</label>
-        <input type="radio" id="css" name="enable_tag" value="0">
-
-        <input type="submit" value="Salvar" class="btn btn-warning" style="position: relative; left: 80px; ">
-    </div>   	
+	
 
 	
 
