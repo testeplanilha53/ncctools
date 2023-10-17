@@ -219,6 +219,15 @@
         </div>
         <br>
 	    
+        <div class="borda">        
+            <label>Habilitar links rápidos</label>
+            <input type="radio" id="html" name="enable_tag" value="1">
+            <br>
+            <label>Desabilitar links rápidos</label>
+            <input type="radio" id="css" name="enable_tag" value="0">
+            <br>
+            <input type="submit" value="Salvar" class="btn btn-warning"a>
+        </div>   
 	    
         <div id="chave_p">
             <label for="key_protocolo">Chave Protocolo: </label>        
@@ -246,16 +255,6 @@
         </div>
             
         <br> <br>
-
-        <div class="borda">        
-            <label>Habilitar links rápidos</label>
-            <input type="radio" id="html" name="enable_tag" value="1">
-            <br>
-            <label>Desabilitar links rápidos</label>
-            <input type="radio" id="css" name="enable_tag" value="0">
-
-            <input type="submit" value="Salvar" class="btn btn-warning" style="position: relative; left: 80px; ">
-        </div>   
 
 
     </div>
