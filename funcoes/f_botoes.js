@@ -475,7 +475,7 @@ function getAdmCode(){
 }
 
 
-
+/*
 function cpfADM(){
     getAdmCode()
     var token = localStorage.getItem('token');
@@ -497,7 +497,7 @@ function cpfADM(){
         window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);    
     }
 
-}
+}*/
 
 
 function validarCNPJ(cnpj) {
