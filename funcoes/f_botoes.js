@@ -475,7 +475,7 @@ function getAdmCode(){
 }
 
 
-/*
+
 function cpfADM(){
     getAdmCode()
     var token = localStorage.getItem('token');
@@ -488,16 +488,16 @@ function cpfADM(){
     var altura = 400; // Altura da nova janela em pixels
 
 
-    if (cpf.value!=""){
-        var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
+    // if (cpf.value!=""){
+    //     var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
 
-        var left = (screen.width - largura) / 2;
-        var top = (screen.height - altura) / 2;
+    //     var left = (screen.width - largura) / 2;
+    //     var top = (screen.height - altura) / 2;
     
-        window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);    
-    }
+    //     window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);    
+    // }
 
-}*/
+}
 
 
 function validarCNPJ(cnpj) {
