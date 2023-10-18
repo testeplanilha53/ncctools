@@ -225,8 +225,7 @@
             <br>
             <label>Desabilitar links rápidos</label>
             <input type="radio" id="css" name="enable_tag" value="0" checked>
-            <br>
-            <input value="Salvar" class="btn btn-warning"a>
+            <br>            
         </div>   
 	    
         <div id="chave_p">
