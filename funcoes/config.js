@@ -126,7 +126,7 @@ function att_ativar_link() {
     }
 }
 
-window.onload = (event) => {
+window.onmousemove = (event) => {
     att_ativar_link()
 };
 
