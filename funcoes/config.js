@@ -128,6 +128,7 @@ function att_ativar_link() {
 
 window.onmousemove = (event) => {
     att_ativar_link()
+    getAdmCode()
 };
 
 /*
@@ -146,25 +147,25 @@ function mud_cor_fonte(){
 // };
 
 
-// // Gerar código
-// function getAdmCode(){
-//     // let admCodeEl = document.getElementById("cod_adm")
-//     let xhttp = new XMLHttpRequest();
-//           xhttp.onreadystatechange = function() {
-//             if (this.readyState == 4 && this.status == 200) {
-//                 //notification.innerHTML = this.responseText;
-//                 let codeAdm =  JSON.parse( this.responseText );
+// Gerar código
+function getAdmCode(){
+    // let admCodeEl = document.getElementById("cod_adm")
+    let xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //notification.innerHTML = this.responseText;
+                let codeAdm =  JSON.parse( this.responseText );
 
-//                 console.log( codeAdm[0].code )
-//                 localStorage.setItem('token', codeAdm[0].code)    
-//                 return (codeAdm[0].code)
+                console.log( codeAdm[0].code )
+                localStorage.setItem('token', codeAdm[0].code)    
+                return (codeAdm[0].code)
                 
-//                 // admCodeEl.value = codeAdm[0].code
+                // admCodeEl.value = codeAdm[0].code
                 
-//             }
-//           };
-//           xhttp.open("POST", "./app.php?action=getAdmCode", true);
-//           xhttp.send();
-// }
+            }
+          };
+          xhttp.open("POST", "./app.php?action=getAdmCode", true);
+          xhttp.send();
+}
 
 
