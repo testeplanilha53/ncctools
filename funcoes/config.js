@@ -121,7 +121,8 @@ function att_ativar_link() {
 
     if (habilitarLink) {
         document.getElementById("linkHabilitado").checked = true;
-    } else {
+    } 
+    if (habilitarLink==false){
         document.getElementById("linkDesabilitado").checked = true;
     }
 }
