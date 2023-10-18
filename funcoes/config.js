@@ -15,6 +15,8 @@ var key_protocolo = window.document.getElementById("key_protocolo");
 function salvar(){
     
     localStorage.clear();   //apaga as informações que já estavam salvas 
+    
+    att_ativar_link() 
 
     //Salva os atalhos
     localStorage.setItem('txt_atalho1', atalho1.value);
@@ -117,11 +119,14 @@ function ativar_link(valor){
 
 function att_ativar_link() {
 
-    var habilitarLink = localStorage.getItem('flexSwitchCheckChecked')
+    var habilitarLink =  document.getElementById("flexSwitchCheckChecked")
+
     if (habilitarLink.checked) {
         document.getElementById("linkHabilitado").checked = true;        
+        localStorage.setItem('habilitarLink', true);
     } else  {
         document.getElementById("linkDesabilitado").checked = true;
+        localStorage.setItem('habilitarLink', false);
     }
     
 }
