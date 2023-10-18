@@ -120,7 +120,7 @@ function att_ativar_link() {
     var habilitarLink = localStorage.getItem('habilitarLink')
 
     if (habilitarLink) {
-        document.getElementById("linkHabilitado").checked = true;
+        document.getElementById("linkHabilitado").checked = true;        
     } 
     if (habilitarLink==false){
         document.getElementById("linkDesabilitado").checked = true;
