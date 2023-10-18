@@ -114,6 +114,22 @@ function ativar_link(valor){
     localStorage.setItem('habilitarLink', valor);
 }
 
+
+function att_ativar_link() {
+
+    var habilitarLink = localStorage.getItem('habilitarLink')
+
+    if (habilitarLink) {
+        document.getElementById("linkHabilitado").checked = true;
+    } else {
+        document.getElementById("linkDesabilitado").checked = true;
+    }
+}
+
+window.onload = (event) => {
+    att_ativar_link()
+};
+
 /*
 function mud_cor_fundo(){
     document.getElementById("corpo_tela_principal").background-color: = document.getElementById("cor_fundo").value;

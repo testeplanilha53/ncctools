@@ -219,12 +219,12 @@
         </div>
         <br>
 	    
-        <div class="borda">        
+        <div class="borda" id="linksRapidos">        
             <label>Habilitar links rápidos</label>
-            <input type="radio" id="html" name="enable_tag" value="1" onclick="ativar_link(true)">
+            <input type="radio" id="linkHabilitado" name="enable_tag" value="1" onclick="ativar_link(true)">
             <br>
             <label>Desabilitar links rápidos</label>
-            <input type="radio" id="css" name="enable_tag" value="0" checked onclick="ativar_link(false)">
+            <input type="radio" id="linkDesabilitado" name="enable_tag" value="0" checked onclick="ativar_link(false)">
             <br>            
         </div>   
 	    
