@@ -225,8 +225,7 @@
             <br>
             <label>Desabilitar links rápidos</label>
             <input type="radio" id="linkDesabilitado" name="enable_tag" value="0" onclick="ativar_link(false)">
-            <br>   -->
-                        
+            <br>   -->                        
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked onchange="ativar_link()">
                 <label class="form-check-label" for="flexSwitchCheckChecked">Habilitar links rápidos</label>

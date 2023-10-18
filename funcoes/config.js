@@ -117,20 +117,15 @@ function ativar_link(valor){
 
 function att_ativar_link() {
 
-    var habilitarLink = localStorage.getItem('habilitarLink')
-
-    if (habilitarLink) {
+    var habilitarLink = localStorage.getItem('flexSwitchCheckChecked')
+    if (habilitarLink.checked) {
         document.getElementById("linkHabilitado").checked = true;        
-    } 
-    if (habilitarLink==false){
+    } else  {
         document.getElementById("linkDesabilitado").checked = true;
     }
+    
 }
 
-window.onmousemove = (event) => {
-    att_ativar_link()
-    getAdmCode()
-};
 
 /*
 function mud_cor_fundo(){
