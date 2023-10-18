@@ -221,13 +221,15 @@
 	    
         <div class="borda">        
             <label>Habilitar links rápidos</label>
-            <input type="radio" id="html" name="enable_tag" value="1">
+            <input type="radio" id="html" name="enable_tag" value="1" onclick="ativar_link(true)">
             <br>
             <label>Desabilitar links rápidos</label>
-            <input type="radio" id="css" name="enable_tag" value="0" checked>
+            <input type="radio" id="css" name="enable_tag" value="0" checked onclick="ativar_link(false)">
             <br>            
         </div>   
 	    
+        <br>
+
         <div id="chave_p">
             <label for="key_protocolo">Chave Protocolo: </label>        
             <select id="key_protocolo" name="key_protocol" required><!--Adicionei o required-->
