@@ -141,10 +141,7 @@
 
     
     	
-    	function getSavedConfig(){
-
-              att_ativar_link()
-
+    	function getSavedConfig(){             
     	      let notification = document.getElementById("notificacao");
     	      let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
