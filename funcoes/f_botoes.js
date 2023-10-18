@@ -489,7 +489,7 @@ function cpfADM(){
 
     var habilitarLink = localStorage.getItem('habilitarLink')
 
-    if (habilitarLink){
+    if (habilitarLink==true){
         if (cpf.value!=""){
             var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
     
