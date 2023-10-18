@@ -122,10 +122,10 @@ function att_ativar_link() {
     var habilitarLink =  document.getElementById("flexSwitchCheckChecked")
 
     if (habilitarLink.checked) {
-        document.getElementById("linkHabilitado").checked = true;        
+        document.getElementById("flexSwitchCheckChecked").checked = true;        
         localStorage.setItem('habilitarLink', true);
     } else  {
-        document.getElementById("linkDesabilitado").checked = true;
+        document.getElementById("flexSwitchCheckChecked").checked = true;
         localStorage.setItem('habilitarLink', false);
     }
     
