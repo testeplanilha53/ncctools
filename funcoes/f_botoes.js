@@ -1071,3 +1071,9 @@ window.onload = (event) => {
     getAdmCode()
 };
 
+
+
+
+function desbilitar_link_cpf(){    
+    localStorage.setItem('habilitarLink', false);
+}
