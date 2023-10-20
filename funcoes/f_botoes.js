@@ -1090,9 +1090,9 @@ function atualizar_status_Butcpf(){
     var seletor = document.getElementById('flexSwitchCheckChecked')
     
     if (habilitado == "true"){
-        seletor.checked = true
-    } else{
         seletor.checked = false
+    } else{
+        seletor.checked = true
     }
     
 }
