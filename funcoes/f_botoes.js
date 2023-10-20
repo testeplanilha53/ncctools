@@ -130,6 +130,7 @@ function mudar_titulo(){
     
     mudar_tema_link()
     atualizar_status_Butcpf()
+    getAdmCode()
 
     var titulo = window.document.getElementById("titulo")
     if (nome_cliente.value!=''){
