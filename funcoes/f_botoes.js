@@ -129,6 +129,7 @@ function copiar_nome_cliente(){
 function mudar_titulo(){
     
     mudar_tema_link()
+    atualizar_status_Butcpf()
 
     var titulo = window.document.getElementById("titulo")
     if (nome_cliente.value!=''){
@@ -1079,6 +1080,19 @@ function link_cpf(){
         localStorage.setItem('habilitarLink', false);
     } else{
         localStorage.setItem('habilitarLink', true);
+    }
+    
+}
+
+
+function atualizar_status_Butcpf(){  
+    var habilitado = localStorage.getItem('habilitarLink')
+    var seletor = document.getElementById('flexSwitchCheckChecked')
+    
+    if (habilitado == "true"){
+        seletor.checked = true
+    } else{
+        seletor.checked = false
     }
     
 }
