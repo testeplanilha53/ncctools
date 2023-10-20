@@ -489,7 +489,7 @@ function cpfADM(){
 
     var habilitarLink = localStorage.getItem('habilitarLink')
 
-    if (habilitarLink=='true'){
+    if (habilitarLink!='false'){
         if (cpf.value!=""){
             var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
     
@@ -1073,7 +1073,12 @@ window.onload = (event) => {
 
 
 
-
-function desbilitar_link_cpf(){    
-    localStorage.setItem('habilitarLink', false);
+function link_cpf(){    
+    var seletor = document.getElementById('flexSwitchCheckChecked')
+    if (seletor.checked == true){
+        localStorage.setItem('habilitarLink', false);
+    } else{
+        localStorage.setItem('habilitarLink', true);
+    }
+    
 }
