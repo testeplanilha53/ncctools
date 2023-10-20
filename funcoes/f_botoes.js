@@ -1092,7 +1092,8 @@ function atualizar_status_Butcpf(){
     
     if (habilitado == "true"){
         seletor.checked = false
-    } else{
+    } 
+    if (habilitado == "false"){
         seletor.checked = true
     }
     
