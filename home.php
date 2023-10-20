@@ -220,13 +220,13 @@
             </a>
         </li>
 
-        <li>    
-            <span class="borda" id="linksRapidos">                           
+        <li>
+            <a class="borda" id="linksRapidos">                           
                 <span class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onchange="link_cpf()">
                     <label class="form-check-label" for="flexSwitchCheckChecked">Desabilitar link CPF</label>
                 </span>
-            </span>   
+            </a>   
         </li>
 
         <li>    
