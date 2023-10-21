@@ -15,6 +15,8 @@ var key_protocolo = window.document.getElementById("key_protocolo");
 function salvar(){
     
     localStorage.clear();   //apaga as informações que já estavam salvas 
+    
+    att_ativar_link() 
 
     //Salva os atalhos
     localStorage.setItem('txt_atalho1', atalho1.value);
@@ -109,6 +111,9 @@ function carregar(){
     pausa_2.value = localStorage.getItem('txt_pausa_2')
 }
 
+
+
+
 /*
 function mud_cor_fundo(){
     document.getElementById("corpo_tela_principal").background-color: = document.getElementById("cor_fundo").value;
@@ -117,4 +122,33 @@ function mud_cor_fundo(){
 function mud_cor_fonte(){
 
 }*/
+
+// Carregando o código do ADM ao carregar a página
+// window.onload = (event) => {
+//     console.log("page is fully loaded");
+//     getAdmCode()
+// };
+
+
+// Gerar código
+function getAdmCode(){
+    // let admCodeEl = document.getElementById("cod_adm")
+    let xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //notification.innerHTML = this.responseText;
+                let codeAdm =  JSON.parse( this.responseText );
+
+                console.log( codeAdm[0].code )
+                localStorage.setItem('token', codeAdm[0].code)    
+                return (codeAdm[0].code)
+                
+                // admCodeEl.value = codeAdm[0].code
+                
+            }
+          };
+          xhttp.open("POST", "./app.php?action=getAdmCode", true);
+          xhttp.send();
+}
+
 

@@ -5,6 +5,8 @@
 
 // Variáveis principais
 
+
+
 var protocolo_chat = window.document.getElementById("protocolo_chat")
 var protocolo_adm = window.document.getElementById("protocolo_adm")
 var nome_cliente = window.document.getElementById("nome_cliente")
@@ -127,6 +129,8 @@ function copiar_nome_cliente(){
 function mudar_titulo(){
     
     mudar_tema_link()
+    atualizar_status_Butcpf()
+    // getAdmCode()
 
     var titulo = window.document.getElementById("titulo")
     if (nome_cliente.value!=''){
@@ -451,24 +455,183 @@ function copiar(){
 
 }
 
+// Gerar código
+function getAdmCode(){
+    // let admCodeEl = document.getElementById("cod_adm")
+    let xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //notification.innerHTML = this.responseText;
+                let codeAdm =  JSON.parse( this.responseText );
+
+                console.log( codeAdm[0].code )
+                localStorage.setItem('token', codeAdm[0].code)    
+                return (codeAdm[0].code)
+                
+                // admCodeEl.value = codeAdm[0].code
+                
+            }
+          };
+          xhttp.open("POST", "./app.php?action=getAdmCode", true);
+          xhttp.send();
+}
+
+
+
+function cpfADM(){
+    getAdmCode()
+    var token = localStorage.getItem('token');
+    console.log(`Token: ${token}`)
+    
+    // Pegando a informação do local Storage
+    var cpf = localStorage.getItem('txt_cpf');
+
+    var largura = 1400; // Largura da nova janela em pixels
+    var altura = 400; // Altura da nova janela em pixels
+
+    var habilitarLink = localStorage.getItem('habilitarLink')
+
+    if (habilitarLink!='false'){
+        if (cpf.value!=""){
+            var url = `http://www2.fasternet.com.br/pesquisa/pesquisa_cliente.asp?acao=pesquisar&url=adm.fasternet.com.br&g=${token}&tipo=nome&nome=${cpf}&cpfonly=cpfonly&usuariologin=lucasa_ncc&submit=pesquisar`
+    
+            var left = (screen.width - largura) / 2;
+            var top = (screen.height - altura) / 2;
+        
+            window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);    
+        }
+    }
+
+}
+
+
+function validarCNPJ(cnpj) {
+ 
+    cnpj = cnpj.replace(/[^\d]+/g,'');
+ 
+    if(cnpj == '') return false;
+     
+    if (cnpj.length != 14)
+        return false;
+ 
+    // Elimina CNPJs invalidos conhecidos
+    if (cnpj == "00000000000000" || 
+        cnpj == "11111111111111" || 
+        cnpj == "22222222222222" || 
+        cnpj == "33333333333333" || 
+        cnpj == "44444444444444" || 
+        cnpj == "55555555555555" || 
+        cnpj == "66666666666666" || 
+        cnpj == "77777777777777" || 
+        cnpj == "88888888888888" || 
+        cnpj == "99999999999999")
+        return false;
+         
+    // Valida DVs
+    tamanho = cnpj.length - 2
+    numeros = cnpj.substring(0,tamanho);
+    digitos = cnpj.substring(tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (i = tamanho; i >= 1; i--) {
+      soma += numeros.charAt(tamanho - i) * pos--;
+      if (pos < 2)
+            pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+    if (resultado != digitos.charAt(0))
+        return false;
+         
+    tamanho = tamanho + 1;
+    numeros = cnpj.substring(0,tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (i = tamanho; i >= 1; i--) {
+      soma += numeros.charAt(tamanho - i) * pos--;
+      if (pos < 2)
+            pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+    if (resultado != digitos.charAt(1))
+          return false;
+           
+    return true;
+    
+}
+
+
+// Verificar CPF
+function validaCPF(strCPF) {
+    var Soma;
+    var Resto;
+    Soma = 0;
+    if (strCPF == "00000000000") return false;
+
+    for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+    Resto = (Soma * 10) % 11;
+
+        if ((Resto == 10) || (Resto == 11))  Resto = 0;
+        if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
+
+    Soma = 0;
+        for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+        Resto = (Soma * 10) % 11;
+
+        if ((Resto == 10) || (Resto == 11))  Resto = 0;
+        if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
+        return true;
+}
+  
+// //   Exemplo de uso:
+//   const cpf1 = '123.456.789-09';
+//   const cpf2 = '111.222.333-44';
+  
+//   console.log(validaCPF(cpf1)); // Deve imprimir true
+//   console.log(validaCPF(cpf2)); // Deve imprimir false
+  
+
 
 // Função CPF
 function x(){
 
     // Pegando a informação do local Storage
     var atalho = localStorage.getItem('txt_cpf');
+    
+    var cpfValido = validaCPF(atalho)
+    var cnpjValido = validarCNPJ(atalho)
 
-    // Passando as informações para a área de transferência
-    navigator.clipboard.writeText(atalho)
+    if (cpfValido||cnpjValido){
+        // Abrindo no adm
+        cpfADM()
 
-    // Exibindo a notificação de texto copiado por 2 segundos
-    let notificacao = document.getElementById("notificacao")
-    notificacao.innerHTML = '<div class="alert alert-dark" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>CPF COPIADO COM SUCESSO!</strong></div>'
-    window.setTimeout(function() {
-        $(".alert").fadeTo(500, 0).slideUp(500, function(){
-            $(this).remove(); 
-        });
-    }, 2000);
+        var areaCPF = window.document.getElementById("areaCPF");
+        areaCPF.innerHTML = `<button type="button" class="btn btn-secondary" onclick="x()" style="width: 80%;" >${atalho}</button>
+                            <button type="button" class="btn btn-danger" onclick="libera_campo_cpf()" style="width: 15%;">                                
+                                <svg onclick="shakeSVG(this)" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="white"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"/></svg>
+                            </button>`
+
+        // Passando as informações para a área de transferência
+        navigator.clipboard.writeText(atalho)
+
+        // Exibindo a notificação de texto copiado por 2 segundos
+        let notificacao = document.getElementById("notificacao")
+        notificacao.innerHTML = '<div class="alert alert-dark" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>CPF OU CNPJ COPIADO COM SUCESSO!</strong></div>'
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 2000);
+
+    } else {
+        // Exibindo a notificação de CPF inválido
+        let notificacao = document.getElementById("notificacao")
+        notificacao.innerHTML = '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>CPF ou CNPJ INVÁLIDO !!!</strong></div>'
+        window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 2000);
+    }
 
 }
 
@@ -480,7 +643,7 @@ function cpf_corrigir(){
 }
 
 function cpf(){
-
+        
     navigator.clipboard
     .readText()
     .then((clipText) => (document.getElementById("btn_cpf").innerText = clipText));
@@ -499,7 +662,11 @@ function cpf(){
 
         // Salva o CPF corrigido no localStorage, para ser copiado em outra função
         localStorage.setItem('txt_cpf', cpf)        
+
+        //Pega o código do banco de dados
+        getAdmCode()
    },100);
+
    
 }
 
@@ -820,11 +987,11 @@ $(function () {
   })
 
 
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip({     
-        'delay': { show: 2000, hide: 100 }
-    })    
-  })
+//   $(function () {
+//     $('[data-toggle="tooltip"]').tooltip({     
+//         'delay': { show: 2000, hide: 100 }
+//     })    
+//   })
 
 
 function muda_title(){    
@@ -879,4 +1046,55 @@ function mudar_tema_cor(){
     var cor = document.getElementById("mudar_tema_cor").value
     document.body.style.backgroundColor = cor;
     localStorage.setItem('mudar_tema_cor', cor)    */
+}
+
+
+// Função par abrir o protocolo
+function link_protocolo() {
+    var largura = 1400; // Largura da nova janela em pixels
+    var altura = 400; // Altura da nova janela em pixels
+
+    if (protocolo_adm.value!=""){
+        var url = `http://adm.fasternet.com.br/tarefas_mostra.php?tarefa=${protocolo_adm.value}`
+
+        var left = (screen.width - largura) / 2;
+        var top = (screen.height - altura) / 2;
+    
+        window.open(url, '_blank', 'width=' + largura + ',height=' + altura + ',left=' + left + ',top=' + top);    
+    }
+
+}
+
+
+// Carregando o código do ADM ao carregar a página
+window.onload = (event) => {
+    console.log("page is fully loaded");
+    getAdmCode()
+    getAdmCode()
+};
+
+
+
+function link_cpf(){    
+    var seletor = document.getElementById('flexSwitchCheckChecked')
+    if (seletor.checked == true){
+        localStorage.setItem('habilitarLink', false);
+    } else{
+        localStorage.setItem('habilitarLink', true);
+    }
+    
+}
+
+
+function atualizar_status_Butcpf(){  
+    var habilitado = localStorage.getItem('habilitarLink')
+    var seletor = document.getElementById('flexSwitchCheckChecked')
+    
+    if (habilitado == "true"){
+        seletor.checked = false
+    } 
+    if (habilitado == "false"){
+        seletor.checked = true
+    }
+    
 }

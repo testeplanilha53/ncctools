@@ -141,7 +141,7 @@
 
     
     	
-    	function getSavedConfig(){
+    	function getSavedConfig(){             
     	      let notification = document.getElementById("notificacao");
     	      let xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
@@ -219,7 +219,15 @@
         </div>
         <br>
 	    
+        <!-- <div class="borda" id="linksRapidos">                           
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked onchange="att_ativar_link()">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Habilitar links rápidos</label>
+            </div>
+        </div>    -->
 	    
+        <br>
+
         <div id="chave_p">
             <label for="key_protocolo">Chave Protocolo: </label>        
             <select id="key_protocolo" name="key_protocol" required><!--Adicionei o required-->
@@ -247,6 +255,7 @@
             
         <br> <br>
 
+
     </div>
 
     <div id="Salvar">    
@@ -264,15 +273,18 @@
 </form><!--Acrescentei essa linha-->
 	
     <div id="tags">
-	 <form method="post" action="./app.php?action=enableTags">
-	  <label for="html">Habilitar tags</label>
-	   <input type="radio" id="html" name="enable_tag" value="1">
-  	  <label for="css">Desabilitar tags</label>
-  	  <input type="radio" id="css" name="enable_tag" value="0">
-          <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
-	</form>
+        <form method="post" action="./app.php?action=enableTags">
+        <label for="html">Habilitar tags</label>
+        <input type="radio" id="html" name="enable_tag" value="1">
+        <label for="css">Desabilitar tags</label>
+        <input type="radio" id="css" name="enable_tag" value="0">
+            <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
+        </form>
     </div>   	
 	
+
+	
+
 	
 
     <div id="cadastrar_resposta">
