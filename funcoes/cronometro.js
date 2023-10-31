@@ -122,7 +122,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
                   
       if ((minutos <= 5)&&(horas == 0)) {
         button_clock.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    <strong>Olá!</strong> Lembre-se de retirar os atendimentos da pendência e retirar da pausa.
+                                    Lembre-se de resgatar os atendimentos e retirar da pausa.
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                   </div>
                                   `
