@@ -123,7 +123,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
       //console.log(formatado);
                   
       if ((minutos <= 6)&&(horas == 0)&&(manter_alerta)) {
-        button_clock.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        button_clock.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin: 5px">
                                     Lembre-se de resgatar os atendimentos e retirar da pausa.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
