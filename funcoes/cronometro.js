@@ -112,6 +112,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
   function notifPendenciaPausa(segundos,campo_timer,button_clock) {    
     segundos +=840 // adicionando + 14minutos
     var manter_alerta = true
+    
     var intervalo = setInterval(() => {
           
       var horas = Math.floor(segundos / 3600);
