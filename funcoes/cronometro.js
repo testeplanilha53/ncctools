@@ -110,7 +110,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
 
   // Notificação para lembrar de retirar os clientes da pendência e retirar da pausa
   function notifPendenciaPausa(segundos,campo_timer,button_clock) {    
-    segundos +=840 // adicionando + 14minutos
+    segundos +=960 // adicionando + 14minutos
     var manter_alerta = true
 
     var intervalo = setInterval(() => {
@@ -122,7 +122,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
       var formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
       //console.log(formatado);
                   
-      if ((minutos <= 5)&&(horas == 0)&&(manter_alerta)) {
+      if ((minutos <= 6)&&(horas == 0)&&(manter_alerta)) {
         button_clock.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
                                     Lembre-se de resgatar os atendimentos e retirar da pausa.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
