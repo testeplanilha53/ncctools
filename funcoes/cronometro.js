@@ -111,9 +111,9 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
   // Notificação para lembrar de retirar os clientes da pendência e retirar da pausa
   function notifPendenciaPausa(segundos,campo_timer,button_clock) {    
     segundos +=840 // adicionando + 14minutos
+    var manter_alerta = true
     var intervalo = setInterval(() => {
-      
-      var manter_alerta = true
+          
       var horas = Math.floor(segundos / 3600);
       var minutos = Math.floor((segundos % 3600) / 60);
       var segundosRestantes = segundos % 60;
