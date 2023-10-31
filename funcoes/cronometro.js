@@ -123,7 +123,9 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
       if ((minutos <= 5)&&(horas == 0)) {
         button_clock.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
                                     Lembre-se de resgatar os atendimentos e retirar da pausa.
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
                                   </div>
                                   `
         //campo_timer.innerHTML = `${formatado}`        
