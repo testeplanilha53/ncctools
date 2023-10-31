@@ -52,7 +52,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
   notifPendenciaPausa(tempo1,campo_timer1,button_clock1); // Notificação ao retornar
 
   cronometroDecrescenteIntervalo(tempo2,campo_timer2,button_clock2); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
-  notifPendenciaPausa(tempo2,campo_timer2,button_clock2); // Notificação ao retornar
+  notifPendenciaPausa(tempo2+600,campo_timer2,button_clock2); // Notificação ao retornar
 
   cronometroDecrescente(tempo3,campo_timer3,button_clock3); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
   notifPendenciaPausa(tempo3,campo_timer3,button_clock3); // Notificação ao retornar
@@ -123,7 +123,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
       //console.log(formatado);
                   
       if ((minutos <= 5)&&(horas == 0)&&(manter_alerta)) {
-        button_clock.innerHTML = `<br> <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        button_clock.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
                                     Lembre-se de resgatar os atendimentos e retirar da pausa.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
