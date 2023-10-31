@@ -49,9 +49,13 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
   var button_clock3 = document.getElementById("button_clock3")  
 
   cronometroDecrescente(tempo1,campo_timer1,button_clock1); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
-  cronometroDecrescenteIntervalo(tempo2,campo_timer2,button_clock2); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
-  cronometroDecrescente(tempo3,campo_timer3,button_clock3); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  notifPendenciaPausa(tempo1,campo_timer1,button_clock1); // Notificação ao retornar
 
+  cronometroDecrescenteIntervalo(tempo2,campo_timer2,button_clock2); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  notifPendenciaPausa(tempo2,campo_timer2,button_clock2); // Notificação ao retornar
+
+  cronometroDecrescente(tempo3,campo_timer3,button_clock3); // Inicia o cronômetro decrescente com 3665 segundos (1 hora, 1 minuto e 5 segundos)
+  notifPendenciaPausa(tempo3,campo_timer3,button_clock3); // Notificação ao retornar
 
 
   function cronometroDecrescente(segundos,campo_timer,button_clock) {    
@@ -103,8 +107,10 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
   }
 
 
-  /*
-function cronometroDecrescente(segundos,campo_timer,button_clock) {    
+
+  // Notificação para lembrar de retirar os clientes da pendência e retirar da pausa
+  function notifPendenciaPausa(segundos,campo_timer,button_clock) {    
+    segundos +=840 // adicionando + 14minutos
     var intervalo = setInterval(() => {
               
       var horas = Math.floor(segundos / 3600);
@@ -112,10 +118,15 @@ function cronometroDecrescente(segundos,campo_timer,button_clock) {
       var segundosRestantes = segundos % 60;
   
       var formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
-      console.log(formatado);
+      //console.log(formatado);
                   
-      if (minutos <= 10) {
-        campo_timer.innerHTML = `${formatado}`        
+      if ((minutos <= 3)&&(horas == 0)) {
+        button_clock.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong>Olá!</strong> Lembre-se de retirar os atendimentos da pendência e retirar da pausa.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                  </div>
+                                  `
+        //campo_timer.innerHTML = `${formatado}`        
       }      
       
       if (segundos <= 0) {
@@ -126,6 +137,3 @@ function cronometroDecrescente(segundos,campo_timer,button_clock) {
       segundos--;
     }, 1000);
   }
-  */
-
-  
