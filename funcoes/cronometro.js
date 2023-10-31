@@ -112,7 +112,8 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
   function notifPendenciaPausa(segundos,campo_timer,button_clock) {    
     segundos +=840 // adicionando + 14minutos
     var intervalo = setInterval(() => {
-              
+      
+      var aplicado = false
       var horas = Math.floor(segundos / 3600);
       var minutos = Math.floor((segundos % 3600) / 60);
       var segundosRestantes = segundos % 60;
@@ -120,7 +121,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
       var formatado = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundosRestantes.toString().padStart(2, '0')}`;
       //console.log(formatado);
                   
-      if ((minutos <= 5)&&(horas == 0)) {
+      if ((minutos <= 5)&&(horas == 0)&&(aplicado == false)) {
         button_clock.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
                                     Lembre-se de resgatar os atendimentos e retirar da pausa.
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -129,6 +130,7 @@ var tempo3 = converter_segundos_string(pausa_2) - converter_segundos(agora)
                                   </div>
                                   `
         //campo_timer.innerHTML = `${formatado}`        
+        aplicado = true
       }      
       
       if (segundos <= 0) {
