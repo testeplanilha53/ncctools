@@ -22,13 +22,6 @@ var b_tranferir = window.document.getElementById("Transferir")
 var b_apagar = window.document.getElementById("Apagar")
 
 
-descricao.addEventListener("onchange", function () {
-
-    descricao.innerHTML = descricao.value;
-
-  });
-
-
 
 /// Busca pendência se tiver salva no banco 
 function salvar_pendencia(){
