@@ -26,6 +26,9 @@ function monitorador(){
     if (msg!=""){
         msg_monitorador(msg)
     }    
+    if (descricao.value.includes("")){
+        mensagens_monitoradas.innerHTML=""
+    }   
 }
 
 function msg_monitorador(msg){
