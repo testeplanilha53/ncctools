@@ -23,7 +23,10 @@ function monitorador(){
     }
     if (descricao.value.includes("C:")) {
         msg = "Identificamos um link de comprovante/foto inválido!<br>Copie o link do Omini."        
-   }
+    }
+    if (descricao.value.includes("sete dias úteis")) {
+        msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto."        
+    }
 
 
     if (msg!=""){
