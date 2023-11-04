@@ -23,9 +23,8 @@ function monitorador(){
    }
 
 
-    if (msg!=""||descricao.value.includes("")){
+    if (msg!=""){
         msg_monitorador(msg)
-        mensagens_monitoradas.innerHTML=""
     }    
 }
 
