@@ -17,21 +17,21 @@ function monitorador(){
     
     if (descricao.value.includes("'")) {
          msg = "Identificado o caractere ' em uso, <br>o ADM não permite para salvar o protocolo!"        
+         msg_monitorador(msg)
     }
     if ((descricao.value.includes("reais"))||(descricao.value.includes("R$")||(descricao.value.includes("$")))) {
         msg = "Tenha atenção as informações sobre valores anexados!"        
+        msg_monitorador(msg)
     }
     if (descricao.value.includes("C:")) {
         msg = "Identificamos um link de comprovante/foto inválido!<br>Copie o link do Omini."        
+        msg_monitorador(msg)
     }
     if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")) {
         msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto."        
+        msg_monitorador(msg)
     }
 
-
-    if (msg!=""){
-        msg_monitorador(msg)
-    }    
 }
 
 function msg_monitorador(msg){
