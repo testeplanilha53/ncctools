@@ -21,8 +21,8 @@ function monitorador(){
     if ((descricao.value.includes("reais"))||(descricao.value.includes("R$")||(descricao.value.includes("$")))) {
         msg = "Tenha atenção as informações sobre valores anexados!"        
     }
-    if (descricao.value.includes("file:///C:/Users/NCC")) {
-        msg = "Identificamos o link do comprovante inválido!<br>Copie o link do Omini."        
+    if (descricao.value.includes("C:")) {
+        msg = "Identificamos um link de comprovante/foto inválido!<br>Copie o link do Omini."        
    }
 
 
