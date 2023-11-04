@@ -124,7 +124,11 @@
             
             <span id="button_clock3">
 
-            </span>               
+            </span>   
+            
+            <span id="mensagens_monitoradas">
+
+            </span>             
         </span>        		                   
     </span>
         	  
@@ -582,6 +586,7 @@
     <script src="funcoes/padrao_noc.js"></script>
     <script src="funcoes/tooltips.js"></script>
     <script src="funcoes/cronometro.js"></script>
+    <script src="funcoes/monitoramento.js"></script>
     
 
 </body>
