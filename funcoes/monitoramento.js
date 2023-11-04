@@ -13,10 +13,19 @@ var h_preferencia = window.document.getElementById("h_preferencia")
 var ponto_referencia = window.document.getElementById("ponto_referencia")
 
 function monitorador(){
+    var msg = ""
+    
     if (descricao.value.includes("'")) {
-        var msg = "Identificado o caractere ' em uso, o ADM não permite para salvar o protocolo!"
+         msg = "Identificado o caractere ' em uso, <br>o ADM não permite para salvar o protocolo!"        
+    }
+    if ((descricao.value.includes("reais"))||(descricao.value.includes("R$")||(descricao.value.includes("$")))) {
+        msg = "Tenha atenção as informações sobre valores anexados!"        
+   }
+
+
+    if (msg!=""){
         msg_monitorador(msg)
-    } 
+    }    
 }
 
 function msg_monitorador(msg){
