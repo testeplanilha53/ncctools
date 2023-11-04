@@ -488,7 +488,7 @@
 
                         <input type="text" id="bfp" placeholder="BFP" value="Padrão Fibra"> <br>
 
-                        <textarea id="descricao" cols="70" rows="8"
+                        <textarea id="descricao" cols="70" rows="8" onchange="monitorador()"
                             placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br>
 			
                          
