@@ -31,6 +31,10 @@ function monitorador(){
         msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto."        
         msg_monitorador(msg)
     }
+    if (descricao.value.includes("campinas")||descricao.value.includes("Campinas")) {
+        msg = "Cidade de Campinas!<br> Esta cidade não tem grupo específico, é usado SupAmparo."        
+        msg_monitorador(msg)
+    }
 
     // quando não tem mais texto
     if (descricao.value == "") {
