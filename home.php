@@ -124,7 +124,11 @@
             
             <span id="button_clock3">
 
-            </span>               
+            </span>   
+            
+            <span id="mensagens_monitoradas">
+
+            </span>             
         </span>        		                   
     </span>
         	  
@@ -484,7 +488,7 @@
 
                         <input type="text" id="bfp" placeholder="BFP" value="Padrão Fibra"> <br>
 
-                        <textarea id="descricao" cols="70" rows="8"
+                        <textarea id="descricao" cols="70" rows="8" onchange="monitorador()" onmousemove="monitorador()"
                             placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br>
 			
                          
@@ -582,6 +586,7 @@
     <script src="funcoes/padrao_noc.js"></script>
     <script src="funcoes/tooltips.js"></script>
     <script src="funcoes/cronometro.js"></script>
+    <script src="funcoes/monitoramento.js"></script>
     
 
 </body>
