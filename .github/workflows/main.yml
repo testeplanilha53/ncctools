@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      - master
+      - main
 name: 🚀 Deploy website on push 
 jobs:
   web-deploy:
@@ -15,6 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ${{secrets.ftp_master_host}}
-        username: ${{secrets.ftp_master_username}}
-        password: ${{secrets.ftp_master_password}}
+        username: ${{secrets.ftp_username}}
+        password: ${{secrets.ftp_password}}
         server-dir: /htdocs/
