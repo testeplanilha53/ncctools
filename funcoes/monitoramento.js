@@ -58,7 +58,7 @@ function msg_monitorador(msg){
                 `
     
     if (mensagens_monitoradas.innerHTML.includes(msg)){
-        console.log("Alerta já existe!")
+        // console.log("Alerta já existe!")
     } else {
             mensagens_monitoradas.innerHTML+= texto
     }
