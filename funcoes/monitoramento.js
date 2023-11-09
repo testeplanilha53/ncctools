@@ -28,7 +28,7 @@ function monitorador(){
         msg_monitorador(msg)
     }
     if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")) {
-        msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto."        
+        msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto.<br> Veja se o cliente não possui pontos adicionais!"        
         msg_monitorador(msg)
     }
     if (descricao.value.includes("campinas")||descricao.value.includes("Campinas")) {
