@@ -32,6 +32,11 @@ function monitorador(){
         msg_monitorador(msg)
     }
 
+    // quando não tem mais texto
+    if (descricao.value.includes("")) {
+        mensagens_monitoradas.innerHTML= ""
+    }
+
 }
 
 function msg_monitorador(msg){
