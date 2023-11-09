@@ -27,7 +27,7 @@ function monitorador(){
         msg = "Identificamos um link de comprovante/foto inválido!<br>Copie o link do Omini."        
         msg_monitorador(msg)
     }
-    if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")) {
+    if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")||descricao.value.includes("7 dias")||descricao.value.includes("sete dias")) {
         msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto.<br> Veja se o cliente não possui pontos adicionais!"        
         msg_monitorador(msg)
     }
