@@ -23,7 +23,7 @@ function monitorador(){
         msg = "Tenha atenção as informações sobre valores anexados!"        
         msg_monitorador(msg)
     }
-    if (descricao.value.includes("C:")) {
+    if (descricao.value.includes("/C:/Users")) {
         msg = "Identificamos um link de comprovante/foto inválido!<br>Copie o link do Omini."        
         msg_monitorador(msg)
     }
