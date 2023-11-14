@@ -35,7 +35,7 @@ function monitorador(){
         msg = "Cidade de Campinas!<br> Esta cidade não tem grupo específico, é usado SupAmparo."        
         msg_monitorador(msg)
     }
-    if (descricao.value.includes("PED.")) {
+    if (descricao.value.includes("PED.")&&(!(descricao.value.includes("fasternet.matrixdobrasil.ai")))) {
         msg = "Anexe a foto do cliente segurando o documento com foto<br>🎴🧔🤳."        
         msg_monitorador(msg)
     }
