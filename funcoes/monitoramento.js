@@ -27,8 +27,16 @@ function monitorador(){
         msg = "Identificamos um link de comprovante/foto inválido!<br>Copie o link do Omini."        
         msg_monitorador(msg)
     }
-    if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")) {
-        msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto."        
+    if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")||descricao.value.includes("7 dias")||descricao.value.includes("sete dias")) {
+        msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto.<br> Veja se o cliente não possui pontos adicionais!"        
+        msg_monitorador(msg)
+    }
+    if (descricao.value.includes("campinas")||descricao.value.includes("Campinas")) {
+        msg = "Cidade de Campinas!<br> Esta cidade não tem grupo específico, é usado SupAmparo."        
+        msg_monitorador(msg)
+    }
+    if (descricao.value.includes("PED.")) {
+        msg = "Anexe a foto do cliente segurando o documento com foto<br>🎴🧔🤳."        
         msg_monitorador(msg)
     }
 
@@ -54,7 +62,7 @@ function msg_monitorador(msg){
                 `
     
     if (mensagens_monitoradas.innerHTML.includes(msg)){
-        console.log("Alerta já existe!")
+        // console.log("Alerta já existe!")
     } else {
             mensagens_monitoradas.innerHTML+= texto
     }
