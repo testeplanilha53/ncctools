@@ -40,7 +40,7 @@ function monitorador(){
         msg_monitorador(msg)
     }
 
-    if ((h_preferencia!="")||(ponto_referencia!="")){
+    if ((h_preferencia.value!="")||(ponto_referencia.value!="")){
         msg = "Visita técnica detectada👷🏻!<br>▶️Verifique se a visita foi enviada corretamente.<br>▶️Verifique se o grupo está correto."        
         msg_monitorador(msg)
     }
