@@ -36,7 +36,7 @@ function monitorador(){
         msg_monitorador(msg)
     }
     if (descricao.value.includes("PED.")) {
-        msg = "Anexe a foto do cliente segurando o documento com foto 🎴🧔🤳."        
+        msg = "Anexe a foto do cliente segurando o documento com foto<br>🎴🧔🤳."        
         msg_monitorador(msg)
     }
 
