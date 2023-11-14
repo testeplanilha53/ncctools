@@ -40,7 +40,7 @@ function monitorador(){
         msg_monitorador(msg)
     }
     if ((descricao.value.includes("IPTV"))||(descricao.value.includes("iptv"))) {
-        msg = "📺IPTV🏴‍☠️ - Anexe a TAG IPTV ao finalizar o protocolo no OMINI ."        
+        msg = "📺🏴‍☠️IPTV - Anexe a TAG IPTV no OMINI ."        
         msg_monitorador(msg)
     }
 
