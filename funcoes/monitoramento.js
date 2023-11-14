@@ -39,6 +39,10 @@ function monitorador(){
         msg = "Anexe a foto do cliente segurando o documento com foto<br>🎴🧔🤳."        
         msg_monitorador(msg)
     }
+    if (descricao.value.includes("IPTV")) {
+        msg = "📺IPTV🏴‍☠️<br>Anexe a TAG IPTV ao finalizar o protocolo no OMINI ."        
+        msg_monitorador(msg)
+    }
 
     if ((h_preferencia.value!="")||(ponto_referencia.value!="")){
         msg = "Visita técnica detectada👷🏻!<br>▶️Verifique se a visita foi enviada corretamente.<br>▶️Verifique se o grupo está correto."        
