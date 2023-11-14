@@ -43,6 +43,10 @@ function monitorador(){
         msg = "📺🏴‍☠️IPTV - Anexe a TAG IPTV no OMINI ."        
         msg_monitorador(msg)
     }
+    if ((descricao.value.includes("rádio")||descricao.value.includes("Rádio")||descricao.value.includes("base")||descricao.value.includes("NS")||descricao.value.includes("torre")||descricao.value.includes("radio")||descricao.value.includes("Radio"))&&!((bfp.value.includes("Padrão Fibra")))) {
+        msg = "📡 Possível cliente Rádio detectado.<br>Necessário mudar a BFP do cliente."        
+        msg_monitorador(msg)
+    }
 
     if ((h_preferencia.value!=="")||(ponto_referencia.value!=="")){
         msg = "Visita técnica detectada👷🏻!<br>▶️Verifique se a visita foi enviada corretamente.<br>▶️Verifique se o grupo está correto."        
