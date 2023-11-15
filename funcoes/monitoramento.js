@@ -28,15 +28,28 @@ function monitorador(){
         msg_monitorador(msg)
     }
     if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")||descricao.value.includes("7 dias")||descricao.value.includes("sete dias")) {
-        msg = "Possível protocolo de serviço!<br>Verifique se a visita foi encaminhada para o grupo correto e com valor correto.<br> Veja se o cliente não possui pontos adicionais!"        
+        msg = "Possível protocolo de serviço👷🏻!<br>▶️Verifique se a visita foi encaminhada com valor correto.<br>▶️Veja se o cliente não possui pontos adicionais!"        
         msg_monitorador(msg)
     }
     if (descricao.value.includes("campinas")||descricao.value.includes("Campinas")) {
         msg = "Cidade de Campinas!<br> Esta cidade não tem grupo específico, é usado SupAmparo."        
         msg_monitorador(msg)
     }
-    if (descricao.value.includes("PED.")) {
+    if (descricao.value.includes("PED.")&&(!(descricao.value.includes("fasternet.matrixdobrasil.ai")))) {
         msg = "Anexe a foto do cliente segurando o documento com foto<br>🎴🧔🤳."        
+        msg_monitorador(msg)
+    }
+    if ((descricao.value.includes("IPTV"))||(descricao.value.includes("iptv"))) {
+        msg = "📺🏴‍☠️IPTV - Anexe a TAG IPTV no OMINI ."        
+        msg_monitorador(msg)
+    }
+    if ((descricao.value.includes("rádio")||descricao.value.includes("Rádio")||descricao.value.includes("base")||descricao.value.includes("NS")||descricao.value.includes("torre")||descricao.value.includes("radio")||descricao.value.includes("Radio"))&&(bfp.value.includes("Padrão Fibra"))) {
+        msg = "📡 Possível cliente Rádio detectado.<br>Necessário mudar a BFP do cliente."        
+        msg_monitorador(msg)
+    }
+
+    if ((h_preferencia.value!=="")||(ponto_referencia.value!=="")){
+        msg = "Visita técnica detectada👷🏻!<br>▶️Verifique se a visita foi enviada corretamente.<br>▶️Verifique se o grupo está correto."        
         msg_monitorador(msg)
     }
 
