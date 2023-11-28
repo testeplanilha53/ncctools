@@ -319,6 +319,14 @@
             <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/> 
         </svg>
         -->
+
+        <img id="chapeu_natal" src="https://cdn-icons-png.flaticon.com/512/1358/1358904.png" width="56" height="56" alt="chapéu de natal grátis ícone" title="chapéu de natal grátis ícone" style="
+            margin: auto;
+            position: fixed;
+            left: 43.2%;
+            top: 2%;
+            z-index: 1;
+        ">
         
         <svg   xmlns="http://www.w3.org/2000/svg"  width="100%" height="65px"
             <g  > 
