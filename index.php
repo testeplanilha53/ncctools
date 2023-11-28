@@ -325,7 +325,7 @@
             z-index: -1;
             left: 80%;
             top: 2%;
-        ">
+        " onclick="alert('🎅Feliz Natal!')">
 
         <img id="presente" src="https://cdn-icons-png.flaticon.com/512/2299/2299184.png" width="36" height="36" alt="presente grátis ícone" title="presente grátis ícone" style="
             position: inherit;
