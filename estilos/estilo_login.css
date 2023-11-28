@@ -68,7 +68,7 @@ body{
   position: relative;
 }
 
-svg {
+svg, img {
   position: relative;
   left: 0;
   top: 0;
