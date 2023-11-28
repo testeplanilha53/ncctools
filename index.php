@@ -320,6 +320,21 @@
         </svg>
         -->
 
+        <img id="arvore" src="https://cdn-icons-png.flaticon.com/512/2299/2299172.png" width="90" height="90" alt="árvore de natal grátis ícone" title="árvore de natal grátis ícone" style="
+            position: inherit;
+            z-index: -1;
+            left: 80%;
+            top: 2%;
+        ">
+
+        <img id="presente" src="https://cdn-icons-png.flaticon.com/512/2299/2299184.png" width="36" height="36" alt="presente grátis ícone" title="presente grátis ícone" style="
+            position: inherit;
+            z-index: -1;
+            left: 80%;
+            top: 15%;
+        ">
+
+
         <img id="chapeu_natal" src="https://cdn-icons-png.flaticon.com/512/1358/1358904.png" width="56" height="56" alt="chapéu de natal grátis ícone" title="chapéu de natal grátis ícone" style="
             margin: auto;
             position: fixed;
