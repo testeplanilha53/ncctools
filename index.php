@@ -327,10 +327,7 @@
                 left: 34%;
                 top: -46%;
             ">
-            <img id="urna" src="   https://cdn-icons-png.flaticon.com/512/6449/6449089.png " width="150" height="150" alt="" title="" class="img-small">  <br>
-            Lembre-se dos idealizadores no NCCTools:  <br>
-            Monitor (Lucas Aguiar), Operador (Dione Mourão) <br>
-            Prazo para votação até 08/12/2023.
+            <img id="urna" src="   https://cdn-icons-png.flaticon.com/512/6449/6449089.png " width="150" height="150" alt="" title="" class="img-small"> 
         </a>
 
 
