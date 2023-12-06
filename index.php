@@ -317,7 +317,7 @@
     </div>
     -->
 
-    <div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Lembre-se dos idealizadores no NCCTools:  <br> Monitor (Lucas Aguiar), Operador (Dione Mourão) <br> Prazo para votação até 08/12/2023.</strong> </div>
+    <div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>Lembre-se dos idealizadores no NCCTools: Monitor (Lucas Aguiar), Operador (Dione Mourão) || Prazo para votação até 08/12/2023.</strong> </div>
 
 
 
@@ -335,7 +335,7 @@
                 position: inherit;
                 z-index: -1;
                 left: 34%;
-                top: -46%;
+                top: -37%;
             ">
             <img id="urna" src="   https://cdn-icons-png.flaticon.com/512/6449/6449089.png " width="150" height="150" alt="" title="" class="img-small"> 
         </a>
