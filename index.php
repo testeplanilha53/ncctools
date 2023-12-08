@@ -317,7 +317,7 @@
     </div>
     -->
 
-    <div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong> 🤝 Lembre-se dos idealizadores do NCCTools: Monitor (Lucas Aguiar), Operador (Dione Mourão) || Prazo para votação até 08/12/2023.</strong> </div>
+    <!-- <div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong> 🤝 Lembre-se dos idealizadores do NCCTools: Monitor (Lucas Aguiar), Operador (Dione Mourão) || Prazo para votação até 08/12/2023.</strong> </div> -->
 
 
 
@@ -329,7 +329,7 @@
             <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/> 
         </svg>
         -->
-
+<!-- 
         <a href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAASdG98NUNFQzRkFTVUxKSjBRS0VJR1pQMUJYTkw0Ti4u" target="_blank" 
             style="
                 position: inherit;
@@ -339,7 +339,7 @@
             ">
             <img id="urna" src="   https://cdn-icons-png.flaticon.com/512/6449/6449089.png " width="150" height="150" alt="" title="" class="img-small"> 
             <br> --Click para votar!--
-        </a>
+        </a> -->
 
 
         <img id="arvore" src="https://cdn-icons-png.flaticon.com/512/2299/2299172.png" width="90" height="90" alt="árvore de natal grátis ícone" title="árvore de natal grátis ícone" style="
