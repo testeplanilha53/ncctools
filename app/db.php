@@ -444,7 +444,7 @@
 				$pdo = new Connect();
 	            		$db = $pdo->connectOnDb();
 
-				status = $_GET['enable_tag'];
+				status = isset( $_GET['enable_tag'] ) ? $_GET['enable_tag'] ) : '0';
 				$id_user = $_SESSION['idUser'];
 			
 				
