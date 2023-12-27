@@ -436,20 +436,23 @@
 
 
 	//Salvar dados do prtocolo no banco
-	if(isset($_GET['action']) && $_GET['action'] == "setCPFlink"){
+	if(isset($_GET['action']) && $_GET['action'] == "enableCPFButton"){
 		session_start();
 		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
-				//INSERT INTO `adm_code`(`id`, `code`) VALUES ([value-1],[value-2])
 				$adm_code =  isset( $_GET['admcode'] ) ? $_GET['admcode'] : 1012;
 				$pdo = new Connect();
-	            $db = $pdo->connectOnDb();
+	            		$db = $pdo->connectOnDb();
+
+				status = $_GET['enable_tag'];
+				$id_user = $_SESSION['idUser'];
+			
 				
 				//$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, $code)"
-				$query = "UPDATE `adm_code` SET `code`='$adm_code' ";
-				$db = $pdo->connectOnDb();
-		        $pdo->update($db, $query);
-			
+				$query = "INSERT INTO `cpf_btn_link`(`id`, `status_btn`, `id_user`) VALUES (DEFAULT, '$status', $id_user)";
+		        	//$pdo->update($db, $query);
+				var_dump($_GET);
+				
 			}
 		}
 		
