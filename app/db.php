@@ -448,10 +448,10 @@
 			
 				
 				//$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, $code)"
-				$query = "INSERT INTO `cpf_btn_link`(`id`, `status_btn`, `id_user`) VALUES (DEFAULT, '$status', $id_user)";
+				//$query = "INSERT INTO `cpf_btn_link`(`id`, `status_btn`, `id_user`) VALUES (DEFAULT, '$status', $id_user)";
 		        	//$pdo->update($db, $query);
 				//var_dump($_GET);
-				echo $query;
+				//echo $query;
 				
 			}
 		}
