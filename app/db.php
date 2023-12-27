@@ -443,15 +443,15 @@
 				$pdo = new Connect();
 	            		$db = $pdo->connectOnDb();
 
-				//status = isset( $_GET['enable_tag'] ) ? $_GET['enable_tag'] ) : '0';
+				$status = isset( $_GET['enable_tag'] ) ? $_GET['enable_tag'] ) : '0';
 				$id_user = $_SESSION['idUser'];
 			
 				
 				//$query = "INSERT INTO `adm_code`(`id`, `code`) VALUES (DEFAULT, $code)"
-				//$query = "INSERT INTO `cpf_btn_link`(`id`, `status_btn`, `id_user`) VALUES (DEFAULT, '$status', $id_user)";
+				$query = "INSERT INTO `cpf_btn_link`(`id`, `status_btn`, `id_user`) VALUES (DEFAULT, '$status', $id_user)";
 		        	//$pdo->update($db, $query);
 				//var_dump($_GET);
-				//echo $query;
+				echo $query;
 				
 			}
 		}
