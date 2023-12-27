@@ -440,7 +440,6 @@
 		session_start();
 		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
 			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
-				$adm_code =  isset( $_GET['admcode'] ) ? $_GET['admcode'] : 1012;
 				$pdo = new Connect();
 	            		$db = $pdo->connectOnDb();
 
