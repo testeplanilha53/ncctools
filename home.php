@@ -77,12 +77,30 @@
 
 		function getEnableButtonCPFLink(){
 
-			console.log('chamou');
+		  let xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				let confBotaoLinkCPF = JSON.parse( this.responseText );
+				console.log( confBotaoLinkCPF );
+			    
+			  
+		    	}
+		 };
+			
+		  xhttp.open("POST", "./app.php?action=getEnableCPFButton", true);
+		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		  xhttp.send();
+
+		  console.log('getEnableButtonCPFLink');
 			
 		}
 
 		
 		getEnableButtonCPFLink();
+
+
+
+		
 		
 	</script>
 	
