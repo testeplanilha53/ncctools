@@ -72,6 +72,40 @@
 	}
   </style>
 
+
+	<script>
+
+		//Essa função busca a configuração do botão de Link do CPF
+		function getEnableButtonCPFLink(){
+
+		  let xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				let confBotaoLinkCPF = JSON.parse( this.responseText );
+				console.log( confBotaoLinkCPF );
+			    
+			  
+		    	}
+		 };
+			
+		  xhttp.open("POST", "./app.php?action=getEnableCPFButton", true);
+		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		  xhttp.send();
+
+		  console.log('getEnableButtonCPFLink');
+			
+		}
+
+		//Chaama a função. Recomendado o uso do windows.onload
+		getEnableButtonCPFLink();
+
+
+
+		
+		
+	</script>
+	
+
 </head>
 	
 	
@@ -246,8 +280,12 @@
 
 	    Desenvolvedores <br>
         <li>
-            <a href="https://silvadevbr.rf.gd/" class="nav-link link-dark d-flex align-items-center sidebar_item text-white position-relative">
+            <!-- <a href="https://silvadevbr.rf.gd/" class="nav-link link-dark d-flex align-items-center sidebar_item text-white position-relative">
                  Dione Mourão <span class="botao">Novo >> Acesse </span>
+            </a> -->
+
+		<a href="https://silvadevbr.rf.gd/" class="nav-link link-dark d-flex align-items-center sidebar_item text-white position-relative">
+                 Dione Mourão 
             </a>
         </li>
 	<li>
