@@ -450,7 +450,7 @@
 				//$query = "INSERT INTO `cpf_btn_link`(`id`, `status_btn`, `id_user`) VALUES (DEFAULT, '$status', $id_user) ON DUPLICATE KEY UPDATE `status_btn` = VALUES(`status_btn`);";
 		        	//$pdo->update($db, $query);
 				//var_dump($_GET);
-				var_dump($query);
+				//var_dump($query);
 
 				$query = " DEFAULT, '$status', $id_user ";
                			$condition =   " ON DUPLICATE KEY UPDATE `status_btn` = '$status' ";
