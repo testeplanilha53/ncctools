@@ -452,7 +452,7 @@
 				//var_dump($_GET);
 				//var_dump($query);
 
-				$query = " '$status', $id_user ";
+				$query = "  $id_user, '$status', ";
                			$condition =   " ON DUPLICATE KEY UPDATE `status_btn` = '$status' ";
 
 				var_dump($query);
