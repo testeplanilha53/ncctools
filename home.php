@@ -72,6 +72,21 @@
 	}
   </style>
 
+
+	<script>
+
+		function getEnableButtonCPFLink(){
+
+			console.log('chamou');
+			
+		}
+
+		
+		getEnableButtonCPFLink();
+		
+	</script>
+	
+
 </head>
 	
 	
