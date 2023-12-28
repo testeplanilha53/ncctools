@@ -435,7 +435,7 @@
 
 
 
-	//Salvar dados do prtocolo no banco
+	//Salvar configuração do botão de habilitar função do CPF no banco
 	if(isset($_GET['action']) && $_GET['action'] == "enableCPFButton"){
 		session_start();
 		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
@@ -446,11 +446,6 @@
 				$status = isset( $_POST['enable_tag'] ) ? $_POST['enable_tag']  : '0';
 				$id_user = isset( $_SESSION['idUser'] ) ? $_SESSION['idUser'] : 'NULL';
 			
-				
-				//$query = "INSERT INTO `cpf_btn_link`(`id`, `status_btn`, `id_user`) VALUES (DEFAULT, '$status', $id_user) ON DUPLICATE KEY UPDATE `status_btn` = VALUES(`status_btn`);";
-		        	//$pdo->update($db, $query);
-				//var_dump($_GET);
-				//var_dump($query);
 
 				$query = "  $id_user, '$status' ";
                			$condition =   " ON DUPLICATE KEY UPDATE `status_btn` = '$status' ";
@@ -463,7 +458,32 @@
 		}
 		
 	}//end function
+
+
+	//Obter status do botão habilitar CPF
+	if(isset($_GET['action']) && $_GET['action'] == "getEnableCPFButton"){
+			session_start();
+		if( isset($_SESSION['user']) && !empty($_SESSION['user']) ){ 
+			if( isset($_SESSION['password']) && !empty($_SESSION['password']) ){
+				$id_user = isset( $_SESSION['idUser'] ) ? $_SESSION['idUser'] : 'NULL';
+				$query = " SELECT `status_btn` FROM `cpf_btn_link` WHERE `id_user` = $id_user; "; 
+	           		$pdo = new Connect();
+	            		$db = $pdo->connectOnDb();
+		    		$answer = $pdo->read($db, $query );
+		
+				if( $answer != false ){
+					//??
+				}
 	
+		    		header('Content-Type: application/json');	
+		   		$array = json_encode($answer, JSON_UNESCAPED_UNICODE );
+                		echo ( $array );	
+			
+			}
+		}
+		
+	}
+
 
 
 ?>
