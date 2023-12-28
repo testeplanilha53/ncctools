@@ -160,15 +160,18 @@
     	//chama a função que busca as configurações salvas no banco de dados
     	function loadConfig(settings){
     	    settings = JSON.parse(settings);
-    	    let shortcuts = document.querySelectorAll(".texto_atalho");
-    	    for(let i=0; i < 6; i++){
-    	        shortcuts[i].value = settings["shortcut"+(i+1)];
-    	    }
+
+		console.log(settings)
+		
+    	    //let shortcuts = document.querySelectorAll(".texto_atalho");
+    	    //for(let i=0; i < 6; i++){
+    	        //shortcuts[i].value = settings["shortcut"+(i+1)];
+    	    //}
     	    
-    	    document.getElementById(settings["key_protocol"]).setAttribute("selected", "selected");
-    	    document.getElementById("pausa_1").value = settings["pause1"];
-    	    document.getElementById("intervalo").value = settings["pause2"];
-    	    document.getElementById("pausa_2").value = settings["pause3"];
+    	    //document.getElementById(settings["key_protocol"]).setAttribute("selected", "selected");
+    	    //document.getElementById("pausa_1").value = settings["pause1"];
+    	    //document.getElementById("intervalo").value = settings["pause2"];
+    	    //document.getElementById("pausa_2").value = settings["pause3"];
     	    
     	}
     	
