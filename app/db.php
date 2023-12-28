@@ -453,7 +453,7 @@
 				var_dump($_POST);
 				
 				$pdo->create( $db,"cpf_btn_link", $query, $condition ) ;
-				
+				header('location:config.php');
 			}
 		}
 		
