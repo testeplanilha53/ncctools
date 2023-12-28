@@ -283,7 +283,8 @@
     </div>   	
 
 
-
+	<!--
+	
     <div id="tags2">
         <form method="post" action="./app.php?action=enableCPFButton">
         <label for="html">Habilitar link CPF</label>
@@ -292,7 +293,9 @@
         <input type="radio" id="css" name="enable_tag" value="0">
             <input type="submit" value="Salvar" id="tag_submit" class="btn btn-warning" style="position: relative; left: 80px; ">
         </form>
-    </div> 
+    </div>  
+
+	-->
 
 	
 
