@@ -443,7 +443,7 @@
 				$pdo = new Connect();
 	            		$db = $pdo->connectOnDb();
 
-				$status = isset( $_GET['enable_tag'] ) ? $_GET['enable_tag']  : '0';
+				$status = isset( $_POST['enable_tag'] ) ? $_POST['enable_tag']  : '0';
 				$id_user = isset( $_SESSION['idUser'] ) ? $_SESSION['idUser'] : 'NULL';
 			
 				
