@@ -106,7 +106,6 @@
 	            $db = $pdo->connectOnDb();
 		        $settings = $pdo->read($db, $query );
 
-			header('Content-Type: application/json');
 		        echo($settings[0]["config"]);
 		        
 	        }
