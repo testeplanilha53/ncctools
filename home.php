@@ -75,6 +75,7 @@
 
 	<script>
 
+		//Essa função busca a configuração do botão de Link do CPF
 		function getEnableButtonCPFLink(){
 
 		  let xhttp = new XMLHttpRequest();
@@ -95,7 +96,7 @@
 			
 		}
 
-		
+		//Chaama a função. Recomendado o uso do windows.onload
 		getEnableButtonCPFLink();
 
 
