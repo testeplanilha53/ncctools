@@ -455,7 +455,7 @@
 				$query = "  $id_user, '$status' ";
                			$condition =   " ON DUPLICATE KEY UPDATE `status_btn` = '$status' ";
 
-				var_dump($query);
+				var_dump($_POST);
 				
 				$pdo->create( $db,"cpf_btn_link", $query, $condition ) ;
 				
