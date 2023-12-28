@@ -284,7 +284,7 @@
 
 
 
-    <div id="tags">
+    <div id="tags2">
         <form method="post" action="./app.php?action=enableCPFButton">
         <label for="html">Habilitar link CPF</label>
         <input type="radio" id="html" name="enable_tag" value="1">
@@ -340,7 +340,7 @@
 	    
 	    <style>
 		    
-		    #conteiner-respostas, #cadastrar_resposta, #tags{
+		    #conteiner-respostas, #cadastrar_resposta, #tags, #tags2{
 		    	border: solid 1px gray;
 			    padding: 10px;
 			   
