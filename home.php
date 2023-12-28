@@ -76,6 +76,7 @@
 	<script>
 
 		//Essa função busca a configuração do botão de Link do CPF
+		
 		function getEnableButtonCPFLink(){
 
 		  let xhttp = new XMLHttpRequest();
@@ -83,7 +84,9 @@
 			if (this.readyState == 4 && this.status == 200) {
 				let confBotaoLinkCPF = JSON.parse( this.responseText );
 				console.log( confBotaoLinkCPF );
-			    
+			    	//Retorna 0 ou 1.   
+				//1 = Habilitado
+				//0 = Desabilitado
 			  
 		    	}
 		 };
