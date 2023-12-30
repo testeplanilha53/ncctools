@@ -939,24 +939,31 @@ function copiar_modelo_financeiro(){
     var d4 =document.getElementById("data_valor4").value
     var d5 =document.getElementById("data_valor5").value
 
+    // link
+    var L1 =document.getElementById("link_valor1").value
+    var L2 =document.getElementById("link_valor2").value
+    var L3 =document.getElementById("link_valor3").value
+    var L4 =document.getElementById("link_valor4").value
+    var L5 =document.getElementById("link_valor5").value
+
     var texto = `Nesse cadastro, consta em atraso a(s) seguinte(s) fatura(s): \n`
     if ((v1!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v1} | Vencimento: ${d1}\n`
+        texto = texto + `- Valor: R$${v1} | Vencimento: ${d1} (${L1})\n`
     }
     if ((v2!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v2} | Vencimento: ${d2}\n`
+        texto = texto + `- Valor: R$${v2} | Vencimento: ${d2} (${L2})\n`
     }
     if ((v3!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v3} | Vencimento: ${d3}\n`
+        texto = texto + `- Valor: R$${v3} | Vencimento: ${d3} (${L3})\n`
     }
     if ((v4!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v4} | Vencimento: ${d4}\n`
+        texto = texto + `- Valor: R$${v4} | Vencimento: ${d4} (${L4})\n`
     }
     if ((v5!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v5} | Vencimento: ${d5}\n`
+        texto = texto + `- Valor: R$${v5} | Vencimento: ${d5} (${L5})\n`
     }
 
-    texto = texto + `Acesse por meio do Painel Financeiro no site da FasterNet: https://www2.fasternet.com.br/financa/default.asp`
+    // texto = texto + `Acesse por meio do Painel Financeiro no site da FasterNet: https://www2.fasternet.com.br/financa/default.asp`
 
     console.log(texto)
     
