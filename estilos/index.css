@@ -429,3 +429,11 @@ border: 2px solid white;
     75% { transform: translateX(-5px); }
     100% { transform: translateX(5px); }
 }
+
+.campo_valor{
+    width: 128px;
+}
+
+.campo_link{
+    width: 128px;
+}
