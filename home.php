@@ -345,11 +345,11 @@
                     </button>
                 </div>
                 <div class="modal-body" id="campo_padrao_verificao">                                        
-                    R$ <input type="text" class="campo_valor" id="campo_valor1" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor1" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_link" id="link_valor1" placeholder="http://..."><br>
-                    R$ <input type="text" class="campo_valor" id="campo_valor2" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor2" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_link" id="link_valor2" placeholder="http://..."><br>
-                    R$ <input type="text" class="campo_valor" id="campo_valor3" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor3" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_link" id="link_valor3" placeholder="http://..."><br>
-                    R$ <input type="text" class="campo_valor" id="campo_valor4" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor4" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_link" id="link_valor4" placeholder="http://..."><br>
-                    R$ <input type="text" class="campo_valor" id="campo_valor5" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor5" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_link" id="link_valor5" placeholder="http://..."><br>
+                    R$ <input type="text" class="campo_valor" id="campo_valor1" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor1" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_valor" id="link_valor1" placeholder="http://..."><br>
+                    R$ <input type="text" class="campo_valor" id="campo_valor2" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor2" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_valor" id="link_valor2" placeholder="http://..."><br>
+                    R$ <input type="text" class="campo_valor" id="campo_valor3" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor3" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_valor" id="link_valor3" placeholder="http://..."><br>
+                    R$ <input type="text" class="campo_valor" id="campo_valor4" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor4" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_valor" id="link_valor4" placeholder="http://..."><br>
+                    R$ <input type="text" class="campo_valor" id="campo_valor5" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor5" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_valor" id="link_valor5" placeholder="http://..."><br>
                 </div>
                 <div class="modal-footer">                                    
                     <button type="button" class="btn btn-secondary"  onclick="apagar_modelo_financeiro()">Apagar</button>                    
