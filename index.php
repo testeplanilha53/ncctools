@@ -341,7 +341,7 @@
             <br> --Click para votar!--
         </a> -->
 
-
+<!-- 
         <img id="arvore" src="https://media.giphy.com/media/T5OAkYDx7IXz5Bb1cb/giphy.gif" width="90" height="90" alt="árvore de natal grátis ícone" title="árvore de natal grátis ícone" style="
             position: inherit;
             z-index: -1;
@@ -363,7 +363,7 @@
             left: 42%;
             top: 0%;
             z-index: 1;
-        ">
+        "> -->
         
         <svg   xmlns="http://www.w3.org/2000/svg"  width="100%" height="65px"
             <g  > 
