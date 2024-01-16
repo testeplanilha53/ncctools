@@ -946,7 +946,7 @@ function copiar_modelo_financeiro(){
     var L4 =document.getElementById("link_valor4").value
     var L5 =document.getElementById("link_valor5").value
 
-    var texto = `Nesse cadastro, consta em atraso a(s) seguinte(s) fatura(s): \n`
+    var texto = `Nesse cadastro, consta em aberto a(s) seguinte(s) fatura(s): \n`
     if ((v1!="")&&(d1!=null)){        
         texto = texto + `- Valor: R$${v1} | Vencimento: ${d1} (${L1})\n`
     }
