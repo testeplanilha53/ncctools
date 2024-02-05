@@ -385,7 +385,7 @@ function copiar(){
     mes = String(mes)
     
     // Montando o texto padrão para colar no ADM
-    let texto_completo = `${dia}/${mes}→ Atendimento realizado com Sr(a). ${nome_cliente.value} via chat no número ${telefone.value}. <br> ${descricao.value}`
+    let texto_completo = `${dia}/${mes}→ Atendimento realizado com Sr(a). ${nome_cliente.value} no número ${telefone.value}. <br> ${descricao.value}`
     
     // Condição em caso de VS
     // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
@@ -427,7 +427,7 @@ function copiar(){
     mes = String(mes)
     
     // Montando o texto padrão para colar no ADM
-    let texto_completo = `<b><font color=blue>Protocolo do Chat: ${protocolo_chat.value} </b></font><hr> <b><font color=blue>	${bfp.value} </b></font><hr> ${dia}/${mes}→ Atendimento realizado com Sr(a). ${nome_cliente.value} via chat no número ${telefone.value}. <br> ${descricao.value}`
+    let texto_completo = `<b><font color=blue>Protocolo do Chat: ${protocolo_chat.value} </b></font><hr> <b><font color=blue>	${bfp.value} </b></font><hr> ${dia}/${mes}→ Atendimento realizado com Sr(a). ${nome_cliente.value} no número ${telefone.value}. <br> ${descricao.value}`
     
     // Condição em caso de VS
     // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
