@@ -16,7 +16,7 @@ function monitorador(){
     var msg = ""
     
     if ((descricao.value.includes("cance"))||(descricao.value.includes("reten")||(descricao.value.includes("reativ")))) {
-        msg = `❗Cadastros <b>TP<\b> não são tratados pela Retenção!`
+        msg = `❗Cadastros <b>TP</b> não são tratados pela Retenção!`
         msg_monitorador(msg)
     }
 
