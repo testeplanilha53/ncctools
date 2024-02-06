@@ -380,12 +380,12 @@
                         <option value="">--Selecione a autenticação--</option>
                         <option value="DHCP">DHCP</option>
                         <option value="PPPoE">PPPoE</option>
-                    </select>
+                    </select> <br>
 
                     <input type="text" class="campo_preenchimento_ncc" placeholder="Plano"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Endereço"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Motivo da verificação"> <br>
-                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Nome e n° de telefone do cliente"> <br> <br> 
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Nome e n° de telefone do cliente"> <br> <br> 
                     <button type="button" class="btn btn-danger" >Apresenta risco de acidente?</button>
                     <select class="campo_preenchimento_ncc" style="width: 90px">
                         <option value=""></option>
