@@ -17,7 +17,7 @@ function copiar_padrao(){
                  nº de telefone do cliente: ${elements[8].value}\n`
     */
 
-    mensagem += `SN: ${elements[0].value}\n Cidade: ${elements[2].value}\n Autenticação: ${elements[3].value}\n Plano: ${elements[4].value}\n Endereço: ${elements[5].value}\n ${elements[7].value}(${elements[1].value}) nº ${elements[8].value}. ${elements[6].value}\n`
+    mensagem += `SN: ${elements[0].value}\nCidade: ${elements[2].value}\nAutenticação: ${elements[3].value}\nPlano: ${elements[4].value}\nEndereço: ${elements[5].value}\n${elements[7].value}(${elements[1].value}) nº ${elements[8].value}. ${elements[6].value}\n`
    /*
     mensagem += `SN: ${elements[0].value}\n                 
                  Cidade: ${elements[2].value}\n
