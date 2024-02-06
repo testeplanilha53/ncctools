@@ -374,7 +374,14 @@
                     <input type="text" class="campo_preenchimento_ncc" placeholder="FHTT/ALCL"> <br>
                     <input type="text" class="campo_preenchimento_ncc" placeholder="Usuário"> <br>
                     <input type="text" class="campo_preenchimento_ncc" placeholder="Cidade"> <br>
-                    <input type="text" class="campo_preenchimento_ncc" placeholder="Autenticação"> <br>
+                    
+                    <!-- <input type="text" class="campo_preenchimento_ncc" placeholder="Autenticação"> <br> -->
+                    <select class="campo_preenchimento_ncc">
+                        <option value="">--Selecione a autenticação--</option>
+                        <option value="DHCP">DHCP</option>
+                        <option value="PPPoE">PPPoE</option>
+                    </select>
+
                     <input type="text" class="campo_preenchimento_ncc" placeholder="Plano"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Endereço"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Motivo da verificação"> <br>
