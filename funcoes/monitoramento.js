@@ -15,6 +15,11 @@ var ponto_referencia = window.document.getElementById("ponto_referencia")
 function monitorador(){
     var msg = ""
     
+    if ((descricao.value.includes("cance"))||(descricao.value.includes("reten")||(descricao.value.includes("reativ")))) {
+        msg = `❗Cadastros <b>TP</b> não são tratados pela Retenção!`
+        msg_monitorador(msg)
+    }
+
     if (descricao.value.includes("'")) {
          msg = "Identificado o caractere ' em uso, <br>o ADM não permite para salvar o protocolo!"        
          msg_monitorador(msg)

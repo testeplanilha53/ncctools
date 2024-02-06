@@ -219,7 +219,7 @@
         </li>
         
         <li>
-            <a class="nav-link link-dark d-flex align-items-center sidebar_item text-white" href="https://ncc.drozbase.cx/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share"   title="Atalhos para o chat"    target="_blank" id="link_atalho_chat">
+            <a class="nav-link link-dark d-flex align-items-center sidebar_item text-white" href="https://ncc.drozbase.com/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share"   title="Atalhos para o chat"    target="_blank" id="link_atalho_chat">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-receipt-cutoff" viewBox="0 0 16 16">
                     <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
                     <path d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z"/>
@@ -247,7 +247,7 @@
         </li>
 
         <li>
-            <a href="https://ncc.drozbase.cx/docs/Plataforma-de-atendimento-via-chat-(NCCTools)-p0gjrbprqbbwcvatw702pq7xax?utm_source=share" target="_blank" class="nav-link link-dark d-flex align-items-center sidebar_item text-white">
+            <a href="https://ncc.drozbase.com/docs/Plataforma-de-atendimento-via-chat-(NCCTools)-p0gjrbprqbbwcvatw702pq7xax?utm_source=share" target="_blank" class="nav-link link-dark d-flex align-items-center sidebar_item text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-scooter" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M9 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-.39l1.4 7a2.5 2.5 0 1 1-.98.195l-.189-.938-2.43 3.527A.5.5 0 0 1 9.5 13H4.95a2.5 2.5 0 1 1 0-1h4.287l2.831-4.11L11.09 3H9.5a.5.5 0 0 1-.5-.5ZM3.915 12a1.5 1.5 0 1 0 0 1H2.5a.5.5 0 0 1 0-1h1.415Zm8.817-.789A1.499 1.499 0 0 0 13.5 14a1.5 1.5 0 0 0 .213-2.985l.277 1.387a.5.5 0 0 1-.98.196l-.278-1.387Z"/>
                 </svg>
@@ -374,11 +374,19 @@
                     <input type="text" class="campo_preenchimento_ncc" placeholder="FHTT/ALCL"> <br>
                     <input type="text" class="campo_preenchimento_ncc" placeholder="Usuário"> <br>
                     <input type="text" class="campo_preenchimento_ncc" placeholder="Cidade"> <br>
-                    <input type="text" class="campo_preenchimento_ncc" placeholder="Autenticação"> <br>
+                    
+                    <!-- <input type="text" class="campo_preenchimento_ncc" placeholder="Autenticação"> <br> -->
+                    <select class="campo_preenchimento_ncc">
+                        <option value="">--Selecione a autenticação--</option>
+                        <option value="DHCP">DHCP</option>
+                        <option value="PPPoE">PPPoE</option>
+                    </select> <br>
+
                     <input type="text" class="campo_preenchimento_ncc" placeholder="Plano"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Endereço"> <br>
                     <input type="text" class="campo_preenchimento_ncc2" placeholder="Motivo da verificação"> <br>
-                    <input type="text" class="campo_preenchimento_ncc2" placeholder="Nome e n° de telefone do cliente"> <br> <br> 
+                    <input type="text" class="campo_preenchimento_ncc" placeholder="Nome"> <br>
+                    <input type="number" class="campo_preenchimento_ncc" placeholder="n° de telefone do cliente"> <br> <br> 
                     <button type="button" class="btn btn-danger" >Apresenta risco de acidente?</button>
                     <select class="campo_preenchimento_ncc" style="width: 90px">
                         <option value=""></option>
