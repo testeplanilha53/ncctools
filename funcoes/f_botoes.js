@@ -391,16 +391,7 @@ function copiar(){
         // Montando o texto padrão para colar no ADM
         let texto_completo = `</b></font><hr> <b><font color=blue>	${bfp.value} </b></font><hr> ${dia}/${mes}→ Atendimento realizado com Sr(a). ${nome_cliente.value} no nº ${telefone.value}. <br> ${descricao.value}`
 
-        // Condição em caso de VS
-        // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
-        
-        var h_preferencia = window.document.getElementById("h_preferencia")
-        if (ponto_referencia.value!=h_preferencia.value){                
-            var texto_vs = `<hr> <b>Horário de preferência:</b> ${h_preferencia.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
-            texto_completo = texto_completo + texto_vs
-        }
-
-        
+       
         // Condição em caso de VS
         // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
         
