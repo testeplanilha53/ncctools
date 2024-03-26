@@ -393,9 +393,6 @@ function copiar(){
 
         // Condição em caso de VS
         // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
-                
-        // Condição em caso de VS
-        // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
         
         var h_preferencia = window.document.getElementById("h_preferencia")
         if (ponto_referencia.value!=h_preferencia.value){                
