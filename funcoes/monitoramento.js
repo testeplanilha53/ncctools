@@ -12,58 +12,58 @@ var descricao = window.document.getElementById("descricao")
 var h_preferencia = window.document.getElementById("h_preferencia")
 var ponto_referencia = window.document.getElementById("ponto_referencia")
 
-function monitorador(){
-    var msg = ""
+// function monitorador(){
+//     var msg = ""
     
-    if ((descricao.value.includes("cance"))||(descricao.value.includes("reten")||(descricao.value.includes("reativ")))) {
-        msg = `❗Cadastros <b>TP</b> não são tratados pela Retenção!`
-        msg_monitorador(msg)
-    }
+//     if ((descricao.value.includes("cance"))||(descricao.value.includes("reten")||(descricao.value.includes("reativ")))) {
+//         msg = `❗Cadastros <b>TP</b> não são tratados pela Retenção!`
+//         msg_monitorador(msg)
+//     }
 
-    if (descricao.value.includes("'")) {
-         msg = "Identificado o caractere ' em uso, <br>o ADM não permite para salvar o protocolo!"        
-         msg_monitorador(msg)
-    }
-    if ((descricao.value.includes("reais"))||(descricao.value.includes("R$")||(descricao.value.includes("$")))) {
-        msg = "Tenha atenção as informações sobre valores anexados!"        
-        msg_monitorador(msg)
-    }
-    if (descricao.value.includes("/C:/Users")) {
-        msg = "Identificamos um link de comprovante/foto inválido!<br>Copie o link do Omini."        
-        msg_monitorador(msg)
-    }
-    if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")||descricao.value.includes("7 dias")||descricao.value.includes("sete dias")) {
-        msg = "Possível protocolo de serviço👷🏻!<br>▶️Verifique se a visita foi encaminhada com valor correto.<br>▶️Veja se o cliente não possui pontos adicionais!"        
-        msg_monitorador(msg)
-    }
-    if (descricao.value.includes("campinas")||descricao.value.includes("Campinas")) {
-        msg = "Cidade de Campinas!<br> Esta cidade não tem grupo específico, é usado SupAmparo."        
-        msg_monitorador(msg)
-    }
-    // if (descricao.value.includes("PED.")&&(!(descricao.value.includes("fasternet.matrixdobrasil.ai")))) {
-    //     msg = "Anexe a foto do cliente segurando o documento com foto<br>🎴🧔🤳."        
-    //     msg_monitorador(msg)
-    // }
-    if ((descricao.value.includes("IPTV"))||(descricao.value.includes("iptv"))) {
-        msg = "📺🏴‍☠️IPTV - Anexe a TAG IPTV no OMINI ."        
-        msg_monitorador(msg)
-    }
-    if ((descricao.value.includes("rádio")||descricao.value.includes("Rádio")||descricao.value.includes("base")||descricao.value.includes("NS")||descricao.value.includes("torre")||descricao.value.includes("radio")||descricao.value.includes("Radio"))&&(bfp.value.includes("Padrão Fibra"))) {
-        msg = "📡 Possível cliente Rádio detectado.<br>Necessário mudar a BFP do cliente."        
-        msg_monitorador(msg)
-    }
+//     if (descricao.value.includes("'")) {
+//          msg = "Identificado o caractere ' em uso, <br>o ADM não permite para salvar o protocolo!"        
+//          msg_monitorador(msg)
+//     }
+//     if ((descricao.value.includes("reais"))||(descricao.value.includes("R$")||(descricao.value.includes("$")))) {
+//         msg = "Tenha atenção as informações sobre valores anexados!"        
+//         msg_monitorador(msg)
+//     }
+//     if (descricao.value.includes("/C:/Users")) {
+//         msg = "Identificamos um link de comprovante/foto inválido!<br>Copie o link do Omini."        
+//         msg_monitorador(msg)
+//     }
+//     if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")||descricao.value.includes("7 dias")||descricao.value.includes("sete dias")) {
+//         msg = "Possível protocolo de serviço👷🏻!<br>▶️Verifique se a visita foi encaminhada com valor correto.<br>▶️Veja se o cliente não possui pontos adicionais!"        
+//         msg_monitorador(msg)
+//     }
+//     if (descricao.value.includes("campinas")||descricao.value.includes("Campinas")) {
+//         msg = "Cidade de Campinas!<br> Esta cidade não tem grupo específico, é usado SupAmparo."        
+//         msg_monitorador(msg)
+//     }
+//     // if (descricao.value.includes("PED.")&&(!(descricao.value.includes("fasternet.matrixdobrasil.ai")))) {
+//     //     msg = "Anexe a foto do cliente segurando o documento com foto<br>🎴🧔🤳."        
+//     //     msg_monitorador(msg)
+//     // }
+//     if ((descricao.value.includes("IPTV"))||(descricao.value.includes("iptv"))) {
+//         msg = "📺🏴‍☠️IPTV - Anexe a TAG IPTV no OMINI ."        
+//         msg_monitorador(msg)
+//     }
+//     if ((descricao.value.includes("rádio")||descricao.value.includes("Rádio")||descricao.value.includes("base")||descricao.value.includes("NS")||descricao.value.includes("torre")||descricao.value.includes("radio")||descricao.value.includes("Radio"))&&(bfp.value.includes("Padrão Fibra"))) {
+//         msg = "📡 Possível cliente Rádio detectado.<br>Necessário mudar a BFP do cliente."        
+//         msg_monitorador(msg)
+//     }
 
-    if ((h_preferencia.value!=="")||(ponto_referencia.value!=="")){
-        msg = "Visita técnica detectada👷🏻!<br>▶️Verifique se a visita foi enviada corretamente.<br>▶️Verifique se o grupo está correto."        
-        msg_monitorador(msg)
-    }
+//     if ((h_preferencia.value!=="")||(ponto_referencia.value!=="")){
+//         msg = "Visita técnica detectada👷🏻!<br>▶️Verifique se a visita foi enviada corretamente.<br>▶️Verifique se o grupo está correto."        
+//         msg_monitorador(msg)
+//     }
 
-    // quando não tem mais texto
-    if (descricao.value == "") {
-        mensagens_monitoradas.innerHTML= ""
-    }
+//     // quando não tem mais texto
+//     if (descricao.value == "") {
+//         mensagens_monitoradas.innerHTML= ""
+//     }
 
-}
+// }
 
 // function msg_monitorador(msg){
 
@@ -87,12 +87,65 @@ function monitorador(){
 
 // }
 
+function monitorador(){
+    var msg = ""
+    
+    if ((descricao.value.includes("cance"))||(descricao.value.includes("reten")||(descricao.value.includes("reativ")))) {
+        msg = `❗Cadastros <b>TP</b> não são tratados pela Retenção!`
+        msg_monitorador(msg)
+    }
+
+    if (descricao.value.includes("'")) {
+         msg = "Identificado o caractere ' em uso, \no ADM não permite para salvar o protocolo!"        
+         msg_monitorador(msg)
+    }
+    if ((descricao.value.includes("reais"))||(descricao.value.includes("R$")||(descricao.value.includes("$")))) {
+        msg = "Tenha atenção as informações sobre valores anexados!"        
+        msg_monitorador(msg)
+    }
+    if (descricao.value.includes("/C:/Users")) {
+        msg = "Identificamos um link de comprovante/foto inválido!\nCopie o link do Omini."        
+        msg_monitorador(msg)
+    }
+    if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")||descricao.value.includes("7 dias")||descricao.value.includes("sete dias")) {
+        msg = "Possível protocolo de serviço👷🏻!\n▶️Verifique se a visita foi encaminhada com valor correto.\n▶️Veja se o cliente não possui pontos adicionais!"        
+        msg_monitorador(msg)
+    }
+    if (descricao.value.includes("campinas")||descricao.value.includes("Campinas")) {
+        msg = "Cidade de Campinas!\n Esta cidade não tem grupo específico, é usado SupAmparo."        
+        msg_monitorador(msg)
+    }
+    // if (descricao.value.includes("PED.")&&(!(descricao.value.includes("fasternet.matrixdobrasil.ai")))) {
+    //     msg = "Anexe a foto do cliente segurando o documento com foto\n🎴🧔🤳."        
+    //     msg_monitorador(msg)
+    // }
+    if ((descricao.value.includes("IPTV"))||(descricao.value.includes("iptv"))) {
+        msg = "📺🏴‍☠️IPTV - Anexe a TAG IPTV no OMINI ."        
+        msg_monitorador(msg)
+    }
+    if ((descricao.value.includes("rádio")||descricao.value.includes("Rádio")||descricao.value.includes("base")||descricao.value.includes("NS")||descricao.value.includes("torre")||descricao.value.includes("radio")||descricao.value.includes("Radio"))&&(bfp.value.includes("Padrão Fibra"))) {
+        msg = "📡 Possível cliente Rádio detectado.\nNecessário mudar a BFP do cliente."        
+        msg_monitorador(msg)
+    }
+
+    if ((h_preferencia.value!=="")||(ponto_referencia.value!=="")){
+        msg = "Visita técnica detectada👷🏻!\n▶️Verifique se a visita foi enviada corretamente.\n▶️Verifique se o grupo está correto."        
+        msg_monitorador(msg)
+    }
+
+    // quando não tem mais texto
+    if (descricao.value == "") {
+        mensagens_monitoradas.innerHTML= ""
+    }
+
+}
+
 function msg_monitorador(msg){
 
     
     Toastify({
 
-        text: `🐳 Monitorador\n${msg}`,
+        text: `🐳\n${msg}`,
         close: true,
         
         duration: 3000
@@ -120,7 +173,7 @@ function msg_monitorador(msg){
 
 Toastify({
 
-    text: "🐳 Monitorador\nBem vindo!",
+    text: "🐳\nBem vindo!",
 
     duration: 3000
 
