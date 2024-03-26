@@ -30,7 +30,7 @@ window.addEventListener("load", (event) => {
 function apagar_modelo_noc(){
     var elements = document.querySelectorAll(`[class^="campo_preenchimento_ncc"]`)
     elements.forEach(function(el) {
-        el.value = 0
+        el.value = ""
     })
     
 }
