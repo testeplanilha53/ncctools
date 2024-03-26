@@ -155,6 +155,10 @@ function msg_monitorador(msg){
 
 }
 
+$('body').mouseleave(function(){
+    monitorador()
+})
+
 // Toastify({
 //     text: "This is a toast",
 //     duration: 3000,
