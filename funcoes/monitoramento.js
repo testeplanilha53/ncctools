@@ -86,3 +86,5 @@ function msg_monitorador(msg){
     }
 
 }
+
+toast.show()
