@@ -396,6 +396,7 @@
                 </div>
                 <div class="modal-footer">                    
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-secondary"  onclick="apagar_modelo_noc()">Apagar</button>                    
                     <button type="button" class="btn btn-success" onclick="copiar_padrao()">Copiar</button>
                 </div>
             </div>
