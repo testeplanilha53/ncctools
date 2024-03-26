@@ -391,7 +391,6 @@ function copiar(){
         // Montando o texto padrão para colar no ADM
         let texto_completo = `</b></font><hr> <b><font color=blue>	${bfp.value} </b></font><hr> ${dia}/${mes}→ Atendimento realizado com Sr(a). ${nome_cliente.value} no nº ${telefone.value}. <br> ${descricao.value}`
 
-       
         // Condição em caso de VS
         // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
         

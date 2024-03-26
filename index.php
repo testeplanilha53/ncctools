@@ -23,7 +23,7 @@
 
 
     <style>
-        
+                
         #resetMail:hover{
             color: red !important;
             transform: scale(1.1);
@@ -279,6 +279,7 @@
           text-decoration: none;
           cursor: pointer;
         }
+
 
     </style>
 </head>
