@@ -88,3 +88,4 @@ function msg_monitorador(msg){
 }
 
 toast.show()
+show.bs.toast	
