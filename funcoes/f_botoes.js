@@ -952,19 +952,39 @@ function copiar_modelo_financeiro(){
 
     var texto = `Nesse cadastro, consta em aberto a(s) seguinte(s) fatura(s): \n`
     if ((v1!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v1} | Vencimento: ${d1} (${L1})\n`
+        if (L1==""){
+            texto = texto + `- Valor: R$${v1} | Vencimento: ${d1} \n`
+        }else{
+            texto = texto + `- Valor: R$${v1} | Vencimento: ${d1} (${L1})\n`
+        }        
     }
     if ((v2!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v2} | Vencimento: ${d2} (${L2})\n`
+        if (L2==""){
+            texto = texto + `- Valor: R$${v2} | Vencimento: ${d2}\n`
+        }else{
+            texto = texto + `- Valor: R$${v2} | Vencimento: ${d2} (${L2})\n`
+        }        
     }
     if ((v3!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v3} | Vencimento: ${d3} (${L3})\n`
+        if (L3==""){
+            texto = texto + `- Valor: R$${v3} | Vencimento: ${d3}\n`
+        }else{
+            texto = texto + `- Valor: R$${v3} | Vencimento: ${d3} (${L3})\n`
+        }        
     }
     if ((v4!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v4} | Vencimento: ${d4} (${L4})\n`
+        if (L4==""){
+            texto = texto + `- Valor: R$${v4} | Vencimento: ${d4}\n`
+        }else{
+            texto = texto + `- Valor: R$${v4} | Vencimento: ${d4} (${L4})\n`
+        }        
     }
     if ((v5!="")&&(d1!=null)){        
-        texto = texto + `- Valor: R$${v5} | Vencimento: ${d5} (${L5})\n`
+        if (L5==""){
+            texto = texto + `- Valor: R$${v5} | Vencimento: ${d5}\n`
+        }else{
+            texto = texto + `- Valor: R$${v5} | Vencimento: ${d5} (${L5})\n`
+        }        
     }
 
     texto = texto + `Clique no link e confira as informações com atenção antes de realizar o pagamento. Qualquer dúvida, me informe.`
