@@ -32,6 +32,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+        
+    <!--Toastify JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
     <!--FONTAWOSONE-->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <style>
@@ -300,10 +305,7 @@
 </nav>  
 	
 	
-	
 <span id="notificacao"> </span>
-	
-
 
     <!-- Modal Notificação de novidades -->
     <div class="modal fade" id="notificacaoNovidades" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -538,7 +540,8 @@
 
                         <input type="text" id="bfp" placeholder="BFP" value="Padrão Fibra"> <br>
 
-                        <textarea id="descricao" cols="70" rows="8" onchange="monitorador()" onmousemove="monitorador()"
+                        <!-- <textarea id="descricao" cols="70" rows="8" onchange="monitorador()" onmousemove="monitorador()" -->
+                        <textarea id="descricao" cols="70" rows="8"
                             placeholder="Descreva aqui a demanda do atendimento..."></textarea> <br>
 			
                          
