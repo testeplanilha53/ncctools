@@ -143,9 +143,13 @@ function monitorador(){
 function msg_monitorador(msg){
     
     // Verificando se a msg já foi acionada
-    var fragmentoUrl = window.location.hash;
-    msg_antigas = localStorage.setItem(getItem)
-    localStorage.setItem(fragmentoUrl, msg_antigas)
+    var chave = window.location.hash;
+    // Verificar se a chave já existe no localStorage
+    if (!localStorage.getItem(chave)) {
+        // Se não existir, configurar o valor padrão para a chave
+        var msg_antigas = localStorage.getItem(getItem)
+        localStorage.setItem(chave, msg_antigas)
+    }
 
     Toastify({
 
