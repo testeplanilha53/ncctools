@@ -158,6 +158,8 @@ function msg_monitorador(msg){
 $('body').mouseleave(function(){
     monitorador()
     window.location.hash = nome_cliente.value
+    var fragmentoUrl = window.location.hash;
+    verificarEConfigurarLocalStorage(fragmentoUrl, "")
 })
 
 // Toastify({
@@ -183,3 +185,12 @@ Toastify({
     duration: 3000
 
 }).showToast();
+
+
+function verificarEConfigurarLocalStorage(chave, valorPadrao) {
+    // Verificar se a chave já existe no localStorage
+    if (!localStorage.getItem(chave)) {
+        // Se não existir, configurar o valor padrão para a chave
+        localStorage.setItem(chave, JSON.stringify(valorPadrao));
+    }
+}
