@@ -141,22 +141,49 @@ function monitorador(){
 }
 
 function msg_monitorador(msg){
+        
+    var chave = window.location.hash;
+    //console.log(chave)
 
+    // Verificar se a chave já existe no localStorage
+    if (!localStorage.getItem(chave)) {
+
+    }else{
+        // // Se existir, configurar o valor padrão para a chave
+        // var msg_antigas = `${localStorage.getItem(chave)},${msg}`
+        // //console.log(localStorage.getItem(chave))
+        // localStorage.setItem(chave, msg_antigas)
+
+        // Verificando se a msg já foi acionada
+        if (localStorage.getItem(chave).includes(msg)) {
+            
+        } else {            
+            var msg_antigas = `${localStorage.getItem(chave)},${msg}`            
+            localStorage.setItem(chave, msg_antigas)
+            Toastify({
+                text: `🐳\n${msg}`,
+                close: true,                
+                duration: 5000            
+            }).showToast();    
+        }
+    }
+
+    // Toastify({
+
+    //     text: `🐳\n${msg}`,
+    //     close: true,
+        
+    //     duration: 3000
     
-    Toastify({
-
-        text: `🐳\n${msg}`,
-        close: true,
-        
-        duration: 3000
-        
-        }).showToast();
-                
+    // }).showToast();            
 
 }
 
 $('body').mouseleave(function(){
     monitorador()
+    window.location.hash = nome_cliente.value
+    var fragmentoUrl = window.location.hash;
+    verificarEConfigurarLocalStorage(fragmentoUrl, "")
 })
 
 // Toastify({
@@ -182,3 +209,12 @@ Toastify({
     duration: 3000
 
 }).showToast();
+
+
+function verificarEConfigurarLocalStorage(chave, valorPadrao) {
+    // Verificar se a chave já existe no localStorage
+    if (!localStorage.getItem(chave)) {
+        // Se não existir, configurar o valor padrão para a chave
+        localStorage.setItem(chave, JSON.stringify(valorPadrao));
+    }
+}
