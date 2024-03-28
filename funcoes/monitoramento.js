@@ -141,8 +141,12 @@ function monitorador(){
 }
 
 function msg_monitorador(msg){
-
     
+    // Verificando se a msg já foi acionada
+    var fragmentoUrl = window.location.hash;
+    msg_antigas = localStorage.setItem(getItem)
+    localStorage.setItem(fragmentoUrl, msg_antigas)
+
     Toastify({
 
         text: `🐳\n${msg}`,
