@@ -141,28 +141,41 @@ function monitorador(){
 }
 
 function msg_monitorador(msg){
-    
-    // Verificando se a msg já foi acionada
+        
     var chave = window.location.hash;
-    console.log(chave)
+    //console.log(chave)
+
     // Verificar se a chave já existe no localStorage
     if (!localStorage.getItem(chave)) {
 
     }else{
-        // Se existir, configurar o valor padrão para a chave
-        var msg_antigas = `${localStorage.getItem(chave)},${msg}`
-        console.log(localStorage.getItem(chave))
-        localStorage.setItem(chave, msg_antigas)
+        // // Se existir, configurar o valor padrão para a chave
+        // var msg_antigas = `${localStorage.getItem(chave)},${msg}`
+        // //console.log(localStorage.getItem(chave))
+        // localStorage.setItem(chave, msg_antigas)
+
+        // Verificando se a msg já foi acionada
+        if (localStorage.getItem(chave).includes(msg)) {
+            
+        } else {            
+            var msg_antigas = `${localStorage.getItem(chave)},${msg}`            
+            localStorage.setItem(chave, msg_antigas)
+            Toastify({
+                text: `🐳\n${msg}`,
+                close: true,                
+                duration: 3000            
+            }).showToast();    
+        }
     }
 
-    Toastify({
+    // Toastify({
 
-        text: `🐳\n${msg}`,
-        close: true,
+    //     text: `🐳\n${msg}`,
+    //     close: true,
         
-        duration: 3000
+    //     duration: 3000
     
-    }).showToast();            
+    // }).showToast();            
 
 }
 $('body').mouseleave(function(){
