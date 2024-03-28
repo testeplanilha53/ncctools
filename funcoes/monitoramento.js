@@ -157,6 +157,7 @@ function msg_monitorador(msg){
 
 $('body').mouseleave(function(){
     monitorador()
+    window.location.hash = nome_cliente.value
 })
 
 // Toastify({
