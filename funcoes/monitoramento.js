@@ -144,10 +144,14 @@ function msg_monitorador(msg){
     
     // Verificando se a msg já foi acionada
     var chave = window.location.hash;
+    console.log(chave)
     // Verificar se a chave já existe no localStorage
     if (!localStorage.getItem(chave)) {
-        // Se não existir, configurar o valor padrão para a chave
-        var msg_antigas = localStorage.getItem(getItem)
+
+    }else{
+        // Se existir, configurar o valor padrão para a chave
+        var msg_antigas = `${localStorage.getItem(chave)},${msg}`
+        console.log(localStorage.getItem(chave))
         localStorage.setItem(chave, msg_antigas)
     }
 
@@ -157,12 +161,10 @@ function msg_monitorador(msg){
         close: true,
         
         duration: 3000
-        
-        }).showToast();
-                
+    
+    }).showToast();            
 
 }
-
 $('body').mouseleave(function(){
     monitorador()
     window.location.hash = nome_cliente.value
