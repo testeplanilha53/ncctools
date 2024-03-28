@@ -163,7 +163,7 @@ function msg_monitorador(msg){
             Toastify({
                 text: `🐳\n${msg}`,
                 close: true,                
-                duration: 3000            
+                duration: 5000            
             }).showToast();    
         }
     }
@@ -178,6 +178,7 @@ function msg_monitorador(msg){
     // }).showToast();            
 
 }
+
 $('body').mouseleave(function(){
     monitorador()
     window.location.hash = nome_cliente.value
