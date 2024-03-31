@@ -160,11 +160,18 @@ function msg_monitorador(msg){
         } else {            
             var msg_antigas = `${localStorage.getItem(chave)},${msg}`            
             localStorage.setItem(chave, msg_antigas)
-            Toastify({
-                text: `🐳\n${msg}`,
-                close: true,                
-                duration: 5000            
-            }).showToast();    
+            Toastify({                                
+                text: `🙉🙈🙊\n${msg}`,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`                
+                style: {
+                  // background: "#dc3546",
+                    background: "#4d6ef7",
+                },
+                duration: 8000            
+            }).showToast();                
+
         }
     }
 
