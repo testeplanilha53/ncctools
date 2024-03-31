@@ -301,7 +301,7 @@ iframe {
 #botoes_mais_usuais {
     display: inline-block;
     text-align: center;
-    width: 550px;
+    width: 50%;
     position: relative;
     z-index: 2;
     left: 0%;
