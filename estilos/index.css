@@ -440,10 +440,8 @@ border: 2px solid white;
 
 .menu_lateral.pointer {
         cursor: pointer;
-      }
 }
 
 .menu_lateral:hover {
     cursor: pointer;
-  }
 }
