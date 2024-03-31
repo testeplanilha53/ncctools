@@ -438,10 +438,6 @@ border: 2px solid white;
     width: 128px;
 }
 
-.menu_lateral.pointer {
-        cursor: pointer;
-}
-
-.menu_lateral:hover {
+#menu_lateral:hover {
     cursor: pointer;
 }
