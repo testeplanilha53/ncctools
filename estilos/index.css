@@ -437,3 +437,13 @@ border: 2px solid white;
 .campo_link{
     width: 128px;
 }
+
+.menu_lateral.pointer {
+        cursor: pointer;
+      }
+}
+
+.menu_lateral:hover {
+    cursor: pointer;
+  }
+}
