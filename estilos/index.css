@@ -311,7 +311,7 @@ iframe {
 
 .clock_new{
     margin: 5px;
-    animation: pulse 1s infinite;
+    /* animation: pulse 1s infinite; */
 }
 
 @keyframes pulse {
