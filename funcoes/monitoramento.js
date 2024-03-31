@@ -161,13 +161,14 @@ function msg_monitorador(msg){
             var msg_antigas = `${localStorage.getItem(chave)},${msg}`            
             localStorage.setItem(chave, msg_antigas)
             Toastify({                                
-                text: `\n${msg}`,
+                text: `${msg}`,
                 close: true,
                 gravity: "top", // `top` or `bottom`
                 position: "center", // `left`, `center` or `right`                
                 style: {
-                    background: "#dc3546",
+                    // background: "#dc3546",
                     // background: "#4d6ef7",
+                    background: "#24555b",
                 },
                 duration: 8000            
             }).showToast();                
