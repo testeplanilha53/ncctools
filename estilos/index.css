@@ -301,7 +301,7 @@ iframe {
 #botoes_mais_usuais {
     display: inline-block;
     text-align: center;
-    width: 550px;
+    width: 50%;
     position: relative;
     z-index: 2;
     left: 0%;
@@ -311,7 +311,7 @@ iframe {
 
 .clock_new{
     margin: 5px;
-    animation: pulse 1s infinite;
+    /* animation: pulse 1s infinite; */
 }
 
 @keyframes pulse {
@@ -436,4 +436,8 @@ border: 2px solid white;
 
 .campo_link{
     width: 128px;
+}
+
+#menu_lateral:hover {
+    cursor: pointer;
 }
