@@ -161,7 +161,7 @@ function msg_monitorador(msg){
             var msg_antigas = `${localStorage.getItem(chave)},${msg}`            
             localStorage.setItem(chave, msg_antigas)
             Toastify({                                
-                text: `🤖\n${msg}`,
+                text: `\n${msg}`,
                 close: true,
                 gravity: "top", // `top` or `bottom`
                 position: "center", // `left`, `center` or `right`                
