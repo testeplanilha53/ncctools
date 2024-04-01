@@ -165,14 +165,13 @@ function msg_monitorador(msg){
                 close: true,
                 gravity: "top", // `top` or `bottom`
                 position: "center", // `left`, `center` or `right`                
-                // style: {
-                //     // background: "#dc3546",
-                //     // background: "#4d6ef7",
-                //     background: "#24555b",
-                // },
+                style: {
+                    // background: "#dc3546",
+                    // background: "#4d6ef7",
+                    background: "#17a2b7",
+                },
                 duration: 8000            
             }).showToast();                
-
         }
     }
 
