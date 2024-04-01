@@ -171,6 +171,15 @@ function Apagar(){
         h_preferencia.value = ''
         ponto_referencia.value = ''
 
+        var hpfr = window.document.getElementById("hpfr")            
+        hpfr.innerHTML = `<select id="h_preferencia" onchange="fun_h_preferencia()">                            
+                            <option></option>                        
+                            <option value="Manhã">Manhã</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Sem preferência">Sem preferência</option>
+                            <option value="Outro">Outro</option>
+                          </select>`        
+
         // Mostra a notificação do bootstrap
         let notificacao = document.getElementById("notificacao")
         notificacao.innerHTML = '<div class="alert alert-danger" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>EXCLUÍDO!</strong>  </div>'
