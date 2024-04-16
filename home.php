@@ -153,6 +153,13 @@
             <button type="button" class="btn btn-success">Nova Aba</button>
         </a>
 
+        <button class="btn btn-light">             
+            <a class="" id="modelo_noc" class="btn btn-warning" data-toggle="modal" data-target="#modal_nota10">                
+                <i class="far fa-user-headset" style="line-height: 1; color: rgb(30, 48, 80);"></i>
+            </a>            
+        </button>                    
+
+
         <!--RELÓGIOS-->
         
         <span id="relogios">
@@ -356,6 +363,57 @@
                 <div class="modal-footer">                                    
                     <button type="button" class="btn btn-secondary"  onclick="apagar_modelo_financeiro()">Apagar</button>                    
                     <button type="button" class="btn btn-success" onclick="copiar_modelo_financeiro()">Copiar</button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Modal Auditoria 100 -->
+        <div class="modal fade" id="modal_nota10" tabindex="3" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 700px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">DICAS PARA UM ATENDIMENTO NOTA 10!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="campo_padrao_verificao">  
+                    <div class="btn-group-dispose" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="checkbox" checked> Confirmar o endereço completo (Rua | Nº da casa | Bairro | Cidade) <br>                          
+                        </label>
+                    </div>      
+                    <div class="btn-group-dispose" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="checkbox" checked> Confirmar os contatos repassando apenas os 4 últimos dígitos <br>
+                        </label>
+                    </div>       
+                    <div class="btn-group-dispose" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="checkbox" checked> Confirmar o e-mail do cliente pedindo para ele repassar o e-mail completo (LGPD*) <br>
+                        </label>
+                    </div>  
+                    <div class="btn-group-dispose" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="checkbox" checked> Pedir para salvar nosso contato do Whatsapp (15) 3384-8181 <br>                 
+                        </label>
+                    </div>  
+                    <div class="btn-group-dispose" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="checkbox" checked> Repassar o protocolo no final da ligação <br>
+                        </label>
+                    </div>     
+                    <div class="btn-group-dispose" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="checkbox" checked> Conferir se o número do cliente está correto <br>
+                        </label>
+                    </div>  
+                           
+                </div>
+                <div class="modal-footer">                                    
+                    
                 </div>
             </div>
         </div>
