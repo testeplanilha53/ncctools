@@ -382,32 +382,32 @@
                 <div class="modal-body" id="campo_padrao_verificao">  
                     <div class="btn-group-dispose" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                            <input type="checkbox" checked> Confirmar o endereço completo (Rua | Nº da casa | Bairro | Cidade) <br>                          
+                            <input type="checkbox"> Confirmar o endereço completo (Rua | Nº da casa | Bairro | Cidade) <br>                          
                         </label>
                     </div>      
                     <div class="btn-group-dispose" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                            <input type="checkbox" checked> Confirmar os contatos repassando apenas os 4 últimos dígitos <br>
+                            <input type="checkbox"> Confirmar os contatos repassando apenas os 4 últimos dígitos <br>
                         </label>
                     </div>       
                     <div class="btn-group-dispose" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                            <input type="checkbox" checked> Confirmar o e-mail do cliente pedindo para ele repassar o e-mail completo (LGPD*) <br>
+                            <input type="checkbox"> Confirmar o e-mail do cliente pedindo para ele repassar o e-mail completo (LGPD*) <br>
                         </label>
                     </div>  
                     <div class="btn-group-dispose" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                            <input type="checkbox" checked> Pedir para salvar nosso contato do Whatsapp (15) 3384-8181 <br>                 
+                            <input type="checkbox"> Pedir para salvar nosso contato do Whatsapp (15) 3384-8181 <br>                 
                         </label>
                     </div>  
                     <div class="btn-group-dispose" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                            <input type="checkbox" checked> Repassar o protocolo no final da ligação <br>
+                            <input type="checkbox"> Repassar o protocolo no final da ligação <br>
                         </label>
                     </div>     
                     <div class="btn-group-dispose" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                            <input type="checkbox" checked> Conferir se o número do cliente está correto <br>
+                            <input type="checkbox"> Conferir se o número do cliente está correto <br>
                         </label>
                     </div>  
                            
