@@ -173,13 +173,14 @@ function Apagar(){
         descricao.value = ''
         h_preferencia.value = ''
         ponto_referencia.value = ''
+        data_vs.value = ''
+        disponibilidade_geral.value = ''
 
         var hpfr = window.document.getElementById("hpfr")            
         hpfr.innerHTML = `<select id="h_preferencia" onchange="fun_h_preferencia()">                            
                             <option></option>                        
                             <option value="Manhã">Manhã</option>
-                            <option value="Tarde">Tarde</option>
-                            <option value="Sem preferência">Sem preferência</option>
+                            <option value="Tarde">Tarde</option>                            
                             <option value="Outro">Outro</option>
                           </select>`        
 
