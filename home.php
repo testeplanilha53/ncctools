@@ -625,7 +625,7 @@
                                 <option></option>                        
                                 <option value="Manhã">Manhã</option>
                                 <option value="Tarde">Tarde</option>
-                                <option value="Noite">Tarde</option>
+                                <option value="Noite">Noite</option>
                                 <!-- <option value="Sem preferência">Sem preferência</option> -->
                                 <option value="Outro">Outro</option>
                             </select>
