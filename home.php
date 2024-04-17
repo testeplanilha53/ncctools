@@ -584,9 +584,9 @@
             </div> -->
             
             <div class="col">
-                <div id="celula_atd_1">
+                <div id="celula_atd_1" class="">
 
-                    <div id="dados_iniciais">
+                    <div id="dados_iniciais" class="bordaBranca">
 
 
                         <input type="text" id="protocolo_chat" placeholder="Protocolo do Chat" style="color: blue;">                        
@@ -618,20 +618,25 @@
 
 
 		    </div>
-                    <div id="vs">
-                        <span id="t1">Horário de preferência:</span>
+                    <div id="vs" class="bordaBranca">                                            
+                        <span id="t1">Agendamento:</span>                    
                         <span id="hpfr" onchange="fun_h_preferencia()">
                             <select id="h_preferencia" onchange="fun_h_preferencia()">                            
                                 <option></option>                        
                                 <option value="Manhã">Manhã</option>
                                 <option value="Tarde">Tarde</option>
-                                <option value="Sem preferência">Sem preferência</option>
+                                <!-- <option value="Sem preferência">Sem preferência</option> -->
                                 <option value="Outro">Outro</option>
                             </select>
                         </span>                    
+                        <input type="date" id="data">
                         <br>
-                        <span id="t2">Ponto de referência:</span>                        
-                        <input type="search" id="ponto_referencia">
+                        <span id="t2">                            
+                            <input placeholder="Disponibilidade Geral" type="text" id="disp_geral" data-toggle="tooltip" data-placement="bottom" title="📑Exemplos de descrição de disponibilidade: “comercial”, “não pode receber à tarde”, “sempre pela tarde”, “só após às 15h”, “qualquer horário o mais rápido possível”."> <br>
+                        </span>                                                
+                        <span id="t3">                            
+                            <input placeholder="Ponto de referência" type="text" id="ponto_referencia" data-toggle="tooltip" data-placement="bottom" title="📑 Se não tiver um ponto de referência, anexe detalhes sobre a casa: cor da casa, cor do portão, se tem garagem...">
+                        </span>                        
                     </div>
 
                     <br>

@@ -13,6 +13,9 @@ var nome_cliente = window.document.getElementById("nome_cliente")
 var telefone = window.document.getElementById("telefone")
 var bfp = window.document.getElementById("bfp")
 var descricao = window.document.getElementById("descricao")
+
+var data_vs = window.document.getElementById("data")
+var disponibilidade_geral = window.document.getElementById("disp_geral")
 var h_preferencia = window.document.getElementById("h_preferencia")
 var ponto_referencia = window.document.getElementById("ponto_referencia")
 
@@ -403,9 +406,9 @@ function copiar(){
         // Condição em caso de VS
         // Se tiver o horario de preferência e o ponto de referência ele adiciona as informações no texto
         
-        var h_preferencia = window.document.getElementById("h_preferencia")
+        var h_preferencia = window.document.getElementById("h_preferencia")                
         if (ponto_referencia.value!=h_preferencia.value){                
-            var texto_vs = `<hr> <b>Horário de preferência:</b> ${h_preferencia.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
+            var texto_vs = `<hr> <b>Agendamento:</b> ${h_preferencia.value} - ${dataFormatada(data_vs.value)}<br> <b>Disponibilidade geral:</b> ${disponibilidade_geral.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
             texto_completo = texto_completo + texto_vs
         }
 
@@ -447,7 +450,7 @@ function copiar(){
         
         var h_preferencia = window.document.getElementById("h_preferencia")
         if (ponto_referencia.value!=h_preferencia.value){                
-            var texto_vs = `<hr> <b>Horário de preferência:</b> ${h_preferencia.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
+            var texto_vs = `<hr> <b>Agendamento:</b> ${h_preferencia.value} - ${dataFormatada(data_vs.value)}<br> <b>Disponibilidade geral:</b> ${disponibilidade_geral.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
             texto_completo = texto_completo + texto_vs
         }
 
@@ -467,6 +470,18 @@ function copiar(){
 	}//end if
 
 }
+
+// Deixa a data no padrão BR
+function dataFormatada(dataAmericana){  
+     // Dividindo a data americana em partes separadas
+     var partes = dataAmericana.split('-');
+    
+     // Criando uma nova data no formato brasileiro
+     var dataBrasileira = partes[2] + '/' + partes[1] + '/' + partes[0];
+     
+     return dataBrasileira;
+}
+
 
 // Gerar código
 function getAdmCode(){
