@@ -303,7 +303,7 @@
                   padding: 0;
 
                    position: absolute;
-                  top: 20;
+                  top: 20px;
                 }
                 .ag-courses_item {
                   -ms-flex-preferred-size: calc(33.33333% - 30px);
