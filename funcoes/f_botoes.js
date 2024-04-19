@@ -182,6 +182,7 @@ function Apagar(){
                             <option value="Manhã">Manhã</option>
                             <option value="Tarde">Tarde</option>                            
                             <option value="Noite">Noite</option>
+                            <option value="Indisponível">Indisponível</option>
                             <option value="Outro">Outro</option>
                           </select>`        
 
@@ -200,36 +201,37 @@ function Apagar(){
 
 
 //  Função Máscara para o número de contato
-/*
-function mascara(o,f){
-    v_obj=o
-    v_fun=f
-    setTimeout("execmascara()",1)
-}
-function execmascara(){
-    v_obj.value=v_fun(v_obj.value)
-}
-function mtel(v){
-    v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
-    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-    v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
-    return v;
-}
-function id( el ){
-	return document.getElementById( el );
-}
 
-window.onload = function(){
-	id('telefone').onkeyup = function(){
-		mascara( this, mtel );
-	}
-}
+// function mascara(o,f){
+//     v_obj=o
+//     v_fun=f
+//     setTimeout("execmascara()",1)
+// }
+// function execmascara(){
+//     v_obj.value=v_fun(v_obj.value)
+// }
+// function mtel(v){
+//     v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+//     v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+//     v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+//     return v;
+// }
+// function id( el ){
+// 	return document.getElementById( el );
+// }
 
-window.onmousemove = function(){
-    id('telefone').onkeyup = function(){
-		mascara( this, mtel );
-	}    
-}*/
+
+// window.onload = function(){
+// 	id('telefone').onkeyup = function(){
+// 		mascara( this, mtel );
+// 	}
+// }
+
+// window.onmousemove = function(){
+//     id('telefone').onkeyup = function(){
+// 		mascara( this, mtel );
+// 	}    
+// }
 
 
 /*
@@ -410,7 +412,7 @@ function copiar(){
         
         var h_preferencia = window.document.getElementById("h_preferencia")                
         if (ponto_referencia.value!=h_preferencia.value){                
-            var texto_vs = `<hr> <b>Agendamento:</b> ${h_preferencia.value} - ${dataFormatada(data_vs.value)}<br> <b>Disponibilidade geral:</b> ${disponibilidade_geral.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
+            var texto_vs = `<hr> <b>Agendamento:</b> ${h_preferencia.value} ${dataFormatada(data_vs.value)}<br> <b>Disponibilidade geral:</b> ${disponibilidade_geral.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
             texto_completo = texto_completo + texto_vs
         }
 
@@ -452,7 +454,7 @@ function copiar(){
         
         var h_preferencia = window.document.getElementById("h_preferencia")
         if (ponto_referencia.value!=h_preferencia.value){                
-            var texto_vs = `<hr> <b>Agendamento:</b> ${h_preferencia.value} - ${dataFormatada(data_vs.value)}<br> <b>Disponibilidade geral:</b> ${disponibilidade_geral.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
+            var texto_vs = `<hr> <b>Agendamento:</b> ${h_preferencia.value} ${dataFormatada(data_vs.value)}<br> <b>Disponibilidade geral:</b> ${disponibilidade_geral.value} <br> <b>Ponto de referência:</b> ${ponto_referencia.value} <hr>` 
             texto_completo = texto_completo + texto_vs
         }
 
@@ -479,9 +481,12 @@ function dataFormatada(dataAmericana){
      var partes = dataAmericana.split('-');
     
      // Criando uma nova data no formato brasileiro
-     var dataBrasileira = partes[2] + '/' + partes[1] + '/' + partes[0];
+     var dataBrasileira = '- ' + partes[2] + '/' + partes[1] + '/' + partes[0];
      
-     return dataBrasileira;
+    if (dataBrasileira=="- undefined/undefined/"){
+        return ""
+    }
+    return dataBrasileira;
 }
 
 
