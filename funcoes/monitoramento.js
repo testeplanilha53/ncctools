@@ -209,20 +209,7 @@ $('body').mouseleave(function(){
 //   }).showToast();
 
 
-Toastify({
 
-    text: "🐳\nBem vindo!\nAtive as notificações do navegador para os alertas de pausa",
-    close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`                
-    style: {
-        // background: "#f44336",
-        background: "#4d6ef7",
-        // background: "#17a2b7",
-    },
-    duration: 5000         
-
-}).showToast();
 
 
 function verificarEConfigurarLocalStorage(chave, valorPadrao) {
@@ -235,11 +222,14 @@ function verificarEConfigurarLocalStorage(chave, valorPadrao) {
 
 
 
+if (!localStorage.getItem(BemVindo)) {
+    localStorage.setItem(BemVindo, "")
+}
 
 
 // Verificar se a chave já existe no localStorage
 if (!localStorage.getItem(BemVindo)) {
-
+    
 }else{
     // // Se existir, configurar o valor padrão para a chave
     // var msg_antigas = `${localStorage.getItem(chave)},${msg}`
@@ -247,9 +237,24 @@ if (!localStorage.getItem(BemVindo)) {
     // localStorage.setItem(chave, msg_antigas)
 
     // Verificando se a msg já foi acionada
-    if (localStorage.getItem(chave).includes("já ativado")) {
+    if (localStorage.getItem(BemVindo).includes("já ativado")) {
         
-    } else {         
+    } else { 
+
+        Toastify({
+
+            text: "👻\nBem vindo!\nAtive as notificações do navegador para os alertas de pausa",
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`                
+            style: {
+                // background: "#f44336",
+                background: "#4d6ef7",
+                // background: "#17a2b7",
+            },
+            duration: 5000         
+        
+        }).showToast();
         
         // Registra que já foi ativado
         localStorage.setItem(BemVindo, "já ativado")
