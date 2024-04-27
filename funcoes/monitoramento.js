@@ -222,10 +222,8 @@ function verificarEConfigurarLocalStorage(chave, valorPadrao) {
 
 
 
-if (!localStorage.getItem(BemVindo)) {
-    localStorage.setItem(BemVindo, "teste")
-}
 
+localStorage.setItem(BemVindo, "1")
 
 // Verificar se a chave já existe no localStorage
 if (!localStorage.getItem(BemVindo)) {
@@ -237,7 +235,7 @@ if (!localStorage.getItem(BemVindo)) {
     // localStorage.setItem(chave, msg_antigas)
 
     // Verificando se a msg já foi acionada
-    if (localStorage.getItem(BemVindo).includes("já ativado")) {
+    if (localStorage.getItem(BemVindo)>1) {
         
     } else { 
 
@@ -257,7 +255,7 @@ if (!localStorage.getItem(BemVindo)) {
         }).showToast();
         
         // Registra que já foi ativado
-        localStorage.setItem(BemVindo, "já ativado")
+        localStorage.setItem(BemVindo, localStorage.getItem(BemVindo)+1)
         
         //NOTIFICAÇAO INICIAL
         Notification.requestPermission(/* opcional: callback */);
