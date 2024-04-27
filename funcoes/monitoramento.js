@@ -234,13 +234,38 @@ function verificarEConfigurarLocalStorage(chave, valorPadrao) {
 }
 
 
-//NOTIFICAÇAO INICIAL
-Notification.requestPermission(/* opcional: callback */);
 
-var notification = new Notification("ALERTA", {
-    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzOkyYZVJdWlMZDRKSBDzVXgITClawUYKV6fD2W0q4ew&s',
-    body: "Obg por ativar as notificações"
-});
-notification.onclick = function() {
-    //window.open("http://stackoverflow.com");
+
+
+// Verificar se a chave já existe no localStorage
+if (!localStorage.getItem(BemVindo)) {
+
+}else{
+    // // Se existir, configurar o valor padrão para a chave
+    // var msg_antigas = `${localStorage.getItem(chave)},${msg}`
+    // //console.log(localStorage.getItem(chave))
+    // localStorage.setItem(chave, msg_antigas)
+
+    // Verificando se a msg já foi acionada
+    if (localStorage.getItem(chave).includes("já ativado")) {
+        
+    } else {         
+        
+        // Registra que já foi ativado
+        localStorage.setItem(BemVindo, "já ativado")
+        
+        //NOTIFICAÇAO INICIAL
+        Notification.requestPermission(/* opcional: callback */);
+
+        var notification = new Notification("ALERTA", {
+            icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzOkyYZVJdWlMZDRKSBDzVXgITClawUYKV6fD2W0q4ew&s',
+            body: "Obg por ativar as notificações"
+        });
+        notification.onclick = function() {
+            //window.open("http://stackoverflow.com");
+        }
+                
+    }
 }
+
+
