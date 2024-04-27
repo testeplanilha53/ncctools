@@ -223,7 +223,7 @@ function verificarEConfigurarLocalStorage(chave, valorPadrao) {
 
 
 if (!localStorage.getItem(BemVindo)) {
-    localStorage.setItem(BemVindo, "")
+    localStorage.setItem(BemVindo, "teste")
 }
 
 
