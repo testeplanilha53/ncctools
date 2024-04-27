@@ -204,7 +204,7 @@
       
   <div class="d-flex flex-column flex-shrink-0 p-3 _menu-sidebar " onmouseleave="menu()" style="height: 100%; background: rgb(21, 34, 56);">
     
-    <form class="d-flex" method="get" action="https://ncc.drozbase.cx/search?" target="_blank">
+    <form class="d-flex" method="get" action="https://ncc.drozbase.com/search?" target="_blank">
         <label class="navbar-item d-flex justify-content-start _header_label text-white">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 18 18" onclick="menu()">
           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
