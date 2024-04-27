@@ -211,9 +211,16 @@ $('body').mouseleave(function(){
 
 Toastify({
 
-    text: "🐳\nBem vindo!",
-
-    duration: 3000
+    text: "🐳\nBem vindo!\nAtive as notificações do navegador para os alertas de pausa",
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`                
+    style: {
+        // background: "#f44336",
+        background: "#4d6ef7",
+        // background: "#17a2b7",
+    },
+    duration: 5000         
 
 }).showToast();
 
@@ -224,4 +231,16 @@ function verificarEConfigurarLocalStorage(chave, valorPadrao) {
         // Se não existir, configurar o valor padrão para a chave
         localStorage.setItem(chave, JSON.stringify(valorPadrao));
     }
+}
+
+
+//NOTIFICAÇAO INICIAL
+Notification.requestPermission(/* opcional: callback */);
+
+var notification = new Notification("ALERTA", {
+    icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzOkyYZVJdWlMZDRKSBDzVXgITClawUYKV6fD2W0q4ew&s',
+    body: "Obg por ativar as notificações"
+});
+notification.onclick = function() {
+    //window.open("http://stackoverflow.com");
 }
