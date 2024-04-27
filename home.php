@@ -445,7 +445,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 700px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">DICAS PARA UM ATENDIMENTO NOTA 10!</h5>
+                    <h5 class="modal-title" id="exampleModalCenterTitle">DICAS PARA UM ATENDIMENTO NOTA 100 no V2!</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
