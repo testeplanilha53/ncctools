@@ -184,7 +184,6 @@
                 </svg>                                
             </a>           
         </button>   
-
                 
         <button class="btn btn-primary lupa">                        
             <a href="https://ncc.drozbase.com/docs/Atalhos-do-chat-p0g97gjgm3qgwczgnbj4byjd9k?utm_source=share"   title="Atalhos para o chat"  target="_blank" id="link_atalho_chat">
