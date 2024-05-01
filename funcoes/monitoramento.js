@@ -222,10 +222,12 @@ function verificarEConfigurarLocalStorage(chave, valorPadrao) {
 
 
 
-localStorage.setItem("BemVindo", "1")
+
 
 // Verificar se a chave já existe no localStorage
 if (!localStorage.getItem("BemVindo")) {
+
+    localStorage.setItem("BemVindo", "1")
     
 }else{
     // // Se existir, configurar o valor padrão para a chave
