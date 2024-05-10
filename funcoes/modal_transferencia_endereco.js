@@ -90,7 +90,8 @@ function inserir_modelo_transferencia(){
     //              <hr> Confirmada a disponibilidade de conexão no local por: ${confirmacao_disponibilidade}
     //             `
 
-    var texto = `Cliente solicita transferência de endereço para: <hr>\n<b> Novo endereço:</b> ${novo_endereco} <hr>\n1 x R$${V_transf},00 -- ponto principal<br> \n${v_tv} x R$25,00 -- ponto adc. TV<br> \n${v_wifi} x R$25,00 -- ponto adc. WI-FI<br> \n<b>VALOR TOTAL: R$${valor_total} EM ${plural_parcelas(parcelas)}</b>\n<hr> Ciente do prazo máximo de 7 dias úteis, e que é necessário levar os dispositivos ao novo endereço. \n<hr> Confirmada a disponibilidade de conexão no local por: \n${confirmacao_disponibilidade}`
+    // var texto = `Cliente solicita transferência de endereço para: <hr>\n<b> Novo endereço:</b> ${novo_endereco} <hr>\n1 x R$${V_transf},00 -- ponto principal<br> \n${v_tv} x R$25,00 -- ponto adc. TV<br> \n${v_wifi} x R$25,00 -- ponto adc. WI-FI<br> \n<b>VALOR TOTAL: R$${valor_total} EM ${plural_parcelas(parcelas)}</b>\n<hr> Ciente do prazo máximo de 7 dias úteis, e que é necessário levar os dispositivos ao novo endereço. \n<hr> Confirmada a disponibilidade de conexão no local por: \n${confirmacao_disponibilidade}`
+    var texto = `Cliente solicita transferência de endereço para: <hr>\n<b> Novo endereço:</b> ${novo_endereco} <hr>\n1 x R$${V_transf},00 -- ponto principal\n${v_tv} x R$25,00 -- ponto adc. TV\n${v_wifi} x R$25,00 -- ponto adc. WI-FI\n<b>VALOR TOTAL: R$${valor_total} EM ${plural_parcelas(parcelas)}</b>\n<hr> Ciente do prazo máximo de 7 dias úteis, e que é necessário levar os dispositivos ao novo endereço. \n<hr> Confirmada a disponibilidade de conexão no local por: \n${confirmacao_disponibilidade}`
     
     window.document.getElementById("descricao").value = texto
                 
