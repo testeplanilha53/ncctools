@@ -1,0 +1,74 @@
+$color1:  #728db4
+$color2:  #556d92 
+$color3:  #394d70
+$color4:  #1c2d4e 
+$color5:  #000d2c 
+
+$cor-primaria: #3498db
+$font-size: 16px
+$app-size: 30px
+
+
+html, body
+  margin: 0
+  padding: 0
+  height: 100%
+  width: 100% 
+
+body
+  background: white
+  padding-top: 20px
+
+.tools
+  min-width: 400px
+  margin: auto
+  max-width: 900px
+  
+
+  .wdg
+    border-radius: 12px
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+    padding: 20px
+    margin: 0 auto
+    backdrop-filter: blur(40px)
+
+    header
+      background: $color1
+      display: flex
+      justify-content: space-between
+
+      .wdg-window-expand
+        display: flex !important
+        width: 90px
+        background: $color2
+        position: relative
+
+      .wdg-apps
+        display: flex !important
+        width: 100%
+        justify-content: start
+
+      .app
+        width: $app-size
+        height: $app-size
+        background: $color3
+        margin: 3px
+        border-radius: 50%
+    
+    
+    header, .wdg-content, .wdg-content-actions
+      margin-top: 10px
+
+
+
+@media (max-width: 480px)
+
+
+@media (min-width: 768px) and  (max-width: 1023px)
+
+
+
+@media (min-width: 1024px)
+
+
+

@@ -1,0 +1,52 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: white;
+  padding-top: 20px;
+}
+
+.tools {
+  min-width: 400px;
+  margin: auto;
+  max-width: 900px;
+}
+.tools .wdg {
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 0 auto;
+  backdrop-filter: blur(40px);
+}
+.tools .wdg header {
+  background: #728db4;
+  display: flex;
+  justify-content: space-between;
+}
+.tools .wdg header .wdg-window-expand {
+  display: flex !important;
+  width: 90px;
+  background: #556d92;
+  position: relative;
+}
+.tools .wdg header .wdg-apps {
+  display: flex !important;
+  width: 100%;
+  justify-content: start;
+}
+.tools .wdg header .app {
+  width: 30px;
+  height: 30px;
+  background: #394d70;
+  margin: 3px;
+  border-radius: 50%;
+}
+.tools .wdg header, .tools .wdg .wdg-content, .tools .wdg .wdg-content-actions {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
