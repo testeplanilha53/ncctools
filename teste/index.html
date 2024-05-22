@@ -6,36 +6,28 @@
 </head>
 <body>
 	<!-- As a link -->
-	<nav class="navbar navbar-light bg-light">
+	<nav class="navbar navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">Navbar</a>
 	</nav>
 
-	<div class="tools">
+	<div class="tools container-sm bg-light">
 		<div class="wdg">
 			<!-- Area de apps --> 
-			<header>
-				<div class="wdg-app">
-					Transf End
-				</div>
+			<div class="nav-scroller bg-body rounded  shadow-sm">
+				<nav class="nav nav-underline" aria-label="Secondary navigation">
+					<a class="nav-link" href="#">
+					Notificações
+					<span class="badge bg-light text-dark rounded-pill align-text-bottom">27</span>
+					</a>
+					<a class="nav-link active" href="#">Modelos</a>
+					<a class="nav-link" href="#">App NOC</a>
+					<a class="nav-link" href="#">App Serviços</a>
+					<a class="nav-link" href="#">Documentação</a>
+				</nav>
+			  </div>
 
-				<div class="wdg-app">
-					Ver NOC
-				</div>
-	
-				<div class="wdg-app">
-					Financeiro
-				</div>
-	
-				<div class="wdg-app">
-					Modelos
-				</div>
-
-				<div class="wdg-app">
-					controles da janela
-				</div>
-			</header>
 			<!-- Area edição --> 
-			<div class="wdg-content">
+			<div class="my-3 p-3 bg-body rounded shadow-sm">
 				<!--Entradas de dados-->
 				<div class="wdg-content-input">
 					<input type="text" placeholder="Protocolo do chat"/>
@@ -59,20 +51,21 @@
 			</div>
 
 			<!--Gerador de script-->
-				<div class="wdg-content-input">
+				<div class="my-3 p-3 bg-body rounded shadow-sm">
 					<input type="button" value="Protocolo"/>
-					<input type="button" placeholder="Copiar"/>
-					<input type="button" placeholder="Transferir"/>
-					<input type="button" placeholder="Apagar"/>
+					<input type="button" value="Copiar"/>
+					<input type="button" value="Transferir"/>
+					<input type="button" value="Apagar"/>
 				</div>
 
 			<!--Atalhos-->
-			<div class="shortcuts">
-				<input type="button" value="Atalho1"/>
-				<input type="button" value="Atalho2"/>
-				<input type="button" value="Atalho3"/>
-				<input type="button" value="Atalho4"/>
-				<input type="button" value="Atalho5"/>
+			<div class="shortcuts my-3 p-3 bg-body rounded shadow-sm">
+				<input type="button" class="btn btn-primary" value="Atalho1"/>
+				<input type="button" class="btn btn-primary" value="Atalho2"/>
+				<input type="button" class="btn btn-primary" value="Atalho3"/>
+				<input type="button" class="btn btn-primary" value="Atalho4"/>
+				<input type="button" class="btn btn-primary" value="Atalho5"/>
+				<input type="button" class="btn btn-primary" value="Atalho6"/>
 			</div>
 		</div>
 	</div> <!--End tools-->
