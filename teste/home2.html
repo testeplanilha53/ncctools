@@ -226,7 +226,7 @@
 						<li>
 							<hr class="dropdown-divider">
 						</li>
-						<li><a class="dropdown-item" href="#">Fechar</a></li>
+						<li><a class="dropdown-item" href="#" onclick="AlterClient()">Fechar</a></li>
 					</ul>
 				</li>
 
@@ -240,7 +240,7 @@
 						<li>
 							<hr class="dropdown-divider">
 						</li>
-						<li><a class="dropdown-item" href="#" onclick="AlterClient()">Fechar</a></li>
+						<li><a class="dropdown-item" href="#">Fechar</a></li>
 					</ul>
 				</li>
 
@@ -499,7 +499,7 @@
 
 	<script>
 		function AlterClient(){
-			var Areaclient = document.querySelectorAll(".clientArea");
+			var Areaclient = document.querySelector(".clientArea");
 			Areaclient.innerHTML = ""
 		}
 	</script>
