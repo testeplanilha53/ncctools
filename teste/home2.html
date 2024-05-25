@@ -249,7 +249,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link disabled" aria-disabled="true">Adicionar</a>
+					<a class="nav-link disabled" aria-disabled="true" onclick="AddClient()">Adicionar</a>
 				</li>
 
 			</ul><!-- Nav tab clientes -->
@@ -498,10 +498,18 @@
 	</script>
 
 	<script>
+		var client = ""
+
 		function AlterClient(){
 			var Areaclient = document.querySelector(".clientArea");
 			Areaclient.innerHTML = ""
 		}
+
+		function AddClient(){
+			var Areaclient = document.querySelector(".clientArea");
+			Areaclient.innerHTML = ""
+		}
+
 	</script>
 
 </body>
