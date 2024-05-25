@@ -1,0 +1,3 @@
+[submodule "projectit"]
+	path = projectit
+	url = https://github.com/dionemourao/projectit.git
