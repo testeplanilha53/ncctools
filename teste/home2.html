@@ -215,7 +215,7 @@
 
 			<!-- Aba de clientes  -->
 			<ul class="nav nav-tabs bg-body rounded shadow-sm border bg-dark-subtle">
-				<li class="nav-item dropdown">
+				<li class="nav-item dropdown" onclick="AlterClient()">
 					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
 						aria-expanded="false">Ana</a>
 					<ul class="dropdown-menu">
@@ -254,9 +254,6 @@
 			</ul><!-- Nav tab clientes -->
 
 			<div class="clientArea">
-				
-
-
 				<!-- Area edição -->
 				<div class="my-3 p-3 bg-body rounded shadow-sm border bg-dark-subtle">
 					<!--Entradas de dados-->
@@ -388,7 +385,6 @@
 					</div><!--end input container-->
 				</div> <!--End container shadow-sm-->
 
-
 				<!--Gerador de script-->
 				<div class="my-3 p-3 bg-body rounded shadow-sm border bg-dark-subtle">
 					<div class="wdg-content-input row">
@@ -500,7 +496,8 @@
 		crossorigin="anonymous">
 	
 		function AlterClient(){
-
+			var Areaclient = document.querySelectorAll(".clientArea");
+			Areaclient.innerHTML = ""
 		}
 	</script>
 
