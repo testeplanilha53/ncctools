@@ -17,7 +17,7 @@ components.forEach(el=>{
 
 
 var headerC = document.querySelector(".headerComponent")
-header.innerHTML = header();
+headerC.innerHTML = header();
 var windowC = document.querySelector(".windowComponent") 
 windowC.innerHTML = compArea();
 
