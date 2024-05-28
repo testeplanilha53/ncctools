@@ -1,7 +1,7 @@
 
 // import { widget } from "../_components/widget.js"; 
 // import { modal } from "../_components/modal.js";
-// import { header } from "../_components/header.js";
+import { header } from "../_components/header.js";
 import { compArea } from "../_components/compArea.js";
 
 

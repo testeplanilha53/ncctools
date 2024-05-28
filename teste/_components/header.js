@@ -1,7 +1,6 @@
 function  header(){
     return(
     `
-
 <!-- Area de apps -->
 			<!--
 			<div class="nav-scroller bg-body rounded shadow-sm border bg-dark-subtle">
@@ -65,7 +64,6 @@ function  header(){
 			</ul><!-- Nav tab clientes -->
 
 			`
-
 )}
 
 
