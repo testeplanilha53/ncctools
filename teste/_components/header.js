@@ -44,7 +44,7 @@ function  header(){
 							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="#">Notificações</a></li>
-								<li><a class="dropdown-item" href="/configuracoes">Configurações</a></li>
+								<li><a class="dropdown-item" href="https://ncctools.epizy.com/teste/configuracoes.html">Configurações</a></li>
 								<hr>
 								<li><a class="dropdown-item" href="#">Sair</a></li>
 							</ul>
