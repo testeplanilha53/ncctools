@@ -1,8 +1,5 @@
-
-// import { widget } from "../_components/widget.js"; 
-// import { modal } from "../_components/modal.js";
 import { header } from "../_components/header.js";
-import { compArea } from "../_components/compArea.js";
+import { compWidgetContainer} from "../_components/compWidgetContainer.js";
 
 
 console.log("ls")
@@ -18,7 +15,7 @@ components.forEach(el=>{
 
 var headerC = document.querySelector(".headerComponent")
 headerC.innerHTML = header();
-var windowC = document.querySelector(".windowComponent") 
-windowC.innerHTML = compArea();
+var compC = document.querySelector(".contentComponent") 
+compC.innerHTML = WidgetContainer();
 
 

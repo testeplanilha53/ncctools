@@ -46,7 +46,7 @@ function  header(){
 								<li><a class="dropdown-item" href="#">Notificações</a></li>
 								<li><a class="dropdown-item" href="#">Configurações</a></li>
 								<hr>
-								<li><a class="dropdown-item" href="#">Sair</a></li>
+								<li><a class="dropdown-item" href="/configuracoes.html">Sair</a></li>
 							</ul>
 						</li>
 					</ul>
