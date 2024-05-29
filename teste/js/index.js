@@ -1,5 +1,5 @@
 import { header } from "../_components/header.js";
-import { compWidgetContainer} from "../_components/compWidgetContainer.js";
+import { WidgetContainer} from "../_components/compWidgetContainer.js";
 
 
 console.log("ls")
