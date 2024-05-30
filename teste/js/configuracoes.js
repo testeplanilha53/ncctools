@@ -1,5 +1,5 @@
 import { header } from "../_components/header.js";
-import { WidgetContainer} from "../_components/compWidgetContainer.js";
+import { createWidget} from "../_components/compCreateWidget.js";
 
 
 console.log("ls")
@@ -16,4 +16,4 @@ components.forEach(el=>{
 var headerC = document.querySelector(".headerComponent")
 headerC.innerHTML = header();
 var compC = document.querySelector(".contentComponent") 
-compC.innerHTML = WidgetContainer();
+compC.innerHTML = createWidget();

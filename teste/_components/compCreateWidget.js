@@ -1,13 +1,24 @@
 
-import { WidgetContainer} from "./compWidgetContainer.js";
+import { widgetContainer } from "./compWidgetContainer.js";
+import { formComponents } from "./compformComponents.js";
 
-function CreateWidget(){
-    return(`
-        ${WidgetContainer}
-    
-    
+
+function createWidget() {
+    return (`
+        <header>
+            Novo Widget +
+        </header>
+        
+        ${widgetContainer( "Novo component", formComponents() )}
+ 
     `)
 }
 
 
-export {CreateWidget}
+function addComponent(el){
+    
+}
+
+
+export { createWidget, addComponent }
+
