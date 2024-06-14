@@ -193,6 +193,14 @@
                 </svg>                   
             </a>                
         </button>   
+
+        <button class="btn btn-info lupa">                        
+            <a class="" class="btn btn-light" data-toggle="modal" id="modelo_multa" title="Cálculo de multa" class="btn btn-light" data-toggle="modal" data-target="#modal_modelo_multa">            
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z"/>
+                </svg>                             
+            </a>                
+        </button>   
         
         <button class="btn btn-outline-dark lupa">             
             <a class="" class="btn btn-light" data-toggle="modal" onclick="mudar_tema()" id="tema"  title="Mudar tema" title="Mudar tema">
@@ -393,6 +401,30 @@
                      <input type="text" placeholder="Insira o link da imagem que vc quer como plano de fundo" id="mudar_tema_link" onchange="mudar_tema_link()"> <hr>
                      Cor de fundo de fundo: <br>                                      
                      <input type="color" id="mudar_tema_cor" onchange="mudar_tema_cor()"> <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Multa -->
+    <div class="modal fade" id="modal_modelo_multa" tabindex="3" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 590px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"style="color: red;">EM TESTES, NÃO UTILIZAR AINDA</h5>
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Cálculo da multa por quebra de fidelidade contratual</h5>                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="campo_padrao_verificao">                                        
+                    <input type="date" name="" id="multa_dInicial" onchange="calcularMulta()"> - Data da contratação<br>
+                    <input type="date" name="" id="multa_dInfinal" onchange="calcularMulta()"> - Data do cancelamento<br>
+                    <input type="number" name="" id="valorPlano" min="0" max="999" placeholder="00,00" onchange="calcularMulta()"> - Valor do plano R$<br>
+                </div>
+                <div class="modal-footer" style="color: red;">     
+                    <span>Valor estimado da multa: R$</span>                    
+                    <span id="resultado_multa">00,00</span>
                 </div>
             </div>
         </div>
@@ -812,6 +844,7 @@
     <script src="funcoes/cronometro.js"></script>
     <script src="funcoes/monitoramento.js"></script>
     <script src="funcoes/modal_transferencia_endereco.js"></script>
+    <script src="funcoes/modal_multa.js"></script>
     
 
 </body>
