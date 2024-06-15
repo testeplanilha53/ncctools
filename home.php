@@ -418,13 +418,33 @@
                     </button>
                 </div>
                 <div class="modal-body" id="campo_padrao_verificao">                                        
-                    <input type="date" name="" id="multa_dInicial" onchange="calcularMulta()"> - Data da contratação<br>
+                    <input type="date" name="" id="multa_dInicial" onchange="calcularMulta()"> - Data da instalação (ou da mundaça de plano)<br>
                     <input type="date" name="" id="multa_dInfinal" onchange="calcularMulta()"> - Data do cancelamento<br>
-                    <input type="number" name="" id="valorPlano" min="0" max="999" placeholder="00,00" onchange="calcularMulta()"> - Valor do plano R$<br>
-                </div>
+                    R$<input type="number" name="" id="valorPlano" min="0" max="999" placeholder="00,00" onchange="calcularMulta()"> - Valor cheio do plano vingente
+                 
+                    <hr>               
+                    <h5>Observações</h5>     
+                    <ul>
+                        <li>Multa rescisória de 30% dos meses restantes.</li>
+                        <li>Verificar se houve mudança de plano no <span style="color: red;">impr</span>.</li>
+                        <li><u>NÃO</u> deve ser considerado o dia da contratação, e <u>SIM</u> o dia em que ocorreu a instalação até a data do dia que cliente solicitou o cancelamento.</li>
+                        <li>Clientes que solicitarem o cancelamento dentro do prazo de 7 dias de utilização <u>NÃO TEM MULTA</u>.</li>
+                    </ul>  
+                    <a href="https://ncc.drozbase.com/docs/Prazos-multas-contratuais-e-valores-apos-cancelado-p0hhm3731zkwn019ej2y152h7q?utm_source=share" target="_blank"><button type="button" class="btn btn-primary">Artigo*</button></a>                                                     
+
+                    <hr>               
+                    <h5>Isenção da multa contratual</h5>     
+                    <ul>
+                        <li>Falecimento do titular do serviço.</li>
+                        <li>Sinal indisponível ou perda de visada.</li>
+                        <li>Cliente deseja transferir o seu contrato para o nome de outra pessoa.</li>
+
+                </div>                          
+                
                 <div class="modal-footer" style="color: red;">     
                     <span>Valor estimado da multa: R$</span>                    
                     <span id="resultado_multa">00,00</span>
+                    <span id="seteDias" style="color: green;"></span>
                 </div>
             </div>
         </div>
