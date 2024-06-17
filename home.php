@@ -438,13 +438,19 @@
                         <li>Falecimento do titular do serviço.</li>
                         <li>Sinal indisponível ou perda de visada.</li>
                         <li>Cliente deseja transferir o seu contrato para o nome de outra pessoa.</li>
+                    </ul>
+
+                    <hr>
+                    <h5>Detalhes da Multa</h5>    
+                    <!-- <span style="color: red;">Valor estimado da multa: R$</span>                    
+                    <span style="color: red;" id="resultado_multa" >00,00</span> <br> -->
+                    <span id="seteDias" style="color: green;"></span>
+                    <span id="explicaCalculo"></span>                    
 
                 </div>                          
                 
-                <div class="modal-footer" style="color: red;">     
-                    <span>Valor estimado da multa: R$</span>                    
-                    <span id="resultado_multa">00,00</span>
-                    <span id="seteDias" style="color: green;"></span>
+                <div class="modal-footer">  
+                    <button type="button" class="btn btn-success" onclick="inserir_modelo_multa()">Inserir no script</button>                       
                 </div>
             </div>
         </div>
@@ -520,7 +526,7 @@
                 <div class="modal-footer">      
                     <a href="https://ncc.drozbase.com/docs/Valores-de-servicos-e-equipamentos-FasterNet-p0ggstkxnaxrxvn6asdts8sj0p?utm_source=share" target="_blank"><button type="button" class="btn btn-primary">Artigo*</button></a>
                     <button type="button" class="btn btn-secondary"  onclick="apagar_modelo_transferencia()">Apagar</button>                    
-                    <button type="button" class="btn btn-success" onclick="inserir_modelo_transferencia()">Inserir</button>                    
+                    <button type="button" class="btn btn-success" onclick="inserir_modelo_transferencia()">Inserir no script</button>                 
                 </div>
             </div>
         </div>
@@ -865,6 +871,8 @@
     <script src="funcoes/monitoramento.js"></script>
     <script src="funcoes/modal_transferencia_endereco.js"></script>
     <script src="funcoes/modal_multa.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
     
 
 </body>
