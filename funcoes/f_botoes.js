@@ -1027,6 +1027,44 @@ function copiar_modelo_financeiro(){
 }
 
 
+function inserir_modelo_financeiro(){
+    // valores
+    var v1 =document.getElementById("campo_valor1").value
+    var v2 =document.getElementById("campo_valor2").value
+    var v3 =document.getElementById("campo_valor3").value
+    var v4 =document.getElementById("campo_valor4").value
+    var v5 =document.getElementById("campo_valor5").value
+
+    // datas
+    var d1 =document.getElementById("data_valor1").value
+    var d2 =document.getElementById("data_valor2").value
+    var d3 =document.getElementById("data_valor3").value
+    var d4 =document.getElementById("data_valor4").value
+    var d5 =document.getElementById("data_valor5").value    
+
+    var texto = `\n<hr><b>Repassado ao cliente sobre as pendências:</b> \n`
+    if ((v1!="")&&(d1!=null)){        
+        texto = texto + `- Valor: R$${v1} | Vencimento: ${d1} \n`     
+    }
+    if ((v2!="")&&(d1!=null)){        
+        texto = texto + `- Valor: R$${v2} | Vencimento: ${d2}\n`     
+    }
+    if ((v3!="")&&(d1!=null)){        
+        texto = texto + `- Valor: R$${v3} | Vencimento: ${d3}\n`     
+    }
+    if ((v4!="")&&(d1!=null)){        
+        texto = texto + `- Valor: R$${v4} | Vencimento: ${d4}\n`     
+    }
+    if ((v5!="")&&(d1!=null)){        
+        texto = texto + `- Valor: R$${v5} | Vencimento: ${d5}\n`     
+    }
+
+    var descricao = window.document.getElementById("descricao")  
+    descricao.value += texto
+
+    
+}
+
 function apagar_modelo_financeiro(){
     var elements1 = document.querySelectorAll(`[class^="campo_valor"]`)
 

@@ -474,8 +474,9 @@
                     R$ <input type="text" class="campo_valor" id="campo_valor5" placeholder="00,00 "> - Data: <input type="text" class="campo_valor" id="data_valor5" placeholder="DD/MM/AAAA"> - Link: <input type="text" class="campo_valor" id="link_valor5" placeholder="http://..."><br>
                 </div>
                 <div class="modal-footer">                                    
-                    <button type="button" class="btn btn-secondary"  onclick="apagar_modelo_financeiro()">Apagar</button>                    
-                    <button type="button" class="btn btn-success" onclick="copiar_modelo_financeiro()">Copiar</button>                    
+                    <button type="button" class="btn btn-danger"  onclick="apagar_modelo_financeiro()">Apagar</button> 
+                    <button type="button" class="btn btn-success" onclick="inserir_modelo_financeiro()">Inserir no script</button>                                    
+                    <button type="button" class="btn btn-primary" onclick="copiar_modelo_financeiro()">Copiar</button>                    
                 </div>
             </div>
         </div>
