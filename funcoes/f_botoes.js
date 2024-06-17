@@ -1073,18 +1073,18 @@ function apagar_modelo_financeiro(){
     });
 }
 
-/*
+
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
     
-  })
-  */
+})
+  
 
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip({     
-        'delay': { show: 1000, hide: 100 }
-    })    
-  })
+//   $(function () {
+//     $('[data-toggle="tooltip"]').tooltip({     
+//         'delay': { show: 1000, hide: 100 }
+//     })    
+//   })
 
 
 //   $(function () {
