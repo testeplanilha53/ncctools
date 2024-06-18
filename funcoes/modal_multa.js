@@ -10,7 +10,7 @@ function inserir_modelo_multa(){
 
 function calcularMulta(){
     var dataInicial =window.document.getElementById("multa_dInicial").value
-    var dataFinal =window.document.getElementById("multa_dInfinal").value
+    var dataFinal =window.document.getElementById("multa_dInfinal").value    
     var valorPlano =window.document.getElementById("valorPlano").value
     var resultadoMulta = window.document.getElementById("resultado_multa")    
     var seteDias_c = window.document.getElementById("seteDias")    
@@ -34,9 +34,9 @@ function calcularMulta(){
             multa = (12-meses)*valorPlano*0.3
             multa = multa.toFixed(2) // deixando apenas com duas casas decimais
             // console.log(multa)        
-            var diasMes = obterDiasNoMes(dataFinal)
+            var diasMes = obterDiasNoMes(new Date(dataFinal))
             
-            explicaCalculo.innerText += `Instalação em: ${converterData(dataInicial)}.\n`
+            explicaCalculo.innerText += `Instalação/Mud. Plan. em: ${converterData(dataInicial)}.\n`
             explicaCalculo.innerText += `Interesse no cancelamento em: ${converterData(dataFinal)}.\n`
             explicaCalculo.innerText += `Meses utilizados: ${meses}.\n`     
             explicaCalculo.innerText += `Meses restantes: ${12-meses}.\n`     
@@ -52,7 +52,12 @@ function calcularMulta(){
             
 
         } else{
-            seteDias_c.innerText = `Cliente a ${meses} meses (Sem Multa).`
+            if (isNaN(meses)){
+                seteDias_c.innerHTML = `<img src="https://cdn.pixabay.com/animation/2022/12/26/19/45/19-45-46-138_512.gif" alt="" width="80px" style="position: absolute; right: 40px;">                 
+                                        🤖 Verifique se as datas foram inseridas corretamente.<br>Ocorreu uma inconsistência!`
+            }else{
+                seteDias_c.innerText = `Cliente a ${meses} meses (Sem Multa).`
+            }            
         }                  
     }
     // resultadoMulta.innerText = multa
@@ -63,17 +68,17 @@ function calcularMulta(){
 
 function calcularMesesEntreDatas(dataInicial, dataFinal) {
     // Converter as datas para objetos Date
-    const dataInicio = new Date(dataInicial);
-    const dataFim = new Date(dataFinal);
+    var dataInicio = new Date(dataInicial);
+    var dataFim = new Date(dataFinal);
 
     // Obter os anos e os meses das datas
-    const anoInicio = dataInicio.getFullYear();
-    const mesInicio = dataInicio.getMonth();
-    const anoFim = dataFim.getFullYear();
-    const mesFim = dataFim.getMonth();
+    var anoInicio = dataInicio.getFullYear();
+    var mesInicio = dataInicio.getMonth();
+    var anoFim = dataFim.getFullYear();
+    var mesFim = dataFim.getMonth();
 
     // Calcular a diferença total em meses
-    const diferencaMeses = (anoFim - anoInicio) * 12 + (mesFim - mesInicio);
+    var diferencaMeses = (anoFim - anoInicio) * 12 + (mesFim - mesInicio);
 
     return diferencaMeses;
 }
@@ -81,14 +86,14 @@ function calcularMesesEntreDatas(dataInicial, dataFinal) {
 
 function verificarDiferencaDe7Dias(dataInicial, dataFinal) {
     // Converter as datas para objetos Date
-    const dataInicio = new Date(dataInicial);
-    const dataFim = new Date(dataFinal);
+    var dataInicio = new Date(dataInicial);
+    var dataFim = new Date(dataFinal);
 
     // Calcular a diferença em milissegundos
-    const diferencaEmMilissegundos = dataFim - dataInicio;
+    var diferencaEmMilissegundos = dataFim - dataInicio;
 
     // Converter a diferença para dias (1 dia = 24 horas * 60 minutos * 60 segundos * 1000 milissegundos)
-    const diferencaEmDias = diferencaEmMilissegundos / (1000 * 60 * 60 * 24);
+    var diferencaEmDias = diferencaEmMilissegundos / (1000 * 60 * 60 * 24);
 
     // Verificar se a diferença é exatamente 7 dias
     return diferencaEmDias <= 7;
@@ -96,35 +101,30 @@ function verificarDiferencaDe7Dias(dataInicial, dataFinal) {
 
 
 function obterDiasNoMes(data) {
-    // Converter a string de data para um objeto Date
-    const dataAtual = new Date(data);
+    // Extrai o ano e o mês da data fornecida
+    var ano = data.getFullYear();
+    var mes = data.getMonth() + 1; // Mês é zero-indexado, então adicionar 1
 
-    // Obter o ano e o mês da data
-    const ano = dataAtual.getFullYear();
-    const mes = dataAtual.getMonth();
+    // Cria uma nova data com o mês seguinte e o dia 0
+    var proximoMes = new Date(ano, mes, 0);
 
-    // Criar uma data para o primeiro dia do mês seguinte
-    const primeiroDiaDoMesSeguinte = new Date(ano, mes + 1, 1);
-
-    // Subtrair um dia para obter o último dia do mês original
-    const ultimoDiaDoMes = new Date(primeiroDiaDoMesSeguinte - 1);
-
-    // Retornar o dia do mês, que é o número total de dias no mês
-    return ultimoDiaDoMes.getDate();
+    // Retorna o último dia do mês, que é o número de dias no mês
+    return proximoMes.getDate();
 }
 
-// Exemplo de uso
-// const data = '2023-07-15'; // formato YYYY-MM-DD
-// const diasNoMes = obterDiasNoMes(data);
-// console.log(`O mês tem ${diasNoMes} dias`);
+// // Exemplo de uso
+// var data = new Date('2024-06-17'); // 17 de junho de 2024
+// var diasNoMes = obterDiasNoMes(data);
+// console.log(diasNoMes); // Saída: 30, pois junho tem 30 dias
+
 
 
 function converterData(data) {
     // Dividir a string da data em partes (ano, mês, dia)
-    const partes = data.split('-');
+    var partes = data.split('-');
 
     // Reorganizar as partes para o formato DD-MM-YYYY
-    const dataFormatada = `${partes[2]}/${partes[1]}/${partes[0]}`;
+    var dataFormatada = `${partes[2]}/${partes[1]}/${partes[0]}`;
 
     return dataFormatada;
 }
@@ -138,11 +138,11 @@ function substituirPontoPorVirgula(texto) {
 
 function obterDiaDaData(data) {
     // Usar moment para criar um objeto de data e obter o dia
-    const dia = moment(data).date();
+    var dia = moment(data).date();
     return dia;
 }
 
 // Exemplo de uso
-// const data = '2023-06-15'; // formato YYYY-MM-DD
-// const dia = obterDiaDaData(data);
+// var data = '2023-06-15'; // formato YYYY-MM-DD
+// var dia = obterDiaDaData(data);
 // console.log(`O dia da data é: ${dia}`);

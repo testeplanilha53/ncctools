@@ -418,19 +418,20 @@
                     </button>
                 </div>
                 <div class="modal-body" id="campo_padrao_verificao">                                        
+                    R$<input type="number" name="" id="valorPlano" min="0" max="999" placeholder="00,00" onchange="calcularMulta()"> - Valor cheio do plano vingente <br>
                     <input type="date" name="" id="multa_dInicial" onchange="calcularMulta()"> - Data da instalação (ou da mundaça de plano)<br>
-                    <input type="date" name="" id="multa_dInfinal" onchange="calcularMulta()"> - Data do cancelamento<br>
-                    R$<input type="number" name="" id="valorPlano" min="0" max="999" placeholder="00,00" onchange="calcularMulta()"> - Valor cheio do plano vingente
+                    <input type="date" name="" id="multa_dInfinal" onchange="calcularMulta()"> - Data do cancelamento                    
                  
                     <hr>               
-                    <h5>Observações</h5>     
+                    <h5>Observações
+                        <a href="https://ncc.drozbase.com/docs/Prazos-multas-contratuais-e-valores-apos-cancelado-p0hhm3731zkwn019ej2y152h7q?utm_source=share" target="_blank"><button type="button" class="btn btn-primary">Artigo*</button></a>                                                     
+                    </h5>     
                     <ul>
                         <li>Multa rescisória de 30% dos meses restantes.</li>
                         <li>Verificar se houve mudança de plano no <span style="color: red;">impr</span>.</li>
                         <li><u>NÃO</u> deve ser considerado o dia da contratação, e <u>SIM</u> o dia em que ocorreu a instalação até a data do dia que cliente solicitou o cancelamento.</li>
                         <li>Clientes que solicitarem o cancelamento dentro do prazo de 7 dias de utilização <u>NÃO TEM MULTA</u>.</li>
-                    </ul>  
-                    <a href="https://ncc.drozbase.com/docs/Prazos-multas-contratuais-e-valores-apos-cancelado-p0hhm3731zkwn019ej2y152h7q?utm_source=share" target="_blank"><button type="button" class="btn btn-primary">Artigo*</button></a>                                                     
+                    </ul>                      
 
                     <hr>               
                     <h5>Isenção da multa contratual</h5>     
@@ -441,7 +442,10 @@
                     </ul>
 
                     <hr>
-                    <h5>Detalhes da Multa</h5>    
+                    <h5>
+                        Detalhes da Multa       
+                        <img src="https://cdn.pixabay.com/animation/2024/05/16/21/45/21-45-34-3_512.gif" alt="" width="80px" style="position: absolute; right: 40px;">                 
+                    </h5>    
                     <!-- <span style="color: red;">Valor estimado da multa: R$</span>                    
                     <span style="color: red;" id="resultado_multa" >00,00</span> <br> -->
                     <span id="seteDias" style="color: green;"></span>
