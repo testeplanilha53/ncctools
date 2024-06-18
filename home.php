@@ -411,7 +411,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 590px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"style="color: red;">EM TESTES, NÃO UTILIZAR AINDA</h5>
+                    <!-- <h5 class="modal-title"style="color: red;">EM TESTES, NÃO UTILIZAR AINDA</h5> -->
                     <h5 class="modal-title" id="exampleModalCenterTitle">Cálculo da multa por quebra de fidelidade contratual</h5>                    
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
