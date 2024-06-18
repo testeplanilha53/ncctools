@@ -35,6 +35,7 @@ function calcularMulta(){
             multa = multa.toFixed(2) // deixando apenas com duas casas decimais
             // console.log(multa)        
             var diasMes = obterDiasNoMes(new Date(dataFinal))
+            // console.log(diasMes)
             
             explicaCalculo.innerText += `Instalação/Mud. Plan. em: ${converterData(dataInicial)}.\n`
             explicaCalculo.innerText += `Interesse no cancelamento em: ${converterData(dataFinal)}.\n`
@@ -101,21 +102,28 @@ function verificarDiferencaDe7Dias(dataInicial, dataFinal) {
 
 
 function obterDiasNoMes(data) {
-    // Extrai o ano e o mês da data fornecida
+
+    data.setDate(data.getDate() + 1);
+    
     var ano = data.getFullYear();
+    console.log(`Ano ${ano}`)
     var mes = data.getMonth() + 1; // Mês é zero-indexado, então adicionar 1
+    console.log(`mes ${mes}`)
 
     // Cria uma nova data com o mês seguinte e o dia 0
     var proximoMes = new Date(ano, mes, 0);
+    console.log(`proximoMes ${proximoMes}`)
 
     // Retorna o último dia do mês, que é o número de dias no mês
+    console.log(`final ${proximoMes.getDate()}`)
     return proximoMes.getDate();
+
 }
 
-// // Exemplo de uso
-// var data = new Date('2024-06-17'); // 17 de junho de 2024
-// var diasNoMes = obterDiasNoMes(data);
-// console.log(diasNoMes); // Saída: 30, pois junho tem 30 dias
+// Exemplo de uso
+var data = new Date('2024-06-17'); // 17 de junho de 2024
+var diasNoMes = obterDiasNoMes(data);
+console.log(diasNoMes); // Saída: 30, pois junho tem 30 dias
 
 
 
