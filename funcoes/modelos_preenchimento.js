@@ -294,7 +294,7 @@ function fun_can_titular (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita cancelamento da conexão. Informado de que tal solicitação será repassada para o setor responsável, que fará posterior contato para fins de conclusão/negociação. Cliente ciente da solicitação em sistema, sem mais dúvidas. \n<b>Motivo do cancelamento: </b> <hr> \n<b>Ofertado: </b> XXXXXX <hr> \n<b> Verificação com a supervisão: </b>`
+    descricao.value = `Cliente solicita cancelamento da conexão. Não foi possível retê-lo com as ofertas disponíveis, então o atendimento foi transferido para o setor de retenção realizar a conclusão/negociação. Sem mais dúvidas. <hr>\n<b>Motivo do cancelamento:</b> XXX <hr> \n<b>Ofertado: </b> XXX <hr>`
 
 }
 
@@ -321,7 +321,16 @@ function fun_troca_titularidade (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicitou informação sobre troca de titularidade. Repassado que o titular deve encaminhar o pedido para cancelamento@fasternet.com.br, no qual deve ser enviado também como cópia para o novo titular da conta. Caso não seja possível, pode ser solicitada no escritório local e é necessária a presença do atual e do novo titular, assim como a documentação de ambos.`
+    descricao.value = ` Cliente solicitou informação sobre troca de titularidade. O atendimento foi transferido para o setor de retenção realizar as tratativas.`
+
+}
+
+function fun_reativação (){
+    meu_id = window.document.getElementById("fun_reativação")
+    change_color(meu_id)
+    meu_id.className = "btn btn-danger"
+
+    descricao.value = `Cliente solicita a reativação do cadastro cancelado há menos de 15 dias. Atendimento transferido para o setor de retenção. Sem mais.`
 
 }
 

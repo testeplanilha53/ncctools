@@ -319,7 +319,7 @@ function tooltips_fun_can_titular (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicita cancelamento da conexão. Informado de que tal solicitação será repassada para o setor responsável, que fará posterior contato para fins de conclusão/negociação. Cliente ciente da solicitação em sistema, sem mais dúvidas. <b>Motivo do cancelamento: </b> <hr> <b>Ofertado: </b> XXXXXX <hr> <b> Verificação com a supervisão: </b>`
+    var txt = `Cliente solicita cancelamento da conexão. Não foi possível retê-lo com as ofertas disponíveis, então o atendimento foi transferido para o setor de retenção realizar a conclusão/negociação. Sem mais dúvidas. <hr> <b> Motivo do cancelamento:</b> XXX <hr> <b>Ofertado: </b> XXX <hr>`
 
     meu_id.setAttribute("data-original-title",txt)
 
@@ -352,11 +352,24 @@ function tooltips_fun_troca_titularidade (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicitou informação sobre troca de titularidade. Repassado que o titular deve encaminhar o pedido para cancelamento@fasternet.com.br, no qual deve ser enviado também como cópia para o novo titular da conta. Caso não seja possível, pode ser solicitada no escritório local e é necessária a presença do atual e do novo titular, assim como a documentação de ambos.`
+    var txt = ` Cliente solicitou informação sobre troca de titularidade. O atendimento foi transferido para o setor de retenção realizar as tratativas.`
 
     meu_id.setAttribute("data-original-title",txt)
 
 }
+
+function tooltips_fun_reativação (){
+    meu_id = window.document.getElementById("fun_reativação")
+    change_color(meu_id)
+    //meu_id.className = "btn btn-danger"
+
+    var txt = `Cliente solicita a reativação do cadastro cancelado há menos de 15 dias. Atendimento transferido para o setor de retenção. Sem mais.`
+
+    meu_id.setAttribute("data-original-title",txt)
+
+}
+
+
 
 //------------------------------------------------------
 //Problemas na conexão

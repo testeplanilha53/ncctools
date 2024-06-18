@@ -692,9 +692,10 @@
 
                     <hr><strong>Cancelamento e Troca de titularidade</strong> <br>
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_titular" onclick="fun_can_titular()" onmouseover="tooltips_fun_can_titular()">Solicitado pelo titular do cadastro</button> <br>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_com_pendencia" onclick="fun_can_com_pendencia()" onmouseover="tooltips_fun_can_com_pendencia()">Cadastro com pendências</button> <br>
+                    <!-- <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_com_pendencia" onclick="fun_can_com_pendencia()" onmouseover="tooltips_fun_can_com_pendencia()">Cadastro com pendências</button> <br> -->
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_can_outra_pessoa" onclick="fun_can_outra_pessoa()" onmouseover="tooltips_fun_can_outra_pessoa()">Solicitado por outra pessoa</button> <br> <br>
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_troca_titularidade" onclick="fun_troca_titularidade()" onmouseover="tooltips_fun_troca_titularidade()">Troca de titularidade</button> <br>
+                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="" id="fun_reativação" onclick="fun_reativação()" onmouseover="tooltips_fun_reativação()">Reativação</button> <br>
 
                     <!--NOVO-->
                     <hr><strong>Problemas na conexão</strong> <br>
