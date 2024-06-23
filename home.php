@@ -201,6 +201,17 @@
                 </svg>                             
             </a>                
         </button>   
+
+        <button class="btn btn-warning lupa">                        
+            <a class="" class="btn btn-light" data-toggle="modal" id="modelo_pontoADC" title="Ponto Adicional" class="btn btn-light" data-toggle="modal" data-target="#modal_pontoADC">            
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-router" viewBox="0 0 16 16">
+                    <path d="M5.525 3.025a3.5 3.5 0 0 1 4.95 0 .5.5 0 1 0 .707-.707 4.5 4.5 0 0 0-6.364 0 .5.5 0 0 0 .707.707"/>
+                    <path d="M6.94 4.44a1.5 1.5 0 0 1 2.12 0 .5.5 0 0 0 .708-.708 2.5 2.5 0 0 0-3.536 0 .5.5 0 0 0 .707.707ZM2.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m4.5-.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2.5.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1.5-.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0"/>
+                    <path d="M2.974 2.342a.5.5 0 1 0-.948.316L3.806 8H1.5A1.5 1.5 0 0 0 0 9.5v2A1.5 1.5 0 0 0 1.5 13H2a.5.5 0 0 0 .5.5h2A.5.5 0 0 0 5 13h6a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5h.5a1.5 1.5 0 0 0 1.5-1.5v-2A1.5 1.5 0 0 0 14.5 8h-2.306l1.78-5.342a.5.5 0 1 0-.948-.316L11.14 8H4.86zM14.5 9a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                </svg>                           
+            </a>                
+        </button>   
         
         <button class="btn btn-outline-dark lupa">             
             <a class="" class="btn btn-light" data-toggle="modal" onclick="mudar_tema()" id="tema"  title="Mudar tema" title="Mudar tema">
@@ -481,6 +492,52 @@
                     <button type="button" class="btn btn-danger"  onclick="apagar_modelo_financeiro()">Apagar</button> 
                     <button type="button" class="btn btn-success" onclick="inserir_modelo_financeiro()">Inserir no script</button>                                    
                     <button type="button" class="btn btn-primary" onclick="copiar_modelo_financeiro()">Copiar</button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal PONTO ADICIONAL-->
+    <div class="modal fade" id="modal_pontoADC" tabindex="3" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 620px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PONTO ADICIONAL</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="campo_padrao_verificao">                                        
+                    Selecione a quantidade de pontos adicionais e o parcelamento da instalação: <br>
+                    <select class="" id="pontos_adicionais">
+                        <option value=""></option>
+                        <option value="1">1 ponto adicional   | R$29,90/mês  | R$100,00 taxa de instalação</option>
+                        <option value="2">2 pontos adicionais | R$49,90/mês  | R$150,00 taxa de instalação</option>
+                        <option value="3">3 pontos adicionais | R$69,90/mês  | R$200,00 taxa de instalação</option>
+                        <option value="4">4 pontos adicionais | R$89,90/mês  | R$250,00 taxa de instalação</option>
+                        <option value="5">5 pontos adicionais | R$109,90/mês | R$300,00 taxa de instalação</option>                        
+                    </select>
+                    em 
+                    <select class="" id="qtd_parcelas">
+                        <option value=""></option>
+                        <option value="1">1x</option>
+                        <option value="2">2x</option>
+                        <option value="3">3x</option>
+                        <option value="4">4x</option>
+                        <option value="5">5x</option>                                           
+                    </select> <br> <br>
+                    Velocidade e valor do plano vingente: 
+                    <input type="number" name="" id="plano_mega" min="0" max="8000" placeholder="200" onchange="calcularMulta()">
+                    <select class="" id="plan_tipo">
+                        <option value="MEGA">MEGA</option>
+                        <option value="GIGA">GIGA</option>                                                                  
+                    </select> 
+                     | 
+                    R$<input type="number" name="" id="valorPlano_adc" min="0" max="999" placeholder="00,00" onchange="calcularMulta()">                    
+                </div>
+                <div class="modal-footer">                                                        
+                    <button type="button" class="btn btn-success" onclick=" calcularPontoAdicional()">Inserir no script</button>                                                                          
                 </div>
             </div>
         </div>
@@ -877,6 +934,7 @@
     <script src="funcoes/monitoramento.js"></script>
     <script src="funcoes/modal_transferencia_endereco.js"></script>
     <script src="funcoes/modal_multa.js"></script>
+    <script src="funcoes/modal_pontoADC.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     
