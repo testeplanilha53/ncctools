@@ -494,7 +494,7 @@ function fun_negociacao_pendencias (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita negociação das pendências. Ciente de que tal verificação deverá ser feita diretamente no escritório local ou via e-mail pelo (atendimentofinanceiro@fasternet.com.br). Ciente dos valores e prazos das pendências em atraso, assim como das formas de pagamento disponíveis. Sem mais dúvidas.`
+    descricao.value = `Cliente solicita negociação das pendências. Ciente de que tal verificação deverá ser feita diretamente no e-mail pelo (atendimentofinanceiro@fasternet.com.br). Ciente dos valores e prazos das pendências em atraso, assim como das formas de pagamento disponíveis.`
 
 }
 
