@@ -647,7 +647,7 @@ function tooltips_fun_troca_plano (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicita informações sobre troca de plano. Repassados os planos em catálogo para cliente. Orientado (a) a enviar um e-mail com a solicitação da troca para novoplano@fasternet.com.br ou solicitar presencialmente no escritório local.  Cliente ciente que para o mês posterior à solicitação, serão geradas duas faturas com os valores proporcionais aos períodos em que cada plano foi utilizado.`
+    var txt = `Cliente solicita troca de plano. Repassados os planos em catálogo, cliente solicitou a troca de plano para XXX MEGA por R$ XX,XX. Feito a solicitação via formulário. Ficou ciente de que serão geradas duas faturas de mensalidade no mês posterior, cada uma referente ao período proporcional de uso de cada plano, e que a fidelidade será renovada por mais 12 meses.`
 
     meu_id.setAttribute("data-original-title",txt)
 
