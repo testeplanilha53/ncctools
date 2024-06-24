@@ -247,7 +247,7 @@ function tooltips_fun_desb3001_indisp (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicita desbloqueio da conexão. Identificado bloqueio 3001. Ciente de que não é possível liberar o acesso em sistema, uma vez que já foi concedido o desbloqueio por 5 dias corridos. Repassados os valores atualizados e prazos das pendências, assim como as formas de pagamento disponíveis, sem mais dúvidas.<b>Pendências em atraso:</b>`
+    var txt = `Cliente solicita desbloqueio da conexão. Identificado bloqueio 3001. Ciente de que não é possível liberar o acesso em sistema, uma vez que já foi concedido o desbloqueio por 5 dias corridos. Repassados os valores atualizados e prazos das pendências, assim como as formas de pagamento disponíveis, sem mais dúvidas.`
 
     meu_id.setAttribute("data-original-title",txt)
 
@@ -267,7 +267,7 @@ function tooltips_fun_bloqueio_verde (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicita desbloqueio da conexão. Identificado bloqueio verde. Ciente de que não é possível liberar o acesso em sistema e ciente dos valores atualizados e prazos das pendências. Repassadas as formas de pagamento disponíveis, sem mais dúvidas.<b>Pendências em atraso:</b>`
+    var txt = `Cliente solicita desbloqueio da conexão. Identificado bloqueio verde. Ciente de que não é possível liberar o acesso em sistema e ciente dos valores atualizados e prazos das pendências. Repassadas as formas de pagamento disponíveis, sem mais dúvidas.`
 
     meu_id.setAttribute("data-original-title",txt)
 
@@ -330,7 +330,7 @@ function tooltips_fun_can_com_pendencia (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicita cancelamento da assinatura. Ciente de que há pendências em atraso e que é necessário quitá-las para fazer o pedido de cancelamento por esse canal de atendimento. Repassada a possibilidade de efetuar o pedido diretamente no escritório munido dos equipamentos. Informados os valores e prazos atualizados com juros, assim como as formas de pagamento disponíveis. Sem mais dúvidas. <hr>Pendências em atraso:`
+    var txt = `Cliente solicita cancelamento da assinatura. Ciente de que há pendências em atraso e que é necessário quitá-las para fazer o pedido de cancelamento por esse canal de atendimento. Repassada a possibilidade de efetuar o pedido diretamente no escritório munido dos equipamentos. Informados os valores e prazos atualizados com juros, assim como as formas de pagamento disponíveis. Sem mais dúvidas.`
 
     meu_id.setAttribute("data-original-title",txt)
 
@@ -550,7 +550,7 @@ function tooltips_fun_pendencias_atraso (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente entrou em contato solicitando informações sobre pendências de boletos. Repassadas as informações sobre os valores e taxas, e as datas referentes aos meses de pendências. Sem mais dúvidas.<b> Pendências em atraso:</b>`
+    var txt = `Cliente entrou em contato solicitando informações sobre pendências de boletos. Repassadas as informações sobre os valores e taxas, e as datas referentes aos meses de pendências. Sem mais dúvidas.`
 
     meu_id.setAttribute("data-original-title",txt)
 
