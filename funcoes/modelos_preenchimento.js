@@ -589,7 +589,7 @@ function fun_token_fatura (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita informações sobre o número de Token para acessar suas faturas. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
+    descricao.value = `Cliente solicita informações sobre o número de Token para acessar suas faturas. Repassado o Token ao cliente.`
 
 }
 
@@ -598,7 +598,7 @@ function fun_token_sva (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
+    descricao.value = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassado o Token ao cliente.`
 
 }
 

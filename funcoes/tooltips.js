@@ -674,7 +674,7 @@ function tooltips_fun_token_fatura (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicita informações sobre o número de Token para acessar suas faturas. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
+    var txt = `Cliente solicita informações sobre o número de Token para acessar suas faturas. Repassado o Token ao cliente.`
 
     meu_id.setAttribute("data-original-title",txt)
 
@@ -685,7 +685,7 @@ function tooltips_fun_token_sva (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassadas as instruções de acesso ao site da FasterNet e do procedimento sobre como gerar o Token. Informação obtida com sucesso. Sem mais dúvidas.`
+    var txt = `Cliente solicita informações sobre o número de Token para ativar os SVA. Repassado o Token ao cliente.`
 
     meu_id.setAttribute("data-original-title",txt)
 
