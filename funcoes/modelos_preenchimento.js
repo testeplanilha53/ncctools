@@ -226,7 +226,7 @@ function fun_desb3001 (){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente entrou em contato solicitando o desbloqueio da conexão, ciente dos valores em pendência assim como o prazo de 3 a 5 dias corridos do desbloqueio. Orientado a realizar o reinicio manual do equipamento durante 15 minutos. Sem mais dúvidas.\n\n<b>Pendências em atraso no sistema:</b>`
+    descricao.value = `Cliente entrou em contato solicitando o desbloqueio da conexão, ciente dos valores em pendência assim como o prazo de 3 a 5 dias corridos do desbloqueio. Orientado a realizar o reinicio manual do equipamento durante 15 minutos. Sem mais dúvidas.`
 
 }
 function fun_desb3001_indisp (){
