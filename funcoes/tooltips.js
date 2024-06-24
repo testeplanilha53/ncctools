@@ -277,7 +277,7 @@ function tooltips_fun_bloqueio_azul (){
     change_color(meu_id)
     //meu_id.className = "btn btn-danger"
 
-    var txt = `Cliente solicita o bloqueio temporário da conexão. Ciente que o cadastro poderá ficar bloqueado por até 120 dias corridos e que o desbloqueio será automático. Repassado que para solicitar o bloqueio ele deve pagar todos as faturas em aberto no sistema e será gerada outra referente aos dias de uso até o data da solicitação. Ciente também que pode estar solicitando esse serviço no escritório local ou através do e-mail bloqueio@fasternet.com.br.`
+    var txt = `Cliente solicita o bloqueio temporário da conexão. Ciente que o cadastro ficará bloqueado por [QUANTIDADE DE DIAS 30, 60 90 OU 120] dias corridos e que o desbloqueio será automático.\nMotivo do bloqueio azul: motivos financeiros/ saúde/ reforma/ viagem.\nSolicitação realizada no formulário financeiro.`
 
     meu_id.setAttribute("data-original-title",txt)
 
