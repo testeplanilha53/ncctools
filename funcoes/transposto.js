@@ -50,9 +50,10 @@ function verificaLayout(){
     var layout = localStorage.getItem('layout');
     
     if (layout=='2'){
-        deixar_em_baixo()
-    }else{        
         deixar_na_lateral()
+    }
+    if (layout=='1'){        
+        deixar_em_baixo()
     }
 }
 
