@@ -1268,18 +1268,10 @@
             </div>
 
 
-            <div id="botoes_laterais" class="oculto">
+            <div id="botoes_laterais" class="oculto" onmouseover="ativar_arrasto()" onmouseleave="desativar_arrasto()">
                 <!-- Draggable DIV -->
                 <div id="mydiv">
-                    <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-                    <div id="mydivheader">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrows-move" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8" />
-                        </svg>
-                    </div>
-                    <section style="max-width: 150;">
+                    <section>
                         <div id="btn_atalhos">
 
 
@@ -1298,39 +1290,48 @@
                             <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
                                 data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
                                 onclick="atalho1()">Atalho 1</button>
-                                <br>
+                            <br>
 
                             <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
                                 data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
                                 onclick="atalho2()">Atalho 2</button>
-                                <br>
+                            <br>
 
 
                             <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
                                 data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
                                 onclick="atalho3()">Atalho 3</button>
-                                <br>
+                            <br>
 
                             <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
                                 data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
                                 onclick="atalho4()">Atalho 4</button>
-                                <br>
+                            <br>
 
                             <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
                                 data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
                                 onclick="atalho5()">Atalho 5</button>
-                                <br>
+                            <br>
 
                             <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
                                 data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
                                 onclick="atalho6()">Atalho 6</button>
-                                <br>
+                            <br>
 
                         </div>
+                    </section>
+                    <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+                    <div id="mydivheader" class="oculto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrows-move" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8" />
+                        </svg>
+                    </div>
                 </div>
 
             </div>
-            </section>
+            
         </div>
 
     </div>

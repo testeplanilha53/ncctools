@@ -41,3 +41,17 @@ function dragElement(elmnt) {
         document.onmousemove = null;
     }
 }
+
+
+
+
+function ativar_arrasto(){
+    var mover = window.document.getElementById("mydivheader")    
+    mover.classList.remove('oculto');   
+}
+
+function desativar_arrasto(){
+    var mover = window.document.getElementById("mydivheader")    
+    mover.classList.add('oculto');    
+     
+}
