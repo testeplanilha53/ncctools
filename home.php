@@ -24,6 +24,7 @@
     <title id="titulo">Atendimento via chat</title>
 
     <link rel="stylesheet" href="estilos/index.css">
+    <link rel="stylesheet" href="estilos/elemento_arrastavel.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
     <!--BOOTSTRAP-->
@@ -162,9 +163,8 @@
                         <path
                             d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
                     </svg>
-                    <span data-toggle="tooltip" data-placement="bottom"
-                        title="Use seus modelos de preenchimento totalmente personalizáveis.">
-                        &nbsp Modelos Pessoais
+                    <span data-toggle="tooltip" data-placement="bottom" title="Modelos de preenchimento Pessoais.">
+                        &nbsp M. Pessoais
                     </span>
                 </button>
 
@@ -179,9 +179,8 @@
                         <path
                             d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
                     </svg>
-                    <span data-toggle="tooltip" data-placement="bottom"
-                        title="Use seus modelos de preenchimento totalmente personalizáveis.">
-                        &nbsp Modelos Padrões
+                    <span data-toggle="tooltip" data-placement="bottom" title="Modelos de preenchimento Padrões.">
+                        &nbsp M. Padrões
                     </span>
                 </button>
 
@@ -191,12 +190,12 @@
                 </a>
                 <br>
 
-                <button class="btn btn-light lupa">
+                <!-- <button class="btn btn-light lupa">
                     <a class="" id="" class="btn btn-warning" data-toggle="modal" data-target="#modal_nota10"
                         title="Dicas para um atendimento nota 100!">
                         <i class="far fa-user-headset" style="line-height: 1; color: rgb(30, 48, 80);"></i>
                     </a>
-                </button>
+                </button> -->
                 <button class="btn btn-warning lupa">
                     <a class="" id="modelo_noc" class="btn btn-light" data-toggle="modal"
                         data-target="#modal_transferencia" title="Modelo de transferência de endereço">
@@ -289,8 +288,10 @@
                 <button class="btn btn-light lupa">
                     <a class="" class="btn btn-light" data-toggle="modal" onclick="transposto()" id=""
                         title="Mudar layout">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-wtf" viewBox="0 0 16 16">
-                            <path d="M5 1v8H1V1zM1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm13 2v5H9V2zM9 1a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 13v2H3v-2zm-2-1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm12-1v2H9v-2zm-6-1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-layout-wtf" viewBox="0 0 16 16">
+                            <path
+                                d="M5 1v8H1V1zM1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm13 2v5H9V2zM9 1a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 13v2H3v-2zm-2-1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zm12-1v2H9v-2zm-6-1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z" />
                         </svg>
                     </a>
                 </button>
@@ -1219,8 +1220,8 @@
 
                 </div>
 
-                <br>                
-                    <section id="botoes_inferiores" class="">
+                <br>
+                <section id="botoes_inferiores" class="">
                     <div id="btn_atalhos">
 
                         <div class="container">
@@ -1263,58 +1264,78 @@
                         </div>
 
                     </div>
-                    </section>                
+                </section>
             </div>
 
-            
-                <div id="botoes_laterais" class="oculto">                                    
-                    <section>
+
+            <div id="botoes_laterais" class="oculto">
+                <!-- Draggable DIV -->
+                <div id="mydiv">
+                    <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+                    <div id="mydivheader">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrows-move" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8" />
+                        </svg>
+                    </div>
+                    <section style="max-width: 150;">
                         <div id="btn_atalhos">
 
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col" id="areaCPF">
-                                        <button type="button" id="btn_cpf" class="btn btn-secondary btn_atalho2"
-                                            data-toggle="tooltip" data-placement="top"
-                                            title="Após copiar o CPF, clique aqui." onclick="cpf()" ondblclick="x()"
-                                            onchange="cpf_corrigir()">CPF ou CNPJ</button>
-                                    </div>
-                                    <div class="col">
-                                        <a href="LGPD.php" target="_blank"> <button type="button" id=""
-                                                class="btn btn-secondary btn_atalho2" onclick="" data-toggle="tooltip"
-                                                data-placement="top" title="Modelo automático LGPD">LGPD</button> </a>
-                                    </div>
-                                    <div class="w-100"></div> <br>
-                                    <div class="w-100"></div>
-                                    <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho"
-                                            data-toggle="tooltip" data-placement="top" title="Atalho"
-                                            onmouseover="muda_title()" onclick="atalho1()">Atalho 1</button> </div>
-                                    <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho"
-                                            data-toggle="tooltip" data-placement="top" title="Atalho"
-                                            onmouseover="muda_title()" onclick="atalho2()">Atalho 2</button></div>
-                                    <div class="w-100"></div>
-                                    <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho"
-                                            data-toggle="tooltip" data-placement="top" title="Atalho"
-                                            onmouseover="muda_title()" onclick="atalho3()">Atalho 3</button> </div>
-                                    <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho"
-                                            data-toggle="tooltip" data-placement="top" title="Atalho"
-                                            onmouseover="muda_title()" onclick="atalho4()">Atalho 4</button> </div>
-                                    <div class="w-100"></div>
-                                    <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho"
-                                            data-toggle="tooltip" data-placement="top" title="Atalho"
-                                            onmouseover="muda_title()" onclick="atalho5()">Atalho 5</button></div>
-                                    <div class="col"><button type="button" id="" class="btn btn-info btn_atalho atalho"
-                                            data-toggle="tooltip" data-placement="top" title="Atalho"
-                                            onmouseover="muda_title()" onclick="atalho6()">Atalho 6</button> </div>
 
-                                </div>
-                            </div>
+                            <span id="areaCPF">
+                                <button type="button" id="btn_cpf" class="btn btn-secondary btn_atalho_lateral"
+                                    data-toggle="tooltip" data-placement="top" title="Após copiar o CPF, clique aqui."
+                                    onclick="cpf()" ondblclick="x()" onchange="cpf_corrigir()">CPF ou CNPJ</button>
+                            </span>
+                            <br>
+
+                            <a href="LGPD.php" target="_blank"> <button type="button" id=""
+                                    class="btn btn-secondary btn_atalho_lateral" onclick="" data-toggle="tooltip"
+                                    data-placement="top" title="Modelo automático LGPD">LGPD</button> </a>
+                            <br>
+
+                            <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
+                                data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
+                                onclick="atalho1()">Atalho 1</button>
+                                <br>
+
+                            <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
+                                data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
+                                onclick="atalho2()">Atalho 2</button>
+                                <br>
+
+
+                            <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
+                                data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
+                                onclick="atalho3()">Atalho 3</button>
+                                <br>
+
+                            <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
+                                data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
+                                onclick="atalho4()">Atalho 4</button>
+                                <br>
+
+                            <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
+                                data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
+                                onclick="atalho5()">Atalho 5</button>
+                                <br>
+
+                            <button type="button" id="" class="btn btn-info btn_atalho_lateral atalho"
+                                data-toggle="tooltip" data-placement="top" title="Atalho" onmouseover="muda_title()"
+                                onclick="atalho6()">Atalho 6</button>
+                                <br>
 
                         </div>
-                    </section>          
                 </div>
-            
+
+            </div>
+            </section>
         </div>
+
+    </div>
+
+    </div>
 
     </div>
 
@@ -1331,6 +1352,7 @@
     <script src="funcoes/modal_multa.js"></script>
     <script src="funcoes/modal_pontoADC.js"></script>
     <script src="funcoes/transposto.js"></script>
+    <script src="funcoes/elemento_arrastavel.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
 

@@ -1,0 +1,15 @@
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f100;
+    border: 1px solid #d3d3d300;
+    text-align: center;
+}
+
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2195f300;
+    color: #fff;
+}

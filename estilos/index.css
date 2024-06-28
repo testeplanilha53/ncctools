@@ -31,6 +31,7 @@
     height: 0;
     width: 0;
     overflow: hidden;
+    display: none;
 }
 
 .celula_lateral {
@@ -295,6 +296,12 @@ body > header > div{
     width: 310px;
     height: 38px;
 }
+
+.btn_atalho_lateral {
+    width: 150px;
+    margin: 0.1rem;
+}
+
 
 #btn_funcoes {
     margin: 0px;
