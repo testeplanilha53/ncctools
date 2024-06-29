@@ -635,16 +635,16 @@
                     </button>
                 </div>
                 <div class="modal-body" id="campo_padrao_verificao">
-                    Selecione a quantidade de pontos adicionais e o parcelamento da instalação: <br>
+                    Selecione a quantidade de pontos adicionais<br>
                     <select class="" id="pontos_adicionais">
                         <option value=""></option>
-                        <option value="1">1 ponto adicional | R$29,90/mês | R$100,00 taxa de instalação</option>
-                        <option value="2">2 pontos adicionais | R$49,90/mês | R$150,00 taxa de instalação</option>
-                        <option value="3">3 pontos adicionais | R$69,90/mês | R$200,00 taxa de instalação</option>
-                        <option value="4">4 pontos adicionais | R$89,90/mês | R$250,00 taxa de instalação</option>
-                        <option value="5">5 pontos adicionais | R$109,90/mês | R$300,00 taxa de instalação</option>
+                        <option value="1">1 ponto adicional | R$29,90/mês</option>
+                        <option value="2">2 pontos adicionais | R$49,90/mês</option>
+                        <option value="3">3 pontos adicionais | R$69,90/mês</option>
+                        <option value="4">4 pontos adicionais | R$89,90/mês</option>
+                        <option value="5">5 pontos adicionais | R$109,90/mês</option>
                     </select>
-                    em
+                    <!-- em
                     <select class="" id="qtd_parcelas">
                         <option value=""></option>
                         <option value="1">1x</option>
@@ -652,7 +652,8 @@
                         <option value="3">3x</option>
                         <option value="4">4x</option>
                         <option value="5">5x</option>
-                    </select> <br> <br>
+                    </select> -->
+                    <br> <br> 
                     Velocidade e valor do plano vingente:
                     <input type="number" name="" id="plano_mega" min="0" max="8000" placeholder="200"
                         onchange="calcularMulta()">
