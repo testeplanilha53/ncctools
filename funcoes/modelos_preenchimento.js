@@ -38,7 +38,7 @@ function fun_Fiberhome(){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `\n\n• Power: On/Off\n• PON/LINK: On/Off/Piscando\n• LOS/Perda: Piscando/off`    
+    descricao.value += `\n<b>Fiberhome</b>\n• Power: On/Off\n• PON/LINK: On/Off/Piscando\n• LOS/Perda: Piscando/off`    
 
 }
 
@@ -47,7 +47,7 @@ function fun_ONU_NOKIA(){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `\n\n• Power: Verde estático/vermelho estático/apagado \n• LINK: Verde estático/Apagado \n• AUTH: Verde estático/Verde Piscando/ Apagado`
+    descricao.value += `\n<b>ONU Nokia</b>\n• Power: Verde estático/vermelho estático/apagado \n• LINK: Verde estático/Apagado \n• AUTH: Verde estático/Verde Piscando/ Apagado`
 
 }
 
@@ -57,7 +57,7 @@ function fun_Conversor_NOKIA(){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `\n\n• Power: Verde estático / Apagado \n• Alarm: vermelho estático/ Apagado \n• Connection: Verde estático / Verde Piscando /Apagado \n• ETH: Verde estático / Verde Piscando / Apagado`
+    descricao.value += `\n<b>Conversor Nokia</b>\n• Power: Verde estático / Apagado \n• Alarm: vermelho estático/ Apagado \n• Connection: Verde estático / Verde Piscando /Apagado \n• ETH: Verde estático / Verde Piscando / Apagado`
 
 }
 
@@ -66,7 +66,7 @@ function fun_Datacom(){
     //change_color(meu_id)
     meu_id.className = "btn btn-info"
 
-    descricao.value += `\n\n• Power: Verde estático/apagado \n• PON: Verde estático/apagado \n• ETH1: Verde estático/Verde Piscando/ Apagado`
+    descricao.value += `\n<b>Datacom</b>\n• Power: Verde estático/apagado \n• PON: Verde estático/apagado \n• ETH1: Verde estático/Verde Piscando/ Apagado`
 
 }
 
