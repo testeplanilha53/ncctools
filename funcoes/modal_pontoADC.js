@@ -31,10 +31,9 @@ function calcularPontoAdicional(){
     
     // antigo
     // var script = `Cliente solicitou a instalação de ${pontos_adicionais} ${pluralPontos(pontos_adicionais)} [wi-fi]. Ficou ciente do prazo de até 7 dias para a ocorrência do serviço.<hr><b>Valor da instalação:</b> R$${vInsta} (em ${qtd_parcelas}x).\n<b>Valor da mensalidade de ${pontos_adicionais} ${pluralPontos(pontos_adicionais)}:</b> R$${vMensalidade}.<hr>Cliente possui um plano de ${plano_mega} ${plan_tipo}, nesse caso o valor da mensalidade ficará: R$${valorPlano} + R$${vMensalidade} = R$${Total}, além de R$${vParcela} da instalação durante ${qtd_parcelas} ${verMes(qtd_parcelas)}.`
-    var script = `Cliente solicitou a instalação de ${pontos_adicionais} ${pluralPontos(pontos_adicionais)} [wi-fi]. Ficou ciente do prazo de até 7 dias para a ocorrência do serviço.<hr>\n<b>Valor da mensalidade de ${pontos_adicionais} ${pluralPontos(pontos_adicionais)}:</b> R$${vMensalidade}.<hr>Cliente possui um plano de ${plano_mega} ${plan_tipo}, nesse caso o valor da mensalidade ficará: R$${valorPlano} + R$${vMensalidade} = R$${Total}.`
+    var script = `Cliente solicitou a instalação de ${pontos_adicionais} ${pluralPontos(pontos_adicionais)} [wi-fi]. Ficou ciente do prazo de até 7 dias para a ocorrência do serviço.\n<hr><b>Valor da mensalidade de ${pontos_adicionais} ${pluralPontos(pontos_adicionais)}:</b> R$${vMensalidade}.<hr>Cliente possui um plano de ${plano_mega} ${plan_tipo}, nesse caso o valor da mensalidade ficará: R$${valorPlano} + R$${vMensalidade} = R$${Total}.`
     console.log(script)
     
-
 
     var descricao = window.document.getElementById("descricao")  
     descricao.value = script
