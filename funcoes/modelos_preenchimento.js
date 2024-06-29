@@ -179,7 +179,7 @@ function fun_Montagem_de_Rede(){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita montagem de rede. <hr> Montagem de rede: R$ 105,00 \nNº de pontos adicionais: não informou \nValor pontos adicionais: X * R$ 35,00 \nConfiguração de roteador: (Sim R$ 35,00 / Não) \nValor total: R$ 105,00 + Valor pontos adc + Config. roteador. \nForma de pagamento: parcelamento em 4x. \n \nCliente ciente de que se a rede ultrapassar [(Nº pontos adicionais * 20m) + 20m], será cobrado R$ 3,00 por metro excedente. <hr> Encaminhado para verificação técnica no local, ciente do prazo de até sete dias úteis para ocorrer.`
+    descricao.value = `Cliente solicita montagem de rede interna. Ficou ciente do prazo máximo de 7 dias úteis para ocorrer.`
 
 }
 
@@ -188,33 +188,33 @@ function fun_Mudanca_de_comodo(){
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita mudança de cômodo. Ciente do valor de R$ 50,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer.`
+    descricao.value = `Cliente solicita mudança de cômodo. Ficou ciente do prazo máximo de 7 dias úteis para ocorrer.`
 
 }
-function fun_Mudanca_de_comodo_amparo(){
-    meu_id = window.document.getElementById("fun_Mudanca_de_comodo_amparo")
-    change_color(meu_id)
-    meu_id.className = "btn btn-danger"
+// function fun_Mudanca_de_comodo_amparo(){
+//     meu_id = window.document.getElementById("fun_Mudanca_de_comodo_amparo")
+//     change_color(meu_id)
+//     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita mudança de cômodo. Ciente do valor de R$ 50,00 (em parcela única), do prazo máximo de 7 dias úteis para ocorrer.`
+//     descricao.value = `Cliente solicita mudança de cômodo. Ciente do valor de R$ 50,00 (em parcela única), do prazo máximo de 7 dias úteis para ocorrer.`
 
-}
+// }
 function fun_Transferência_de_endereço(){
     meu_id = window.document.getElementById("fun_Transferência_de_endereço")
     change_color(meu_id)
     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita transferência de endereço. Ciente do valor de R$ 50,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer, e que é necessário levar os dispositivos ao novo endereço. Cliente já está no novo endereço. \n<hr> <b> Novo endereço: </b>. \n<hr> Confirmada a disponibilidade de conexão no local por:\n`
+    descricao.value = `Cliente solicita transferência de endereço. Ficou ciente do prazo máximo de 7 dias úteis para ocorrer, e que é necessário levar os dispositivos ao novo endereço. Cliente já está no novo endereço. \n<hr> <b> Novo endereço: </b>. \n<hr> Confirmada a disponibilidade de conexão no local por:\n`
 
 }
-function fun_Transferência_de_endereço_amparo(){
-    meu_id = window.document.getElementById("fun_Transferência_de_endereço_amparo")
-    change_color(meu_id)
-    meu_id.className = "btn btn-danger"
+// function fun_Transferência_de_endereço_amparo(){
+//     meu_id = window.document.getElementById("fun_Transferência_de_endereço_amparo")
+//     change_color(meu_id)
+//     meu_id.className = "btn btn-danger"
 
-    descricao.value = `Cliente solicita transferência de endereço. Ciente do valor de R$ 100,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer. Cliente já está no novo endereço. \n<hr> <b> Novo endereço:</b> \n<hr> Confirmado a disponibilidade de conexão no local por: \n`
+//     descricao.value = `Cliente solicita transferência de endereço. Ciente do valor de R$ 100,00 (parcelado em 2 vezes), do prazo máximo de 7 dias úteis para ocorrer. Cliente já está no novo endereço. \n<hr> <b> Novo endereço:</b> \n<hr> Confirmado a disponibilidade de conexão no local por: \n`
 
-}
+// }
 
 
 

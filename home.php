@@ -196,7 +196,7 @@
                         <i class="far fa-user-headset" style="line-height: 1; color: rgb(30, 48, 80);"></i>
                     </a>
                 </button> -->
-                <button class="btn btn-warning lupa">
+                <!-- <button class="btn btn-warning lupa">
                     <a class="" id="modelo_noc" class="btn btn-light" data-toggle="modal"
                         data-target="#modal_transferencia" title="Modelo de transferência de endereço">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -207,7 +207,7 @@
                                 d="M8.793 2a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708z" />
                         </svg>
                     </a>
-                </button>
+                </button> -->
 
                 <button class="btn btn-info lupa">
                     <a class="" class="btn btn-light" data-toggle="modal" data-target="#padrao_noc"
@@ -937,17 +937,17 @@
                         onmouseover="tooltips_fun_Montagem_de_Rede()">Montagem de rede</button> <br>
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title=""
                         id="fun_Mudanca_de_comodo" onclick="fun_Mudanca_de_comodo()"
-                        onmouseover="tooltips_fun_Mudanca_de_comodo()">Mudança de cômodo</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title=""
+                        onmouseover="tooltips_fun_Mudanca_de_comodo()">Mudança de cômodo</button> <br>
+                    <!-- <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title=""
                         id="fun_Mudanca_de_comodo_amparo" onclick="fun_Mudanca_de_comodo_amparo()"
-                        onmouseover="tooltips_fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br>
+                        onmouseover="tooltips_fun_Mudanca_de_comodo_amparo()">Mudança de cômodo - AMPARO</button> <br> -->
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title=""
                         id="fun_Transferência_de_endereço" onclick="fun_Transferência_de_endereço()"
                         onmouseover="tooltips_fun_Transferência_de_endereço()">Transf. de endereço</button>
-                    <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title=""
+                    <!-- <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title=""
                         id="fun_Transferência_de_endereço_amparo" onclick="fun_Transferência_de_endereço_amparo()"
                         onmouseover="tooltips_fun_Transferência_de_endereço_amparo()">Transf. de endereço -
-                        AMPARO</button> <br>
+                        AMPARO</button> <br> -->
 
                     <hr><strong>Financeiro</strong> <br>
                     <button class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title=""
