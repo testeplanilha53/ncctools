@@ -15,7 +15,7 @@ function calcularPontoAdicional(){
 
     var vMensalidade = valorMensalidade(pontos_adicionais)    
     console.log(vMensalidade)
-    console.log(substituirPontoPorVirgula(vMensalidade))
+    // console.log(substituirPontoPorVirgula(vMensalidade))
 
     // console.log(typeof(valorPlano))
     // console.log(typeof(vMensalidade))
