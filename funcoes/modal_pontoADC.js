@@ -10,8 +10,8 @@ function calcularPontoAdicional(){
     var pontos_adicionais = window.document.getElementById("pontos_adicionais").value
     var valorPlano = window.document.getElementById("valorPlano_adc").value    
     
-    var vInsta = valorInstalação(pontos_adicionais)    
-    console.log(vInsta)
+    // var vInsta = valorInstalação(pontos_adicionais)    
+    // console.log(vInsta)
 
     var vMensalidade = valorMensalidade(pontos_adicionais)    
     console.log(vMensalidade)
