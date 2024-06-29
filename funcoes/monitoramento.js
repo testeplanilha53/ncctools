@@ -91,7 +91,7 @@ function monitorador(){
     var msg = ""
     
     if ((descricao.value.includes("cance"))||(descricao.value.includes("reten")||(descricao.value.includes("reativ")))) {
-        msg = `❗Cadastros <b>TP</b> não são tratados pela Retenção!`
+        msg = `❗Cadastros TP não são tratados pela Retenção!`
         msg_monitorador(msg)
     }
 
@@ -107,10 +107,14 @@ function monitorador(){
         msg = "Identificamos um link de comprovante/foto inválido!\nCopie o link do Omini."        
         msg_monitorador(msg)
     }
-    if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")||descricao.value.includes("7 dias")||descricao.value.includes("sete dias")) {
-        msg = "Possível protocolo de serviço👷🏻!\n▶️Verifique se a visita foi encaminhada com valor correto.\n▶️Veja se o cliente não possui pontos adicionais!"        
+    if ((descricao.value.includes("azul"))||(descricao.value.includes("bloqueio temporário")||(descricao.value.includes("temporário")))) {
+        msg = "Regras para o bloqueio temporário:\n1 - Realizar o bloqueio mediante a SOLICITAÇÃO do cliente;\n2 - O cliente deve estar na base há pelo menos 6 meses;\n3 - Não deve possuir valores em aberto;\n4 - O desbloqueio é automático após o período solicitado;\n5 - Os bloqueios podem ser de 30, 60, 90 e 120 dias."        
         msg_monitorador(msg)
     }
+    // if (descricao.value.includes("sete dias úteis")||descricao.value.includes("7 dias úteis")||descricao.value.includes("7 dias")||descricao.value.includes("sete dias")) {
+    //     msg = "Possível protocolo de serviço👷🏻!\n▶️Verifique se a visita foi encaminhada com valor correto.\n▶️Veja se o cliente não possui pontos adicionais!"        
+    //     msg_monitorador(msg)
+    // }
     if (descricao.value.includes("campinas")||descricao.value.includes("Campinas")) {
         msg = "Cidade de Campinas!\n Esta cidade não tem grupo específico, é usado SupAmparo."        
         msg_monitorador(msg)
@@ -119,10 +123,10 @@ function monitorador(){
     //     msg = "Anexe a foto do cliente segurando o documento com foto\n🎴🧔🤳."        
     //     msg_monitorador(msg)
     // }
-    if ((descricao.value.includes("IPTV"))||(descricao.value.includes("iptv"))) {
-        msg = "📺🏴‍☠️IPTV - Anexe a TAG IPTV no OMINI ."        
-        msg_monitorador(msg)
-    }
+    // if ((descricao.value.includes("IPTV"))||(descricao.value.includes("iptv"))) {
+    //     msg = "📺🏴‍☠️IPTV - Anexe a TAG IPTV no OMINI ."        
+    //     msg_monitorador(msg)
+    // }
     if ((descricao.value.includes("rádio")||descricao.value.includes("Rádio")||descricao.value.includes("base")||descricao.value.includes("NS")||descricao.value.includes("torre")||descricao.value.includes("radio")||descricao.value.includes("Radio"))&&(bfp.value.includes("Padrão Fibra"))) {
         msg = "📡 Possível cliente Rádio detectado.\nNecessário mudar a BFP do cliente."        
         msg_monitorador(msg)
