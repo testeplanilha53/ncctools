@@ -94,7 +94,6 @@ function monitorador(){
         msg = `❗Cadastros TP não são tratados pela Retenção!`
         msg_monitorador(msg)
     }
-
     if (descricao.value.includes("'")) {
          msg = "Identificado o caractere ' em uso, \no ADM não permite para salvar o protocolo!"        
          msg_monitorador(msg)
