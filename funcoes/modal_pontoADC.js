@@ -6,7 +6,7 @@ function calcularPontoAdicional(){
 
     var plano_mega = window.document.getElementById("plano_mega").value
     var plan_tipo = window.document.getElementById("plan_tipo").value    
-    var qtd_parcelas = window.document.getElementById("qtd_parcelas").value        
+    // var qtd_parcelas = window.document.getElementById("qtd_parcelas").value        
     var pontos_adicionais = window.document.getElementById("pontos_adicionais").value
     var valorPlano = window.document.getElementById("valorPlano_adc").value    
     
